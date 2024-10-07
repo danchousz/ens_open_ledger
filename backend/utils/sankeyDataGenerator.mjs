@@ -2584,6 +2584,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     qtrReceiversList = ecosystemRecipients.concat(publicGoodsRecipients, metagovRecipients, communityWGRecipients, spsRecipients, daoWalletRecipients)
                     qtrSendersList = ecosystemSenders.concat(publicGoodsSenders, metagovSenders, communityWGSenders, spsSenders)
                 } else if (model === 'detailed') {
+                    pad = 15;
                 } else if (model === 'dissolution') {
                     pad = 10;
                     if (nodeName === 'DAO Wallet') {
