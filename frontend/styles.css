@@ -572,9 +572,9 @@ input[type="text"] {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
     height: fit-content;
-    max-height: 1000px;
+    max-height: 500px;
     overflow-y: auto;
-    min-width: 150px;
+    min-width: 200px;
 
     padding-top: 0.375rem;
 z-index: 1;
