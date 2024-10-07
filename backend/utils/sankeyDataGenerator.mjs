@@ -267,6 +267,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
             if ((sender.startsWith('Community WG') && receiver.startsWith('Dissolution')) 
                 || (receiver.endsWith('Swap') || sender.endsWith('Swap'))
                 || (receiver === 'CoW' || sender === 'CoW')
+                || (receiver.startsWith('Community WG') && sender.startsWith('Community WG'))
                 ) { return -1; }
             if (!nodeIndices[nodeName]) {
                 nodeIndices[nodeName] = nodes.length;
