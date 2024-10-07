@@ -52,8 +52,9 @@ export function getWalletData(quarter, walletFilter) {
         if (row.Quarter === quarter) {
             if (row['Transaction Hash'] === 'Interquarter') {
                 if (row.From_name !== 'DAO Wallet') {
-                    row.To_name = `Unspent_${row.From_name}`;
-                    row.To_category = `Unspent_${row.From_name}`;
+                    const nextQuarter = getNextQuarter(row.Quarter);
+                    row.To_name = `Unspent_${row.From_name}_${nextQuarter}`;
+                    row.To_category = `Unspent_${row.From_name}_${nextQuarter}`;
                     row['Transaction Hash'] = 'Unspent';
                     return true;
                 }
