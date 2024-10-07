@@ -1,0 +1,21 @@
+Quarter,From_category,To_category,Symbol,Value,DOT_USD
+2022Q3,Ecosystem,Gitcoin Grants,USDC,69420.0,69508.06
+2022Q3 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,USDC,69420.0,69420.0
+2022Q3 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,ETH,0.0,0.0
+2023Q1,Ecosystem,Eco. Small Grants,ETH,-15.0,-24805.8
+2023Q1 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,USDC,69420.0,69420.0
+2023Q1 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,ETH,-15.0,-26983.5
+2023Q2,Ecosystem,Gitcoin Grants,USDC,50100.0,50100.0
+2023Q2,Ecosystem,Eco. Grants,USDC,10000.0,10000.0
+2023Q2,Ecosystem,Gitcoin Grants,ETH,-1.693,-3258.20862
+2023Q2,Ecosystem,Eco. Small Grants,ETH,-9.299999999999999,-17243.863999999998
+2023Q2 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,USDC,129520.0,129520.0
+2023Q2 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,ETH,-25.993,-48261.2031
+2023Q3,Ecosystem,Eco. Grants,USDC,20000.0,20000.0
+2023Q3,Ecosystem,Gitcoin Grants,ETH,-0.25,-426.385
+2023Q3 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,ETH,-26.243,-43799.566999999995
+2023Q3 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,USDC,149520.0,149520.0
+2023Q4,Ecosystem,Gitcoin Grants,USDC,140480.0,140480.0
+2023Q4,Ecosystem,Gitcoin Grants,ETH,-3.757,-8811.818080000001
+2023Q4 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,USDC,290000.0,290000.0
+2023Q4 Unspent,Gitcoin Grants SG,Gitcoin Grants SG,ETH,-30.0,-68871.0

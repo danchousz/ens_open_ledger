@@ -1,0 +1,782 @@
+{
+  "hodl.esf.eth": {
+    "textRecord": "ipfs://QmXXNXPgERredPwezFLguiB1kNrf89T56fRkP867NfKPdw/images/371.png",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmXXNXPgERredPwezFLguiB1kNrf89T56fRkP867NfKPdw/images/371.png"
+  },
+  "gregskril.eth": {
+    "textRecord": "eip155:1/erc721:0x4a4f4a202c840f7247cfcb429e1b41a5509176d8/19",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmXX4bGgu4gUPgbb6HvxYjqZam2h9inyKEamJoN3Us3wCY"
+  },
+  "stevegachau.eth": {
+    "textRecord": "https://us-central1-superchain-resolver.cloudfunctions.net/avatar",
+    "avatarUrl": "https://us-central1-superchain-resolver.cloudfunctions.net/avatar"
+  },
+  "raffy.eth": {
+    "textRecord": "https://raffy.antistupid.com/ens.jpg",
+    "avatarUrl": "https://raffy.antistupid.com/ens.jpg"
+  },
+  "slobo.eth": {
+    "textRecord": "https://raw.githubusercontent.com/aslobodnik/profile/main/pic.jpeg",
+    "avatarUrl": "https://raw.githubusercontent.com/aslobodnik/profile/main/pic.jpeg"
+  },
+  "bobjiang.eth": {
+    "textRecord": "https://www.bobjiang.com/images/bobjiang.webp",
+    "avatarUrl": "https://www.bobjiang.com/images/bobjiang.webp"
+  },
+  "ginge.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/8220587745662616459260259615118041147963982898598852245933465594789902680065",
+    "avatarUrl": "https://i.seadn.io/gae/n8wWpI8ODL8hpbkDwWrm39ZtyWUoGUXN8cwh1KDKcdoi0Bpv0uNfYMl1bU-7AZ54QxGxW3KgH7WnN_O5ekPuYljWZi9Wz7a7AJkF?w=500&auto=format"
+  },
+  "danch.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "sumedha.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "coltron.eth": {
+    "textRecord": "https://euc.li/coltron.eth",
+    "avatarUrl": "https://euc.li/coltron.eth"
+  },
+  "limes.eth": {
+    "textRecord": "https://euc.li/limes.eth",
+    "avatarUrl": "https://euc.li/limes.eth"
+  },
+  "spencecoin.eth": {
+    "textRecord": "https://i.imgur.com/Ses3NSL.png",
+    "avatarUrl": "https://i.imgur.com/Ses3NSL.png"
+  },
+  "validator.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/8112316025873927737505937898915153732580103913704334048512380449015566696449",
+    "avatarUrl": "https://i.seadn.io/gae/hUNBdeO_rXIBNRCOVH7xGulvuf3Q6D25R_hPZlxqh8g0EiW0pbByenjBtDO7PBeYawTzmLk9vkwgloIf58_4Sqb7YGcHBJUOalMDEeY?w=500&auto=format"
+  },
+  "endlessness.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "alisha.eth": {
+    "textRecord": "https://euc.li/alisha.eth",
+    "avatarUrl": "https://euc.li/alisha.eth"
+  },
+  "taytems.eth": {
+    "textRecord": "ipfs://QmR6SxBfMEas7SB5KaRHd4ZrBzCeVjMrpn6fAMZZpbdojQ",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmR6SxBfMEas7SB5KaRHd4ZrBzCeVjMrpn6fAMZZpbdojQ"
+  },
+  "daylon.eth": {
+    "textRecord": "ipfs://bafkreigktenavi4souvbydssouthvvmn3vn4yfvz3x2zbsnk2kazwjqcoq",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafkreigktenavi4souvbydssouthvvmn3vn4yfvz3x2zbsnk2kazwjqcoq"
+  },
+  "estmcmxci.eth": {
+    "textRecord": "eip155:1/erc721:0xed37c99f3000d751c460c5e386f02a6de7581407/259",
+    "avatarUrl": null
+  },
+  "maintainer.eth": {
+    "textRecord": "https://euc.li/maintainer.eth",
+    "avatarUrl": "https://euc.li/maintainer.eth"
+  },
+  "vegayp.eth": {
+    "textRecord": "https://euc.li/vegayp.eth",
+    "avatarUrl": "https://euc.li/vegayp.eth"
+  },
+  "zadok7.eth": {
+    "textRecord": "ipfs://QmYTdx4skZfy3h9YPc7qVP9YiL9fyqcULfgEfhMjpeHH9H",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmYTdx4skZfy3h9YPc7qVP9YiL9fyqcULfgEfhMjpeHH9H"
+  },
+  "altbeast.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "cryptowork.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "blackcoin.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "supplanter.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "generalmagic.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "leticiaferraz.eth": {
+    "textRecord": "https://euc.li/leticiaferraz.eth",
+    "avatarUrl": "https://euc.li/leticiaferraz.eth"
+  },
+  "enspunks.eth": {
+    "textRecord": "https://punks.on.fleek.co/enspunk/2890.gif",
+    "avatarUrl": "https://punks.on.fleek.co/enspunk/2890.gif"
+  },
+  "joycelai.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "frolic.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/14340956495070452533448411743660034281365817504224433241868312629593776324609",
+    "avatarUrl": "https://i.seadn.io/gae/xkHbgnjMo4vRUjWNPUDCt7zGfRr0kYEajyPV1z_EPRRK1maqrd5r_amLwYqUtQ109gbqNsjgNvLHZMfMkbzQMt3ioYrHxhNzo2TK?w=500&auto=format"
+  },
+  "rahs.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "simona.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749Ce646f68AC8c248420045cb7b5e/8112316025873927737505937898915153732580103913704334048512380366552194613249",
+    "avatarUrl": "https://i.seadn.io/gae/IQhvad8Lri1IjrZcwxhJ5BWhKqHBRVlB7Dca0ZNJcGA0a8xProHYMsWnt1kEXOn5AvXwqcaJgoqmHPZVf0FRaa4S6Co2bKNQBG1dZg?w=500&auto=format"
+  },
+  "anthonyware.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749Ce646f68AC8c248420045cb7b5e/81261719407199013876712583830251687374860191233127246802792163794610708021249",
+    "avatarUrl": null
+  },
+  "ceresstation.eth": {
+    "textRecord": "eip155:1/erc721:0x8d04a8c79ceb0889bdd12acdf3fa9d207ed3ff63/53",
+    "avatarUrl": null
+  },
+  "launchdapp.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "cryptoplaza.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "sheetns.eth": null,
+  "premm.eth": {
+    "textRecord": "ipfs://bafybeih2fk3p3bomd74mw7uloig27r6ezb3ebvabhxip5tkvzp4jpbqjc4/prem_2.jpg",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafybeih2fk3p3bomd74mw7uloig27r6ezb3ebvabhxip5tkvzp4jpbqjc4/prem_2.jpg"
+  },
+  "wlfrm.eth": {
+    "textRecord": "https://gateway.pinata.cloud/ipfs/QmVvUCCrQvxJFNcyRmJ8fMJrHUnQoKokVmkpvy1Q6YTsrB",
+    "avatarUrl": "https://gateway.pinata.cloud/ipfs/QmVvUCCrQvxJFNcyRmJ8fMJrHUnQoKokVmkpvy1Q6YTsrB"
+  },
+  "hellenstans.eth": {
+    "textRecord": "https://avatar-twitter-cv4s4om35q-uc.a.run.app/?user=hellenstans",
+    "avatarUrl": "https://avatar-twitter-cv4s4om35q-uc.a.run.app/?user=hellenstans"
+  },
+  "julieshi.eth": {
+    "textRecord": "eip155:1/erc721:0x4a4f4a202c840f7247cfcb429e1b41a5509176d8/62",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmZgqMp8w14LRxZBDuUuXTh2wcKCLPCzaKyxEF6ZiCFMB1"
+  },
+  "accessor.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "mattwright.eth": {
+    "textRecord": "https://pbs.twimg.com/profile_images/1530275541886042114/jHl7uAua_400x400.jpg",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1530275541886042114/jHl7uAua_400x400.jpg"
+  },
+  "publicburn.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "ensnews.eth": {
+    "textRecord": "https://euc.li/ensnews.eth",
+    "avatarUrl": "https://euc.li/ensnews.eth"
+  },
+  "0xsef.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "apoorv.eth": {
+    "textRecord": "eip155:1/erc721:0x23e5b6ae0f34da4a7d0da49a484b42d4dd496940/2",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmXhs1Ebn1tjNUcpWcejc6HB4K86ZWVE8MdS3ZR249RALn/2.png"
+  },
+  "carletex.eth": {
+    "textRecord": "ipfs://bafybeidapuwbolbsgiitgf7q4dwtznfh24ttqntkk3eanv5ueqr34i7fcu",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafybeidapuwbolbsgiitgf7q4dwtznfh24ttqntkk3eanv5ueqr34i7fcu"
+  },
+  "busayo.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "feems.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "cookbookdev.eth": {
+    "textRecord": "https://locksmith.unlock-protocol.com/lock/0x461932419cd19cf192c6b729c5994f3f8c3557f2/icon",
+    "avatarUrl": "https://locksmith.unlock-protocol.com/lock/0x461932419cd19cf192c6b729c5994f3f8c3557f2/icon"
+  },
+  "unvetica.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "dm3.eth": {
+    "textRecord": "https://framerusercontent.com/images/5EmrNRp5SBJgfYmL1mvYbNEqM.png",
+    "avatarUrl": "https://framerusercontent.com/images/5EmrNRp5SBJgfYmL1mvYbNEqM.png"
+  },
+  "superteamdao.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "planetable.eth": {
+    "textRecord": "https://www.planetable.xyz/assets/planetable-logo-light.png",
+    "avatarUrl": "https://www.planetable.xyz/assets/planetable-logo-light.png"
+  },
+  "aexek.eth": {
+    "textRecord": "eip155:1/erc721:0x6866ed9a183f491024692971a8f78b048fb6b89b/80149087549151199525421582453776081415238102091854551380564398732605638464108",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafkreieo3qwjpvm7kqyxnegjdcfxbcs4zvirmfqzegvzhzjyi5dc7tzzxu"
+  },
+  "fabioanaya.eth": {
+    "textRecord": "https://euc.li/fabioanaya.eth",
+    "avatarUrl": "https://euc.li/fabioanaya.eth"
+  },
+  "oddfather.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "vitruvius.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "5pence.eth": {
+    "textRecord": "https://euc.li/5pence.eth",
+    "avatarUrl": "https://euc.li/5pence.eth"
+  },
+  "nabsku.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "serenae.eth": {
+    "textRecord": "https://serenae.eth.limo/avatar.jpg",
+    "avatarUrl": "https://serenae.eth.limo/avatar.jpg"
+  },
+  "web3newsletters.eth": null,
+  "mhaas.eth": {
+    "textRecord": "https://euc.li/mhaas.eth",
+    "avatarUrl": "https://euc.li/mhaas.eth"
+  },
+  "bishara.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "yeeteezy.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749Ce646f68AC8c248420045cb7b5e/82610458131361857968382027635308749672026818580224236980796169128265264398337",
+    "avatarUrl": "https://i.seadn.io/gae/Z_2lWmkbBR-Qr20za8ROCMEXYr5caXtF4AWAV6Wd2ukVVmHmF3swVBCC1JjqDASg4ThW53n3slpgdwTDyjWB77G3ePy_ot6axYXglg4?w=500&auto=format"
+  },
+  "neiman.eth": {
+    "textRecord": "https://www.neiman.co.il/neiman.png",
+    "avatarUrl": "https://www.neiman.co.il/neiman.png"
+  },
+  "water3.eth": {
+    "textRecord": "https://i.seadn.io/gae/NqwmZvTM-JuRx4GltyZ9IFtIBxCIgxUW0LWpYeBBJoOB-hkS60Xf02-cAnMrLIjrpamCBTXB-0I2TsmiOl9kWnbJRLP4xqdUvC9k?auto=format&w=1000",
+    "avatarUrl": "https://i.seadn.io/gae/NqwmZvTM-JuRx4GltyZ9IFtIBxCIgxUW0LWpYeBBJoOB-hkS60Xf02-cAnMrLIjrpamCBTXB-0I2TsmiOl9kWnbJRLP4xqdUvC9k?auto=format&w=1000"
+  },
+  "domo.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "siddesh.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "letsrally.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "sambitsargam.eth": {
+    "textRecord": "https://euc.li/sambitsargam.eth",
+    "avatarUrl": "https://euc.li/sambitsargam.eth"
+  },
+  "harshilp.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "jennifertran.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "symcards.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "armorfi.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "pandæmonium.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "32337.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "960ac2.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "drea.eth": {
+    "textRecord": "https://euc.li/drea.eth",
+    "avatarUrl": "https://euc.li/drea.eth"
+  },
+  "kevins.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "nameart.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "genz.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "1w3.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/64066856996771783874849311578983107107617056268274165703624776859827021283329",
+    "avatarUrl": "https://i.seadn.io/gcs/files/e37a4d3b5c65d0144472cd7ffeab932a.png?w=500&auto=format"
+  },
+  "pugson.eth": {
+    "textRecord": "https://wojtek.im/face.jpg",
+    "avatarUrl": "https://wojtek.im/face.jpg"
+  },
+  "liubenben.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749Ce646f68AC8c248420045cb7b5e/96712692256253237623163406048245285455374971161281492342922636761214350262273",
+    "avatarUrl": "https://i.seadn.io/gae/FqTkVNKALhaBqaIZxjV2quLPny2ZStbFMajgLaxKreV86L53QhS5xQBAt-WsWabBVNTlQDViU8lXI8tXmmKJFQE0lM0MxRh0_JpY9fY?w=500&auto=format"
+  },
+  "wayback-machine.eth": {
+    "textRecord": "https://ipfs.blossom.software/ipfs/Qmdu59esUUHvH1NUVSGKNjLFB22G7qxMaR5vg7RXwp1vsZ",
+    "avatarUrl": "https://ipfs.blossom.software/ipfs/Qmdu59esUUHvH1NUVSGKNjLFB22G7qxMaR5vg7RXwp1vsZ"
+  },
+  "katherineykwu.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "dannithomx.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "gashawk.eth": {
+    "textRecord": "ipfs://bafkreidtmx445cahmtk6shm6nsthtjcdn4iffrcudohxp3p6cpcow2fqqi",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafkreidtmx445cahmtk6shm6nsthtjcdn4iffrcudohxp3p6cpcow2fqqi"
+  },
+  "zeptimus.eth": {
+    "textRecord": "eip155:1/erc721:0xe203cdc6011879cde80c6a1dcf322489e4786eb3/1052",
+    "avatarUrl": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBpZD0iZXllMSI+PGVsbGlwc2Ugc3Ryb2tlLXdpZHRoPSIzIiByeT0iMjkuNSIgcng9IjI5LjUiIGlkPSJzdmdfMSIgY3k9IjE1NC41IiBjeD0iMTgxLjUiIHN0cm9rZT0iIzAwMCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIHJ5PSIzLjUiIHJ4PSIyLjUiIGlkPSJzdmdfMyIgY3k9IjE1NC41IiBjeD0iMTczLjUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlPSIjMDAwIiBmaWxsPSIjMDAwMDAwIi8+PC9nPjxnIGlkPSJoZWFkIj48ZWxsaXBzZSBmaWxsPSIjYzVhZTAwIiBzdHJva2Utd2lkdGg9IjMiIGN4PSIyMDQuNSIgY3k9IjIxMS44MDA2NSIgaWQ9InN2Z181IiByeD0iNTciIHJ5PSI1MS44MDA2NSIgc3Ryb2tlPSIjMDAwIi8+PC9nPjxnIGlkPSJleWUyIj48ZWxsaXBzZSBzdHJva2Utd2lkdGg9IjMiIHJ5PSIyOS41IiByeD0iMjkuNSIgaWQ9InN2Z18yIiBjeT0iMTY4LjUiIGN4PSIyMDkuNSIgc3Ryb2tlPSIjMDAwIiBmaWxsPSIjZmZmIi8+PGVsbGlwc2Ugcnk9IjMuNSIgcng9IjMiIGlkPSJzdmdfNCIgY3k9IjE2OS41IiBjeD0iMjA4IiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMCIvPjwvZz48L3N2Zz4="
+  },
+  "dodao-academy.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "marcusam.eth": {
+    "textRecord": "https://euc.li/marcusam.eth",
+    "avatarUrl": "https://euc.li/marcusam.eth"
+  },
+  "entigd.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "scaffold.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "kbw.eth": {
+    "textRecord": "https://euc.li/kbw.eth",
+    "avatarUrl": "https://euc.li/kbw.eth"
+  },
+  "yambo.eth": {
+    "textRecord": "eip155:1/erc721:0x58f7e9810f5559dc759b731843212370363e433e/4",
+    "avatarUrl": null
+  },
+  "gmcafe.eth": {
+    "textRecord": "https://gmcafe.s3.us-east-2.amazonaws.com/gmoo/jpg-256/1.jpg",
+    "avatarUrl": "https://gmcafe.s3.us-east-2.amazonaws.com/gmoo/jpg-256/1.jpg"
+  },
+  "thecap.eth": {
+    "textRecord": "https://euc.li/thecap.eth",
+    "avatarUrl": "https://euc.li/thecap.eth"
+  },
+  "jeromebernard.eth": {
+    "textRecord": "eip155:1/erc721:0xd0aaac09e7f9b794fafa9020a34ad5b906566a5c/390",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafybeidbmg442mmfymcqr6vdx5gytljp5vrybiw2nf2ez525bjbcky2ami/42.gif"
+  },
+  "chomtana.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "criticals.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "galacticwhorls.eth": {
+    "textRecord": "eip155:1/erc721:0x793daf78b74aadf1eda5cc07a558fed932360a60/5211",
+    "avatarUrl": "https://assets.wanderers.ai/file/wandernauts/png/5211.png"
+  },
+  "drooboid.eth": {
+    "textRecord": "ipfs://Qmdrge6PBRi2czy573BQKKdRqW9QTTxPouM6Yzffjdvpdh",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/Qmdrge6PBRi2czy573BQKKdRqW9QTTxPouM6Yzffjdvpdh"
+  },
+  "r1der.eth": {
+    "textRecord": "eip155:1/erc721:0x7DEDa0aFE6DF3da6a85a87b371F8b464c30C6803/7040",
+    "avatarUrl": "https://arweave.net/zujL5TbeTOE7v-pEQSfholCKuae0U9f7IAN0CmwC2Yg/7040-night.webp"
+  },
+  "ji-nu.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "tkn.eth": {
+    "textRecord": "https://gateway.tkn.xyz/ipfs/QmZoruj5i2T4MaqRVFSrzvJ5YZWnD3zaMDJsNfeY5MWvnq",
+    "avatarUrl": "https://gateway.tkn.xyz/ipfs/QmZoruj5i2T4MaqRVFSrzvJ5YZWnD3zaMDJsNfeY5MWvnq"
+  },
+  "dennism.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "mironq.eth": {
+    "textRecord": "eip155:1/erc721:0xed96257397Adf1Ad0831D3c2D8132274968062Be/1",
+    "avatarUrl": null
+  },
+  "enswildcards.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "misharik.eth": {
+    "textRecord": "eip155:1/erc721:0x3903d4ffaaa700b62578a66e7a67ba4cb67787f9/29",
+    "avatarUrl": null
+  },
+  "drf.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "crvne.eth": {
+    "textRecord": "https://ipfs.io/ipfs/QmNvbYvGMA6eoLkyjq4T2EMLnguEE4eEVfNYbXsDrSuQ87?filename=VOID_CRVNE_circle_400x400.png",
+    "avatarUrl": "https://ipfs.io/ipfs/QmNvbYvGMA6eoLkyjq4T2EMLnguEE4eEVfNYbXsDrSuQ87?filename=VOID_CRVNE_circle_400x400.png"
+  },
+  "hotnerd.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "optidomains.eth": {
+    "textRecord": "https://euc.li/optidomains.eth",
+    "avatarUrl": "https://euc.li/optidomains.eth"
+  },
+  "davisshaver.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "cushion.eth": {
+    "textRecord": "https://euc.li/cushion.eth",
+    "avatarUrl": "https://euc.li/cushion.eth"
+  },
+  "otterscan.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "billymeth.eth": {
+    "textRecord": "eip155:1/erc721:0x76d344553995a9ddb02844287e4f03632ff57552/254",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmRFMUSRguuJ9GSUiLNKqYcWeQR2L2yLBEyxWtuiUzZwyP"
+  },
+  "beaconchain.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "chainhacker.eth": {
+    "textRecord": "https://ens.xyz/chainhacker.eth",
+    "avatarUrl": "https://ens.xyz/chainhacker.eth"
+  },
+  "nextme.eth": {
+    "textRecord": "https://euc.li/nextme.eth",
+    "avatarUrl": "https://euc.li/nextme.eth"
+  },
+  "0xbbbb.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "me3.eth": {
+    "textRecord": "ipfs://bafkreibtnn5sd63wbnhmsrtx43iae5e5ydj7irqj2zychojc7yrppi4emy",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafkreibtnn5sd63wbnhmsrtx43iae5e5ydj7irqj2zychojc7yrppi4emy"
+  },
+  "0xplus7.eth": {
+    "textRecord": "eip155:1/erc721:0x1d20a51f088492a0f1c57f047a9e30c9ab5c07ea/111",
+    "avatarUrl": null
+  },
+  "tealc.eth": {
+    "textRecord": "https://i.imgur.com/uBulH4V.gif",
+    "avatarUrl": "https://i.imgur.com/uBulH4V.gif"
+  },
+  "hidayath.eth": {
+    "textRecord": "eip155:1/erc721:0xae952e90f4ae0fd904f1ebdc717d2e0b5cd7dc60/0",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmPMxvtDX7j3mHiniajquj1Jx2twngThQejqvV3hRga2YG"
+  },
+  "mestar.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "aralekor.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "recipromancer.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "3bra.eth": {
+    "textRecord": "https://assets.3bra.com/images/avatars/avatar-ens.png",
+    "avatarUrl": "https://assets.3bra.com/images/avatars/avatar-ens.png"
+  },
+  "altascaster.eth": null,
+  "filevs.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "paul2.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "unblockreceipts.eth": {
+    "textRecord": "https://www.unblockreceipts.com/android-chrome-512x512.png",
+    "avatarUrl": "https://www.unblockreceipts.com/android-chrome-512x512.png"
+  },
+  "opscientia.eth": {
+    "textRecord": "https://bafkreiasimdnqwv4vdsbuml2se42d6f6zliyqp26ou3mveymubfs5yhl3i.ipfs.dweb.link/",
+    "avatarUrl": "https://bafkreiasimdnqwv4vdsbuml2se42d6f6zliyqp26ou3mveymubfs5yhl3i.ipfs.dweb.link/"
+  },
+  "vinayvasanji.eth": {
+    "textRecord": "https://euc.li/vinayvasanji.eth",
+    "avatarUrl": "https://euc.li/vinayvasanji.eth"
+  },
+  "web3beach.eth": {
+    "textRecord": "https://euc.li/web3beach.eth",
+    "avatarUrl": "https://euc.li/web3beach.eth"
+  },
+  "jackqack.eth": {
+    "textRecord": "eip155:1/erc721:0xef1a89cbfabe59397ffda11fc5df293e9bc5db90/4511",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafybeihlond74ij2vbzyuagma2uxtv2b7e4nmty6ujxbapqopsarzy3yo4/4315.png"
+  },
+  "blockhead.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "marcosolis.eth": {
+    "textRecord": "https://lh3.googleusercontent.com/drive-viewer/AJc5JmRTfqmKoDl3zVrCq7o_fGr2BW3A_EBYmSVFlDJosRWnkMYfNnYS5IbGJRls4SC3P0pc-3jRxc8=w1920-h973",
+    "avatarUrl": "https://lh3.googleusercontent.com/drive-viewer/AJc5JmRTfqmKoDl3zVrCq7o_fGr2BW3A_EBYmSVFlDJosRWnkMYfNnYS5IbGJRls4SC3P0pc-3jRxc8=w1920-h973"
+  },
+  "atticknight.eth": {
+    "textRecord": "https://euc.li/atticknight.eth",
+    "avatarUrl": "https://euc.li/atticknight.eth"
+  },
+  "dostr.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "thatguyintech.eth": {
+    "textRecord": "https://assets.deform.cc/thatguyintech.png",
+    "avatarUrl": "https://assets.deform.cc/thatguyintech.png"
+  },
+  "evmcrispr.eth": {
+    "textRecord": "https://evmcrispr.eth.limo/logo512.png",
+    "avatarUrl": "https://evmcrispr.eth.limo/logo512.png"
+  },
+  "yazdani.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "commonsstack.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "treecz.eth": {
+    "textRecord": "https://ens.xyz/treecz.eth",
+    "avatarUrl": "https://ens.xyz/treecz.eth"
+  },
+  "capitulation.eth": {
+    "textRecord": "eip155:1/ERC721:0xF3E778F839934fC819cFA1040AabaCeCBA01e049/15011",
+    "avatarUrl": null
+  },
+  "ipns.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "foolas.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "184.eth": {
+    "textRecord": "https://euc.li/184.eth",
+    "avatarUrl": "https://euc.li/184.eth"
+  },
+  "stargategavin.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "sporkster.eth": {
+    "textRecord": "https://euc.li/sporkster.eth",
+    "avatarUrl": "https://euc.li/sporkster.eth"
+  },
+  "yukinnn2007.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/104960635844694975928166925720134984087297734148077397095299712941758078779393",
+    "avatarUrl": "https://i.seadn.io/s/raw/files/666aedea8e47362662b100e3e88d1e64.jpg?w=500&auto=format"
+  },
+  "andinolabs.eth": {
+    "textRecord": "https://euc.li/andinolabs.eth",
+    "avatarUrl": "https://euc.li/andinolabs.eth"
+  },
+  "itublockchain.eth": {
+    "textRecord": "ipfs://QmeDFcUNLGaZjs6dCM28HYwszXQc5doEsJkis1a1b5UsVY",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmeDFcUNLGaZjs6dCM28HYwszXQc5doEsJkis1a1b5UsVY"
+  },
+  "orcaprotocol.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "sefu.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "nycmobile.eth": {
+    "textRecord": "https://euc.li/nycmobile.eth",
+    "avatarUrl": "https://euc.li/nycmobile.eth"
+  },
+  "maxi.eth": {
+    "textRecord": "https://i.imgur.com/KGcSyMx.jpg",
+    "avatarUrl": "https://i.imgur.com/KGcSyMx.jpg"
+  },
+  "enspoker.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "0xlucas.eth": {
+    "textRecord": "https://euc.li/0xlucas.eth",
+    "avatarUrl": "https://euc.li/0xlucas.eth"
+  },
+  "pairwise.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "ethdaily.eth": {
+    "textRecord": "eip155:1/erc721:0x12dd7684437d1a1b9A4b29aA460E982660106593/1",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafkreibsb3jinn2p4zgdijpb3ipshur6ucdvspprezpzfrazsnbqbxfhee?id=1"
+  },
+  "likebutton.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749Ce646f68AC8c248420045cb7b5e/61155629280242240552523361367168200207246744104025029435680038149317659197441",
+    "avatarUrl": "https://i.seadn.io/s/raw/files/8e0e76062d7a9fe53b27627dde1f8627.png?w=500&auto=format"
+  },
+  "wslyvh.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/8112316025873927737505937898915153732580103913704334048512380752480775962625",
+    "avatarUrl": null
+  },
+  "decimetils.eth": null,
+  "cassxbt.eth": {
+    "textRecord": "eip155:1/erc1155:0x0476ba0846a79b97686223ffd22448fc61a5c0d7/1",
+    "avatarUrl": "https://arweave.net/FpzxR2ClEnsGmT3WqSOynxpztxY4otzhELRflIlaoCQ"
+  },
+  "bianc8.eth": {
+    "textRecord": "https://euc.li/bianc8.eth",
+    "avatarUrl": "https://euc.li/bianc8.eth"
+  },
+  "camparimaximalist.eth": {
+    "textRecord": "https://euc.li/camparimaximalist.eth",
+    "avatarUrl": "https://euc.li/camparimaximalist.eth"
+  },
+  "spanish-or-vanish.eth": {
+    "textRecord": "ipfs://bafkreiay757ckqit3vzowkjwoyvwsbuz7lwljffq2mb56tfwi3vrpana4m",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafkreiay757ckqit3vzowkjwoyvwsbuz7lwljffq2mb56tfwi3vrpana4m"
+  },
+  "midena.eth": {
+    "textRecord": "https://euc.li/midena.eth",
+    "avatarUrl": "https://euc.li/midena.eth"
+  },
+  "pastofre.eth": {
+    "textRecord": "ipfs://bafybeihkocofvbc2hfins2ae4ufsfk7us6qhzzyk4l23sa2bzxmhp35fru",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafybeihkocofvbc2hfins2ae4ufsfk7us6qhzzyk4l23sa2bzxmhp35fru"
+  },
+  "izziaraffaele.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "dafra.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "slavni.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "ndovu.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "daemon.eth": {
+    "textRecord": "https://euc.li/daemon.eth",
+    "avatarUrl": "https://euc.li/daemon.eth"
+  },
+  "weird3.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "avsa.eth": {
+    "textRecord": "https://euc.li/avsa.eth",
+    "avatarUrl": "https://euc.li/avsa.eth"
+  },
+  "andrewpage.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "nick.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749ce646f68ac8c248420045cb7b5e/8112316025873927737505937898915153732580103913704334048512380490797008551937",
+    "avatarUrl": "https://i.seadn.io/gae/hKHZTZSTmcznonu8I6xcVZio1IF76fq0XmcxnvUykC-FGuVJ75UPdLDlKJsfgVXH9wOSmkyHw0C39VAYtsGyxT7WNybjQ6s3fM3macE?w=500&auto=format"
+  },
+  "aynieducativo.eth": {
+    "textRecord": "https://euc.li/aynieducativo.eth",
+    "avatarUrl": "https://euc.li/aynieducativo.eth"
+  },
+  "modularcrypto.eth": {
+    "textRecord": "https://euc.li/modularcrypto.eth",
+    "avatarUrl": "https://euc.li/modularcrypto.eth"
+  },
+  "daveytea.eth": {
+    "textRecord": "ipfs://QmTjyUyYZNaVKRfTmBW3sSbGha9nmoEj5LXaapAQVJDZ4s",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmTjyUyYZNaVKRfTmBW3sSbGha9nmoEj5LXaapAQVJDZ4s"
+  },
+  "glodollar.eth": {
+    "textRecord": "https://euc.li/glodollar.eth",
+    "avatarUrl": "https://euc.li/glodollar.eth"
+  },
+  "bloomnetwork.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "illuminated.eth": {
+    "textRecord": "https://euc.li/illuminated.eth",
+    "avatarUrl": "https://euc.li/illuminated.eth"
+  },
+  "dhive.eth": {
+    "textRecord": "https://euc.li/dhive.eth",
+    "avatarUrl": "https://euc.li/dhive.eth"
+  },
+  "iviangita.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "pabl0cks.eth": {
+    "textRecord": "https://ens.xyz/pabl0cks.eth",
+    "avatarUrl": "https://ens.xyz/pabl0cks.eth"
+  },
+  "2118.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "easlabs.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "stephancill.eth": {
+    "textRecord": "https://euc.li/stephancill.eth",
+    "avatarUrl": "https://euc.li/stephancill.eth"
+  },
+  "borderlessafrica.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "buidlguidl.eth": {
+    "textRecord": "https://euc.li/buidlguidl.eth",
+    "avatarUrl": "https://euc.li/buidlguidl.eth"
+  },
+  "eth-mexico.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  }
+}

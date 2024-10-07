@@ -1,0 +1,6 @@
+requests
+pandas
+pytz
+python-dotenv
+web3==5.31.3
+

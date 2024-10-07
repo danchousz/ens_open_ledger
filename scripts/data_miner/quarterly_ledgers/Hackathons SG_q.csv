@@ -1,0 +1,31 @@
+Quarter,From_category,To_category,Symbol,Value,DOT_USD
+2022Q3,Ecosystem,Hackathons,USDC,30000.0,30048.0
+2022Q3 Unspent,Hackathons SG,Hackathons SG,ETH,0.0,0.0
+2022Q3 Unspent,Hackathons SG,Hackathons SG,ENS,0.0,0.0
+2022Q3 Unspent,Hackathons SG,Hackathons SG,USDC,30000.0,30000.0
+2022Q4,Ecosystem,Hackathons,USDC,154250.0,154222.91999999998
+2022Q4 Unspent,Hackathons SG,Hackathons SG,ENS,0.0,0.0
+2022Q4 Unspent,Hackathons SG,Hackathons SG,USDC,184250.0,184250.0
+2022Q4 Unspent,Hackathons SG,Hackathons SG,ETH,0.0,0.0
+2023Q1,Ecosystem,Hackathons,USDC,112999.99859999999,112999.99859999999
+2023Q1,Ecosystem,Hackathons,ENS,1500.0,23114.37
+2023Q1 Unspent,Hackathons SG,Hackathons SG,ENS,1500.0,19965.0
+2023Q1 Unspent,Hackathons SG,Hackathons SG,ETH,0.0,0.0
+2023Q1 Unspent,Hackathons SG,Hackathons SG,USDC,297249.9986,297249.9986
+2023Q2,Ecosystem,Hackathons,USDC,31327.663399,31327.663399
+2023Q2 Unspent,Hackathons SG,Hackathons SG,ETH,0.0,0.0
+2023Q2 Unspent,Hackathons SG,Hackathons SG,ENS,1500.0,12915.0
+2023Q2 Unspent,Hackathons SG,Hackathons SG,USDC,328577.661999,328577.661999
+2023Q3,Ecosystem,Hackathons,USDC,22925.0,22925.0
+2023Q3,Ecosystem,Hackathons,ETH,-0.2088336639866346,-404.60269395426536
+2023Q3 Unspent,Hackathons SG,Hackathons SG,USDC,351502.661999,351502.661999
+2023Q3 Unspent,Hackathons SG,Hackathons SG,ENS,1500.0,11370.0
+2023Q3 Unspent,Hackathons SG,Hackathons SG,ETH,-0.2088336639866346,-348.54338519369315
+2024Q1,Ecosystem,Hackathons,USDC,240000.0,240000.0
+2024Q1 Unspent,Hackathons SG,Hackathons SG,ETH,-0.2088336639866346,-734.8230134697711
+2024Q1 Unspent,Hackathons SG,Hackathons SG,USDC,591502.661999,591502.661999
+2024Q1 Unspent,Hackathons SG,Hackathons SG,ENS,1500.0,32535.000000000004
+2024Q2,Ecosystem,Hackathons,USDC,14680.0,14680.0
+2024Q2 Unspent,Hackathons SG,Hackathons SG,USDC,606182.661999,606182.661999
+2024Q2 Unspent,Hackathons SG,Hackathons SG,ENS,1500.0,42075.0
+2024Q2 Unspent,Hackathons SG,Hackathons SG,ETH,-0.2088336639866346,-716.888378406599

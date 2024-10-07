@@ -1,0 +1,15 @@
+Quarter,From_category,To_category,Symbol,Value,DOT_USD
+2022Q3,Ecosystem,Translators,USDC,2768.0,2767.76
+2022Q3 Unspent,Translators SG,Translators SG,USDC,2768.0,2768.0
+2022Q3 Unspent,Translators SG,Translators SG,ENS,0.0,0.0
+2022Q3 Unspent,Translators SG,Translators SG,ETH,0.0,0.0
+2022Q4,Ecosystem,Translators,USDC,9287.89534,9287.89534
+2022Q4 Unspent,Translators SG,Translators SG,USDC,12055.89534,12055.89534
+2022Q4 Unspent,Translators SG,Translators SG,ENS,0.0,0.0
+2022Q4 Unspent,Translators SG,Translators SG,ETH,0.0,0.0
+2023Q1,Ecosystem,Translators,ENS,1000.0,15939.89
+2023Q1,Ecosystem,Translators,USDC,5039.561664,5039.561664
+2023Q1,Ecosystem,Translators,ETH,-2.0,-3170.94
+2023Q1 Unspent,Translators SG,Translators SG,USDC,17095.457004,17095.457004
+2023Q1 Unspent,Translators SG,Translators SG,ENS,1000.0,13310.0
+2023Q1 Unspent,Translators SG,Translators SG,ETH,-2.0,-3597.8
