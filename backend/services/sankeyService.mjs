@@ -16,7 +16,7 @@ export function getBigPictureData(hideMode) {
         }
         return row;
     });
-    return createSankeyData(modifiedDf, true, null, null, hideMode);
+    return createSankeyData(modifiedDf, true, null, null, false, hideMode);
 }
 
 export function getQuarterData(quarter) {
@@ -43,7 +43,7 @@ export function getQuarterData(quarter) {
         return false;
     });
 
-    return createSankeyData(filteredDf, false, quarter, null);
+    return createSankeyData(filteredDf, false, quarter, null, false);
 }
 
 export function getWalletData(quarter, walletFilter) {
@@ -67,7 +67,38 @@ export function getWalletData(quarter, walletFilter) {
 
     filteredDf = filteredDf.filter(row => row.From_category === walletFilter || row.To_category === walletFilter || row['Transaction Hash'] === walletFilter);
 
-    return createSankeyData(filteredDf, false, quarter, walletFilter);
+    return createSankeyData(filteredDf, false, quarter, walletFilter, false);
+}
+
+export function getYearData(year) {
+    const df = getData(true);
+    const yearInt = parseInt(year);
+    if (yearInt < 2022) {
+        throw new Error('Invalid year: data not available for years before 2022');
+    }
+
+    let filteredDf = df.filter(row => {
+        if (row['Transaction Hash'] === '0xdf821cb80860f015bff9ef1818cbb16e93682f071254f76a173db3db133dc534' 
+            || row['Transaction Hash'] === '0xdef61eb66b78c5b6acbe4c7eaa44438d1772e885a33588a5df0ca8bd63289a59') {
+            return
+        }
+        if (row.Quarter === year.toString()) {
+            if (row['Transaction Hash'] === 'Interquarter' && row.From_name !== 'Community WG') {
+                if (row.From_name !== 'DAO Wallet') {
+                    const nextYear = (yearInt + 1).toString();
+                    row.To_name = `Unspent_${row.From_name}_${nextYear}`;
+                    row.To_category = `Unspent_${row.From_name}_${nextYear}`;
+                    row['Transaction Hash'] = 'Unspent';
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+        return false;
+    });
+
+    return createSankeyData(filteredDf, false, year, null, true);
 }
 
 export function getCategorySankeyData(category, quarter) {

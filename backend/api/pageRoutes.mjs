@@ -15,6 +15,7 @@ router.get('/', sendIndexHtml);
 router.get('/fullview', sendIndexHtml);
 router.get('/quarter/:quarter', sendIndexHtml);
 router.get('/quarter/:quarter/:wallet', sendIndexHtml);
+router.get('/year/:year', sendIndexHtml);
 router.get('/category/:quarter/:category', sendIndexHtml);
 
 export { router as pageRoutes };

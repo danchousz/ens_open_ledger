@@ -5,13 +5,14 @@ export function exportData(view, filter, quarter) {
     let filteredDf;
 
     if (view === 'big_picture') {
-        filteredDf = df;
+        filteredDf = df.filter(row => row['Transaction Hash'] !== 'Interquarter');
     } else if (view === 'quarter') {
-        filteredDf = df.filter(row => row.Quarter === quarter);
+        filteredDf = df.filter(row => row.Quarter === quarter && row['Transaction Hash'] !== 'Unspent');
     } else if (view === 'wallet') {
         filteredDf = df.filter(row => 
             row.Quarter === quarter && 
             (row.From_name === filter || row.To_name === filter)
+            && row['Transaction Hash'] !== 'Unspent'
         );
     }
 

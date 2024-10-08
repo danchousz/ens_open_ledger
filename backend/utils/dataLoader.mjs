@@ -7,42 +7,55 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ledgerCsvFilePath = path.join(__dirname, '../..', 'frontend', 'data', 'ledger.csv');
+const ledgerYearCsvFilePath = path.join(__dirname, '../..', 'frontend', 'data', 'ledger_year.csv');
 const unknownContractorsCsvFilePath = path.join(__dirname, '../..', 'frontend', 'data', 'unknown_contractors.csv');
 
 let df;
+let dfYear;
 let unknownContractorsData;
 
-export function loadData() {
-    if (!df) {
-        try {
-            const csvData = fs.readFileSync(ledgerCsvFilePath, 'utf8');
-            df = csvParse(csvData);
-            df = df.map(row => {
-                if (row['Transaction Hash'] === 'Stream') {
-                    return { ...row, To_category: 'Stream' };
-                }
-                return row;
-            });
-            console.log('Ledger data loaded successfully');
-        } catch (error) {
-            console.error('Error reading ledger CSV file:', error);
-            throw error;
-        }
+export function loadData(isYear = false) {
+    const filePath = isYear ? ledgerYearCsvFilePath : ledgerCsvFilePath;
+    try {
+        const csvData = fs.readFileSync(filePath, 'utf8');
+        const parsedData = csvParse(csvData);
+        const processedData = parsedData.map(row => {
+            if (row['Transaction Hash'] === 'Stream') {
+                return { ...row, To_category: 'Stream' };
+            }
+            return row;
+        });
+        console.log(`${isYear ? 'Yearly' : 'Quarterly'} ledger data loaded successfully`);
+        return processedData;
+    } catch (error) {
+        console.error(`Error reading ${isYear ? 'yearly' : 'quarterly'} ledger CSV file:`, error);
+        throw error;
     }
-    return df;
+}
+
+export function getData(isYear = false) {
+    if (isYear) {
+        if (!dfYear) {
+            dfYear = loadData(true);
+        }
+        return dfYear;
+    } else {
+        if (!df) {
+            df = loadData();
+        }
+        return df;
+    }
 }
 
 export function reloadData() {
     df = null;
-    return loadData();
+    dfYear = null;
+    return {
+        quarterly: getData(),
+        yearly: getData(true)
+    };
 }
 
-export function getData() {
-    if (!df) {
-        return loadData();
-    }
-    return df;
-}
 
 export function loadUnknownContractorsData() {
     if (!unknownContractorsData) {

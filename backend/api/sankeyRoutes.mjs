@@ -1,5 +1,5 @@
 import express from 'express';
-import { getBigPictureData, getQuarterData, getWalletData, getCategorySankeyData } from '../services/sankeyService.mjs';
+import { getBigPictureData, getQuarterData, getWalletData, getCategorySankeyData, getYearData } from '../services/sankeyService.mjs';
 
 const router = express.Router();
 
@@ -21,6 +21,17 @@ router.get('/data/:quarter', (req, res) => {
         res.json(sankeyData);
     } catch (error) {
         console.error('Error creating Sankey data:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+router.get('/data/year/:year', (req, res) => {
+    try {
+        const year = req.params.year;
+        const sankeyData = getYearData(year);
+        res.json(sankeyData);
+    } catch (error) {
+        console.error('Error creating yearly Sankey data:', error);
         res.status(500).send('Internal Server Error');
     }
 });

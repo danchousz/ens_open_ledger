@@ -174,7 +174,9 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         df = df[df['To_name'] != 'Public Goods']
         df = df[df['From_name'] != 'Public Goods']
         df['To_category'] = df.apply(lambda row: 
-            "PG Large Grants" if row['Transaction Hash'] not in txs_dict else row['To_category'], axis=1)
+            row['To_category'] if row['To_name'].endswith('Swap') else
+            "PG Large Grants" if row['Transaction Hash'] not in txs_dict else 
+            row['To_category'], axis=1)
         
         cow_mask = df['From_name'] == 'CoW'
         swap_mask = df['From_name'].str.endswith('Swap')
@@ -189,7 +191,9 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         df = df[df['From_name'] != 'Ecosystem']
         base_category = folder_name.rsplit(' ', 1)[0]
         df['To_category'] = df.apply(lambda row: 
-            base_category if row['Transaction Hash'] not in txs_dict else row['To_category'], axis=1)
+            row['To_category'] if row['To_name'].endswith('Swap') else
+            base_category if row['Transaction Hash'] not in txs_dict else 
+            row['To_category'], axis=1)
         
         cow_mask = df['From_name'] == 'CoW'
         swap_mask = df['From_name'].str.endswith('Swap')
@@ -204,7 +208,9 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         df = df[df['From_name'] != 'Metagov']
         base_category = folder_name.rsplit(' ', 1)[0]
         df['To_category'] = df.apply(lambda row: 
-            base_category if row['Transaction Hash'] not in txs_dict else row['To_category'], axis=1)
+            row['To_category'] if row['To_name'].endswith('Swap') else
+            base_category if row['Transaction Hash'] not in txs_dict else 
+            row['To_category'], axis=1)
         
         cow_mask = df['From_name'] == 'CoW'
         swap_mask = df['From_name'].str.endswith('Swap')
@@ -217,7 +223,10 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
     elif folder_name == 'Support SG (pre-dissolve)':
         df = df[df['To_name'] != 'Community WG']
         df = df[df['From_name'] != 'Community WG']
-        df['To_category'] = 'Support'
+        df['To_category'] = df.apply(lambda row: 
+            row['To_category'] if row['To_name'].endswith('Swap') else
+            'Support' if row['Transaction Hash'] not in txs_dict else 
+            row['To_category'], axis=1)
         
         cow_mask = df['From_name'] == 'CoW'
         swap_mask = df['From_name'].str.endswith('Swap')
@@ -415,28 +424,40 @@ def get_unspent_date(quarter, prices_dict):
 
     return closest_date
 
-def calculate_interquarter_balances(df, wallet):
+def calculate_interperiod_balances(df, wallet, is_year=False):
     if wallet.endswith(' SG') or wallet.endswith(' Pod') or wallet == "Large Grants Pod":
         return pd.DataFrame()
+    
     df['Date'] = pd.to_datetime(df['Date'])
-    quarters = df['Date'].apply(get_quarter_end_date).unique()
-    interquarter_balances = []
+    
+    if is_year:
+        df['Period'] = df['Date'].dt.year
+        period_end_func = lambda year: pd.Timestamp(f"{year}-12-31")
+        quarter_func = lambda year: str(year)
+    else:
+        df['Period'] = df['Date'].apply(get_quarter_end_date)
+        period_end_func = lambda x: x
+        quarter_func = lambda date: f"{date.year}Q{(date.month - 1) // 3 + 1}"
 
-    for quarter_end in quarters:
-        quarter_df = df[df['Date'] <= quarter_end]
-        for symbol in quarter_df['Symbol'].unique():
-            from_balance = quarter_df[(quarter_df['Symbol'] == symbol) & (quarter_df['From_category'] == wallet)]['Value'].sum()
-            to_balance = quarter_df[(quarter_df['Symbol'] == symbol) & (quarter_df['To_category'] == wallet)]['Value'].sum()
+    periods = sorted(df['Period'].unique())
+    
+    interperiod_balances = []
+
+    for period_end in periods:
+        period_df = df[df['Period'] <= period_end]
+        for symbol in period_df['Symbol'].unique():
+            from_balance = period_df[(period_df['Symbol'] == symbol) & (period_df['From_category'] == wallet)]['Value'].sum()
+            to_balance = period_df[(period_df['Symbol'] == symbol) & (period_df['To_category'] == wallet)]['Value'].sum()
             net_balance = to_balance + from_balance
 
-            from_usd = quarter_df[(quarter_df['Symbol'] == symbol) & (quarter_df['From_category'] == wallet)]['DOT_USD'].sum()
-            to_usd = quarter_df[(quarter_df['Symbol'] == symbol) & (quarter_df['To_category'] == wallet)]['DOT_USD'].sum()
+            from_usd = period_df[(period_df['Symbol'] == symbol) & (period_df['From_category'] == wallet)]['DOT_USD'].sum()
+            to_usd = period_df[(period_df['Symbol'] == symbol) & (period_df['To_category'] == wallet)]['DOT_USD'].sum()
             net_usd = to_usd + from_usd
 
             if net_balance != 0:
-                interquarter_balances.append({
+                interperiod_balances.append({
                     'Transaction Hash': 'Interquarter',
-                    'Date': quarter_end,
+                    'Date': period_end_func(period_end),
                     'From': wallet,
                     'From_name': wallet,
                     'From_category': wallet,
@@ -446,13 +467,17 @@ def calculate_interquarter_balances(df, wallet):
                     'Value': 1 if wallet == 'Community WG' else net_balance,
                     'DOT_USD': 1 if wallet == 'Community WG' else net_usd,
                     'Symbol': symbol,
-                    'Acquainted?': 1
+                    'Acquainted?': 1,
+                    'Quarter': quarter_func(period_end)
                 })
 
-    return pd.DataFrame(interquarter_balances)
+    result_df = pd.DataFrame(interperiod_balances)
+    if 'Period' in result_df.columns:
+        result_df = result_df.drop(columns=['Period'])
+    return result_df
 
 # Function to combine local ledgers, remove duplicates and add interquarter balances
-def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict):
+def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=False):
     all_files = glob(os.path.join(local_ledgers_dir, '*.csv'), recursive=True)
     combined_df = pd.DataFrame()
     unacquainted_df = pd.DataFrame()
@@ -469,10 +494,10 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict):
         df = df[~(df['To_name'].str.endswith(' SG') | df['To_name'].str.endswith(' Pod') | df['From_name'].str.endswith(' SG') | df['From_name'].str.endswith(' Pod'))]
 
         wallet_name = os.path.splitext(os.path.basename(file))[0]
-        interquarter_df = calculate_interquarter_balances(df, wallet_name)
-        interquarter_df['Thru'] = 'Direct'
+        interperiod_df = calculate_interperiod_balances(df, wallet_name, is_year)
+        interperiod_df['Thru'] = 'Direct'
         
-        df = pd.concat([df, interquarter_df])
+        df = pd.concat([df, interperiod_df])
         combined_df = pd.concat([combined_df, df])
 
         temp_unacquainted_df = df[
@@ -519,9 +544,12 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict):
                            (combined_df['Transaction Hash'] != 'Stream') & 
                            combined_df.duplicated(subset=['Transaction Hash', 'From', 'To', 'Value'], keep='first'))]
 
-    combined_df['Quarter'] = combined_df['Date'].apply(add_quarter)
+    if is_year:
+        combined_df['Quarter'] = combined_df['Date'].dt.year.astype(str)
+    else:
+        combined_df['Quarter'] = combined_df['Date'].apply(add_quarter)
 
-    combined_df = combined_df[combined_df['Quarter'] > '2022Q1']
+    combined_df = combined_df[combined_df['Quarter'] > ('2021' if is_year else '2022Q1')]
 
     invalid_names_ref = combined_df[combined_df['To_category'] == 'Invalid Names Ref.'].copy()
     if not invalid_names_ref.empty:
@@ -543,7 +571,7 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict):
 
     stream_txs = combined_df[combined_df['Transaction Hash'] == 'Stream'].copy()
     if not stream_txs.empty:
-        stream_txs['Year-Month'] = stream_txs['Date'].dt.to_period('M')
+        stream_txs['Year-Month'] = stream_txs['Date'].dt.to_period('M' if not is_year else 'Y')
         aggregated_stream = stream_txs.groupby(['Year-Month', 'To_name', 'From', 'From_name', 'From_category', 
                                                 'To', 'To_category', 'Symbol', 'Quarter']).agg({
             'Date': 'last',
@@ -671,7 +699,11 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict):
     combined_df.sort_values(by=['sort_key'], inplace=True)
     combined_df.drop(columns=['sort_key'], inplace=True)
 
-    combined_df.to_csv(os.path.join(save_dir, 'ledger.csv'), index=False)
+    if 'Period' in combined_df.columns:
+            combined_df = combined_df.drop(columns=['Period'])
+
+    filename = 'ledger_year.csv' if is_year else 'ledger.csv'
+    combined_df.to_csv(os.path.join(save_dir, filename), index=False)
 
     return combined_df
 
@@ -730,7 +762,9 @@ def main(ens_wallets, various_txs):
 
         if folder_name != parent_wallet:
             named_df['To_category'] = named_df.apply(lambda row: 
-                base_category if row['Transaction Hash'] not in txs_dict else row['To_category'], axis=1)
+                row['To_category'] if row['To_name'].endswith('Swap') else
+                base_category if row['Transaction Hash'] not in txs_dict else 
+                row['To_category'], axis=1)
             
             named_df['From_name'] = named_df.apply(lambda row:
                 row['From_name'] if row['From_name'].endswith('Swap') else parent_wallet, axis=1)
@@ -744,7 +778,6 @@ def main(ens_wallets, various_txs):
                 row['To'][:8] if row['Acquainted?'] == 0 else row['To_name'], axis=1)
             named_df['Acquainted?'] = 1
             named_df = named_df[named_df['To_name'] != folder_name]
-
         if parent_wallet not in parent_wallets:
             parent_wallets[parent_wallet] = named_df
         else:
@@ -767,6 +800,8 @@ def main(ens_wallets, various_txs):
         final_df.to_csv(grouped_file, index=False)
 
     combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict)
+
+    combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=True)
 
 if __name__ == "__main__":
     main(ens_wallets, various_txs)
