@@ -19,10 +19,12 @@ initializeCronJobs();
 const app = express();
 const port = 3000;
 
-app.use(express.static(path.join('..', 'frontend')));
 app.use(express.json());
 
 app.use(pageRoutes);
+
+app.use(express.static(path.join('..', 'frontend')));
+
 app.use(sankeyRoutes);
 app.use(avatarRoutes);
 app.use(recipientRoutes);

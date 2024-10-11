@@ -1,0 +1,14 @@
+#detailsContent {
+    max-height: calc(90vh - 10px);
+    padding-right: 1.42vw;
+    margin-right: -1.42vw;
+}
+
+#detailsContent::-webkit-scrollbar {
+    display: none;
+}
+
+#detailsContent {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

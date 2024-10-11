@@ -1,5 +1,5 @@
 import express from 'express';
-import { getBigPictureData, getQuarterData, getWalletData, getCategorySankeyData, getYearData } from '../services/sankeyService.mjs';
+import { getBigPictureData, getQuarterData, getWalletData, getCategorySankeyData, getYearData, getYearWalletData, getYearCategoryData } from '../services/sankeyService.mjs';
 
 const router = express.Router();
 
@@ -48,7 +48,7 @@ router.get('/data/:quarter/:wallet', (req, res) => {
     }
 });
 
-router.get('/category-sankey-data/:category/:quarter', (req, res) => {
+router.get('/category-sankey-data/quarter/:quarter/category/:category', (req, res) => {
     try {
         const category = req.params.category;
         const quarter = req.params.quarter;
@@ -56,6 +56,31 @@ router.get('/category-sankey-data/:category/:quarter', (req, res) => {
         res.json(sankeyData);
     } catch (error) {
         console.error('Error creating category Sankey data:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+router.get('/category-sankey-data/year/:year/category/:category', (req, res) => {
+    try {
+        const category = req.params.category;
+        const year = req.params.year;
+        const sankeyData = getYearCategoryData(category, year);
+        res.json(sankeyData);
+    } catch (error) {
+        console.error('Error creating yearly category Sankey data:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// New routes for yearly wallet and category views
+router.get('/data/year/:year/:wallet', (req, res) => {
+    try {
+        const year = req.params.year;
+        const walletFilter = req.params.wallet;
+        const sankeyData = getYearWalletData(year, walletFilter);
+        res.json(sankeyData);
+    } catch (error) {
+        console.error('Error creating yearly wallet Sankey data:', error);
         res.status(500).send('Internal Server Error');
     }
 });

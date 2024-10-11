@@ -1,7 +1,7 @@
 import { getData } from '../utils/dataLoader.mjs';
 
-export function getContractorsData(category, quarter, sender) {
-    const df = getData();
+export function getContractorsData(category, quarter, sender, isYear = false) {
+    const df = getData(isYear);
 
     let filteredData = df.filter(row =>
         row.Quarter === quarter &&

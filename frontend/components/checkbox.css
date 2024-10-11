@@ -1,0 +1,90 @@
+.checkbox {
+    font: inherit;
+    display: grid;
+    position: relative;
+    place-content: center;
+    transition: transform 150ms ease-in-out, filter 150ms ease-in-out;
+    cursor: pointer;
+    width: var(--space-5, 1.42vw);
+    height: var(--space-5, 1.42vw);
+    border-radius: var(--radii-small, 0.28vw);
+    background-color: var(--color-border, #e0e0e0);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    margin-left: 0;
+}
+
+.checkbox:checked {
+    background: var(--color-accent-primary, #007bff);
+}
+
+.checkbox::before {
+    content: '';
+    background: var(--color-border, #e0e0e0);
+    mask-image: url('data:image/svg+xml; utf8, <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12.625L10.125 20.125L22 3.875" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+    mask-repeat: no-repeat;
+    width: var(--space-3, 0.857vw);
+    height: var(--space-3, 0.857vw);
+    transition: all 90ms ease-in-out;
+}
+
+.checkbox:hover {
+    transform: translateY(-0.121vh);
+}
+
+.checkbox:hover::before,
+.checkbox:checked::before {
+    background: var(--color-text, #ffffff);
+}
+
+.checkbox:disabled {
+    cursor: not-allowed;
+}
+
+.checkbox:disabled::before,
+.checkbox:disabled:hover::before {
+    background: var(--color-border, #e0e0e0);
+}
+
+.checkbox:disabled:checked,
+.checkbox:disabled:checked:hover {
+    background: var(--color-border, #e0e0e0);
+}
+
+.checkbox:disabled:checked::before,
+.checkbox:disabled:checked:hover::before {
+    background: var(--color-grey-primary, #808080);
+}
+
+.option-button-text {
+    font-family: satoshi;
+    font-size: 1.14vw;
+    align-self: center;
+}
+
+#chartTypeToggle {
+    top: 10%;
+    left: 87%;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+  .checkbox {
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: var(--radii-small, 0.7vw);
+  }
+  .checkbox:hover {
+    transform: none;
+  }
+  .checkbox::before {
+    content: '';
+    background: var(--color-border, #e0e0e0);
+    mask-image: url('data:image/svg+xml; utf8, <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12.625L10.125 20.125L22 3.875" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+    mask-repeat: no-repeat;
+    width: var(--space-3, 2.8vw);
+    height: var(--space-3, 2.8vw);
+    transition: all 90ms ease-in-out;
+  }
+}

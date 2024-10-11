@@ -7,9 +7,13 @@ router.get('/contractors/:category', (req, res) => {
     const category = req.params.category;
     const quarter = req.query.quarter;
     const sender = req.query.sender;
+    let isYear = false;
 
+    if (quarter.match(/^\d{4}$/)) {
+        isYear = true;
+    }
     try {
-        const result = getContractorsData(category, quarter, sender);
+        const result = getContractorsData(category, quarter, sender, isYear);
         res.json(result);
     } catch (error) {
         console.error('Error getting contractors data:', error);

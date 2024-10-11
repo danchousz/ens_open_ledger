@@ -1,13 +1,15 @@
 {
-  "name": "sankey_project",
+  "name": "ENS_Open_Ledger",
   "version": "1.0.0",
   "description": "",
-  "main": "app.mjs",
+  "main": "server.mjs",
   "scripts": {
-    "start": "node server.mjs",
-    "dev": "nodemon server.mjs"
+    "start": "cd backend && node server.mjs"
   },
-  "author": "avsa.eth",
+  "authors": [
+    "Alex Van de Sande",
+    "Daniel Potyomka"
+  ],
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.5",

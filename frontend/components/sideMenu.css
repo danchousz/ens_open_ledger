@@ -1,0 +1,112 @@
+.page-container {
+    display: flex;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    width: 23vw;
+    background-color: white;
+    color: black;
+    padding: 1.428vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0.142vw 0 0.357vw rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+.side-menu h1 {
+    font-size: 1.71vw;
+    margin-bottom: 2.43vh;
+}
+
+.side-menu p {
+    font-size: 0.92vw;
+    line-height: 1.5;
+}
+
+.side-menu-content {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.side-menu.collapsed {
+    width: 1.42vw;
+    padding: 0;
+    transition: none;
+}
+
+.side-menu.expanding {
+    transition: width 0.3s ease-in-out;
+}
+
+.options {
+    margin-top: 0px;
+}
+
+.side-menu-content,
+.side-menu-buttons {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.side-menu.collapsed .side-menu-content,
+.side-menu.collapsed .side-menu-buttons {
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+}
+
+.side-menu.expanding .side-menu-content,
+.side-menu.expanding .side-menu-buttons {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.side-menu.collapsed .collapse-icon {
+    transform: rotate(180deg);
+    transition: none;
+}
+
+.side-menu.expanding .collapse-icon {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+#toChartButton {
+    display: none;
+}
+
+@media (max-width = 768px) {
+    .side-menu {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        z-index: 2;
+        transition: none;
+    }
+    .side-menu-content {
+        border: solid 5.25vw white;
+        flex-grow: 0;
+        overflow: hidden;
+    }
+    .side-menu-buttons {
+        border: solid 5.25vw white;
+        margin-top:10vw;
+    }
+    .side-menu p {
+        font-size: 2.6vw;
+        line-height: 2;
+    }
+    .side-menu.expanding {
+        transition: none;
+    }
+    .side-menu-content,
+    .side-menu-buttons {
+        transition: none;
+    }
+}

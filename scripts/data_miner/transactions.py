@@ -362,5 +362,7 @@ various_txs = [
         ("Mini Grants", "0x643b11eb77bc8ff747ea1fa819c8894d6bab9aa77ec09aa390301699ab174df1"),
 
 #Q4 2024
-    ("SMM", "0x82c80e435235b09a7a399a453bf87d07f3d972553f3ca2a586edf7f5f967ce51"),
+    #Ecosystem
+        ("SMM", "0x82c80e435235b09a7a399a453bf87d07f3d972553f3ca2a586edf7f5f967ce51"),
+        ("Eco. Grants", "0x6f5b3d6fd14f54be1973af424024d54758ee3c7ddb0e1a8185b26c02476176fd"),
 ]

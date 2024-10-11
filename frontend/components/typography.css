@@ -1,0 +1,49 @@
+.typography {
+    font-family: var('Satoshi');
+    line-height: var(--line-height-body, 1.5);
+    color: var(--color-text, #000);
+}
+
+.typography--ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.typography--body {
+    font-size: var(--font-size-body, 1.14vw);
+    font-weight: var(--font-weight-body, 400);
+    line-height: var(--line-height-body, 1.5);
+}
+
+.typography--heading {
+    font-size: var(--font-size-heading, 1.25vw);
+    font-weight: var(--font-weight-heading, 700);
+    line-height: var(--line-height-heading, 1.2);
+    margin-top: 1.75vh;
+}
+
+.typography--subheading {
+    font-size: var(--font-size-subheading, 1.42vw);
+    font-weight: var(--font-weight-subheading, 600);
+    line-height: var(--line-height-subheading, 1.3);
+}
+
+
+.typography--medium {
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.typography--bold {
+    font-weight: var(--font-weight-bold, 700);
+}
+
+@media (max-width: 768px) {
+    .typography--heading {
+        font-size: 4.35vw;
+        margin-top: 4.35vw;
+    }
+    .typography--medium {
+        font-size: 2.6vw;
+    }
+}

@@ -1,0 +1,22 @@
+body {
+    font-family: Satoshi;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.logo {
+    width: 100%;
+    border-radius: 1.14vw;
+}
+
+a:visited {
+  color: #2f7cff;
+}
+
+@media (max-width: 768px) {
+    .logo {
+      height: 43.4vw;
+      border-radius: 5.8vw;
+    }
+}

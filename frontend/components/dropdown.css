@@ -1,0 +1,244 @@
+.dropdown-container {
+    display: inline-block;
+}
+
+.contractors-dropdown {
+    position: absolute;
+    background-color: white;
+    border: 0.071vw solid #e0e0e0;
+    border-radius: 1.142vw;
+    box-shadow: 0px 0.57vw 1.14vw 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    height: fit-content;
+    max-height: 80vh;
+    overflow-y: auto;
+    min-width: 200px;
+    padding-top: 0.5vw;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0.75vh;
+    transform: translateY(0px);
+    opacity: 1;
+    border: solid 0.71vw white;
+    width: fit-content;
+}
+
+.contractors-dropdown-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+.contractors-dropdown h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contractors-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contractors-dropdown li {
+    padding: 0.57vw 0.85vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10%;
+}
+
+.contractors-dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+#dropdownTitle {
+    font-size: 1.33vw;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header {
+    font-size: 1.2vw;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 0.625vh;
+}
+
+.summary-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1.25vh;
+    padding: 0.71vw;
+    border: solid 0.071vw #ddd;
+    min-height: 9vw;
+}
+
+.summary-title {
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 0.625vh;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.summary-values {
+    font-size: 1.7vw;
+    white-space: nowrap;
+    text-align: end;
+}
+
+.swaps-container {
+    padding: 0.71vw;
+    border: 0.071vw solid #ddd;
+    margin-bottom: 1.25vh;
+}
+
+.swaps-title {
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 0.625vh;
+}
+
+.summary-header {
+    margin-bottom: 0.625vh;
+}
+
+.short-summ-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.category-chart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.35vw;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    width: 100%;
+    justify-content: center;
+}
+
+.category-chart-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.category-chart-button img {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 0.21vw;
+}
+
+#contractorsList {
+    font-size: 1.14vw;
+}
+
+.category-title {
+    flex-grow: 1;
+    font-size: 1.7vw;
+}
+
+.swap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+  
+.swap-hash {
+    color: #2f7cff;
+    text-decoration: none;
+}
+
+.category-chart-icon {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.category-chart-icon:hover {
+    opacity: 0.7;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contractors-dropdown {
+        border-radius: 7%;
+        margin-top: 0;
+        border: none;
+    }
+    .contractors-dropdown-content {
+        width: unset;
+        border: solid 4vw white;
+        height: 100%;
+    }
+    #dropdownTitle {
+        font-size: 5vw;
+    }
+    .category-title {
+        font-size: unset;
+    }
+    .swaps-title {
+        font-size: unset;
+    }
+    .column-header {
+        font-size: unset;
+    }
+    .summary-title {
+        font-size: 3vw;
+    }
+    .summary-section {
+        min-height: 20vh;
+    }
+    .summary-values {
+        font-size: unset;
+    }
+    .category-chart-button {
+        justify-content: start;
+        margin-top: 0.6vh;
+        margin-bottom: 1.7vh;
+    }
+    .category-chart-button img {
+        width: 9.5vw;
+        height: 9.5vw;
+        margin-right: 2vw;
+    }
+    .contractors-dropdown li {
+        padding: 2.5vw 2.8vw;
+    }
+    #contractorsList {
+        font-size: 7vw;
+        width: 100%;
+    }
+}

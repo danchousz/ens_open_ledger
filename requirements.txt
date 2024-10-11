@@ -1,6 +1,4 @@
-requests
-pandas
-pytz
-python-dotenv
+requests=2.32.3
+pandas=2.2.2
+pytz=2024.1
 web3==5.31.3
-

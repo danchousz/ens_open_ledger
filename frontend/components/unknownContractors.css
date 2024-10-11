@@ -1,0 +1,52 @@
+#transactionsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93vw;
+}
+
+#transactionsTable th, #transactionsTable td {
+    border: 0.071vw solid #ddd;
+    padding: 0.857vw;
+    text-align: center;
+}
+
+#transactionsTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#transactionsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#transactionsTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+.checkmark {
+    color: #4CAF50;
+    font-size: 1.2vw;
+    margin-left: 0.5vw;
+}
+
+.modal-title {
+    font-family: montserrat, sans-serif;
+    font-size: 1.8vw;
+    color: #333;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 0.4vw;
+    font-size: 1vw;
+    border: 1px solid #ddd;
+    border-radius: 0.25vw;
+}
+
+@media (max-width: 768px) {
+    #transactionsTable th, #transactionsTable td {
+        font-size: 2vw;
+    }
+}

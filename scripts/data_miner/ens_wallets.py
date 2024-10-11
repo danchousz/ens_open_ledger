@@ -285,6 +285,8 @@ ens_wallets = [
     ("yukinnn2007.eth", "Endpoint", "0xd6f030a6be2dceae7a5ac418f98e90adebc8cb2b"),
     ("Denca", "Endpoint", "0x90575de93554bb5b7728b076257cc790c9ae98df"),
 
+    ("3DNS", "Endpoint", "0xbba294d303555032c6bd1021c639654b95e77fa8"),
+
 
     # SG Contractors
         # Ecosystem
