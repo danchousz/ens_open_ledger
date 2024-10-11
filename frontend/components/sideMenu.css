@@ -77,10 +77,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-#toChartButton {
-    display: none;
-}
-
 @media (max-width: 768px) {
     .side-menu {
         width: 100%;
@@ -96,7 +92,6 @@
     }
     .side-menu-buttons {
         border: solid 5.25vw white;
-        margin-top:10vw;
     }
     .side-menu p {
         font-size: 2.6vw;

@@ -206,6 +206,10 @@
     left: 3%;
 }
 
+#toChartButton {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #downloadButton {
         display: none;
@@ -217,7 +221,7 @@
         display: flex;
         font-size: 4vw;
         border-radius: 2.9vw;
-        bottom: 80%;
+        bottom: 0;
     }
     .options {
         display: none;
