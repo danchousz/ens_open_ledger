@@ -1,6 +1,6 @@
 import { spendingLinksDictionary, requestLinksDictionary } from './reportDicts.js';
 import { navigator, updateContextButton } from '../navigator.js';
-import { formatValue, getMonthRange } from '../../services/utils.js';
+import { formatValue, getMonthRange, getEtherscanLink } from '../../services/utils.js';
 import { showRecipientDetails } from '../tables/recipientDetails.js';
 import { getSideMenuState } from '../globalStates.js';
 import { specialWallets, isDesktop } from '../globalVars.js';
