@@ -5,7 +5,7 @@ from glob import glob
 from ens_wallets import ens_wallets
 from transactions import various_txs
 from asset_prices import prices
-from excluded_hashes import bad_hashes
+from excluded_hashes import bad_hashes, ignore_duplicates
 
 # Function aimed at unifying data downloaded from etherscan for erc-20 transactions
 def process_erc20_txs(token_file, prices_dict):
@@ -184,8 +184,8 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         df.loc[cow_mask | swap_mask, ['To_name', 'To_category']] = 'Public Goods'
         df.loc[~(cow_mask | swap_mask), ['From_name', 'From_category']] = 'Public Goods'
         
-        df['Value'] = -abs(df['Value'])
-        df['DOT_USD'] = -abs(df['DOT_USD'])
+        df.loc[~(cow_mask | swap_mask), 'Value'] = -abs(df.loc[~(cow_mask | swap_mask), 'Value'])
+        df.loc[~(cow_mask | swap_mask), 'DOT_USD'] = -abs(df.loc[~(cow_mask | swap_mask), 'DOT_USD'])
     elif folder_name.endswith(' SG'):
         df = df[df['To_name'] != 'Ecosystem']
         df = df[df['From_name'] != 'Ecosystem']
@@ -197,12 +197,15 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         
         cow_mask = df['From_name'] == 'CoW'
         swap_mask = df['From_name'].str.endswith('Swap')
+
+        inter_wg_send = df['To_name'] == 'Metagov'
         
         df.loc[cow_mask | swap_mask, ['To_name', 'To_category']] = 'Ecosystem'
         df.loc[~(cow_mask | swap_mask), ['From_name', 'From_category']] = 'Ecosystem'
+        df.loc[inter_wg_send, ['To_name', 'To_category']] = 'Metagov'
         
-        df['Value'] = -abs(df['Value'])
-        df['DOT_USD'] = -abs(df['DOT_USD'])
+        df.loc[~(cow_mask | swap_mask), 'Value'] = -abs(df.loc[~(cow_mask | swap_mask), 'Value'])
+        df.loc[~(cow_mask | swap_mask), 'DOT_USD'] = -abs(df.loc[~(cow_mask | swap_mask), 'DOT_USD'])
     elif folder_name.endswith(' Pod'):
         df = df[df['To_name'] != 'Metagov']
         df = df[df['From_name'] != 'Metagov']
@@ -218,8 +221,8 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         df.loc[cow_mask | swap_mask, ['To_name', 'To_category']] = 'Metagov'
         df.loc[~(cow_mask | swap_mask), ['From_name', 'From_category']] = 'Metagov'
         
-        df['Value'] = -abs(df['Value'])
-        df['DOT_USD'] = -abs(df['DOT_USD'])
+        df.loc[~(cow_mask | swap_mask), 'Value'] = -abs(df.loc[~(cow_mask | swap_mask), 'Value'])
+        df.loc[~(cow_mask | swap_mask), 'DOT_USD'] = -abs(df.loc[~(cow_mask | swap_mask), 'DOT_USD'])
     elif folder_name == 'Support SG (pre-dissolve)':
         df = df[df['To_name'] != 'Community WG']
         df = df[df['From_name'] != 'Community WG']
@@ -234,8 +237,8 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
         df.loc[cow_mask | swap_mask, ['To_name', 'To_category']] = 'Community WG'
         df.loc[~(cow_mask | swap_mask), ['From_name', 'From_category']] = 'Community WG'
         
-        df['Value'] = -abs(df['Value'])
-        df['DOT_USD'] = -abs(df['DOT_USD'])
+        df.loc[~(cow_mask | swap_mask), 'Value'] = -abs(df.loc[~(cow_mask | swap_mask), 'Value'])
+        df.loc[~(cow_mask | swap_mask), 'DOT_USD'] = -abs(df.loc[~(cow_mask | swap_mask), 'DOT_USD'])
 
     if folder_name.endswith(' SG') or folder_name.endswith(' Pod') or folder_name == "Large Grants Pod":
         df = df.copy()
@@ -302,6 +305,8 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
 
         df.loc[(df['Transaction Hash'] == '0x15b33f26832e8c7eb39448e94ddd13b48e73c22df414e1b9d55dabc1df540b2d') & 
             (df['To'] == '0xa19a7ae868ede64c6c5256a64bcd3bf3a9f2d615'), 'To_name'] = 'cryptowork.eth'
+        
+        df = df[df['From_name'] != 'Dissolved Community WG']
 
         return df
 
@@ -476,20 +481,79 @@ def calculate_interperiod_balances(df, wallet, is_year=False):
         result_df = result_df.drop(columns=['Period'])
     return result_df
 
+def add_dissolution_records():
+    return [
+        {
+            'Transaction Hash': 'Dissolution',
+            'Date': '2022-07-01',
+            'From': 'Community WG',
+            'From_name': 'Community WG',
+            'From_category': 'Community WG',
+            'To': 'Ecosystem',
+            'To_name': 'Ecosystem',
+            'To_category': 'Ecosystem',
+            'Value': 486,
+            'DOT_USD': 4332,
+            'Symbol': 'ENS',
+            'Acquainted?': 1,
+            'Quarter': '2022Q3'
+        },
+        {
+            'Transaction Hash': 'Dissolution',
+            'Date': '2022-07-01',
+            'From': 'Community WG',
+            'From_name': 'Community WG',
+            'From_category': 'Community WG',
+            'To': 'Ecosystem',
+            'To_name': 'Ecosystem',
+            'To_category': 'Ecosystem',
+            'Value': 54000,
+            'DOT_USD': 54000,
+            'Symbol': 'USDC',
+            'Acquainted?': 1,
+            'Quarter': '2022Q3'
+        }
+    ]
+
+def add_txs_from_sgs_to_non_parent_wallets():
+    return [
+        {
+            'Transaction Hash': 'Interwallet',
+            'Date': '2024-01-08',
+            'From': 'Bug Bounty',
+            'From_name': 'Bug Bounty',
+            'From_category': 'Bug Bounty',
+            'To': 'Metagov',
+            'To_name': 'Metagov',
+            'To_category': 'Metagov',
+            'Value': 14000,
+            'DOT_USD': 14000,
+            'Symbol': 'USDC',
+            'Acquainted?': 1,
+            'Quarter': '2024Q1'
+        }
+    ]
+
 # Function to combine local ledgers, remove duplicates and add interquarter balances
 def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=False):
     all_files = glob(os.path.join(local_ledgers_dir, '*.csv'), recursive=True)
     combined_df = pd.DataFrame()
     unacquainted_df = pd.DataFrame()
+    dissolution_df = pd.DataFrame(add_dissolution_records())
+    interwallet_df = pd.DataFrame(add_txs_from_sgs_to_non_parent_wallets())
 
     for file in all_files:
         print(f"Processing file: {file}")
         df = pd.read_csv(file).copy()
+        if file.endswith('Ecosystem.csv'):
+            df = pd.concat([df, dissolution_df])
+        if file.endswith('Metagov.csv'):
+            df = pd.concat([df, interwallet_df])
         if 'From_category' not in df.columns or 'To_category' not in df.columns:
             print(f"Skipping file due to missing columns: {file}")
             continue 
         df['Date'] = pd.to_datetime(df['Date'])
-        df = df[(df['From_category'] != 'WETH Contract') & (df['To_category'] != 'WETH Contract')].copy()
+        df = df[(df['From_name'] != 'WETH Contract') & (df['To_name'] != 'WETH Contract')].copy()
 
         df = df[~(df['To_name'].str.endswith(' SG') | df['To_name'].str.endswith(' Pod') | df['From_name'].str.endswith(' SG') | df['From_name'].str.endswith(' Pod'))]
 
@@ -535,14 +599,21 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=
     names_to_remove = ['Token Timelock', 'slobo.eth', 'capitulation.eth', 'Disperse.app', 'ETHGlobal', 'ImmuneFi', 'PG Large Grants Pod']
     combined_df = combined_df[~combined_df['From_name'].isin(names_to_remove)]
 
-    mutual_removes = ['Ecosystem']
-    mutual_removes_2 = ['New Registrar']
-    combined_df = combined_df[~(combined_df['From_name'].isin(mutual_removes) & combined_df['To_name'].isin(mutual_removes_2))]
-    combined_df = combined_df[~(combined_df['To_name'].isin(mutual_removes) & combined_df['From_name'].isin(mutual_removes_2))]
+    combined_df = combined_df[~((combined_df['From_name'] == 'New Registrar') & 
+                                (combined_df['To_name'] == 'Ecosystem'))]
 
-    combined_df = combined_df[~((combined_df['Transaction Hash'] != 'Interquarter') & 
-                           (combined_df['Transaction Hash'] != 'Stream') & 
-                           combined_df.duplicated(subset=['Transaction Hash', 'From', 'To', 'Value'], keep='first'))]
+    mask = (combined_df['From_name'] == 'Ecosystem') & (combined_df['To_name'] == 'New Registrar')
+    combined_df.loc[mask, 'To_name'] = 'Registrar'
+    combined_df.loc[mask, 'To_category'] = 'Names Renewal'
+
+    duplicate_mask = (
+        (combined_df['Transaction Hash'] != 'Interquarter') &
+        (combined_df['Transaction Hash'] != 'Stream') &
+        (~combined_df['Transaction Hash'].isin(ignore_duplicates)) &
+        combined_df.duplicated(subset=['Transaction Hash', 'From', 'To', 'Value'], keep='first')
+    )
+
+    combined_df = combined_df[~duplicate_mask]
 
     if is_year:
         combined_df['Quarter'] = combined_df['Date'].dt.year.astype(str)
@@ -771,8 +842,12 @@ def main(ens_wallets, various_txs):
             named_df['From_category'] = named_df.apply(lambda row:
                 row['From_category'] if row['From_name'].endswith('Swap') else parent_wallet, axis=1)
             
-            named_df['To_category'] = named_df.apply(lambda row:
-                parent_wallet if row['From_name'].endswith('Swap') else row['To_category'], axis=1)
+            named_df['To_name'] = named_df.apply(lambda row:
+                parent_wallet if row['From_name'].endswith('Swap') else row['To_name'], axis=1)
+            named_df['To_category'] = named_df.apply(lambda row: 
+                parent_wallet if row['From_name'].endswith('Swap') 
+                else ('Metagov' if row['To_name'] == 'Metagov' 
+                else row['To_category']), axis=1)
             
             named_df['To_name'] = named_df.apply(lambda row: 
                 row['To'][:8] if row['Acquainted?'] == 0 else row['To_name'], axis=1)
@@ -789,7 +864,7 @@ def main(ens_wallets, various_txs):
         df.to_csv(local_ledgers_file, index=False, columns=[col for col in df.columns if col != 'Original_WETH'])
 
         acquainted_df = df[df['Acquainted?'] == 1].copy()
-        cleaned_df = acquainted_df[(acquainted_df['From_category'] != 'WETH Contract') & (acquainted_df['To_category'] != 'WETH Contract')].copy()
+        cleaned_df = acquainted_df[(acquainted_df['From_name'] != 'WETH Contract') & (acquainted_df['To_name'] != 'WETH Contract')].copy()
         grouped_df = group_by_quarter(cleaned_df)
 
         unspent_rows_df = add_unspent_balances(grouped_df, prices_dict, parent_wallet)

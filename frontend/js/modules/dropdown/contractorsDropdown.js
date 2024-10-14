@@ -93,15 +93,18 @@ export function showContractorsDropdown(category, clickX, clickY, categoryIndex,
                     <div style="color: black; font-family: satoshi; font-size: ${isDesktop ? '1.14vw' : '5.5vw'}; align-self: center;">See All-Time Statistics</div>
                 </button>`
         // We don't add the internal column in any display but Big_picture
+        const isDiss = category === 'Community WG'
+        ? 'Dissolution'
+        : false;
         const internalColumn = !isSpecial 
         ? ''
         : navigator.currentView === 'big_picture'
             ? `<div class="column">
                     <div class="column-header">Internal</div>
-                    ${generateSummarySection('BROUGHT FORWARD', interquarterInArgs, categoryIndex)}
-                    ${generateSummarySection('CARRIED DOWN', interquarterOutArgs, categoryIndex)}
+                    ${generateSummarySection('BROUGHT FORWARD', interquarterInArgs, false, categoryIndex, category)}
+                    ${generateSummarySection('CARRIED DOWN', interquarterOutArgs, isDiss, categoryIndex, category)}
                 </div>`
-            : ''
+            : '';
 
         if (!isSpecial) {
             dropdown.style.width = 'fit-content';
@@ -156,8 +159,8 @@ export function showContractorsDropdown(category, clickX, clickY, categoryIndex,
                     ${internalColumn}
                     <div class="column" style="width: ${navigator.currentView === 'big_picture' ? '48%' : 'unset'}; min-width: ${navigator.currentView === 'big_picture' ? '48%' : '100%'}"}">
                         <div class="column-header">External</div>
-                        ${generateSummarySection('RECEIVED', sumInArgs, 'Funding Request', categoryIndex)}
-                        ${generateSummarySection('SENT', sumOutArgs, 'Spending Summary', categoryIndex)}
+                        ${generateSummarySection('RECEIVED', sumInArgs, 'Funding Request', categoryIndex, category)}
+                        ${generateSummarySection('SENT', sumOutArgs, 'Spending Summary', categoryIndex, category)}
                     </div>
                 </div>
                 ${generateSwapsSection(swaps)}
@@ -415,7 +418,7 @@ function generateValueDivs(arr) {
     return arr.map(value => `<div>${value}</div>`).join('');
 }
 
-function generateSummarySection(title, values, linkType, categoryIndex) {
+function generateSummarySection(title, values, linkType, categoryIndex, category) {
     let linkHtml = '';
     if (linkType && (title === 'RECEIVED' || title === 'SENT')) {
         const link = linkType === 'Spending Summary'
@@ -424,13 +427,18 @@ function generateSummarySection(title, values, linkType, categoryIndex) {
         linkHtml = link ? `<a href="${link}" target="_blank" style="text-decoration: none; color: #2f7cff;">${linkType}</a>` : '';
     }
 
+    if (linkType && linkType === 'Dissolution') {
+        linkHtml = `<a href="https://snapshot.org/#/ens.eth/proposal/0xa64ec8b446e509cb4b75092c4a714897790b70e2711fc3d6afa969c250e7eb92" target="_blank" style="text-decoration: none; color: #2f7cff;">${linkType}</a>`
+    }
+
+    console.log('category:', category);
     return `
         <div class="summary-section">
             <div class="summary-header">
                 <div class="summary-title">${title} ${linkHtml}</div>
             </div>
             <div class="summary-values">
-                ${generateValueDivs(values)}
+                ${category && title === 'CARRIED DOWN' && category === 'Community WG' ? '<div>To Ecosystem</div>' : generateValueDivs(values, false)}
             </div>
         </div>
     `;

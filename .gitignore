@@ -4,5 +4,5 @@ venv/
 *.pyc
 __pycache__/
 obsolete/
-scripts/data_miner/keys.py
-.DS_Store
+/scripts/data_miner/keys.py
+/scripts/data_miner/last_processed_block.txt

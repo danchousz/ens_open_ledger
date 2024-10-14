@@ -17,6 +17,7 @@
     box-shadow: 0.142vw 0 0.357vw rgba(0, 0, 0, 0.1);
     transition: width 0.3s ease-in-out;
     overflow-x: hidden;
+    min-height: initial;
 }
 
 .side-menu h1 {
