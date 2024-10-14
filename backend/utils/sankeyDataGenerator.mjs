@@ -96,13 +96,13 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         let publicGoodsZone = 0.58;
         let publicGoodsZoneRecipientsCat, publicGoodsZoneSendersCat = publicGoodsZone;
 
-        let metagovZone = 0.75;
+        let metagovZone = 0.81;
         let metagovZoneRecipientCat, metagovZoneSendersCat = metagovZone;
 
         let communityWGZone = 0.88;
         let communityWGZoneRecipientsCat = communityWGZone;
 
-        let spsZone = 0.92;
+        let spsZone = 0.24;
         let spsZoneRecipientsCat, spsZoneSendersCat = spsZone;
         // For detailed mode (obsolete, deleted)
 
@@ -243,10 +243,12 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
     const getNodeIndex = (nodeName, sender, receiver, model, quarter = null) => {
         const specialWallets = ['Ecosystem', 'Public Goods', 'Metagov', 'Community WG', 'Providers'];
         if (bigPicture) {
-            if ((sender.startsWith('Community WG') && receiver.startsWith('Dissolution')) 
+            if ((receiver.startsWith('Dissolution') && sender.startsWith('Community WG')) 
                 || (receiver.endsWith('Swap') || sender.endsWith('Swap'))
                 || (receiver === 'CoW' || sender === 'CoW')
                 || (receiver.startsWith('Community WG') && sender.startsWith('Community WG'))
+                || (receiver === 'Ecosystem') && (sender === 'Community WG')
+                || (receiver === 'Metagov') && (sender === 'Bug Bounty')
                 ) { return -1; }
             if (!nodeIndices[nodeName]) {
                 nodeIndices[nodeName] = nodes.length;
@@ -258,11 +260,11 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 if (!hideMode) {
                     registrarZone = 0.065;
                     daoWalletZone = 0.2;
-                    ecosystemZone = 0.45;
-                    publicGoodsZone = 0.64;
-                    metagovZone = 0.78;
+                    ecosystemZone = 0.48;
+                    publicGoodsZone = 0.66;
+                    metagovZone = 0.84;
                     communityWGZone = 0.9;
-                    spsZone = 0.9;
+                    spsZone = 0.39;
                     if (nodeName.startsWith('Registrar')) {
                         nodeX.push(registrarZone)
                     }
@@ -483,7 +485,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         if (hideMode) {
                             nodeY.push(daoWalletZoneRecipientsCat += 0.03);
                         } else {
-                            nodeY.push(daoWalletZoneRecipientsCat += 0.01);
+                            nodeY.push(daoWalletZoneRecipientsCat += 0.02);
                         }
                         ecosystemZoneRecipientsCat = ecosystemZone;
                         ecosystemZoneSendersCat = ecosystemZone;
@@ -1019,7 +1021,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         ecosystemZoneRecipientsCat = ecosystemZone;
                         ecosystemZoneSendersCat = ecosystemZone;
                     } else if (nodeName.startsWith('Ecosystem')) {
-                        nodeX.push(startPoint + (quarterNumber/2.5));
+                        nodeX.push(startPoint + (quarterNumber/4));
                         nodeY.push(ecosystemZone);
                         interCatFlag = true;
                         ecosystemZoneSendersCat = ecosystemZone + 0.03;
@@ -1206,7 +1208,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     } else if (sender.startsWith('Metagov')) {
                         if (interCatFlag) {
                             if (hideMode) {
-                                metagovZoneRecipientCat += 0.05;
+                                metagovZoneRecipientCat += 0.07;
                             } else {
                                 metagovZoneRecipientCat += 0.02;
                             }
@@ -1921,11 +1923,14 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         
         if (quarter && !isYear) {
             if (nodeName.includes('Registrar') 
-                || (sender === 'Community WG' && receiver.startsWith('Dissolution'))
-                || (sender === 'Community WG' && receiver.startsWith('Unspent'))
+                || (receiver.startsWith('Dissolution') && sender === 'Community WG')
+                || (receiver.startsWith('Unspent') && sender === 'Community WG')
                 || (receiver.endsWith('Swap') || sender.endsWith('Swap'))
                 || (receiver === 'CoW' || sender === 'CoW')
-                || (sender === 'Dissolved Community WG' && receiver === 'Ecosystem')) {
+                || (receiver === 'Ecosystem' && sender === 'Dissolved Community WG')
+                || (receiver === 'Ecosystem') && (sender === 'Community WG')
+                || (receiver === 'Metagov') && (sender === 'Bug Bounty')
+                || (receiver === 'Metagov') && (sender === 'Ecosystem')) {
                 return -1;
             }
             if (!nodeIndices[nodeName]) {
@@ -2716,10 +2721,13 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
 
         if (isYear) {
             if (nodeName.includes('Registrar') 
-                || (sender === 'Community WG' && receiver.startsWith('Dissolution'))
+                || (receiver.startsWith('Dissolution') && sender === 'Community WG' )
                 || (receiver.endsWith('Swap') || sender.endsWith('Swap'))
                 || (receiver === 'CoW' || sender === 'CoW')
-                || (sender === 'Dissolved Community WG' && receiver === 'Ecosystem')) {
+                || (receiver === 'Ecosystem' && sender === 'Dissolved Community WG' )
+                || (receiver === 'Ecosystem') && (sender === 'Community WG')
+                || (receiver === 'Metagov') && (sender === 'Bug Bounty')
+                || (receiver === 'Metagov') && (sender === 'Ecosystem')) {
                     return -1;
                 }
             pad = 1;
