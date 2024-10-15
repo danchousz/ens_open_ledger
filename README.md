@@ -39,7 +39,7 @@ __Frontend__
 
 ### Dropdown
 Opens a dropdown with final recipients within a category when clicking on a node.
-![Dropdown](https://ibb.co/Qf7qDrp)
+![Dropdown](https://i.ibb.co/L8DqNnY/2024-10-15-18-24-20.png)
 
 __Backend__
 
@@ -54,7 +54,7 @@ __Frontend__
 
 ### Tables
 Shows detailed statistics for the recipient when clicking Show All-time statistics in the dropdown.
-![Table](https://ibb.co/T8jwvzY)
+![Table](https://i.ibb.co/yyvNfLd/2024-10-15-18-47-07.png)
 
 __Backend__
 
@@ -69,7 +69,7 @@ __Frontend__
 
 ### Pie charts
 Allows you to draw a pie chart instead of Sankey.
-![Pie](https://ibb.co/Rg6BMVQ)
+![Pie](https://i.ibb.co/hgdZnt2/2024-10-15-18-57-29.png)
 
 __Backend__
 
