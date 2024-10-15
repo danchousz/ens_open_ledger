@@ -64,7 +64,7 @@ __Backend__
 __Frontend__ 
 
 - [recipientDetails](https://github.com/danchousz/ens_open_ledger/blob/main/frontend/js/modules/tables/recipientDetails.js) сalculates statistics, draws diagrams, and creates a table based on data received from the service.
-- 
+
 [__Styles__](https://github.com/danchousz/ens_open_ledger/blob/main/frontend/components/recipientDetails.css)
 
 ### Pie charts
