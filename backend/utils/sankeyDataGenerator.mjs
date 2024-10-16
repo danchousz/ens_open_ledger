@@ -84,9 +84,9 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
     // In big picture:
         let startPoint = 0;
         // For catergory mode
-        let registrarZone = 0.075;
+        let registrarZone = 0.095;
 
-        let daoWalletZone = 0.125;
+        let daoWalletZone = 0.145;
         let daoWalletZoneRecipientsCat = 0;
 
         let ecosystemZone = 0.35;
@@ -102,7 +102,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         let communityWGZone = 0.88;
         let communityWGZoneRecipientsCat = communityWGZone;
 
-        let spsZone = 0.24;
+        let spsZone = 0.275;
         let spsZoneRecipientsCat, spsZoneSendersCat = spsZone;
         // For detailed mode (obsolete, deleted)
 
@@ -258,13 +258,13 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     nodeColors.push('rgba(0, 0, 0, 0)')
                 }
                 if (!hideMode) {
-                    registrarZone = 0.065;
-                    daoWalletZone = 0.2;
+                    registrarZone = 0.055;
+                    daoWalletZone = 0.22;
                     ecosystemZone = 0.48;
                     publicGoodsZone = 0.66;
                     metagovZone = 0.84;
                     communityWGZone = 0.9;
-                    spsZone = 0.39;
+                    spsZone = 0.435;
                     if (nodeName.startsWith('Registrar')) {
                         nodeX.push(registrarZone)
                     }
@@ -290,7 +290,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -376,7 +376,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -477,7 +477,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -569,7 +569,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -678,7 +678,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -788,7 +788,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -898,7 +898,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.125;
+                                daoWalletZoneRecipientsCat += 0.15;
                             }
                             interCatFlag = false;
                         }
@@ -1008,7 +1008,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -1133,7 +1133,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -1262,7 +1262,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -1396,7 +1396,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -1529,7 +1529,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -1662,7 +1662,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
@@ -1795,7 +1795,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             if (hideMode) {
                                 daoWalletZoneRecipientsCat += 0.025;
                             } else {
-                                daoWalletZoneRecipientsCat += 0.14;
+                                daoWalletZoneRecipientsCat += 0.17;
                             }
                             interCatFlag = false;
                         }
