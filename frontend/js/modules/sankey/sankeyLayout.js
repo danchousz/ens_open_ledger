@@ -205,11 +205,11 @@ export function createLayout(data) {
                 family: "satoshi"
             },
             showarrow: false,
-            text: navigator.currentView === 'quarter' 
-                ? `Quarter: ${navigator.currentQuarter}`        
-                : navigator.currentView
-                    ? `Year: ${navigator.currentYear}`
-                    : `Quarter: ${navigator.currentQuarter}, Wallet: ${navigator.walletFilter}`,
+            text: navigator.currentQuarter
+                ? `Quarter: ${navigator.currentQuarter} ${navigator.walletFilter ? `Wallet: ${navigator.walletFilter}` : ''}`        
+                : navigator.currentYear
+                    ? `Year: ${navigator.currentYear} ${navigator.walletFilter? `Wallet: ${navigator.walletFilter}` : ''}`
+                    : ``,
             xanchor: 'end',
             yanchor: 'middle',
             dragmode: 'none',
