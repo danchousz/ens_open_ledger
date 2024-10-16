@@ -78,6 +78,12 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.options-header {
+    margin-top: 0px;
+    font-size: 1.285vw;
+    margin-bottom: 1.25vh;
+}
+
 @media (max-width: 768px) {
     .side-menu {
         width: 100%;
@@ -104,5 +110,15 @@
     .side-menu-content,
     .side-menu-buttons {
         transition: none;
+    }
+}
+
+@media (min-aspect-ratio: 21/9) {
+    .side-menu p {
+        font-size: 0.7vw;
+        line-height: 1.5;
+    }
+    .options-header {
+        font-size: 1vw;
     }
 }

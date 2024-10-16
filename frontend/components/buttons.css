@@ -239,3 +239,9 @@
         background-color: #3888ff;
     }
 }
+
+@media (min-aspect-ratio: 21/9) {
+    .button--options {
+        font-size: 1vw;
+    }
+}

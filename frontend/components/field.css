@@ -40,3 +40,9 @@
         font-size: 3vw;
     }
 }
+
+@media (min-aspect-ratio: 21/9) {
+    .field__description {
+        font-size: 0.9vw;
+    }
+}

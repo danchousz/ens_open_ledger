@@ -10,10 +10,11 @@ export const daoWallet = ['DAO Wallet'];
 
 export const registrars = ['Old Registrar', 'New Registrar'];
 
-export const isDesktop = window.innerWidth >= 768;
-
 export const getWidth = window.innerWidth;
 export const getHeight = window.innerHeight;
+
+export const isDesktop = getWidth >= 768;
+export const isWideScreen = getWidth/getHeight > 2.3;
 
 export const heightCalibration = getHeight / 820;
 export const widthCalibration = getWidth / 1440;

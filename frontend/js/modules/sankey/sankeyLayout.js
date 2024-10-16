@@ -1,6 +1,6 @@
 import { navigator } from "../navigator.js";
 import { getMonthRange } from "../../services/utils.js";
-import { isDesktop, getWidth, getHeight, heightCalibration, widthCalibration } from "../globalVars.js";
+import { isDesktop, getWidth, getHeight, heightCalibration, widthCalibration, isWideScreen } from "../globalVars.js";
 import { getSideMenuState } from "../globalStates.js";
 
 // Plotly Sankey Traces. See more: https://plotly.com/javascript/reference/sankey/
@@ -10,7 +10,7 @@ export function createSankeyData(data) {
         orientation: "h",
         arrangement: "fixed",
         node: {
-            pad: data.pad,
+            pad: data.pad*heightCalibration,
             thickness: navigator.currentView === 'wallet' ? (isDesktop ? 150*widthCalibration : 150) 
             : (navigator.currentView === 'big_picture' ? (isDesktop ? 15*widthCalibration : 15) 
             : (isDesktop ? 100*widthCalibration : 100)),
@@ -150,12 +150,24 @@ export function createLayout(data) {
         }
 
         return {
-            width: isDesktop ? Math.max(600*quarterCount*widthCalibration, 5000) : 600*quarterCount,
-            height: isDesktop ? Math.max(2000*heightCalibration, 2000) : 2000,
+            width: isDesktop 
+                ? isWideScreen
+                    ? Math.max(600*quarterCount*widthCalibration, 5000) 
+                    : Math.max(600*quarterCount*widthCalibration, 5000) 
+                : 600*quarterCount,
+            height: isDesktop 
+                ? isWideScreen 
+                    ? Math.max(2600*heightCalibration, 2000) 
+                    : Math.max(2000*heightCalibration, 2000) 
+                : 2000,
             margin: { 
                 l: 0, 
                 r: 0, 
-                t: isDesktop ? 2000*heightCalibration*0.05 : 100, 
+                t: isDesktop 
+                ? isWideScreen
+                    ? 2600*heightCalibration*0.05 
+                    : 2000*heightCalibration*0.05 
+                : 100, 
                 b: 0
             },
             shapes: shapes,
