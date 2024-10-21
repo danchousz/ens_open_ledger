@@ -119,7 +119,7 @@ export function updateHideModeVisibility() {
 
     if (navigator.currentView !== 'big_picture') {
         hideModeContainer.style.display = 'none';
-        sankeyContainer.style.setProperty('overflow', isDesktop ? 'hidden' : 'auto');
+        sankeyContainer.style.setProperty('overflow', 'hidden');
     } else {
         hideModeContainer.style.display = 'flex';
         sankeyContainer.style.setProperty('overflow', 'auto');

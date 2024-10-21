@@ -6,6 +6,7 @@ import { createDragOverlay } from './customDragOverlay.js';
 import { addAnnotationListener, createUniversalListenerForNodesAndLinks, createCategoryUniversalListener } from './plotlyListeners.js';
 import { isDesktop, getWidth, getHeight, heightCalibration, widthCalibration } from "../globalVars.js";
 import { getSideMenuState } from "../globalStates.js";
+import { updateHideModeVisibility } from "../domEventHandlers.js";
 
 // The main functions for processing data and transforming it into a Sankey diagram.
 export const drawSankey = (period, walletFilter) => {
@@ -28,6 +29,7 @@ export const drawSankey = (period, walletFilter) => {
     const sankeyContainer = document.querySelector('.sankey-container');
 
     updateChartTypeToggleVisibility();
+    updateHideModeVisibility();
     
     let url;
     if (navigator.currentView === 'big_picture') {
