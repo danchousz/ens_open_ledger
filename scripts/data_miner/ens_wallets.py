@@ -390,7 +390,8 @@ ens_wallets = [
             ("borderlessafrica.eth", "Endpoint", "0x4a8ab737cdb7dc3c56dd59266591b9d2eb1e55ab"),
             ("buidlguidl.eth", "Endpoint", "0x00080706a7d99cbc163d52dcf435205b1ad940d1"),
             ("Firefly", "Endpoint", "0xfa3eff9b199f1903d44aeaab4ff9859638028719"),
-            ("Urbe Campus", "Endpoint", "0xadead18d0612cb0bc46bfcfad77dc07389aa331d"),    
+            ("Urbe Campus", "Endpoint", "0xadead18d0612cb0bc46bfcfad77dc07389aa331d"),
+            ("caiomattos.eth", "Endpoint", "0x7950aee3952d6c6297bf349e0d2731a745aabb32"),  
 
 
     # Stewards
