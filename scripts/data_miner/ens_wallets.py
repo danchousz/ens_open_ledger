@@ -211,7 +211,7 @@ ens_wallets = [
     ("bloomnetwork.eth", "Endpoint", "0x5219ffb88175588510e9752a1ecaa3cd217ca783"),
     ("daveytea.eth", "Endpoint", "0xd48fbaf788ee2831086f074c208cd90269ead050"),
     ("dhive.eth", "Endpoint", "0xbc7797319b3ed4246c7078cc4e8b28ea2c6872d0"),
-    ("bloomnetwork.eth", "Endpoint", "0xe6829705c43530973c9a9394513a18e6a60ea22a"),
+    ("UPE", "Endpoint", "0xe6829705c43530973c9a9394513a18e6a60ea22a"),
     ("glodollar.eth", "Endpoint", "0x2c844b941c67b24c799fd43bad117cdf7f23ef81"),
     ("ethdaily.eth", "Endpoint", "0xd58bf63c2a565dced209d608c240463f5f3982e9"),
     ("illuminated.eth", "Endpoint", "0xd39a979841623a4731fd41b0ba72262f7cc9667c"),
