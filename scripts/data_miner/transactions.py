@@ -365,4 +365,7 @@ various_txs = [
     #Ecosystem
         ("SMM", "0x82c80e435235b09a7a399a453bf87d07f3d972553f3ca2a586edf7f5f967ce51"),
         ("Eco. Grants", "0x6f5b3d6fd14f54be1973af424024d54758ee3c7ddb0e1a8185b26c02476176fd"),
+        ("Gitcoin Grants", "0x9c750f9541a552f731d30439c3fa70ac9a4255b1ea82fb62f604f0d5172d956b"), #Socket
+        ("Eco. Grants", "0xab869490b775a12d803aea2c3a171d492aae8002fa72f68e9c306d0dd806e821"),
+
 ]

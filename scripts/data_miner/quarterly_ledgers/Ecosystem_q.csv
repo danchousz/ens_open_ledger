@@ -162,11 +162,9 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2024Q3 Unspent,Ecosystem,Ecosystem,ETH,101.3506434220253,343341.5206950582
 2024Q3 Unspent,Ecosystem,Ecosystem,ENS,26450.0,682410.0
 2024Q4,CoW Swap,Ecosystem,USDC,52227.535734,52227.535734
-2024Q4,Ecosystem,Eco. Grants,USDC,-118750.0,-118750.0
-2024Q4,Ecosystem,Socket,USDC,-50001.0,-50001.0
+2024Q4,Ecosystem,Eco. Grants,USDC,-143750.0,-143750.0
+2024Q4,Ecosystem,Gitcoin Grants,USDC,-50001.0,-50001.0
 2024Q4,Ecosystem,Hackathons,USDC,-17500.0,-17500.0
-2024Q4,Ecosystem,frolic.eth,USDC,-15000.0,-15000.0
-2024Q4,Ecosystem,Pugson,USDC,-10000.0,-10000.0
 2024Q4,Ecosystem,Support,USDC,-1700.0,-1700.0
 2024Q4,Ecosystem,SMM,USDC,-560.0,-560.0
 2024Q4,Ecosystem,CoW Swap,ETH,-10.0,0.0
