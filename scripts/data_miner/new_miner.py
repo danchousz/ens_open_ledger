@@ -8,10 +8,28 @@ import pytz
 
 scan_url = 'https://api.etherscan.io/api'
 wallets = {
+    # Active
     'DAO Wallet': '0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7',
     'Ecosystem': '0x2686a8919df194aa7673244549e68d42c1685d03',
     'Metagov': '0x91c32893216de3ea0a55abb9851f581d4503d39b',
-    'Public Goods': '0xcd42b4c4d102cc22864e3a1341bb0529c17fd87d'
+    'Public Goods': '0xcd42b4c4d102cc22864e3a1341bb0529c17fd87d',
+    'IRL SG': '0x536013c57daf01d78e8a70cad1b1abada9411819',
+    'Hackathons SG': '0x9b9c249be04dd433c7e8fbbf5e61e6741b89966d',
+    'Newsletter SG': '0x13aee52c1c688d3554a15556c5353cb0c3696ea2',
+    'Large Grants Pod': '0xeba76c907f02ba13064edad7876fe51d9d856f62'
+
+    # Temp/const inactive
+    # 'Merch SG': '0x0d06a817584ac378849f03df6f11a9ad67dd786d',
+    # 'Builders SG': '0x6a016548310076285668e2378df70bd545396b5a',
+    # 'Translators SG': '0xe8929029ea54113da91cdb8c9c1ba297cf803838',
+    # 'Websites SG': '0x593a50cf05359bc88474d86b06ec6e1c1a2a899f',
+    # 'Docs SG': '0x5d609c79c7e19aa334d77517b3b17a3dac6f54bc',
+    # 'Gitcoin Grants SG': '0xba0c461b22d918fb1f52fef556310230d177d1f2',
+    # 'Support SG': '0x69a79128462853833e22bba1a43bcdac4725761b',
+    # 'Bug Bounty SG': '0xb3a37c813d3d365a03dd1dd3e68cc11af019cdd6',
+    # 'Governance Pod': '0x4f4cadb8af8f1d463240c2b93952d8a16688a818',
+     # 'DAO Tooling Pod': '0x8f730f4ac5fd234df9993e0e317f07e44fb869c1',
+    # 'Endowment Fees Pod': '0x83dd97a584c4ad50015f7aa6b48bf4970a056d8f',
 }
 contracts = {
     'ens': '0xc18360217d8f7ab5e7c516566761ea12ce7f9d72',

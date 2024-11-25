@@ -1,2 +1,2 @@
 Transaction Hash,Date,From,From_name,From_category,To,To_name,To_category,Value,DOT_USD,Symbol,Acquainted?,Thru,Period,Quarter
-0xdb90045634e3654f169b60ab779da3212a229d0e5597921c0208eb7134f4b5c1,2024-10-16,0xcd42b4c4d102cc22864e3a1341bb0529c17fd87d,Public Goods,Public Goods,0x0a64f452d41991e3fdc5e1a45acb94c7b5faf32a,0x0a64f452d41991e3fdc5e1a45acb94c7b5faf32a,0x0a64f452d41991e3fdc5e1a45acb94c7b5faf32a,-3000.0,-3000.0,USDC,0,Direct,2024.0,
+0x4a1aed7b7ede77f27116945b2378cfd348244bb73eaa9e1e5129c9e6ca74a081,2024-11-21,0x91c32893216de3ea0a55abb9851f581d4503d39b,Metagov,Metagov,0xe83a7861e0dd1187826ba2ef4eba2216c407bb4c,0xe83a7861e0dd1187826ba2ef4eba2216c407bb4c,0xe83a7861e0dd1187826ba2ef4eba2216c407bb4c,-86400.0,-86400.0,USDC,0,Direct,2024.0,

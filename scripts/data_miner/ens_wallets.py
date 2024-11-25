@@ -286,6 +286,7 @@ ens_wallets = [
     ("Denca", "Endpoint", "0x90575de93554bb5b7728b076257cc790c9ae98df"),
 
     ("3DNS", "Endpoint", "0xbba294d303555032c6bd1021c639654b95e77fa8"),
+    ("QuestBook", "Endpoint", "0x0a64f452d41991e3fdc5e1a45acb94c7b5faf32a"),
 
 
     # SG Contractors
@@ -328,6 +329,11 @@ ens_wallets = [
             ("jennifertran.eth", "Endpoint", "0x16d7034610db82fd30ffc9667f4b4f55e2b8541f"),
             ("symcards.eth", "Endpoint", "0x35228676f0c3c1dc4018613502d77a8e99295fc9"),
             ("sambitsargam.eth", "Endpoint", "0xadbb2bae7f0cd584491c35089d8a819108a1276c"),
+            ("0xshazam.eth", "Endpoint", "0x7c00dc7574605bb50ada16e75cc797ec7f17b7fe"),
+            ("iandreeacia", "Endpoint", "0xc269ac03e6a0aa9332667a6cd2d531351cc56776"),
+            ("TCracks", "Endpoint", "0x46b3555496f82c1d86b7f50573a66574e384e797"),
+            ("bifolco.eth", "Endpoint", "0xa60638304eb24c5581e9f57abfac40cc9f0187c8"),
+            ("MrSaulman", "Endpoint", "0xd092ffdecf51fa0c98ce03eb9b1bb4ccbf8a15f6"),
             # Support SG
             ("endlessness.eth", "Endpoint", "0x6d53ed14a8f771a96e9186368d97c2cc06bec059"),
             ("alisha.eth", "Endpoint", "0x75cac0ceb8a39ddb4942a83ad2aafaf0c2a3e13f"),
