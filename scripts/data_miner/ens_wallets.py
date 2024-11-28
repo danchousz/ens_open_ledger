@@ -60,6 +60,7 @@ ens_wallets = [
     ("SIWE", "Endpoint", "0xddb53563586e2d5f9cde97b99b1062c4315785ec"),
     ("Karpatkey", "Endpoint", "0x58e6c7ab55aa9012eacca16d1ed4c15795669e1c"),
     ("Code4rena", "Endpoint", "0xc2bc2f890067c511215f9463a064221577a53e10"),
+    ("Code4rena", "Endpoint", "0xe83a7861e0dd1187826ba2ef4eba2216c407bb4c"),
     ("Agora", "Endpoint", "0x63fd9d5c51adb4b41629608385bb2ad05fc63a20"),
     ("KarmaHQ", "Endpoint", "0xc98786d5a7a03c1e74affcb97ff7ef8a710da09b"),
     ("generalmagic.eth", "Endpoint", "0xc8d65e1bd67f16522e3117b980e1c9d2caeb9dc3"),
@@ -225,6 +226,7 @@ ens_wallets = [
     ("Hedgey Finance", "Endpoint", "0x3466eb008edd8d5052446293d1a7d212cb65c646"),
     ("eth-mexico.eth", "Endpoint", "0x7674d60760918ae89ca71f2ce1af2b2e740e2c8e"),
     ("Blockful", "Endpoint", "0x3aae10803fd40005a6132e6b9f5cd6ac0657bf60"),
+    ("Blockful", "Endpoint", "0x0b48f961776bb4678b7a4fcf0711f3e86949f72b"),
     ("KarmaHQ", "Endpoint", "0xc98786d5a7a03c1e74affcb97ff7ef8a710da09b"),
     ("Fluidkey", "Endpoint", "0xd4864a82f8c875aadd653f3bdeff3c9e2f11a848"),
     ("Drips", "Endpoint", "0xdf8ec14222ce1127d31a3828758b53b40abacc17"),
@@ -233,6 +235,7 @@ ens_wallets = [
     ("stephancill.eth", "Endpoint", "0x8d25687829d6b85d9e0020b8c89e3ca24de20a89"),
     ("Kiwi News", "Endpoint", "0x571fd71e4ebc85037f5bb6439022e90ce260df39"),
     ("Scope.sh", "Endpoint", "0x1337e2624ffec537087c6774e9a18031cfeaf0a9"),
+    ("ens.vision", "Endpoint", "0x5dabd4f6b820142edee7d9a2cd5f1bf4546791dd"),
 
     ("0x4f0b04", "Endpoint", "0x4f0b0426f2c370b61206172c8d042f54ad384a62"),
     ("0x20e6cd", "Endpoint", "0x20e6cdba3a9e4d67bcfca8fe030697b1b8950f6d"),

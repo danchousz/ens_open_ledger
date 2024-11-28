@@ -20,7 +20,7 @@ export function addAnnotationListener() {
 
             const clickedYear = eventData.fullAnnotation.text;
 
-            if (clickedOnQuarter.match(/^\d{4}Q\d$/) && clickedOnQuarter !== '2024Q4') {
+            if (clickedOnQuarter.match(/^\d{4}Q\d$/) && clickedOnQuarter !== '2025Q1') {
                 navigator.setQuarter(clickedOnQuarter);
             } else if ((clickedYear.match(/^\d{4}$/))) {
                 navigator.setYear(clickedYear);
@@ -29,13 +29,14 @@ export function addAnnotationListener() {
     } else {
         sankeyDiv.on('plotly_click', function(eventData) {
             const clickedPoint = eventData.points[0];
+            console.log(clickedPoint);
             const quarterLabel = clickedPoint.label;
             if (navigator.currentView === 'quarter') {
-                if (quarterLabel.match(/^\d{4}Q\d$/) && clickedPoint !== '2024Q4') {
+                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q1')) {
                     navigator.setQuarter(quarterLabel);
                 }
             } else if (navigator.currentView === 'wallet') {
-                if (quarterLabel.match(/^\d{4}Q\d$/) && clickedPoint !== '2024Q4') {
+                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q1')) {
                     navigator.currentQuarter = quarterLabel;
                     navigator.updateDiagram();
                 }

@@ -305,6 +305,15 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
 
         df.loc[(df['Transaction Hash'] == '0x15b33f26832e8c7eb39448e94ddd13b48e73c22df414e1b9d55dabc1df540b2d') & 
             (df['To'] == '0xa19a7ae868ede64c6c5256a64bcd3bf3a9f2d615'), 'To_name'] = 'cryptowork.eth'
+
+        df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
+            (df['To'] == '0x7f7720bdb2cb5c13dd30a0c8ab8d0dd553b31caa'), 'To_category'] = 'Open Ledger'
+        
+        df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
+            ((df['To'] == '0xe52c39327ff7576baec3dbfef0787bd62db6d726') | (df['To'] == '0x60dbf50076206f60bcc2edf9295f5734561b8d77')), 'To_category'] = 'Event'
+        
+        df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
+            (df['To'] == '0x0b48f961776bb4678b7a4fcf0711f3e86949f72b'), 'To_category'] = 'Governance'
         
         df = df[df['From_name'] != 'Dissolved Community WG']
 

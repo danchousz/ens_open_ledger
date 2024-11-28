@@ -1930,7 +1930,8 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 || (receiver === 'Ecosystem' && sender === 'Dissolved Community WG')
                 || (receiver === 'Ecosystem') && (sender === 'Community WG')
                 || (receiver === 'Metagov') && (sender === 'Bug Bounty')
-                || (receiver === 'Metagov') && (sender === 'Ecosystem')) {
+                || (receiver === 'Metagov') && (sender === 'Ecosystem') 
+                || (sender === 'Endowment')) {
                 return -1;
             }
             if (!nodeIndices[nodeName]) {
@@ -2546,7 +2547,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     } else if (sender === 'DAO Wallet' && !specialWallets.hasOwnProperty(nodeName)) {
                         daoWalletRecipients.push(nodeName);
                         nodeX.push(0.95);
-                        nodeY.push(daoWalletY - 0.1);
+                        nodeY.push(daoWalletY - 0.095);
                     } else if (nodeName === 'Ecosystem') {
                         nodeX.push(specialWalletsX);
                         if (daoWalletRecipients.length > 1) {

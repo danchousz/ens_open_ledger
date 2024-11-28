@@ -368,6 +368,11 @@ various_txs = [
         ("Eco. Grants", "0x6f5b3d6fd14f54be1973af424024d54758ee3c7ddb0e1a8185b26c02476176fd"),
         ("Gitcoin Grants", "0x9c750f9541a552f731d30439c3fa70ac9a4255b1ea82fb62f604f0d5172d956b"), #Socket
         ("Eco. Grants", "0xab869490b775a12d803aea2c3a171d492aae8002fa72f68e9c306d0dd806e821"),
+        ("Sponsorship", "0x820af9be1be9c22f945c4b7bc7f4f485780bb2f8cb909aa38c1ffe76e514afeb"),
     #Public Goods
         ("Grant Platform", "0xdb90045634e3654f169b60ab779da3212a229d0e5597921c0208eb7134f4b5c1"), #Questbook
+    #Metagov 
+        ("Audit", "0x4a1aed7b7ede77f27116945b2378cfd348244bb73eaa9e1e5129c9e6ca74a081"),
+
+    
 ]
