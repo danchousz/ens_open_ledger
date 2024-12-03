@@ -1,0 +1,8 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-0.14vw) translateY(-0.14vw); }
+    20%, 80% { transform: translateX(0.14vw) translateY(0.14vw);}
+    30%, 50%, 70% { transform: translateX(-0.14vw) translateY(-0.14vw); }
+    40%, 60% { transform: translateX(0.14vw) translateY(0.14vw); }
+    100% { transform: translateX(0); }
+}

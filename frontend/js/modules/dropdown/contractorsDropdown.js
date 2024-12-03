@@ -119,18 +119,48 @@ export function showContractorsDropdown(category, clickX, clickY, categoryIndex,
             } else {
                 dropdown.style.flexDirection = 'column-reverse'
             }
-            title.innerHTML = `
-                <div class="title-container">
-                    <span class="category-title" style="font-size: ${isDesktop ? '1.7vw' : '13vw'}">${category}</span>
-                </div>
-                <hr>
-                <div class="short-summ-container">
-                    <div style="font-size: ${isDesktop ? '1vw' : '4vw'}; /* margin-bottom: 0px; */ /* margin: 0px; */ font-weight: 500;">RECEIVED</div>
-                    <div style="font-size: ${isDesktop ? '2.3vw' : '10vw'}; /* letter-spacing: 0.2vw; */ margin-top: 0; /* font-weight: 400; */ margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${formattedCategoryValue}</div>
-                    <div style="color: grey; font-size: ${isDesktop ? '0.9vw' : '4vw'}; font-weight: 400; margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${!navigator.currentYear ? getMonthRange(quarterInfo.quarter) : ''} ${!navigator.currentYear ? quarterInfo.year : navigator.currentYear}</div>
-                </div>
-                <hr>
-            `;
+            if (category === 'Stream') {
+                const quarterInfo = parseCategoryIndex(categoryIndex);
+                const disbursementPercentage = calculateQuarterProgress(
+                    parseInt(quarterInfo.year), 
+                    parseInt(quarterInfo.quarter)
+                );
+        
+                const streamTitle = `
+                    <div class="title-container">
+                        <span class="category-title" style="font-size: ${isDesktop ? '1.7vw' : '13vw'}">${category}</span>
+                    </div>
+                    <hr>
+                    <div class="short-summ-container">
+                        <div style="font-size: ${isDesktop ? '1vw' : '4vw'}; font-weight: 500;">RECEIVED</div>
+                        <div style="font-size: ${isDesktop ? '2.3vw' : '10vw'}; margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${formattedCategoryValue}</div>
+                        <div style="color: grey; font-size: ${isDesktop ? '0.9vw' : '4vw'}; font-weight: 400; margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${!navigator.currentYear ? getMonthRange(quarterInfo.quarter) : ''} ${!navigator.currentYear ? quarterInfo.year : navigator.currentYear}</div>
+                    </div>
+                    <hr>
+                    <div class="short-summ-container">
+                        <div style="font-size: ${isDesktop ? '1vw' : '4vw'}; font-weight: 500;">DISBURSED</div>
+                        <div style="font-size: ${isDesktop ? '2.3vw' : '10vw'}; margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${disbursementPercentage}%</div>
+                        <div style="color: grey; font-size: ${isDesktop ? '0.9vw' : '4vw'}; font-weight: 400; margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${!navigator.currentYear ? getMonthRange(quarterInfo.quarter) : ''} ${!navigator.currentYear ? quarterInfo.year : navigator.currentYear}</div>
+                        <a href="https://snapshot.org/#/ens.eth/proposal/0x6ba81cd2997288cc49ae1b95921ec8f107e8ffb9733321d53d488e2b30710b86" target="_blank" style="text-decoration: none; color: #2f7cff; font-size: ${isDesktop ? '0.9vw' : '4vw'}; margin-top: 0.5vh;">Snapshot</a>
+                    </div>
+                    <hr>
+                `;
+                
+                title.innerHTML = streamTitle;
+            } else {
+                title.innerHTML = `
+                    <div class="title-container">
+                        <span class="category-title" style="font-size: ${isDesktop ? '1.7vw' : '13vw'}">${category}</span>
+                    </div>
+                    <hr>
+                    <div class="short-summ-container">
+                        <div style="font-size: ${isDesktop ? '1vw' : '4vw'}; /* margin-bottom: 0px; */ /* margin: 0px; */ font-weight: 500;">RECEIVED</div>
+                        <div style="font-size: ${isDesktop ? '2.3vw' : '10vw'}; /* letter-spacing: 0.2vw; */ margin-top: 0; /* font-weight: 400; */ margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${formattedCategoryValue}</div>
+                        <div style="color: grey; font-size: ${isDesktop ? '0.9vw' : '4vw'}; font-weight: 400; margin-top: ${isDesktop ? '-0.6vh' : '-1vh'};">${!navigator.currentYear ? getMonthRange(quarterInfo.quarter) : ''} ${!navigator.currentYear ? quarterInfo.year : navigator.currentYear}</div>
+                    </div>
+                    <hr>
+                `;
+            }
             options.innerHTML = `
                 ${chartButtonHTML}
                 ${detailsButtonHTML}
@@ -330,7 +360,7 @@ export function showContractorsDropdown(category, clickX, clickY, categoryIndex,
         let left;
         
         if (navigator.currentView === 'big_picture') {
-            left = Math.min(clickX, layout.width - dropdownRect.width);
+            left = Math.min(clickX, layout.width - dropdownRect.width*0.1);
         } else if (navigator.currentView === 'quarter'){
             if (!isSideMenuExpanded) {
                 left = 0.915*layout.width - dropdownRect.width;
@@ -371,7 +401,7 @@ export function showContractorsDropdown(category, clickX, clickY, categoryIndex,
             }
             
             if (navigator.currentView === 'big_picture') {
-                left = Math.max(0, Math.min(left, layout.width - dropdownRect.width));
+                left = Math.max(0, Math.min(left, layout.width - dropdownRect.width/2));
                 top = Math.max(0, Math.min(top, layout.height - dropdownRect.height));
             }
 
@@ -395,16 +425,43 @@ export function showContractorsDropdown(category, clickX, clickY, categoryIndex,
             dropdown.style.flexDirection = 'column';
         }
 
-        function closeDropdownOnOutsideClick(event) {
-            if (!dropdown.contains(event.target)) {
-                dropdown.style.display = 'none';
-                document.removeEventListener('click', closeDropdownOnOutsideClick);
+        let startX = 0;
+        let startY = 0;
+        let hasMoved = false;
+
+        function handleMouseDown(e) {
+            startX = e.clientX;
+            startY = e.clientY;
+            hasMoved = false;
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+        }
+
+        function handleMouseMove(e) {
+            if (Math.abs(e.clientX - startX) > 3 || Math.abs(e.clientY - startY) > 3) {
+                hasMoved = true;
             }
         }
 
+        function handleMouseUp(e) {
+            if (!hasMoved && !dropdown.contains(e.target)) {
+                dropdown.style.display = 'none';
+                cleanup();
+            }
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+        }
+
+        function cleanup() {
+            document.removeEventListener('mousedown', handleMouseDown);
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+        }
+
         setTimeout(() => {
-            document.addEventListener('click', closeDropdownOnOutsideClick);
+            document.addEventListener('mousedown', handleMouseDown);
         }, 0);
+
     })
     .catch(error => {
         console.error('Error fetching contractors:', error);
@@ -431,7 +488,6 @@ function generateSummarySection(title, values, linkType, categoryIndex, category
         linkHtml = `<a href="https://snapshot.org/#/ens.eth/proposal/0xa64ec8b446e509cb4b75092c4a714897790b70e2711fc3d6afa969c250e7eb92" target="_blank" style="text-decoration: none; color: #2f7cff;">${linkType}</a>`
     }
 
-    console.log('category:', category);
     return `
         <div class="summary-section">
             <div class="summary-header">
@@ -442,6 +498,37 @@ function generateSummarySection(title, values, linkType, categoryIndex, category
             </div>
         </div>
     `;
+}
+
+function calculateQuarterProgress(year, quarter) {
+    const currentDate = new Date();
+    const quarterStartDates = {
+        1: new Date(year, 0, 1),
+        2: new Date(year, 3, 1),
+        3: new Date(year, 6, 1),
+        4: new Date(year, 9, 1)
+    };
+    const quarterEndDates = {
+        1: new Date(year, 2, 31),
+        2: new Date(year, 5, 30),
+        3: new Date(year, 8, 30),
+        4: new Date(year, 11, 31)
+    };
+
+    const quarterStart = quarterStartDates[quarter];
+    const quarterEnd = quarterEndDates[quarter];
+    
+    if (quarterEnd < currentDate) {
+        return 100;
+    }
+    
+    if (currentDate < quarterStart) {
+        return 0;
+    }
+    
+    const totalDays = Math.ceil((quarterEnd - quarterStart) / (1000 * 60 * 60 * 24));
+    const daysPassed = Math.ceil((currentDate - quarterStart) / (1000 * 60 * 60 * 24));
+    return Math.round((daysPassed / totalDays) * 100);
 }
 
 function generateSwapsSection(swaps) {

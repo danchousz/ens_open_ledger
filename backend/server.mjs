@@ -3,17 +3,15 @@ import path from 'path';
 
 import { avatarRoutes } from './api/avatarRoutes.mjs';
 import { sankeyRoutes } from './api/sankeyRoutes.mjs';
-import { loadData, loadUnknownContractorsData } from './utils/dataLoader.mjs';
+import { loadData } from './utils/dataLoader.mjs';
 import { recipientRoutes } from './api/recipientDetailsRoutes.mjs';
-import { exportRoutes } from './api/exportRoutes.mjs';
-import { unknownContractorsRoutes } from './api/unknownContractorsRoutes.mjs';
-import { saveResponseRoutes } from './api/saveResponseRoutes.mjs';
+import { exportRoutes } from './api/exportRoutes.mjs';;
 import { dropdownRoutes } from './api/dropdownRoutes.mjs';
 import { pageRoutes } from './api/pageRoutes.mjs';
 import { initializeCronJobs } from './utils/cronJobs.mjs';
+import { searchRoutes } from './api/searchRoutes.mjs';
 
 loadData();
-loadUnknownContractorsData();
 initializeCronJobs();
 
 const app = express();
@@ -29,9 +27,8 @@ app.use(sankeyRoutes);
 app.use(avatarRoutes);
 app.use(recipientRoutes);
 app.use(exportRoutes);
-app.use(unknownContractorsRoutes);
-app.use(saveResponseRoutes);
 app.use(dropdownRoutes);
+app.use(searchRoutes);
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server running at port ${port}`);

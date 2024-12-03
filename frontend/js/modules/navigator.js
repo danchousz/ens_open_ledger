@@ -11,6 +11,7 @@ class LedgerNavigator {
         this.drawWalletPieChart = null;
         this.drawCategoryPieChart = null;
         this.isPieChart = null;
+        this.currentDetails = null;
     
         window.addEventListener('popstate', (event) => {
             if (event.state) {
@@ -29,7 +30,7 @@ class LedgerNavigator {
     updateUrlBar(initialLoad = false) {
         let path = '/';
         const params = new URLSearchParams();
-
+    
         if (this.currentYear) {
             path += `year/${this.currentYear}`;
             if (this.walletFilter) {
@@ -46,8 +47,12 @@ class LedgerNavigator {
             }
         }
     
+        // Add details to URL if present
+        if (this.currentDetails) {
+            params.set('details', encodeURIComponent(this.currentDetails));
+        }
+    
         const url = path + (params.toString() ? `?${params.toString()}` : '');
-        console.log("UpdateUrlBar:", url);
         if (!initialLoad) {
             history.pushState(this.getState(), '', url);
         } else {
@@ -62,14 +67,13 @@ class LedgerNavigator {
             year: this.currentYear,
             wallet: this.walletFilter,
             category: this.currentCategory,
-            hideMode: this.hideMode
+            hideMode: this.hideMode,
+            details: this.currentDetails
         };
-        console.log("GetState:", state);
         return state;
     }
     
     loadState(state) {
-        console.log("LoadState input:", state);
         this.currentView = state.view;
         if (state.year) {
             this.currentYear = state.year;
@@ -81,10 +85,21 @@ class LedgerNavigator {
         this.walletFilter = state.wallet;
         this.currentCategory = state.category;
         this.hideMode = state.hideMode;
-      
-        console.log("LoadState after:", this.getState());
+        this.currentDetails = state.details;
+        
         this.updateDiagram();
         updateContextButton();
+    }
+    
+    // Add or modify these methods
+    setRecipientDetails(recipient) {
+        this.currentDetails = recipient;
+        this.updateUrlBar();
+    }
+    
+    clearRecipientDetails() {
+        this.currentDetails = null;
+        this.updateUrlBar();
     }
       
     updateDiagram() {
@@ -97,7 +112,6 @@ class LedgerNavigator {
         } else {
             const period = this.currentView === 'big_picture' ? 'big_picture' : 
                            this.currentYear || this.currentQuarter;
-            console.log("UpdateDiagram calling drawSankey with:", period, this.walletFilter);
             this.drawSankey(period, this.walletFilter);
         }
     }
@@ -168,12 +182,14 @@ class LedgerNavigator {
 export function parseUrl() {
     const path = window.location.pathname;
     const parts = path.split('/').filter(Boolean);
+    const params = new URLSearchParams(window.location.search);
     
     let view = 'big_picture';
     let quarter = null;
     let year = null;
     let wallet = null;
     let category = null;
+    let details = params.get('details') ? decodeURIComponent(params.get('details')) : null;
     
     if (parts[0] === 'quarter') {
         view = 'quarter';
@@ -197,8 +213,7 @@ export function parseUrl() {
         }
     }
     
-    console.log('Parsed URL:', { view, quarter, year, wallet, category });
-    return { view, quarter, year, wallet, category };
+    return { view, quarter, year, wallet, category, details };
 }
 
 import { exitPieChart } from './pie/walletPie.js';

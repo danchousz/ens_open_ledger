@@ -365,14 +365,17 @@ various_txs = [
     #Ecosystem
         ("SMM", "0x82c80e435235b09a7a399a453bf87d07f3d972553f3ca2a586edf7f5f967ce51"),
         ("SMM", "0x393b541a4b05e14dd82a8b51ca828b90d585b6700967ed767866c4b562d3a64b"),
+        ("SMM", "0x0d6393de9b04361d2feb3e833a56ff6fe58d00aae3f18e4ac0f7e814989a223b"),
         ("Eco. Grants", "0x6f5b3d6fd14f54be1973af424024d54758ee3c7ddb0e1a8185b26c02476176fd"),
         ("Gitcoin Grants", "0x9c750f9541a552f731d30439c3fa70ac9a4255b1ea82fb62f604f0d5172d956b"), #Socket
         ("Eco. Grants", "0xab869490b775a12d803aea2c3a171d492aae8002fa72f68e9c306d0dd806e821"),
         ("Sponsorship", "0x820af9be1be9c22f945c4b7bc7f4f485780bb2f8cb909aa38c1ffe76e514afeb"),
+        ("Eco. Grants", "0xb642434417928afff158d81f92b55f87ca33e71a11a92b207af7a7b0dc2c4ea6"),
     #Public Goods
         ("Grant Platform", "0xdb90045634e3654f169b60ab779da3212a229d0e5597921c0208eb7134f4b5c1"), #Questbook
     #Metagov 
         ("Audit", "0x4a1aed7b7ede77f27116945b2378cfd348244bb73eaa9e1e5129c9e6ca74a081"),
+        ("$ENS Vesting", "0x86bb724e316a5c838299959cff8f6c04d77bd9188c6a6faf4ca9e78ca50763bc"),
+        ("Security Bounty", "0x53663f861470592a24e05e0bf5c3ade5b26420603c6ac08be46e18d1a37c6e66"),
 
-    
 ]

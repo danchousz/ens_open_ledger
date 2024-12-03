@@ -3,9 +3,9 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2022Q2,Public Goods,Gitcoin Multisig,USDC,-42000.0,-42000.0
 2022Q2,Public Goods,PG Grants,USDC,-5000.0,-5000.0
 2022Q2,Public Goods,Salaries,USDC,-5000.0,-5000.0
-2022Q2 Unspent,Public Goods,Public Goods,USDC,48000.0,48000.0
 2022Q2 Unspent,Public Goods,Public Goods,ENS,0.0,0.0
 2022Q2 Unspent,Public Goods,Public Goods,ETH,0.0,0.0
+2022Q2 Unspent,Public Goods,Public Goods,USDC,48000.0,48000.0
 2022Q3,DAO Wallet,Public Goods,USDC,333800.0,333800.0
 2022Q3,DAO Wallet,Public Goods,ETH,90.0,174241.8
 2022Q3,CoW Swap,Public Goods,ETH,5.0,8134.02
@@ -21,9 +21,9 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2022Q4,Public Goods,Scholarship,USDC,-72000.0,-72000.0
 2022Q4,Public Goods,Gitcoin Multisig,USDC,-50000.0,-50000.0
 2022Q4,Public Goods,PG Small Grants,ETH,-20.0,-27207.2
-2022Q4 Unspent,Public Goods,Public Goods,ENS,200.0,2136.0
 2022Q4 Unspent,Public Goods,Public Goods,ETH,75.0,89610.0
 2022Q4 Unspent,Public Goods,Public Goods,USDC,146548.59366800002,146548.59366800002
+2022Q4 Unspent,Public Goods,Public Goods,ENS,200.0,2136.0
 2023Q1,DAO Wallet,Public Goods,USDC,250000.0,250000.0
 2023Q1,DAO Wallet,Public Goods,ETH,50.0,77289.0
 2023Q1,Public Goods,Gitcoin Multisig,USDC,-50000.0,-50000.0
@@ -35,16 +35,16 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2023Q2,Public Goods,Growth Grants,USDC,-50000.0,-50000.0
 2023Q2,Public Goods,PG Small Grants,ETH,-15.0,-26381.65
 2023Q2,Public Goods,PG Hackathons,USDC,-1614.38,-1614.38
-2023Q2 Unspent,Public Goods,Public Goods,ENS,200.0,1722.0
 2023Q2 Unspent,Public Goods,Public Goods,USDC,284934.213668,284934.213668
 2023Q2 Unspent,Public Goods,Public Goods,ETH,95.0,176386.5
+2023Q2 Unspent,Public Goods,Public Goods,ENS,200.0,1722.0
 2023Q3,UniSwap,Public Goods,USDC,102408.492634,102408.492634
 2023Q3,Public Goods,PG Large Grants,USDC,-200000.0,-200000.0
 2023Q3,Public Goods,UniSwap,ETH,-55.0,-102163.6
 2023Q3,Public Goods,Discretionary Grants,ETH,-15.0,-30084.9
-2023Q3 Unspent,Public Goods,Public Goods,ETH,25.0,41725.0
-2023Q3 Unspent,Public Goods,Public Goods,ENS,200.0,1516.0
 2023Q3 Unspent,Public Goods,Public Goods,USDC,187342.706302,187342.706302
+2023Q3 Unspent,Public Goods,Public Goods,ENS,200.0,1516.0
+2023Q3 Unspent,Public Goods,Public Goods,ETH,25.0,41725.0
 2023Q4,DAO Wallet,Public Goods,USDC,218204.0,218204.0
 2023Q4,DAO Wallet,Public Goods,ETH,35.0,70791.7
 2023Q4,Public Goods,PG Large Grants,USDC,-150000.0,-150000.0
@@ -52,9 +52,9 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2023Q4,Public Goods,Giveth,USDC,-23000.0,-23000.0
 2023Q4,Public Goods,PG Hackathons,USDC,-7500.0,-7500.0
 2023Q4,Public Goods,Translators,USDC,-4995.0,-4995.0
+2023Q4 Unspent,Public Goods,Public Goods,USDC,220051.706302,220051.706302
 2023Q4 Unspent,Public Goods,Public Goods,ETH,33.5,76905.95
 2023Q4 Unspent,Public Goods,Public Goods,ENS,200.0,1968.0
-2023Q4 Unspent,Public Goods,Public Goods,USDC,220051.706302,220051.706302
 2024Q1,Public Goods,PG Large Grants,USDC,-57500.0,-57500.0
 2024Q1,Public Goods,Salaries,USDC,-11000.0,-11000.0
 2024Q1,Public Goods,PG Hackathons,USDC,-10000.0,-10000.0
@@ -67,9 +67,9 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2024Q2,Public Goods,PG Large Grants,USDC,-87500.0,-87500.0
 2024Q2,Public Goods,PG Small Grants,ETH,-15.5,-56366.99
 2024Q2,Public Goods,Event,USDC,-21000.0,-21000.0
+2024Q2 Unspent,Public Goods,Public Goods,ENS,200.0,5610.0
 2024Q2 Unspent,Public Goods,Public Goods,USDC,482001.083915,482001.083915
 2024Q2 Unspent,Public Goods,Public Goods,ETH,39.5,135596.39
-2024Q2 Unspent,Public Goods,Public Goods,ENS,200.0,5610.0
 2024Q3,Public Goods,PG Large Grants,USDC,-112500.0,-112500.0
 2024Q3,Public Goods,Discretionary,USDC,-7300.0,-7300.0
 2024Q3,Public Goods,Salaries,USDC,-6600.0,-6600.0
@@ -78,9 +78,10 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2024Q3 Unspent,Public Goods,Public Goods,ENS,200.0,5160.0
 2024Q3 Unspent,Public Goods,Public Goods,ETH,39.5,133812.57
 2024Q3 Unspent,Public Goods,Public Goods,USDC,345002.383915,345002.383915
+2024Q4,DAO Wallet,Public Goods,USDC,226000.0,226000.0
 2024Q4,Public Goods,PG Large Grants,USDC,-95500.0,-95500.0
 2024Q4,Public Goods,Salaries,USDC,-13000.0,-13000.0
 2024Q4,Public Goods,Grant Platform,USDC,-3000.0,-3000.0
 2024Q4 Unspent,Public Goods,Public Goods,ETH,39.5,133812.57
-2024Q4 Unspent,Public Goods,Public Goods,USDC,233502.383915,233502.383915
+2024Q4 Unspent,Public Goods,Public Goods,USDC,459502.383915,459502.383915
 2024Q4 Unspent,Public Goods,Public Goods,ENS,200.0,5160.0

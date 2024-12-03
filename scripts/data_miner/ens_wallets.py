@@ -57,6 +57,7 @@ ens_wallets = [
 
 
     # WG/Main Wallet Contractors
+    ("web3bio", "Endpoint", "0x5c51b52694719931919aebb2dccf7ca3447d0608"),
     ("SIWE", "Endpoint", "0xddb53563586e2d5f9cde97b99b1062c4315785ec"),
     ("Karpatkey", "Endpoint", "0x58e6c7ab55aa9012eacca16d1ed4c15795669e1c"),
     ("Code4rena", "Endpoint", "0xc2bc2f890067c511215f9463a064221577a53e10"),
@@ -193,7 +194,7 @@ ens_wallets = [
     ("ipns.eth", "Endpoint", "0x47c10b0491a138ddae6ccfa26f17adcfca299753"),
     ("maxi.eth", "Endpoint", "0xbe86ad13bc8906b5fa41b6b60e949df8d23dde11"),
     ("enspoker.eth", "Endpoint", "0xeed28010b97ec007dce8da01970dd60dab771bd8"),
-    ("Pugson", "Endpoint", "0xe4b23bd52ccb8596e7354f4ae79647095140502b"),
+    ("pugson.eth", "Endpoint", "0xe4b23bd52ccb8596e7354f4ae79647095140502b"),
     ("beaconchain.eth", "Endpoint", "0x9d4e94db689bc471e45b0a18b7bda36fccec9c3b"),
     ("Discord Support", "Endpoint", "0x11725b126ff9e4279e4f645c87736a501aa0eb1a"),
     ("daylon.eth", "Endpoint", "0xcef0b1bbec22edc3d07eac2f5f1053359a96a5e2"),
@@ -350,14 +351,7 @@ ens_wallets = [
             ("ipns.eth", "Endpoint", "0x839b3b540a9572448fd1b2335e0eb09ac1a02885"),
             ("hodl.esf.eth", "Endpoint", "0x328ebc7bb2ca4bf4216863042a960e3c64ed4c10"),
             ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
-            ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
+
             # Translators
             ("sefu.eth", "Endpoint", "0x905296ed6411d92165349b468ca838d83fe96ae4"),
             ("dafra.eth", "Endpoint", "0x453712f21ddda4b7c00b4dcd3383b13f8664239e"),

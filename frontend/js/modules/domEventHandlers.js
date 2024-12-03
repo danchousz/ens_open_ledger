@@ -3,7 +3,6 @@ import { getSideMenuState, setSideMenuState } from './globalStates.js';
 import { isDesktop } from './globalVars.js';
 import { drawCategorySankey, drawSankey } from './sankey/sankey.js';
 import { exportDataByPeriod, exportCustomSVG } from '../services/exportChart.js';
-import { loadTransactions } from './tables/unknownTransactions.js';
 
 export function initializeEventListeners() {
     const sideMenu = document.getElementById('sideMenu');
@@ -11,6 +10,7 @@ export function initializeEventListeners() {
     const contextButton = document.querySelector('.context-button');
     const sankeyDiv = document.getElementById('sankeyDiagram');
     const mobileCloseButton = document.getElementById('toChartButton');
+    let relayout;
 
     mobileCloseButton.addEventListener('touchstart', (e) => {
         e.preventDefault();
@@ -42,7 +42,7 @@ export function initializeEventListeners() {
                     drawCategorySankey(navigator.currentQuarter, navigator.currentCategory);
                 } else {
                     if (navigator.currentQuarter !== 'big_picture') {
-                        drawSankey(navigator.currentQuarter, navigator.walletFilter);
+                        drawSankey(navigator.currentQuarter, navigator.walletFilter, relayout=true);
                     }
                 }
             }
@@ -62,9 +62,6 @@ function initializeDesktopModals() {
     const downloadDiv = document.getElementById('downloadDiv');
     const downloadBackdrop = document.getElementById('downloadBackdrop');
     const downloadButton = document.getElementById('downloadButton');
-    const identifyDiv = document.getElementById('identifyDiv');
-    const identifyBackdrop = document.getElementById('identifyBackdrop');
-    const identifyButton = document.getElementById('identifyButton');
 
     downloadButton.addEventListener('click', () => downloadDiv.style.display = 'block');
     downloadBackdrop.addEventListener('click', () => downloadDiv.style.display = 'none');
@@ -80,19 +77,27 @@ function initializeDesktopModals() {
     exportJSON.addEventListener('click', () => exportDataByPeriod('json'));
     exportSVG.addEventListener('click', () => exportCustomSVG('svg'));
     exportPNG.addEventListener('click', () => exportCustomSVG('png'));
-
-    identifyButton.addEventListener('click', () => {
-        identifyDiv.style.display = 'block';
-        loadTransactions();
-    });
-    identifyBackdrop.addEventListener('click', () => identifyDiv.style.display = 'none');
 }
 
 function initializeCommonModals() {
     const recipientDetailsDiv = document.getElementById('recipientDetailsDiv');
     const recipientDetailsBackdrop = document.getElementById('recipientDetailsBackdrop');
+    const closeButton = recipientDetailsDiv.querySelector('.close-button');
+    const chevronPlaceholder = document.getElementById('Chevron');
 
-    recipientDetailsBackdrop.addEventListener('click', () => recipientDetailsDiv.style.display = 'none');
+    if (!isDesktop) {
+        chevronPlaceholder.style.display = 'none';
+    }
+
+    const closeModal = () => {
+        recipientDetailsDiv.style.display = 'none';
+        navigator.clearRecipientDetails();
+    };
+
+    recipientDetailsBackdrop.addEventListener('click', closeModal);
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
 }
 
 function initializeChartTypeToggle() {

@@ -9,8 +9,7 @@ import { getSideMenuState } from "../globalStates.js";
 import { updateHideModeVisibility } from "../domEventHandlers.js";
 
 // The main functions for processing data and transforming it into a Sankey diagram.
-export const drawSankey = (period, walletFilter) => {
-    console.log("DrawSankey input:", period, walletFilter);
+export const drawSankey = (period, walletFilter, relayout) => {
     if (period) {
         if (period === 'big_picture') {
             navigator.currentView = 'big_picture';
@@ -52,8 +51,14 @@ export const drawSankey = (period, walletFilter) => {
         const layout = createLayout(data);
         const config = createConfig();
         
-        window.scrollTo(0, 0);
-        sankeyContainer.scrollTo(0, 0);
+        if (navigator.currentView === 'big_picture') {
+            if (!relayout) {
+                window.scrollTo(0, 0);
+                sankeyContainer.scrollTo(0, 0);
+            }
+        } else {
+            sankeyContainer.scrollTo(0, 0);
+        };
         
         Plotly.react(sankeyDiv)
         .then(() => {

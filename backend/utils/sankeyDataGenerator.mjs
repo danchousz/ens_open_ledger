@@ -1,3 +1,5 @@
+import e from "express";
+
 export function getNextQuarter(quarter) {
     const [year, q] = quarter.split('Q');
     const nextQ = parseInt(q) % 4 + 1;
@@ -21,8 +23,6 @@ export function countUniqueQuarters(dataFrame) {
 
 export function createSankeyData(df, bigPicture = false, quarter = null, walletFilter, isYear, hideMode = true) {
     
-    console.log('Creating Sankey data:', { bigPicture, quarter, walletFilter, hideMode });
-
     const specialWallets = {
         'Ecosystem': 0.9,
         'Public Goods': 0.9,
@@ -207,8 +207,6 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         }
     });
 
-    console.log(isYear)
-
     // Model assigner
     let model;
     if (isYear) {
@@ -248,8 +246,9 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 || (receiver === 'CoW' || sender === 'CoW')
                 || (receiver.startsWith('Community WG') && sender.startsWith('Community WG'))
                 || (receiver === 'Ecosystem') && (sender === 'Community WG')
-                || (receiver === 'Metagov') && (sender === 'Bug Bounty')
-                ) { return -1; }
+                || (receiver === 'Metagov') && (sender === 'Bug Bounty')) { 
+                    return -1; 
+                }
             if (!nodeIndices[nodeName]) {
                 nodeIndices[nodeName] = nodes.length;
                 nodes.push(nodeName);
@@ -1469,23 +1468,14 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         nodeY.push(metagovZone);
                         interCatFlag = true;
                     } else if (sender.startsWith('Metagov')) {
+                        if (interCatFlag) {
+                            metagovZoneRecipientCat += 0.02;
+                            interCatFlag = false;
+                        }
+                        nodeX.push(startPoint + quarterNumber -  2.5*border);
                         if (hideMode) {
-                            if (interCatFlag) {
-                                metagovZoneRecipientCat += 0.04;
-                                nodeX.push(startPoint + quarterNumber -  2.5*border);
-                                nodeY.push(metagovZoneRecipientCat += 0.01);
-                                metagovZoneRecipientCat += 0.03;
-                                interCatFlag = false;
-                            } else {
-                                nodeX.push(startPoint + quarterNumber -  2.5*border);
-                                nodeY.push(metagovZoneRecipientCat += 0.0125);
-                            }
+                            nodeY.push(metagovZoneRecipientCat += 0.0125);
                         } else {
-                            if (interCatFlag) {
-                                metagovZoneRecipientCat += 0.02;
-                                interCatFlag = false;
-                            }
-                            nodeX.push(startPoint + quarterNumber -  2.5*border);
                             nodeY.push(metagovZoneRecipientCat += 0.01);
                         }
                         spsZoneRecipientsCat = spsZone;
@@ -1931,7 +1921,8 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 || (receiver === 'Ecosystem') && (sender === 'Community WG')
                 || (receiver === 'Metagov') && (sender === 'Bug Bounty')
                 || (receiver === 'Metagov') && (sender === 'Ecosystem') 
-                || (sender === 'Endowment')) {
+                || (sender === 'Endowment'))
+                {
                 return -1;
             }
             if (!nodeIndices[nodeName]) {
@@ -1972,7 +1963,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             nodeX.push(lastX);
                             nodeY.push(lastEcosystemY);
                             if (quarter !== '2022Q2') {
-                                lastEcosystemY += 0.04;
+                                lastEcosystemY += 0.05;
                             }
                             interCatFlag = false;
                         } else {
@@ -2007,7 +1998,11 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             interCatFlag = false;
                         } else {
                             nodeX.push(lastX);
-                            nodeY.push(lastMetagovY += 0.05);
+                            if (quarter !== '2022Q2') {
+                                nodeY.push(lastMetagovY += 0.06);
+                            } else {
+                                nodeY.push(lastMetagovY += 0.05);
+                            }
                         }
                         metagovRecipients.push(nodeName);
                     } else if (nodeName === 'Community WG') {
@@ -2265,7 +2260,11 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                             lastX = 0.95;
                             nodeX.push(lastX);
                             nodeY.push(lastEcosystemY);
-                            lastEcosystemY += 0.075
+                            if (quarter !== '2023Q3') {
+                                lastEcosystemY += 0.075
+                            } else {
+                                lastEcosystemY += 0.05
+                            }
                             interCatFlag = false;
                         } else {
                             nodeX.push(lastX);
@@ -2349,9 +2348,11 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         daoWalletRecipients.push(nodeName);
                         nodeX.push(0.95);
                         if (quarter === '2024Q3') {
-                            nodeY.push(lastDaoWalletY -= 0.125);
+                            nodeY.push(lastDaoWalletY -= 0.1);
                         } else if (quarter == '2023Q1') {
                             nodeY.push(lastDaoWalletY -= 0.075);
+                        } else if (quarter === '2024Q4') {
+                            nodeY.push(lastDaoWalletY -= 0.06);
                         } else {
                             if (daoWalletRecipients.length != 1) {
                                 nodeY.push(lastDaoWalletY += (daoWalletRecipients.length * 0.1));
@@ -2364,7 +2365,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         if (quarter !== '2024Q3') {
                             nodeY.push(lastEcosystemY = lastDaoWalletY + 0.2);
                         } else {
-                            nodeY.push(lastEcosystemY = lastDaoWalletY + 0.1);
+                            nodeY.push(lastEcosystemY = lastDaoWalletY + 0.15);
                         }
                         lastEcosystemSenderY = lastEcosystemY + 0.01;
                         interCatFlag = true;
@@ -2383,6 +2384,8 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                                 lastEcosystemY += 0.07;
                             } else if (quarter == '2024Q2'){
                                 lastEcosystemY += 0.04;
+                            } else if (quarter === '2024Q1') {
+                                lastEcosystemY += 0.03;
                             } else {
                                 lastEcosystemY += 0.02;
                             }
@@ -2415,6 +2418,10 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                                 lastPublicGoodsY += 0.007;
                             } else if (quarter == '2024Q2'){
                                 lastPublicGoodsY += 0.01;
+                            } else if (quarter === '2024Q1') {
+                                lastPublicGoodsY += 0.005;
+                            } else if (quarter === '2024Q4') {
+                                lastPublicGoodsY += 0.005;
                             } else {
                                 lastPublicGoodsY += 0.01;
                             }
@@ -2458,6 +2465,12 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                                 lastMetagovY += 0.02;
                             } else if (quarter == '2024Q2'){
                                 lastMetagovY += 0.01;
+                            } else if (quarter === '2024Q1') {
+                                lastMetagovY += 0.02;
+                            } else if (quarter === '2024Q3') {
+                                lastMetagovY += 0.02;
+                            } else if (quarter === '2024Q4') {
+                                lastMetagovY += 0.02;
                             } else {
                                 lastMetagovY += 0.05;
                             }
@@ -2950,7 +2963,6 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 } else {
                     pad = 15;
                 }
-            console.log(`Node ${nodeName}: X=${nodeX[nodeIndices[nodeName]]}, Y=${nodeY[nodeIndices[nodeName]]}`);
             qtrReceiversList = ecosystemRecipients.concat(publicGoodsRecipients, metagovRecipients, communityWGRecipients, spsRecipients, daoWalletRecipients)
             qtrSendersList = ecosystemSenders.concat(publicGoodsSenders, metagovSenders, communityWGSenders, spsSenders)
         }

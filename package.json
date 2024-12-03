@@ -1,6 +1,6 @@
 {
   "name": "ENS_Open_Ledger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "server.mjs",
   "scripts": {
@@ -12,12 +12,19 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@ensdomains/thorin": "^0.6.4",
+    "@vitejs/plugin-react": "^4.3.4",
     "axios": "^1.7.5",
     "buffer": "^6.0.3",
     "d3-dsv": "^3.0.1",
     "ethers": "^6.13.2",
     "express": "^4.17.1",
     "node-cron": "3.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-transition-state": "^1.1.5",
+    "styled-components": "^6.1.13",
+    "vite": "^6.0.2",
     "xlsx": "^0.17.5"
   },
   "devDependencies": {

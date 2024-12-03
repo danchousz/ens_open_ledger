@@ -1,17 +1,18 @@
 import { getEtherscanLink, formatValue, groupDataByField } from '../../services/utils.js';
 import { loadAllAvatars } from '../../services/loadAvatar.js';
 import { exportTableByEntity } from '../../services/exportChart.js';
-import { colorMap } from '../globalVars.js';
+import { colorMap, isDesktop, specialWallets } from '../globalVars.js';
 import { drawTablePieChart } from '../pie/tablePie.js';
+import { navigator } from '../navigator.js';
 
 export function showRecipientDetails(recipientName, isCategory) {
-    const specialWallets = ['Ecosystem', 'Public Goods', 'Metagov', 'Community WG', 'Providers'];
     const isSpecialWallet = specialWallets.includes(recipientName);
-    const isDesktop = window.innerWidth >= 768;
 
     if (recipientName === 'DAO Wallet') {
         return;
     }
+
+    navigator.setRecipientDetails(recipientName);
 
     fetch(`/recipient_details/${encodeURIComponent(recipientName)}?isCategory=${isCategory}&isSpecialWallet=${isSpecialWallet}`)
     .then(response => response.json())
@@ -214,7 +215,7 @@ export function showRecipientDetails(recipientName, isCategory) {
         setTimeout(() => {
             loadAllAvatars();
         }, 100);
-            })
+        })
     .catch(error => {
         console.error('Error fetching recipient details:', error);
     });

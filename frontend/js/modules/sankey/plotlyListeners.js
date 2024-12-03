@@ -29,7 +29,6 @@ export function addAnnotationListener() {
     } else {
         sankeyDiv.on('plotly_click', function(eventData) {
             const clickedPoint = eventData.points[0];
-            console.log(clickedPoint);
             const quarterLabel = clickedPoint.label;
             if (navigator.currentView === 'quarter') {
                 if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q1')) {
@@ -56,7 +55,6 @@ export function createUniversalListenerForNodesAndLinks(layout) {
     const sankeyDiv = document.getElementById('sankeyDiagram');
     sankeyDiv.on('plotly_click', function(eventData) {
         const clickedPoint = eventData.points[0];
-        console.log('Clicked point:', clickedPoint);
     
         // clickedPoint.childrenNodes is simply used as a distinguishing feature between a link and a node. 
         // In eventData.points, links do not have the childrenNodes attribute, whereas nodes do. 

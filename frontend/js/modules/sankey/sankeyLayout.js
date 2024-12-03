@@ -179,8 +179,8 @@ export function createLayout(data) {
             dragmode: 'none',
             hovermode: 'closest',
             clickmode: 'event',
-            paper_bgcolor: 'white',
-            plot_bgcolor: 'white',
+            paper_bgcolor: '#fafafa',
+            plot_bgcolor: '#fafafa',
         };
     } else {
         const currentModel = data.model;
@@ -240,8 +240,8 @@ export function createLayout(data) {
                 dragmode: 'none',
                 hovermode: 'closest',
                 clickmode: 'event',
-                paper_bgcolor: 'white',
-                plot_bgcolor: 'white',
+                paper_bgcolor: '#fafafa',
+                plot_bgcolor: '#fafafa',
                 annotations: annotations,
                 font: {
                     family: "satoshi",
@@ -262,8 +262,8 @@ export function createLayout(data) {
                 hovermode: 'closest',
                 clickmode: 'event',
                 annotations: annotations,
-                paper_bgcolor: 'white',
-                plot_bgcolor: 'white',
+                paper_bgcolor: '#fafafa',
+                plot_bgcolor: '#fafafa',
                 font: {
                     family: "satoshi",
                     size: isDesktop ? 15*widthCalibration : 14,
