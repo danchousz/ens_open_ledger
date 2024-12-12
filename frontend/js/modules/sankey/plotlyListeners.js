@@ -55,7 +55,7 @@ export function createUniversalListenerForNodesAndLinks(layout) {
     const sankeyDiv = document.getElementById('sankeyDiagram');
     sankeyDiv.on('plotly_click', function(eventData) {
         const clickedPoint = eventData.points[0];
-    
+        console.log(clickedPoint);    
         // clickedPoint.childrenNodes is simply used as a distinguishing feature between a link and a node. 
         // In eventData.points, links do not have the childrenNodes attribute, whereas nodes do. 
         // For nodes, a dropdown is triggered (see more in contractorsDropdown.js), and for links, a banner is triggered (see more in banner.js)
@@ -212,11 +212,12 @@ export function createUniversalListenerForNodesAndLinks(layout) {
             if (clickedPoint.customdata) {
                 const txDetails = clickedPoint.customdata;
                 const txHash = txDetails.receipt;
+                const address = txDetails.addr;
     
                 if (!hasOpenBanner(txHash) && txHash !== 'Interquarter' && txHash !== 'Unspent') {
                     const flowInfo = `${txDetails.date}: <b>${txDetails.from}</b> sent ${txDetails.value} ${txDetails.symbol} (${txDetails.usd} USD) to <b>${txDetails.to}</b>`;
                     const etherscanUrl = `${getEtherscanLink(txHash)}`;
-                    createFlowBanner(flowInfo, etherscanUrl, txHash);
+                    createFlowBanner(flowInfo, etherscanUrl, txHash, address);
                 } else if (txHash === 'Interquarter' || txHash === 'Unspent') {
                     const uniqueID = `${txHash}${txDetails.date}${txDetails.from}${txDetails.symbol}`;
                     if (hasOpenBanner(uniqueID)) {
@@ -236,9 +237,13 @@ export function createCategoryUniversalListener(category) {
     const sankeyDiv = document.getElementById('sankeyDiagram');
     sankeyDiv.on('plotly_click', function(eventData) {
         const clickedPoint = eventData.points[0];
+        console.log(clickedPoint);
         const recipientName = clickedPoint.label === category
             ? clickedPoint.label
             : clickedPoint.label.split(' - ')[1];
+        const address = clickedPoint.customdata.addr;
+        const quarter = clickedPoint.customdata.qtr;
+        const txHash = clickedPoint.customdata.receipt;
         
         if (clickedPoint.childrenNodes) {
             if (recipientName === category) {
@@ -250,12 +255,12 @@ export function createCategoryUniversalListener(category) {
             const txDetails = clickedPoint.customdata;
             if (txDetails) {
                 const bannerId = `${category}-${txDetails.to}-${quarter}`;
-                if (hasOpenBanner(bannerId)) {
-                    shakeBanner(bannerId);
+                if (hasOpenBanner(txHash)) {
+                    shakeBanner(txHash);
                 } else {
                     const flowInfo = `${txDetails.date}: <b>${txDetails.from}</b> sent ${txDetails.value} ${txDetails.symbol} (${txDetails.usd} USD) to <b>${txDetails.to}</b>`;
                     const etherscanUrl = txDetails.receipt ? getEtherscanLink(txDetails.receipt) : null;
-                    createFlowBanner(flowInfo, etherscanUrl, bannerId);
+                    createFlowBanner(flowInfo, etherscanUrl, txHash, address);
                 }
             }
         }

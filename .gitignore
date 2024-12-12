@@ -6,3 +6,4 @@ __pycache__/
 obsolete/
 /scripts/data_miner/keys.py
 /scripts/data_miner/last_processed_block.txt
+/backend/config/gsc/gsc-key.json

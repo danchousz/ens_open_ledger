@@ -369,8 +369,10 @@ various_txs = [
         ("Eco. Grants", "0x6f5b3d6fd14f54be1973af424024d54758ee3c7ddb0e1a8185b26c02476176fd"),
         ("Gitcoin Grants", "0x9c750f9541a552f731d30439c3fa70ac9a4255b1ea82fb62f604f0d5172d956b"), #Socket
         ("Eco. Grants", "0xab869490b775a12d803aea2c3a171d492aae8002fa72f68e9c306d0dd806e821"),
+        ("Eco. Grants", "0x1d92649577f4b1c6ee087965004c4c0a93893f653c73f5dc3383b7143fca1b6f"),
         ("Sponsorship", "0x820af9be1be9c22f945c4b7bc7f4f485780bb2f8cb909aa38c1ffe76e514afeb"),
         ("Eco. Grants", "0xb642434417928afff158d81f92b55f87ca33e71a11a92b207af7a7b0dc2c4ea6"),
+        ("Mini Grants", "0xc73a2834409b550b1bc052d95860f9088c0dc994187238f86dcac17e6e7f48f4"),
     #Public Goods
         ("Grant Platform", "0xdb90045634e3654f169b60ab779da3212a229d0e5597921c0208eb7134f4b5c1"), #Questbook
     #Metagov 

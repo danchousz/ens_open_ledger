@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.1a] - 12.12.2024
+
+### Added
+
+- Legal invoices are now available by clicking on the flow (e.g. click on any flow [here](ens-ledger.app/quarter/2023Q4/category/DAO%20Tooling)) or in the recipient tables (e.g. like [here](http://ens-ledger.app/?details=Agora)). DAO does not use this kind of documentation very often, so there are currently 3 invoices available. They are pulled automatically from Google Cloud Storage, so stewards or a secretary can be given access to fill out the application with such invoices.
+ 
 ## [1.0.1] - 03.12.2024
 
 ### Added

@@ -140,7 +140,8 @@ export function getCategorySankeyData(category, quarter) {
                     value: tx.Value,
                     symbol: tx.Symbol,
                     usd: Math.round(tx.DOT_USD),
-                    receipt: tx['Transaction Hash']
+                    receipt: tx['Transaction Hash'],
+                    addr: tx.To
                 }
             });
         });
@@ -274,7 +275,8 @@ export function getYearCategoryData(category, year) {
                     value: tx.Value,
                     symbol: tx.Symbol,
                     usd: Math.round(tx.DOT_USD),
-                    receipt: tx['Transaction Hash']
+                    receipt: tx['Transaction Hash'],
+                    addr: tx.To
                 }
             });
         });

@@ -1,6 +1,6 @@
 {
   "name": "ENS_Open_Ledger",
-  "version": "1.0.1",
+  "version": "1.0.1a",
   "description": "",
   "main": "server.mjs",
   "scripts": {
@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@ensdomains/thorin": "^0.6.4",
+    "@google-cloud/storage": "^7.14.0",
     "@vitejs/plugin-react": "^4.3.4",
     "axios": "^1.7.5",
     "buffer": "^6.0.3",

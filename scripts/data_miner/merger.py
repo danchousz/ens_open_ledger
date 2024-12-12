@@ -321,7 +321,7 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
 
     df = force_rename_specific_transactions(df)
 
-    df.loc[df['To_name'] == 'Discord Support', 'To_category'] = 'Support'
+    df.loc[df['To_name'] == 'Ashu', 'To_category'] = 'Support'
     
     df = df.reindex(columns=['Transaction Hash', 'Date', 'From', 'From_name', 'From_category', 'To', 'To_name', 'To_category', 'Value', 'DOT_USD', 'Symbol', 'Acquainted?', 'Thru'])
 

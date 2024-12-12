@@ -5,6 +5,17 @@ import { colorMap, isDesktop, specialWallets } from '../globalVars.js';
 import { drawTablePieChart } from '../pie/tablePie.js';
 import { navigator } from '../navigator.js';
 
+async function checkInvoiceExists(txHash, address) {
+    try {
+        const response = await fetch(`/api/check-invoice/${txHash}/${address}`);
+        const data = await response.json();
+        return data.exists ? data.url : null;
+    } catch (error) {
+        console.error('Error checking invoice:', error);
+        return null;
+    }
+}
+
 export function showRecipientDetails(recipientName, isCategory) {
     const isSpecialWallet = specialWallets.includes(recipientName);
 
@@ -15,8 +26,8 @@ export function showRecipientDetails(recipientName, isCategory) {
     navigator.setRecipientDetails(recipientName);
 
     fetch(`/recipient_details/${encodeURIComponent(recipientName)}?isCategory=${isCategory}&isSpecialWallet=${isSpecialWallet}`)
-    .then(response => response.json())
-    .then(data => {
+    .then(async response => response.json())
+    .then(async data => {
         if (!data.transactions || data.transactions.length === 0) {
             return;
         }
@@ -29,9 +40,20 @@ export function showRecipientDetails(recipientName, isCategory) {
                 ? ['Date', 'Amount', 'USD Value', 'From', 'Address', 'Counterparty', 'TX']
                 : ['Date', 'Amount', 'USD Value', 'From', 'Address', 'Item', 'TX']);
 
-        const tableRows = data.transactions.map(tx => {
+        const invoiceChecks = data.transactions.map(tx => 
+            checkInvoiceExists(tx['Transaction Hash'], tx['To'])
+        );
+
+        const invoiceUrls = await Promise.all(invoiceChecks);
+
+        const tableRows = data.transactions.map((tx, index) => {
             const txLink = `<a href="${getEtherscanLink(tx['Transaction Hash'])}" target="_blank" style="color: #2f7cff; text-decoration: none;">${tx['Transaction Hash'].substring(0, 6)}...</a>`;
 
+            const invoiceUrl = invoiceUrls[index];
+            const invoiceLink = invoiceUrl 
+                ? `<br><a href="${invoiceUrl}" target="_blank" style="color: #2f7cff; text-decoration: none; font-weight: bold;">Legal Invoice</a>` 
+                : '';
+            
             const addressLink = isSpecialWallet
                 ? `<a href="${getEtherscanLink(null, tx['To'])}" target="_blank" style="color: #2f7cff; text-decoration: none;">${isDesktop ? tx['To'] : tx['To'].substring(0, 6)}</a>`
                 : `<a href="${getEtherscanLink(null, tx['To'])}" target="_blank" style="color: #2f7cff; text-decoration: none;">${isDesktop ? tx['To'] : tx['To'].substring(0, 6)}</a>`;
@@ -68,7 +90,7 @@ export function showRecipientDetails(recipientName, isCategory) {
                 <td>${isSpecialWallet ? tx.To_category : tx.From_name}</td>
                 <td>${addressLink}</td>
                 <td>${counterpartyCell}</td>
-                <td>${txLink}</td>
+                <td>${txLink}${invoiceLink}</td>
             </tr>`;
         }).join('');
 
