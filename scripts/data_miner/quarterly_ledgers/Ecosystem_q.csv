@@ -165,6 +165,7 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2024Q4,CoW Swap,Ecosystem,USDC,52227.535734,52227.535734
 2024Q4,New Registrar,Ecosystem,ETH,0.0033590170841784,12.099179537210597
 2024Q4,Ecosystem,Eco. Grants,USDC,-168750.0,-168750.0
+2024Q4,Ecosystem,Eco. Grants,ETH,-42.0,-164767.26
 2024Q4,Ecosystem,Gitcoin Grants,USDC,-50001.0,-50001.0
 2024Q4,Ecosystem,IRL,USDC,-32000.0,-32000.0
 2024Q4,Ecosystem,Hackathons,USDC,-24000.0,-24000.0
@@ -175,6 +176,6 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2024Q4,Ecosystem,SMM,USDC,-1680.0,-1680.0
 2024Q4,Ecosystem,New Registrar,ETH,-0.225314469483661,-811.5827190801468
 2024Q4,Ecosystem,CoW Swap,ETH,-10.0,0.0
+2024Q4 Unspent,Ecosystem,Ecosystem,ETH,47.128687969625815,159655.97108718258
 2024Q4 Unspent,Ecosystem,Ecosystem,ENS,26450.0,682410.0
-2024Q4 Unspent,Ecosystem,Ecosystem,ETH,89.12868796962582,301937.69108718255
 2024Q4 Unspent,Ecosystem,Ecosystem,USDC,765490.4830770002,765490.4830770002
