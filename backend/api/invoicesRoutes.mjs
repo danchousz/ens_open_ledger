@@ -1,5 +1,5 @@
 import express from 'express';
-import { bucket } from '../config/gsc/gsc.mjs';
+import { bucket } from '../config/gcs/gcs.mjs';
 
 const router = express.Router();
 
@@ -7,13 +7,11 @@ router.get('/api/check-invoice/:txHash/:address?', async (req, res) => {
     try {
         const { txHash, address } = req.params;
         
-        // Сначала проверяем существование общего файла для всех
         const commonFilename = `${txHash}.pdf`;
         const commonFile = bucket.file(commonFilename);
         const [commonExists] = await commonFile.exists();
 
         if (commonExists) {
-            // Если существует общий файл, генерируем URL для него
             const [signedUrl] = await commonFile.getSignedUrl({
                 version: 'v4',
                 action: 'read',
@@ -64,17 +62,14 @@ router.get('/api/invoice-recipients/:txHash', async (req, res) => {
             prefix: txHash
         });
 
-        // Обрабатываем результаты
         const recipients = files.map(file => {
             const filename = file.name;
             if (filename === `${txHash}.pdf`) {
-                // Это общий файл
                 return {
                     type: 'common',
                     filename
                 };
             } else {
-                // Это персональный файл
                 const address = filename.replace(`${txHash}_`, '').replace('.pdf', '');
                 return {
                     type: 'personal',
@@ -92,7 +87,6 @@ router.get('/api/invoice-recipients/:txHash', async (req, res) => {
     }
 });
 
-// Модифицированный эндпоинт для загрузки
 router.post('/api/upload-invoice', async (req, res) => {
     try {
         const { txHash, address, fileBuffer } = req.body;
