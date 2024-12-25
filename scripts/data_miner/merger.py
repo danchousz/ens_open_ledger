@@ -1,5 +1,7 @@
 import os
 import pandas as pd
+import subprocess
+import json
 from glob import glob
 
 from ens_wallets import ens_wallets
@@ -128,7 +130,91 @@ def get_base_category(folder_name):
         return 'Support'
     else:
         return folder_name
+    
+def get_hedgey_transactions(df: pd.DataFrame) -> pd.DataFrame:
+    hedgey_mask = df['To_name'] == 'Hedgey Finance'
+    hedgey_txs = df[hedgey_mask].copy()
+    non_hedgey_txs = df[~hedgey_mask].copy()
 
+    result_rows = []
+    for _, tx in hedgey_txs.iterrows():
+        try:
+            result = subprocess.run(
+                f"python3 ../scripts/data_miner/hedgey_decomp.py '{tx['Transaction Hash']}'",
+                shell=True,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            
+            if not result.stdout.strip():
+                continue
+                
+            hedgey_data = json.loads(result.stdout)
+            
+            if 'plans' not in hedgey_data or not hedgey_data['plans']:
+                continue
+
+            for plan in hedgey_data['plans']:
+                recipient_address = plan['recipient']
+                amount = float(plan['amount'])
+
+                recipient_name = None
+                for wallet_data in ens_wallets:
+                    if isinstance(wallet_data, (list, tuple)) and len(wallet_data) >= 3:
+                        name, _, address, *details = wallet_data
+                        if address.lower() == recipient_address.lower():
+                            recipient_name = name if not details else details[0]
+                            break
+
+                if not recipient_name:
+                    for wallet_data in various_txs:
+                        if isinstance(wallet_data, (list, tuple)) and len(wallet_data) >= 2:
+                            if wallet_data[1] == tx['Transaction Hash']:
+                                recipient_name = wallet_data[0]
+                                break
+                
+                if not recipient_name:
+                    recipient_name = recipient_address[:8]
+
+                recipient_category = None
+                for tx_data in various_txs:
+                    if isinstance(tx_data, (list, tuple)) and len(tx_data) >= 2:
+                        if tx_data[1] == tx['Transaction Hash']:
+                            recipient_category = tx_data[0]
+                            break
+
+                if not recipient_category:
+                    recipient_category = recipient_name
+
+                new_dot_usd = (tx['DOT_USD'] / abs(tx['Value'])) * amount
+
+                new_row = tx.copy()
+                new_row.update({
+                    'To': recipient_address.lower(),
+                    'To_name': recipient_name,
+                    'To_category': recipient_category,
+                    'Value': amount,
+                    'DOT_USD': new_dot_usd
+                })
+                result_rows.append(new_row)
+
+        except subprocess.CalledProcessError as e:
+            print(f"Process error for {tx['Transaction Hash']}: {e.output}")
+            continue
+        except json.JSONDecodeError as e:
+            print(f"JSON error for {tx['Transaction Hash']}: {e}")
+            continue
+        except Exception as e:
+            print(f"Error for {tx['Transaction Hash']}: {e}")
+            continue
+
+    if result_rows:
+        hedgey_processed = pd.DataFrame(result_rows)
+        return pd.concat([non_hedgey_txs, hedgey_processed], ignore_index=True)
+    
+    return non_hedgey_txs
+    
 # Function assigning names to wallets
 def identify_wallets(df, wallets_dict, txs_dict, folder_name):
 
@@ -631,6 +717,8 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=
 
     combined_df = combined_df[combined_df['Quarter'] > ('2021' if is_year else '2022Q1')]
 
+    combined_df = get_hedgey_transactions(combined_df)
+
     invalid_names_ref = combined_df[combined_df['To_category'] == 'Invalid Names Ref.'].copy()
     if not invalid_names_ref.empty:
         aggregated = invalid_names_ref.groupby(['Quarter', 'From', 'From_name', 'From_category']).agg({
@@ -643,8 +731,9 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=
         aggregated['To'] = 'Users'
         aggregated['To_name'] = 'Invalid Names Ref.'
         aggregated['To_category'] = 'Invalid Names Ref.'
-        aggregated['Symbol'] = 'USDC'
+        aggregated['Symbol'] = 'ETH'
         aggregated['Acquainted?'] = 1
+        aggregated['Thru'] = 'Direct'
         
         combined_df = combined_df[combined_df['To_category'] != 'Invalid Names Ref.']
         combined_df = pd.concat([combined_df, aggregated])

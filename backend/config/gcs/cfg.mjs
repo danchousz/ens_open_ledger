@@ -2,7 +2,7 @@ import { Storage } from '@google-cloud/storage';
 
 const storage = new Storage({
     projectId: 'ens-legal-invoices',
-    keyFilename: './config/gsc/gcs-key.json'
+    keyFilename: './config/gcs/gcs-key.json'
 });
 
 const bucketName = 'invoices_ens_ledger';

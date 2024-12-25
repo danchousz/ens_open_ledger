@@ -7,3 +7,5 @@ obsolete/
 /scripts/data_miner/keys.py
 /scripts/data_miner/last_processed_block.txt
 /backend/config/gcs/gcs-key.json
+/backend/config/telegram/telegram-key.mjs
+/backend/bot/telegram/subscribers.json

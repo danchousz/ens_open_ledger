@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 25.12.2024
+
+### Added
+
+- Telegram bot for the Ledger – @ens_ledger_bot. It can provide recent transactions, historical data and recipient search.
+
+### Changed
+
+- Funding through Hedgey Finance is now decomposed by tracking the recipients of NFTs. Previously, there were transactions in Hedger Finance, but it was not clear who exactly was ultimately receiving these funds.
+
 ## [1.0.1a] - 12.12.2024
 
 ### Added

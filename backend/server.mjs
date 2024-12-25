@@ -11,6 +11,9 @@ import { pageRoutes } from './api/pageRoutes.mjs';
 import { initializeCronJobs } from './utils/cronJobs.mjs';
 import { searchRoutes } from './api/searchRoutes.mjs';
 import { invoicesRoutes } from './api/invoicesRoutes.mjs';
+import { telegramRoutes } from './api/telegramRoutes.mjs';
+
+import { startBot } from './bot/telegram/index.mjs';
 
 loadData();
 initializeCronJobs();
@@ -31,7 +34,9 @@ app.use(exportRoutes);
 app.use(dropdownRoutes);
 app.use(searchRoutes);
 app.use(invoicesRoutes);
+app.use(telegramRoutes);
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, '0.0.0.0', async () => {
     console.log(`Server running at port ${port}`);
+    startBot();
 });

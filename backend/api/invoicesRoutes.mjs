@@ -1,5 +1,5 @@
 import express from 'express';
-import { bucket } from '../config/gcs/gcs.mjs';
+import { bucket } from '../config/gcs/cfg.mjs';
 
 const router = express.Router();
 

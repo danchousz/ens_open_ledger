@@ -32,7 +32,7 @@ export function initializeCronJobs() {
     });
 
     // Run data miner every 2 hours, 1 minute after the merger
-    cron.schedule('1 */2 * * *', () => {
+    cron.schedule('10 */2 * * *', () => {
         runPythonScript(dataMinerPath);
     });
 

@@ -185,14 +185,14 @@ ens_wallets = [
     ("jeromebernard.eth", "Endpoint", "0xb835f2736a2bafafb8e4a250fe130dc08b74006e"),
     ("wayback-machine.eth", "Endpoint", "0x6ea869b6870dd98552b0c7e47da90702a436358b"),
     ("premm.eth", "Endpoint", "0x8b1f85a93ac6e4f62695ea8ef2410d248605feff"),
-    ("ipns.eth", "Endpoint", "0x59ad62fe873409969ac636ec38edd000411b0847"),
+    ("namesys.eth", "Endpoint", "0x59ad62fe873409969ac636ec38edd000411b0847"),
     ("1w3.eth", "Endpoint", "0x2ac6a3561a43f06d62602ef9728c2b9eec393326"),
     ("nycmobile.eth", "Endpoint", "0x102ef2536ef4cb29231fbadbb89c29f0db936231"),
-    ("ipns.eth", "Endpoint", "0x59ad62fe873409969ac636ec38edd000411b0847"),
+    ("namesys.eth", "Endpoint", "0x59ad62fe873409969ac636ec38edd000411b0847"),
     ("Onthis", "Endpoint", "0x090295882a6c69a79d9b293124fdd7dc9e181013"),
     ("ENSTools", "Endpoint", "0xac50ce326de14ddf9b7e9611cd2f33a1af8ac039"),
     ("EVM Gateway", "Endpoint", "0x546b9ac9a6c0a7e50caa189f021b1ccc676e1d7e"),
-    ("ipns.eth", "Endpoint", "0x47c10b0491a138ddae6ccfa26f17adcfca299753"),
+    ("namesys.eth", "Endpoint", "0x47c10b0491a138ddae6ccfa26f17adcfca299753"),
     ("maxi.eth", "Endpoint", "0xbe86ad13bc8906b5fa41b6b60e949df8d23dde11"),
     ("enspoker.eth", "Endpoint", "0xeed28010b97ec007dce8da01970dd60dab771bd8"),
     ("pugson.eth", "Endpoint", "0xe4b23bd52ccb8596e7354f4ae79647095140502b"),
@@ -220,7 +220,7 @@ ens_wallets = [
     ("glodollar.eth", "Endpoint", "0x2c844b941c67b24c799fd43bad117cdf7f23ef81"),
     ("ethdaily.eth", "Endpoint", "0xd58bf63c2a565dced209d608c240463f5f3982e9"),
     ("illuminated.eth", "Endpoint", "0xd39a979841623a4731fd41b0ba72262f7cc9667c"),
-    ("Blockful", "Endpoint", "0x000ee9a6bcec9aadcc883bd52b2c9a75fb098991"),
+    ("netto.eth", "Endpoint", "0x000ee9a6bcec9aadcc883bd52b2c9a75fb098991"),
     ("Fluidkey", "Endpoint", "0x1ba8603da702602a8657980e825a6daa03dee93a"),
     ("ImmuneFi", "Endpoint", "0x50d6ccf9e9ca7157f058545f0c3b2552041ae483"),
     ("2118.eth", "Endpoint", "0xd43b89621ffd48a8a51704f85fd0c87cbc0eb299"),
@@ -237,13 +237,15 @@ ens_wallets = [
     ("Juicebox", "Endpoint", "0x823b92d6a4b2aed4b15675c7917c9f922ea8adad"),
     ("Blockscout", "Endpoint", "0x242ba6d68ffeb4a098b591b32d370f973ff882b7"),
     ("stephancill.eth", "Endpoint", "0x8d25687829d6b85d9e0020b8c89e3ca24de20a89"),
-    ("Kiwi News", "Endpoint", "0x571fd71e4ebc85037f5bb6439022e90ce260df39"),
-    ("Scope.sh", "Endpoint", "0x1337e2624ffec537087c6774e9a18031cfeaf0a9"),
+    ("Kiwi News", "Endpoint", "0x1337e2624ffec537087c6774e9a18031cfeaf0a9"),
+    ("Scope.sh", "Endpoint", "0x571fd71e4ebc85037f5bb6439022e90ce260df39"),
     ("ens.vision", "Endpoint", "0x5dabd4f6b820142edee7d9a2cd5f1bf4546791dd"),
-
     ("0x4f0b04", "Endpoint", "0x4f0b0426f2c370b61206172c8d042f54ad384a62"),
     ("0x20e6cd", "Endpoint", "0x20e6cdba3a9e4d67bcfca8fe030697b1b8950f6d"),
     ("0x324d62", "Endpoint", "0x324d62eea625a84e04940a560564d8882ff5b05e"),
+
+    ("ETHGlobal", "Endpoint", "0x780bdd4fdff5329ed68f95d0d3fced4abb9e15d3"),
+    ("nevvdevv.eth", "Endpoint", "0x90138150a4cf51ae2cb7fc6376771a7a858dd07c"),
 
     ("enssurf.eth", "Endpoint", "0x91769843cec84adcf7a48df9dbd9694a39f44b42"),
     ("genz.eth", "Endpoint", "0x8ed7ba39ecdb39fdf21b0569b301b5756951c5e9"),
@@ -295,6 +297,24 @@ ens_wallets = [
     ("3DNS", "Endpoint", "0xbba294d303555032c6bd1021c639654b95e77fa8"),
     ("QuestBook", "Endpoint", "0x0a64f452d41991e3fdc5e1a45acb94c7b5faf32a"),
 
+    ("Resolverworks", "Endpoint", "0xa342bc613803978c7e664f59cec78f437b147854"),
+    ("EFP", "Endpoint", "0xe2cded674643743ec1316858dfd4fd2116932e63"),
+    ("Unruggable", "Endpoint", "0x64ca550f78d6cc711b247319cc71a04a166707ab"),
+    ("Namespace", "Endpoint", "0x168cafecfbe97df85968ea039cc11d10a9a44567"),
+    ("Wildcard", "Endpoint", "0xaaa6e2e683a128b34390b2985b4ae4e7b42935f0"),
+
+    ("lefteris.eth", "Endpoint", "0x2b888954421b424c5d3d9ce9bb67c9bd47537d12"),
+    ("katherineykwu.eth", "Endpoint", "0xe3919f3f971c4589089daa930aafa81b8a27b406"),
+    ("fireeyesdao.eth", "Endpoint", "0x5bfcb4be4d7b43437d5a0c57e908c048a4418390"),
+    ("brantly.eth", "Endpoint", "0x983110309620d911731ac0932219af06091b6744"),
+    ("avsa.eth", "Endpoint", "0x809fa673fe2ab515faa168259cb14e2bedebf68e"),
+
+    ("Fluidkey", "Endpoint", "0xdcc34c0da55cef7aed38bb749ad97dac12a9936c"),
+    ("1w3.eth", "Endpoint", "0x898b2500c4fed262d7cc564dd892a34b33da0a41"),
+    ("lcfr.eth", "Endpoint", "0x1c98ec38126965ad2e732f7f66f03c18ca4a9ece"),
+
+
+
 
     # SG Contractors
         # Ecosystem
@@ -313,6 +333,7 @@ ens_wallets = [
             ("weird3.eth", "Endpoint", "0x5e1b182e53f44a72e556fd1dae0c24a077cfbe38"),
             ("coltron.eth", "Endpoint", "0xad67b9be4258a2ed0d3f9d0958227a72f7657223"),
             ("estmcmxci.eth", "Endpoint", "0x53c3f34edbb06edac0c42006d3db15936b6d146f"),
+            ("estmcmxci.eth", "Endpoint", "0x4767b1902865940f020c3e3ba3c0e117941f96ff"),
             ("aexek.eth", "Endpoint", "0xcbf0ff50786dd6179b5106e8289d86c8128141d1"),
             # Bug Bounty SG
             ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
@@ -351,7 +372,7 @@ ens_wallets = [
             ("drea.eth", "Endpoint", "0xeb6b293e9bb1d71240953c8306ad2c8ac523516a"),
             ("blackcoin.eth", "Endpoint", "0x0b04a93661c11721fff0b723071fe6c3454a6310"),
             # Gtc grants SG
-            ("ipns.eth", "Endpoint", "0x839b3b540a9572448fd1b2335e0eb09ac1a02885"),
+            ("namesys.eth", "Endpoint", "0x839b3b540a9572448fd1b2335e0eb09ac1a02885"),
             ("hodl.esf.eth", "Endpoint", "0x328ebc7bb2ca4bf4216863042a960e3c64ed4c10"),
             ("armorfi.eth", "Endpoint", "0x1f28ed9d4792a567dad779235c2b766ab84d8e33"),
 
@@ -379,7 +400,7 @@ ens_wallets = [
             ("planetable.eth", "Endpoint", "0x18deee9699526f8c8a87004b2e4e55029fb26b9a"),
             ("dWebservices", "Endpoint", "0xf5afc384da034a12f2b1512b70ae22c1ea4a6bf4"),
             # Merch 
-            ("generalmagic.eth", "Endpoint", "0x839395e20bbb182fa440d08f850e6c7a8f6f0780"),
+            ("griff.eth", "Endpoint", "0x839395e20bbb182fa440d08f850e6c7a8f6f0780"),
             ("generalmagic.eth", "Endpoint", "0x0b08da7068b73a579bd5e8a8290ff8afd37bc32a"),
         # Metagov
             # DAO Tooling

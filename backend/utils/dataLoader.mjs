@@ -29,14 +29,14 @@ export function loadData(isYear = false) {
     }
 }
 
-export function getData(isYear = false) {
+export function getData(isYear = false, forceReload = false) {
     if (isYear) {
-        if (!dfYear) {
+        if (!dfYear || forceReload) {
             dfYear = loadData(true);
         }
         return dfYear;
     } else {
-        if (!df) {
+        if (!df || forceReload) {
             df = loadData();
         }
         return df;
