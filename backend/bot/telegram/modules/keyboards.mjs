@@ -6,7 +6,7 @@ export const createMainKeyboard = (isAdmin = false) => {
             [{ text: '📊 Latest transactions' }, { text: '📈 Historical data' }],
             [{ text: '🔍 Search address' }]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -25,7 +25,7 @@ export const createLatestKeyboard = () => {
             [{ text: 'Latest: Public Goods' }, { text: 'Latest: Metagov' }],
             [{ text: '⬅️ Back to main menu' }]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -39,7 +39,7 @@ export const createHistoricalKeyboard = () => {
             [{ text: 'Historical: DAO Wallet' }, { text: 'Historical: Community WG' }],
             [{ text: '⬅️ Back to main menu' }]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -54,7 +54,7 @@ export const createPeriodKeyboard = () => {
             [{ text: '📈 All time' }],
             [{ text: '⬅️ Back to categories' }]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -88,7 +88,7 @@ export const createQuartersKeyboard = (quarters) => {
 
     return {
         keyboard,
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -108,7 +108,7 @@ export const createYearsKeyboard = (years) => {
 
     return {
         keyboard,
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -131,7 +131,7 @@ export const createDateSelectionKeyboard = (category) => {
             [{ text: '📊 All-time stats' }],
             [{ text: '⬅️ Back to categories' }]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
@@ -146,7 +146,7 @@ export const createFormatKeyboard = (isHistorical) => {
             [{ text: '📑 XLSX' }, { text: '📄 CSV' }, { text: '🔤 JSON' }],
             [{ text: `⬅️ Back to ${backToWhere}`}]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
