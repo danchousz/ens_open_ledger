@@ -159,7 +159,7 @@ export const createSearchKeyboard = () => {
             [{ text: '👤 Search by Recipient' }],
             [{ text: '⬅️ Back to main menu' }]
         ],
-        resize_keyboard: false,
+        resize_keyboard: true,
         one_time_keyboard: false,
         selective: false
     };
