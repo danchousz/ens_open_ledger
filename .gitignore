@@ -9,3 +9,7 @@ obsolete/
 /backend/config/gcs/gcs-key.json
 /backend/config/telegram/telegram-key.mjs
 /backend/bot/telegram/subscribers.json
+/scripts/data_miner/raw_txs/
+/scripts/data_miner/local_ledgers/
+/scripts/data_miner/quarterly_ledgers/
+/frontend/data/

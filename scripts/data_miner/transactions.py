@@ -7,8 +7,8 @@ various_txs = [
         ("Eco. Grants", "0x9fc2812533dcd1cbf81f3fdf00eb3ec5f391ad183823831b1cf25bd0566fb65a"), #Ethlimo
         ("Eco. Grants", "0x580f4a60dac647cd046a152045ab587aae9bcc205e0a1df89b3f57c814bcb135"), #Research
         ("Eco. Grants", "0xa9f0f7adbf97b0643026cd4723ea1115d8c43dba68ce2682816b2f2db5225966"), #10kclub
-        ("Eco. Grants", "0xe0081485f9ee1b75ea0c44279e1a63482a85ddfc8d26320f05ac3b31bbe518b2"), #Website Competition
-        ("Eco. Grants", "0x7021bcee453664bcae2a8a2d56c184674cd27d1c85da13a73d7012bb075b664d"), #Website Competition
+        ("Website Competition", "0xe0081485f9ee1b75ea0c44279e1a63482a85ddfc8d26320f05ac3b31bbe518b2"), #Website Competition
+        ("Website Competition", "0x7021bcee453664bcae2a8a2d56c184674cd27d1c85da13a73d7012bb075b664d"), #Website Competition
         ("Eco. Grants", "0x16d27d47d92011c88c61857a1d4c2806f9b05d034075e4ea2dd9466232262b9a"), #Greg
         # Translators – marked in funding request&reports as Integretions
         ("Translators", "0x335170d78dd22feb2ec78e9435b792d277fff6117d3c944d87a13baa00c1f7e2"), #Danch.eth
@@ -34,8 +34,9 @@ various_txs = [
         ("Onboarding", "0xd59486c14605163d0cc931135281a475d5a01e44382f3c85204dffd8dd4251f1"), #Eduardo
         ("Onboarding", "0x4db304421c475c88d9be51bbda295a41ae2ee4fcee59716e903b2953f3ff5d80"), #Eduardo
         # IRL Outreach
-        ("IRL Outreach", "0xb25b7b3e103a6b47cfca2bd5dbfe4ed9a23d0155aedd74f2966f563020266dae"), #Limes
-        ("IRL Outreach", "0x7d282108397f7bff39797e15cd5c9141cb3f9c52938b52b4e5b396ad969650b8"), #POAP
+        ("IRL", "0xb25b7b3e103a6b47cfca2bd5dbfe4ed9a23d0155aedd74f2966f563020266dae"), #Limes
+        ("IRL", "0x7d282108397f7bff39797e15cd5c9141cb3f9c52938b52b4e5b396ad969650b8"), #POAP
+        ("IRL", "0x2dad9b5b069672ce5b1debd2bb26e540bd8e0781967a35cb35b60134a33a507a"),
         # Docs
         ("Docs", "0x44e792d2af514676c2b84ec6287c818b58aa9471b9516119ed7df5992fd2fb34"), #Zadok7
         ("Docs", "0x75d7f7f08402796fc2ea8d91e0569b69b3feef10fa6ab6f435a183713a72fac5"), #Zadok7
@@ -53,6 +54,7 @@ various_txs = [
         ("Eco. Grants", "0xa7675915b1943fb465c7a5122cb23e3eca487a9cb04e3244aaf532969c0a451e"), #Nimi
         ("Eco. Grants", "0x9f67cb4d8f22af403498ab057c4f86f85c27c3da840b6f645af30d068f3cc6ea"), #Nimi
         ("Eco. Grants", "0xc7ef4fbf4b8cf4ee7aa2b86e8831f32a02d1fc555a20e2ed3672d9e2b06f8ed5"), #Stevegachau
+        ("Eco. Grants", "0x44e1715ccabafe202857686bd24bca9ebb7fde6ccee824e4bffa2d2e46610b3f"), #Limo
         # Hackathons
         ("Hackathons", "0xd8a0754449941fc177f41946c7553c819eac0f0c2a6b3d312b57435e4a4d4a39"), #WG Sent to ENSLabs to compensate hackathon expenses from Q2              
     # Metagov
@@ -75,7 +77,7 @@ various_txs = [
         ("Eco. Grants", "0x93a64100e22cb526b6a6369280ad068b8f9580cf7d7d47e0b2f7694b4244de9b"), #Ens Academy
         ("Eco. Grants", "0x3cbf93527e747c04755893e1f4dec4cc175ab01ec487214827b7bfcd5916f9bc"), #Stevegachau
         # Small Grants 1
-        ("Eco. Small Grants", "0x30c4cb2817f1fc5010840493cc114efc969a51c20f2ce1a7ca91efe3d20eea8e"),
+        ("Discretionary", "0x30c4cb2817f1fc5010840493cc114efc969a51c20f2ce1a7ca91efe3d20eea8e"), #mattwright
         ("Eco. Small Grants", "0xe34a75e03f0138e79b140264c635af01a7f9b5a3d9f15f7ace15b656a28b3f14"),
         ("Eco. Small Grants", "0xe66cc3a2b0ea50df81050a914b5d271f751b7faa39ddacf1364885872e39639d"),
         ("Eco. Small Grants", "0x1094765880e05845480260897e96522114fa6478c6f0b2feed500d676abcf27a"),
@@ -100,6 +102,9 @@ various_txs = [
         ("SMM", "0x1ffde69b813722b7e1faaad10395b76e0a08ae8b805b22bfd53f3c2d7ee2d851"),
         ("SMM", "0xa34c54ea54ae96dddfd2e9a79f6cdcf96b14eadda46a71da5f78565d9d8421c8"),
         ("SMM", "0x0efe5c338c254fe3c2e871ea7f24beacab18340f92e00510a32085976273b97b"),
+        # POAPs
+        ("POAPs", "0x0b26682f4cfac34a907dca811d0b2b6fd6d5317f0c0e7bb809463009e23989de"),
+        
     # Metagov
         # DAO Tooling
         ("DAO Tooling", "0xe3c9e56764fc1564c214e2ef6367eef38429e16a649404ef7cdf33cf332adc2f"), #ENSTooling
@@ -123,6 +128,8 @@ various_txs = [
         ("SMM", "0x715014e1f1b64ca727c2423318d16d7221cb8808be795e0d68ecf54fc040d6b9"),
         ("SMM", "0x4111662bf95c598812141eb7b2d6517be34af50b03d3ee7e70481c672de5d46a"),
         ("SMM", "0x89f2ea7df4ae902ba6ec781eef4381880b979f03da42d7742a08a8bce37808b5"),
+        # POAPs
+        ("POAPs", "0x3721891a58164924afa661a3be975620f28ac3535270c4cbc082e2a627ceb008"),
     #Metagov
         # $ENS Distribution
         ("$ENS Vesting", "0x8a7a6cf4b729f3caf234bf71c39a303dcb94268ad7d2d4521e564aac945b9b03"),
@@ -161,8 +168,10 @@ various_txs = [
         ("SMM", "0x880b22c6e0d2ded0f5d4a97efb64fa4f3a79a359276941d5804ba0e16e9ac6b4"),
         ("SMM", "0xb307de353277e24f8030fcab49c2fdc93d5c21b5aff6a903542948d8b5e3d91b"),
         ("SMM", "0x5a266e8f2eb83506e3b17f8eedfd5f86f87f2e9ac89cc672319add61ae50554a"),
-        # Event
-        ("Event", "0xc49c041ecb006a5a6c6bc9fc184f102c074cc3711b458778cfa76fef15a8ea83"), #Aexek
+        # POAPs
+        ("POAPs", "0xc49c041ecb006a5a6c6bc9fc184f102c074cc3711b458778cfa76fef15a8ea83"), #Aexek
+        ("POAPs", "0x4926a0e0660f0a2ec6a6b2e9a6c6a7cb74a31bb86271b6342e8cc6be327ec163"),
+        ("POAPs", "0x2db24ad42e31d8c8e204ddf0fec868cd99187d5e4166666f292988a093666992"),
     #Metagov
         ("Discretionary","0x6a86f0e108c4c4104419172eefd56318acc754215da3fac7596bcf4b16a2677b"), #Capitulation.eth
         ("Discretionary","0xf03577647d4acd959fd3d28d05223fa84212fe21f049f9feb425f17f2337a579"), #Capitulation.eth
@@ -191,6 +200,8 @@ various_txs = [
         ("Fellowship", "0x4b83fe3c6e1814710b3a8b4a3027bbe112481c61150a4033268422c4f253d6c3"), #Julieshi
         # ENS Distribution
         ("$ENS Distribution", "0x0478a0be769a5bb2b0f4e506a373e42b99eca005cd710665497d1fdd31e390ed"), #Tally
+        # POAPs
+        ("POAPs", "0xa181a4058b1a5440abdc7f7514ee38117b3b1b24c987b299905c9655f2be84ae"),
     #Metagov
         # Gas Ref.
         ("Delegate Gas Ref.", "0x08abae2b6f0f9c6500059cf11a40d869e755119d571357e49682202f631101f1"), 
@@ -286,8 +297,8 @@ various_txs = [
         ("Steward Gas Ref.", "0xd08ed57849adb99a4165673922678f6833601d845579e18cbdb81d8e597d47fe"),
         ("Ref. Accidental Txs", "0x5a5ca9f80d5953af65d271ef7e274746912b807d5220302b178142ebacff6f10"),
         # Event
-        ("Event", "0x31c3177217dd5f7cabb11954f700fcf5dc281c89c95fb503e43e3adff2a5d10c"), 
-        ("Event", "0x656ee1a2070f30fdfe606e9c071f362293149564f6d39166537ba403f73e8513"),
+        ("IRL", "0x31c3177217dd5f7cabb11954f700fcf5dc281c89c95fb503e43e3adff2a5d10c"), 
+        ("IRL", "0x656ee1a2070f30fdfe606e9c071f362293149564f6d39166537ba403f73e8513"),
     #Public Goods
         # Translators
         ("Articles", "0x268e6299a5f02e98ee8f42ed60c8fb51e82c216200cfd058755dbdf972327c15"),
@@ -320,6 +331,7 @@ various_txs = [
     #Metagov
         # Endowment Fees
         ('Endowment', '0xdef61eb66b78c5b6acbe4c7eaa44438d1772e885a33588a5df0ca8bd63289a59'), #Karpatkey Ref.
+        ("IRL", "0xadf127907a8db65f55553889fad46d9a11218cbe18038a0bad88e313bd7a2f99"),
         # AI
         ("AI", "0x4fce697c14b1e1310bfa2716fdffa315329ca59c13236ee39bb4f8a04255f557"),    
         ("AI", "0xec60569895b4c6c89cee157e663487681c194e766696cc43103baf6b1ab6191b"),
@@ -386,5 +398,7 @@ various_txs = [
         ("$ENS Vesting", "0x86bb724e316a5c838299959cff8f6c04d77bd9188c6a6faf4ca9e78ca50763bc"),
         ("Security Bounty", "0x53663f861470592a24e05e0bf5c3ade5b26420603c6ac08be46e18d1a37c6e66"),
         ("DAO Tooling", "0xa8c75013fe5e16c2b3242dfe4d4bb3dfda45ffc3406fcfc05686911f4dd32fba"),
+        ("$ENS Vesting", "0xa35d65e95df52d7f6bcaa0fbbaf88b9a2bff74d5b892839d971f323436a746a6"),
+        ("PG Large Grants", "0x1876ce4e24e52efcef24abc4d5170b850f47923fc17b8dee8446fcf117a37dab"),
 
 ]

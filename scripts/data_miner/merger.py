@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import subprocess
 import json
+import os
 from glob import glob
 
 from ens_wallets import ens_wallets
@@ -139,22 +140,39 @@ def get_hedgey_transactions(df: pd.DataFrame) -> pd.DataFrame:
     result_rows = []
     for _, tx in hedgey_txs.iterrows():
         try:
-            result = subprocess.run(
-                f"python3 ../scripts/data_miner/hedgey_decomp.py '{tx['Transaction Hash']}'",
+            script_path = os.path.abspath(os.path.join(
+                os.path.dirname(__file__),
+                'hedgey_decomp.py'
+            ))
+            print(f"Trying to execute: {script_path}")
+
+            result1 = subprocess.run(
+                f"../venv/bin/python3 ../scripts/data_miner/hedgey_decomp.py '{tx['Transaction Hash']}'",
                 shell=True,
                 capture_output=True,
                 text=True,
                 check=True
             )
-            
+
+            result = subprocess.run(
+                f"../venv/bin/python3 '{script_path}' '{tx['Transaction Hash']}'",
+                shell=True,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+
+            if result.stderr:
+                print(f"STDERR: {result.stderr}")
+
             if not result.stdout.strip():
                 continue
-                
+
             hedgey_data = json.loads(result.stdout)
-            
+
             if 'plans' not in hedgey_data or not hedgey_data['plans']:
                 continue
-
+            
             for plan in hedgey_data['plans']:
                 recipient_address = plan['recipient']
                 amount = float(plan['amount'])
@@ -173,7 +191,7 @@ def get_hedgey_transactions(df: pd.DataFrame) -> pd.DataFrame:
                             if wallet_data[1] == tx['Transaction Hash']:
                                 recipient_name = wallet_data[0]
                                 break
-                
+
                 if not recipient_name:
                     recipient_name = recipient_address[:8]
 
@@ -193,7 +211,7 @@ def get_hedgey_transactions(df: pd.DataFrame) -> pd.DataFrame:
                 new_row.update({
                     'To': recipient_address.lower(),
                     'To_name': recipient_name,
-                    'To_category': recipient_category,
+                    'To_category': '$ENS Vesting',
                     'Value': amount,
                     'DOT_USD': new_dot_usd
                 })
@@ -201,6 +219,8 @@ def get_hedgey_transactions(df: pd.DataFrame) -> pd.DataFrame:
 
         except subprocess.CalledProcessError as e:
             print(f"Process error for {tx['Transaction Hash']}: {e.output}")
+            print(f"Return code: {e.returncode}")
+            print(f"STDERR: {e.stderr}")
             continue
         except json.JSONDecodeError as e:
             print(f"JSON error for {tx['Transaction Hash']}: {e}")
@@ -212,8 +232,133 @@ def get_hedgey_transactions(df: pd.DataFrame) -> pd.DataFrame:
     if result_rows:
         hedgey_processed = pd.DataFrame(result_rows)
         return pd.concat([non_hedgey_txs, hedgey_processed], ignore_index=True)
-    
+
     return non_hedgey_txs
+
+def decomp_scholarship(df: pd.DataFrame) -> pd.DataFrame:
+    scholarship_mask = df['To_category'] == 'Scholarship'
+    non_scholarship_txs = df[~scholarship_mask].copy()
+    scholarship_txs = df[scholarship_mask].copy()
+    
+    result_rows = []
+    
+    for _, tx in scholarship_txs.iterrows():
+        tx_hash = tx['Transaction Hash']
+        
+        if tx_hash == '0x11bf109a0989c151aea7da5494e641ba215307e83a43480c56af785fe8b6eb5d':
+            new_rows = [
+                {
+                    **tx.to_dict(),
+                    'Transaction Hash': tx_hash,
+                    'Date': tx['Date'],
+                    'From': tx['From'],
+                    'From_name': tx['From_name'],
+                    'From_category': tx['From_category'],
+                    'To': '0x1c98ec38126965ad2e732f7f66f03c18ca4a9ece',
+                    'To_name': 'lcfr.eth',
+                    'To_category': 'Scholarship',
+                    'Value': tx['Value'] / 6,
+                    'DOT_USD': tx['DOT_USD'] / 6,
+                    'Symbol': tx['Symbol'],
+                    'Acquainted?': tx['Acquainted?'],
+                    'Thru': tx['Thru'],
+                    'Quarter': tx['Quarter']
+                },
+                {
+                    **tx.to_dict(),
+                    'Transaction Hash': tx_hash,
+                    'Date': tx['Date'],
+                    'From': tx['From'],
+                    'From_name': tx['From_name'],
+                    'From_category': tx['From_category'],
+                    'To': '0x87c02352ad720889e5b5fbb541ff162da6690019',
+                    'To_name': 'albertocevallos.eth',
+                    'To_category': 'Scholarship',
+                    'Value': tx['Value'] / 6,
+                    'DOT_USD': tx['DOT_USD'] / 6,
+                    'Symbol': tx['Symbol'],
+                    'Acquainted?': tx['Acquainted?'],
+                    'Thru': tx['Thru'],
+                    'Quarter': tx['Quarter']
+                },
+                {
+                    **tx.to_dict(),
+                    'Transaction Hash': tx_hash,
+                    'Date': tx['Date'],
+                    'From': tx['From'],
+                    'From_name': tx['From_name'],
+                    'From_category': tx['From_category'],
+                    'To': '0x07590a393c67670463b80768feed264832541d51',
+                    'To_name': 'cookbookdev.eth',
+                    'To_category': 'Scholarship',
+                    'Value': tx['Value'] / 6,
+                    'DOT_USD': tx['DOT_USD'] / 6,
+                    'Symbol': tx['Symbol'],
+                    'Acquainted?': tx['Acquainted?'],
+                    'Thru': tx['Thru'],
+                    'Quarter': tx['Quarter']
+                },
+                {
+                    **tx.to_dict(),
+                    'Transaction Hash': tx_hash,
+                    'Date': tx['Date'],
+                    'From': tx['From'],
+                    'From_name': tx['From_name'],
+                    'From_category': tx['From_category'],
+                    'To': '0x81ebe8ee7b51741fd5dad31f6987e626a9bb8111',
+                    'To_name': 'hellenstans.eth',
+                    'To_category': 'Scholarship',
+                    'Value': tx['Value'] / 6,
+                    'DOT_USD': tx['DOT_USD'] / 6,
+                    'Symbol': tx['Symbol'],
+                    'Acquainted?': tx['Acquainted?'],
+                    'Thru': tx['Thru'],
+                    'Quarter': tx['Quarter']
+                },
+                {
+                    **tx.to_dict(),
+                    'Transaction Hash': tx_hash,
+                    'Date': tx['Date'],
+                    'From': tx['From'],
+                    'From_name': tx['From_name'],
+                    'From_category': tx['From_category'],
+                    'To': '0x60583563d5879c2e59973e5718c7de2147971807',
+                    'To_name': 'carletex.eth',
+                    'To_category': 'Scholarship',
+                    'Value': tx['Value'] / 6,
+                    'DOT_USD': tx['DOT_USD'] / 6,
+                    'Symbol': tx['Symbol'],
+                    'Acquainted?': tx['Acquainted?'],
+                    'Thru': tx['Thru'],
+                    'Quarter': tx['Quarter']
+                },
+                {
+                    **tx.to_dict(),
+                    'Transaction Hash': tx_hash,
+                    'Date': tx['Date'],
+                    'From': tx['From'],
+                    'From_name': tx['From_name'],
+                    'From_category': tx['From_category'],
+                    'To': '0x8f73be66ca8c79382f72139be03746343bf5faa0',
+                    'To_name': 'mihal.eth',
+                    'To_category': 'Scholarship',
+                    'Value': tx['Value'] / 6,
+                    'DOT_USD': tx['DOT_USD'] / 6,
+                    'Symbol': tx['Symbol'],
+                    'Acquainted?': tx['Acquainted?'],
+                    'Thru': tx['Thru'],
+                    'Quarter': tx['Quarter']
+                },
+            ]
+            result_rows.extend(new_rows)
+            
+        # elif tx_hash == 
+    
+    if result_rows:
+        scholarship_processed = pd.DataFrame(result_rows)
+        return pd.concat([non_scholarship_txs, scholarship_processed], ignore_index=True)
+    
+    return non_scholarship_txs
     
 # Function assigning names to wallets
 def identify_wallets(df, wallets_dict, txs_dict, folder_name):
@@ -354,7 +499,7 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
             '0x81b6b744ff95090b9d2727e7d5b6c9301e643a9de8305377011c2c5a4f11084a': 'Providers',
             '0xcdb37683ee78536c1cbc9e190dfa5805ce408e4fa1182235b400fd54f2b36ed9': 'Hackathons SG',
             '0x2930846bf5fe2844d4a5d280ae54753a6265f2f75b576945fdd268fc863b43e9': 'Community SG',
-            '0x1d16ce36118f0903c89a856661083a017524e4e8d9225b87948cb21e993e4377': 'Gitcoin Grants',
+            '0x1d16ce36118f0903c89a856661083a017524e4e8d9225b87948cb21e993e4377': 'Gitcoin Multisig',
         }
         specific_cats = {
             '0x81b6b744ff95090b9d2727e7d5b6c9301e643a9de8305377011c2c5a4f11084a': 'Providers',
@@ -396,7 +541,7 @@ def identify_wallets(df, wallets_dict, txs_dict, folder_name):
             (df['To'] == '0x7f7720bdb2cb5c13dd30a0c8ab8d0dd553b31caa'), 'To_category'] = 'Open Ledger'
         
         df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
-            ((df['To'] == '0xe52c39327ff7576baec3dbfef0787bd62db6d726') | (df['To'] == '0x60dbf50076206f60bcc2edf9295f5734561b8d77')), 'To_category'] = 'Event'
+            ((df['To'] == '0xe52c39327ff7576baec3dbfef0787bd62db6d726') | (df['To'] == '0x60dbf50076206f60bcc2edf9295f5734561b8d77')), 'To_category'] = 'IRL'
         
         df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
             (df['To'] == '0x0b48f961776bb4678b7a4fcf0711f3e86949f72b'), 'To_category'] = 'Governance'
@@ -701,6 +846,9 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=
     combined_df.loc[mask, 'To_name'] = 'Registrar'
     combined_df.loc[mask, 'To_category'] = 'Names Renewal'
 
+    aexek_mask = (combined_df['To_name'] == 'aexek.eth') & (combined_df['Thru'] == 'IRL SG')
+    combined_df.loc[aexek_mask, 'To_category'] = 'POAPs'
+
     duplicate_mask = (
         (combined_df['Transaction Hash'] != 'Interquarter') &
         (combined_df['Transaction Hash'] != 'Stream') &
@@ -718,6 +866,8 @@ def combine_local_ledgers(local_ledgers_dir, prices_dict, wallets_dict, is_year=
     combined_df = combined_df[combined_df['Quarter'] > ('2021' if is_year else '2022Q1')]
 
     combined_df = get_hedgey_transactions(combined_df)
+
+    combined_df = decomp_scholarship(combined_df)
 
     invalid_names_ref = combined_df[combined_df['To_category'] == 'Invalid Names Ref.'].copy()
     if not invalid_names_ref.empty:

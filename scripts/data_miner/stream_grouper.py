@@ -76,7 +76,7 @@ def generate_rows_for_date(date):
 
 
 new_rows = []
-date_range = pd.date_range(start=initial_start_date, end=current_date)
+date_range = pd.date_range(start=initial_start_date, end=datetime(2025, 1, 1) - timedelta(days=1))
 for date in date_range:
     new_rows.extend(generate_rows_for_date(date))
 
@@ -84,6 +84,8 @@ for date in date_range:
 new_df = pd.DataFrame(new_rows, columns=columns)
 final_df = pd.concat([new_df, providers_rows])
 final_df['Date'] = pd.to_datetime(final_df['Date'])
+
+final_df = final_df[(final_df['Date'] >= datetime(2024, 1, 1)) & (final_df['Date'] < datetime(2025, 1, 1))]
 final_df = final_df.sort_values('Date')
 final_df['Date'] = final_df['Date'].dt.strftime(output_date_format)
 final_df = final_df[columns]

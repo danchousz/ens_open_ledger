@@ -6,8 +6,9 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2022Q2,Ecosystem,Bug Bounty,USDC,-60000.0,-60000.0
 2022Q2,Ecosystem,Eco. Grants,USDC,-28000.0,-28000.0
 2022Q2,Ecosystem,Salaries,USDC,-27500.0,-27500.0
-2022Q2,Ecosystem,Eco. Grants,ENS,-850.0,-9914.97
 2022Q2,Ecosystem,Eco. Grants,ETH,-4.0,-7060.02
+2022Q2,Ecosystem,Eco. Grants,ENS,-650.0,-7051.969999999999
+2022Q2,Ecosystem,Website Competition,ENS,-200.0,-2863.0
 2022Q2,Ecosystem,Translators,USDC,-700.0,-700.0
 2022Q2 Unspent,Ecosystem,Ecosystem,USDC,11300.0,11300.0
 2022Q2 Unspent,Ecosystem,Ecosystem,ETH,2.0,2202.46
@@ -15,18 +16,16 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2022Q3,DAO Wallet,Ecosystem,USDC,1553000.0,1553000.0
 2022Q3,DAO Wallet,Ecosystem,ENS,42500.0,617138.01
 2022Q3,DAO Wallet,Ecosystem,ETH,156.0,302019.12
+2022Q3,Ecosystem,Eco. Grants,USDC,-96000.0,-96000.0
 2022Q3,Ecosystem,Gitcoin Grants,USDC,-69420.0,-69420.0
 2022Q3,Ecosystem,Support,USDC,-66635.620522,-66635.620522
-2022Q3,Ecosystem,ETHLimo,USDC,-60000.0,-60000.0
+2022Q3,Ecosystem,Eco. Grants,ENS,-3450.0,-52735.12
 2022Q3,Ecosystem,Fellowship,USDC,-49990.3488,-49990.3488
-2022Q3,Ecosystem,ETHLimo,ENS,-3000.0,-46174.12
-2022Q3,Ecosystem,Eco. Grants,USDC,-36000.0,-36000.0
 2022Q3,Ecosystem,Hackathons,USDC,-35000.0,-35000.0
-2022Q3,Ecosystem,ETHLimo,ETH,-10.0,-17193.5
+2022Q3,Ecosystem,Eco. Grants,ETH,-10.0,-17193.5
 2022Q3,Ecosystem,Community,USDC,-14988.840588,-14988.840588
 2022Q3,Ecosystem,IRL,USDC,-13331.89,-13331.89
 2022Q3,Ecosystem,Websites,USDC,-8000.0,-8000.0
-2022Q3,Ecosystem,Eco. Grants,ENS,-450.0,-6561.0
 2022Q3,Ecosystem,Merch,USDC,-6250.0,-6250.0
 2022Q3,Ecosystem,Translators,USDC,-2768.0,-2768.0
 2022Q3 Unspent,Ecosystem,Ecosystem,USDC,1201915.3000900003,1201915.3000900003
@@ -35,18 +34,19 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2022Q4,Hackathons,Ecosystem,USDC,2000.0,2000.0
 2022Q4,Ecosystem,Hackathons,USDC,-179250.0,-179250.0
 2022Q4,Ecosystem,Builders,USDC,-45994.6124,-45994.6124
-2022Q4,Ecosystem,Eco. Small Grants,ETH,-29.0285,-39435.562295
 2022Q4,Ecosystem,Support,USDC,-39025.0,-39025.0
+2022Q4,Ecosystem,Eco. Small Grants,ETH,-28.5285,-38773.902295
 2022Q4,Ecosystem,Eco. Grants,USDC,-36965.867249999996,-36965.867249999996
-2022Q4,Ecosystem,IRL,USDC,-21611.870000000003,-21611.870000000003
+2022Q4,Ecosystem,IRL,USDC,-21371.870000000003,-21371.870000000003
 2022Q4,Ecosystem,Merch,USDC,-18754.378065,-18754.378065
 2022Q4,Ecosystem,Websites,USDC,-15000.0,-15000.0
 2022Q4,Ecosystem,Builders,ETH,-8.0,-10131.55
 2022Q4,Ecosystem,Translators,USDC,-9287.89534,-9287.89534
 2022Q4,Ecosystem,SMM,USDC,-6300.0,-6300.0
 2022Q4,Ecosystem,$ENS Distibution,ENS,-500.0,-5207.88
-2022Q4,Ecosystem,Discretionary,ETH,-1.5,-1751.52
+2022Q4,Ecosystem,Discretionary,ETH,-2.0,-2413.18
 2022Q4,Ecosystem,Community,USDC,-650.0,-650.0
+2022Q4,Ecosystem,POAPs,USDC,-240.0,-240.0
 2022Q4 Unspent,Ecosystem,Ecosystem,ENS,44200.0,472056.0
 2022Q4 Unspent,Ecosystem,Ecosystem,ETH,109.47149999999999,130796.54819999999
 2022Q4 Unspent,Ecosystem,Ecosystem,USDC,831075.6770350003,831075.6770350003
@@ -58,7 +58,7 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2023Q1,Ecosystem,Support,ENS,-3750.0,-42260.509999999995
 2023Q1,Ecosystem,Support,USDC,-31880.0,-31880.0
 2023Q1,Ecosystem,Eco. Small Grants,ETH,-15.0,-24805.8
-2023Q1,Ecosystem,IRL,USDC,-21290.858838,-21290.858838
+2023Q1,Ecosystem,IRL,USDC,-20740.858838,-20740.858838
 2023Q1,Ecosystem,Eco. Grants,ETH,-10.0,-16770.0
 2023Q1,Ecosystem,Builders,USDC,-13075.566751,-13075.566751
 2023Q1,Ecosystem,Merch,USDC,-7247.0,-7247.0
@@ -67,6 +67,7 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2023Q1,Ecosystem,Support,ETH,-1.42507218,-2253.149335443
 2023Q1,Ecosystem,Builders,ETH,-1.0,-1793.51
 2023Q1,Ecosystem,ENS Fairy,ETH,-1.0,-1633.45
+2023Q1,Ecosystem,POAPs,USDC,-550.0,-550.0
 2023Q1 Unspent,Ecosystem,Ecosystem,USDC,1349682.2528460003,1349682.2528460003
 2023Q1 Unspent,Ecosystem,Ecosystem,ETH,335.04642781999996,602715.0190053979
 2023Q1 Unspent,Ecosystem,Ecosystem,ENS,40450.0,538389.5
@@ -75,14 +76,14 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2023Q2,Ecosystem,Fellowship,USDC,-54979.5264,-54979.5264
 2023Q2,Ecosystem,Gitcoin Grants,USDC,-50100.0,-50100.0
 2023Q2,Ecosystem,Eco. Small Grants,ETH,-24.916,-46330.098
-2023Q2,Ecosystem,Support,USDC,-42320.0,-42320.0
+2023Q2,Ecosystem,Support,USDC,-41820.0,-41820.0
 2023Q2,Ecosystem,$ENS Distribution,ENS,-3000.0,-27738.47
-2023Q2,Ecosystem,IRL,USDC,-23731.75,-23731.75
+2023Q2,Ecosystem,IRL,USDC,-23431.75,-23431.75
 2023Q2,Ecosystem,Hackathons,USDC,-21162.663399,-21162.663399
 2023Q2,Ecosystem,ENS Fairy,ETH,-4.0,-8406.44
 2023Q2,Ecosystem,SMM,USDC,-3900.0,-3900.0
 2023Q2,Ecosystem,Gitcoin Grants,ETH,-1.693,-3258.20862
-2023Q2,Ecosystem,Event,USDC,-500.0,-500.0
+2023Q2,Ecosystem,POAPs,USDC,-1300.0,-1300.0
 2023Q2,Ecosystem,Merch,USDC,-373.995467,-373.995467
 2023Q2 Unspent,Ecosystem,Ecosystem,ENS,37450.0,322444.5
 2023Q2 Unspent,Ecosystem,Ecosystem,ETH,304.43742782,565248.9722333939
@@ -98,7 +99,7 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2023Q3,Ecosystem,Newsletter,USDC,-4500.0,-4500.0
 2023Q3,Ecosystem,Merch,USDC,-4000.0,-4000.0
 2023Q3,Ecosystem,Gitcoin Grants,ETH,-0.25,-426.385
-2023Q3,Ecosystem,Hackathons,ETH,-0.2088336639866346,-404.60269395426536
+2023Q3,Ecosystem,POAPs,ETH,-0.2088336639866346,-404.60269395426536
 2023Q3,Ecosystem,IRL,ETH,-0.132642786945538,-219.24526254227976
 2023Q3,Ecosystem,Merch,ETH,-0.085821,-158.51224521
 2023Q3 Unspent,Ecosystem,Ecosystem,ENS,37450.0,283871.0
@@ -172,12 +173,13 @@ Quarter,From_category,To_category,Symbol,Value,DOT_USD
 2024Q4,Ecosystem,IRL,USDC,-32000.0,-32000.0
 2024Q4,Ecosystem,CoW Swap,ETH,-10.0,-23852.0
 2024Q4,Ecosystem,Mini Grants,ETH,-2.0,-8001.06
-2024Q4,Ecosystem,Support,USDC,-5100.0,-5100.0
+2024Q4,Ecosystem,Support,USDC,-6800.0,-6800.0
+2024Q4,Ecosystem,Newsletter,USDC,-4500.0,-4500.0
 2024Q4,Ecosystem,Hackathons,ETH,-1.0,-3907.67
-2024Q4,Ecosystem,Newsletter,USDC,-3000.0,-3000.0
 2024Q4,Ecosystem,Sponsorship,USDC,-1800.0,-1800.0
 2024Q4,Ecosystem,SMM,USDC,-1680.0,-1680.0
 2024Q4,Ecosystem,New Registrar,ETH,-0.225314469483661,-821.2104063611837
+2024Q4,Ecosystem,Salaries,USDC,-560.0,-560.0
 2024Q4 Unspent,Ecosystem,Ecosystem,ETH,46.128687969625815,138386.06390887743
 2024Q4 Unspent,Ecosystem,Ecosystem,ENS,22450.0,808649.0000000001
-2024Q4 Unspent,Ecosystem,Ecosystem,USDC,745490.4830770002,745490.4830770002
+2024Q4 Unspent,Ecosystem,Ecosystem,USDC,741730.4830770002,741730.4830770002
