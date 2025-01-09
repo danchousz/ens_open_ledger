@@ -1499,6 +1499,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         nodeX.push(startPoint + quarterNumber -  2.5*border);
                         nodeY.push(spsZoneRecipientsCat += 0.01);
+                        ecosystemZoneRecipientsCat = ecosystemZone;
                     } else if (receiver.startsWith('Providers')) {
                         nodeX.push(startPoint);
                         nodeY.push(spsZoneSendersCat -= 0.0075)
@@ -1592,23 +1593,14 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         nodeY.push(metagovZone);
                         interCatFlag = true;
                     } else if (sender.startsWith('Metagov')) {
+                        if (interCatFlag) {
+                            metagovZoneRecipientCat += 0.02;
+                            interCatFlag = false;
+                        }
+                        nodeX.push(startPoint + quarterNumber -  2.5*border);
                         if (hideMode) {
-                            if (interCatFlag) {
-                                metagovZoneRecipientCat += 0.04;
-                                nodeX.push(startPoint + quarterNumber -  2.5*border);
-                                nodeY.push(metagovZoneRecipientCat += 0.01);
-                                metagovZoneRecipientCat += 0.03;
-                                interCatFlag = false;
-                            } else {
-                                nodeX.push(startPoint + quarterNumber -  2.5*border);
-                                nodeY.push(metagovZoneRecipientCat += 0.0125);
-                            }
+                            nodeY.push(metagovZoneRecipientCat += 0.0125);
                         } else {
-                            if (interCatFlag) {
-                                metagovZoneRecipientCat += 0.02;
-                                interCatFlag = false;
-                            }
-                            nodeX.push(startPoint + quarterNumber -  2.5*border);
                             nodeY.push(metagovZoneRecipientCat += 0.01);
                         }
                         spsZoneRecipientsCat = spsZone;

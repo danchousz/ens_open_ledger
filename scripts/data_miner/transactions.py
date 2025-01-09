@@ -132,7 +132,7 @@ various_txs = [
         ("POAPs", "0x3721891a58164924afa661a3be975620f28ac3535270c4cbc082e2a627ceb008"),
     #Metagov
         # $ENS Distribution
-        ("$ENS Vesting", "0x8a7a6cf4b729f3caf234bf71c39a303dcb94268ad7d2d4521e564aac945b9b03"),
+        ("$ENS Distribution", "0x8a7a6cf4b729f3caf234bf71c39a303dcb94268ad7d2d4521e564aac945b9b03"),
         # Discretionary
         ("Discretionary", "0x44d01ea5d6584c58c63eb8580819e7f3da50b5b5aeb64705d51007a58f2f9c6e"),
 
@@ -390,7 +390,7 @@ various_txs = [
         ("Hackathons", "0x4e1885663fe9818d1f59f5edb982ef88d32bad80d72c93f2a2a813a8bc7d6306"),
         ("Hackathons", "0x4e1885663fe9818d1f59f5edb982ef88d32bad80d72c93f2a2a813a8bc7d6302"),
         ("Hackathons", "0x4e1885663fe9818d1f59f5edb982ef88d32bad80d72c93f2a2a813a8bc7d6301"),
-        ("$ENS Distibution", "0x6357daddf4fcbbc68d634f092352d2eea48117256f40682f7179d25e2bfa2259"),
+        ("$ENS Distribution", "0x6357daddf4fcbbc68d634f092352d2eea48117256f40682f7179d25e2bfa2259"),
     #Public Goods
         ("Grant Platform", "0xdb90045634e3654f169b60ab779da3212a229d0e5597921c0208eb7134f4b5c1"), #Questbook
     #Metagov 
@@ -401,4 +401,7 @@ various_txs = [
         ("$ENS Vesting", "0xa35d65e95df52d7f6bcaa0fbbaf88b9a2bff74d5b892839d971f323436a746a6"),
         ("PG Large Grants", "0x1876ce4e24e52efcef24abc4d5170b850f47923fc17b8dee8446fcf117a37dab"),
 
+#Q1 2025
+    #Ecosystem
+        ("$ENS Distribution", "0x051314b048719258ef28defa13bfb3297e0a999ad06049ff15e44cdbbb1ce9d0"),
 ]

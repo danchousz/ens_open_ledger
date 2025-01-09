@@ -3,12 +3,48 @@ import { getData } from '../utils/dataLoader.mjs';
 
 const router = express.Router();
 
+let nameMapCache = null;
+let lastUpdateTime = null;
+const CACHE_LIFETIME = 5 * 60 * 1000;
+
+function buildNameMap() {
+    const df = getData();
+    const nameMap = new Map();
+    
+    df.forEach(row => {
+        if (row.To && 
+            row.To_name && 
+            row['Transaction Hash'] !== 'Interquarter' &&
+            !row['Transaction Hash'].startsWith('Unspent')) 
+        {
+            if (!row.To_name.startsWith('0x') || row.To_name.length > 10) {
+                nameMap.set(row.To_name.toLowerCase(), row.To_name);
+            }
+        }
+    });
+
+    return nameMap;
+}
+
+function getNameMap() {
+    const currentTime = Date.now();
+    
+    // Если кэш пустой или устарел, обновляем его
+    if (!nameMapCache || !lastUpdateTime || (currentTime - lastUpdateTime) > CACHE_LIFETIME) {
+        nameMapCache = buildNameMap();
+        lastUpdateTime = currentTime;
+    }
+    
+    return nameMapCache;
+}
+
 router.get('/api/search', (req, res) => {
     const searchTerm = req.query.term.toLowerCase();
     const df = getData();
     
     try {
-        const nameMap = new Map();
+        const nameMap = getNameMap();
+        let matches = [];
         
         df.forEach(row => {
             if (row.To && 
@@ -21,8 +57,6 @@ router.get('/api/search', (req, res) => {
                 }
             }
         });
- 
-        let matches = [];
         
         if (searchTerm.startsWith('0x') && searchTerm.length > 10) {
             matches = Array.from(df
@@ -43,7 +77,7 @@ router.get('/api/search', (req, res) => {
                 if (!searchTerm.endsWith('.eth') && nameLower.includes(searchTerm + '.eth')) {
                     return true;
                 }
- 
+                
                 return searchWords.some(word => {
                     if (word.length < 2) return false;
                     
