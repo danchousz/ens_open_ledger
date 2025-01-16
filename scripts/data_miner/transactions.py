@@ -404,4 +404,7 @@ various_txs = [
 #Q1 2025
     #Ecosystem
         ("$ENS Distribution", "0x051314b048719258ef28defa13bfb3297e0a999ad06049ff15e44cdbbb1ce9d0"),
+        ("Articles", "0x1375bed275b4bc51ab322e81817584a48bc1c58bfd234776ccdc674ce7d7bcab"),
+        ("Builders", "0x440b28fe819bc74c27b542f5d08b9cac62666bd404fb0150b6d98a85145683b5"),
+        ("Builders", "0x51482b22753f387a5032750e813707e3e20fa8a056c519f3cd5997bbf1a39732"),
 ]

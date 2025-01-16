@@ -52,11 +52,11 @@ const formatTransaction = (tx) => {
 
     const formattedAmount = tx.symbol === 'USDC'
                         ? Math.round(tx.amount)
-                        : Math.round(tx.amount, 3);
+                        : Math.round(tx.amount * 1000) / 1000;
 
     const dotusdMessage = tx.symbol === 'USDC'
                         ? ''
-                        : `($${Math.round(tx.dot_usd, 0)}) `
+                        : `($${Math.round(tx.dot_usd)}) `
     const categoryMessage = tx.category === tx.to_name 
                         ? ''
                         : `within the category ${tx.category}`;
@@ -896,7 +896,7 @@ export const notifySubscribers = async (bot, newTransaction) => {
 
     for (const chatId of subscribers) {
         try {
-            await bot.sendMessage(chatId, `🔔 New transaction detected:\n\n${message}`, {
+            await bot.sendMessage(chatId, `🔔 New transaction detected:\n${message}`, {
                 parse_mode: config.PARSEMODE, 
                 disable_web_page_preview: true
             });

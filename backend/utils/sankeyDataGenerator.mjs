@@ -2969,7 +2969,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
     });
 
     df.forEach(row => {
-        const dollarValue = Math.round(row.DOT_USD, 0);
+        const dollarValue = Math.round(row.DOT_USD);
         const formattedDollarValue = dollarValue.toLocaleString('en-US') + '$';
         const sender = row.From_category;
         const qtr = row.Quarter;
@@ -2990,7 +2990,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
 
         const rawValue = (row.Symbol === 'ENS' || row.Symbol === 'USDC')
         ? Math.round(row.Value, 0) 
-        : Math.round(row.Value, 2);
+        : Math.round(row.Value * 100) / 100;
 
         const label = row.Symbol !== 'USDC'
         ? (row['Transaction Hash'] === 'Interquarter' || row['Transaction Hash'] === 'Unspent' 

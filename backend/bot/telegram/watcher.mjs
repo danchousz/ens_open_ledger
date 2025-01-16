@@ -29,7 +29,7 @@ export const initializeTransactionWatcher = (bot) => {
                         amount: tx['Value'],
                         symbol: tx['Symbol'] || '',
                         quarter: tx['Quarter'],
-                        dot_usd: tx['DOT_USD'] ? `$${tx['DOT_USD']}` : '',
+                        dot_usd: tx['DOT_USD'] ? tx['DOT_USD'] : '',
                         category: tx['To_category'] || 'Unknown',
                         Thru: tx['Thru'] || 'Direct'
                     });
