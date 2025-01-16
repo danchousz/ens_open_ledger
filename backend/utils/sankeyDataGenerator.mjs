@@ -1,5 +1,3 @@
-import e from "express";
-
 export function getNextQuarter(quarter) {
     const [year, q] = quarter.split('Q');
     const nextQ = parseInt(q) % 4 + 1;
