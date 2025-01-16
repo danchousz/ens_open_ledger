@@ -1,104 +1,135 @@
 import { getData } from '../utils/dataLoader.mjs';
 import { createSankeyData, getNextQuarter } from '../utils/sankeyDataGenerator.mjs';
+import { cacheManager } from '../utils/cacheManager.mjs';
+
+function getCachedData(key, computeFn, ...args) {
+    const cachedData = cacheManager.get(key);
+    if (cachedData) {
+        return cachedData;
+    }
+
+    const result = computeFn(...args);
+    if (!cacheManager.isInitialized) {
+        return result;
+    }
+    cacheManager.set(key, result);
+    return result;
+}
 
 export function getBigPictureData(hideMode) {
-    const df = getData();
-    let modifiedDf = JSON.parse(JSON.stringify(df));
+    const cacheKey = `big_picture_${hideMode}`;
+    return getCachedData(cacheKey, () => {
+        const df = getData();
+        let modifiedDf = JSON.parse(JSON.stringify(df));
 
-    modifiedDf = modifiedDf.map(row => {
-        if (row['Transaction Hash'] === 'Unspent') {
-            return {
-                ...row,
-                'Transaction Hash': 'Interquarter',
-                To_name: row.From_name,
-                To_category: row.From_category,
+        modifiedDf = modifiedDf.map(row => {
+            if (row['Transaction Hash'] === 'Unspent') {
+                return {
+                    ...row,
+                    'Transaction Hash': 'Interquarter',
+                    To_name: row.From_name,
+                    To_category: row.From_category,
+                }
             }
-        }
-        return row;
+            return row;
+        });
+        return createSankeyData(modifiedDf, true, null, null, false, hideMode);
     });
-    return createSankeyData(modifiedDf, true, null, null, false, hideMode);
 }
 
 export function getQuarterData(quarter) {
-    const df = getData();
-    const [year, q] = quarter.split('Q');
-    if (parseInt(year) < 2022 || (parseInt(year) === 2022 && parseInt(q) < 2)) {
-        throw new Error('Invalid quarter: data not available for quarters before 2022Q2');
-    }
-
-    let filteredDf = df.filter(row => {
-        if (row.Quarter === quarter) {
-            if (row['Transaction Hash'] === 'Interquarter' && row.From_name !== 'Community WG') {
-                if (row.From_name !== 'DAO Wallet') {
-                    const nextQuarter = getNextQuarter(row.Quarter);
-                    row.To_name = `Unspent_${row.From_name}_${nextQuarter}`;
-                    row.To_category = `Unspent_${row.From_name}_${nextQuarter}`;
-                    row['Transaction Hash'] = 'Unspent';
-                    return true;
-                }
-                return false;
-            }
-            return true;
+    const cacheKey = `quarter_${quarter}`;
+    return getCachedData(cacheKey, () => {
+        const df = getData();
+        const [year, q] = quarter.split('Q');
+        if (parseInt(year) < 2022 || (parseInt(year) === 2022 && parseInt(q) < 2)) {
+            throw new Error('Invalid quarter: data not available for quarters before 2022Q2');
         }
-        return false;
-    });
 
-    return createSankeyData(filteredDf, false, quarter, null, false);
+        let filteredDf = df.filter(row => {
+            if (row.Quarter === quarter) {
+                if (row['Transaction Hash'] === 'Interquarter' && row.From_name !== 'Community WG') {
+                    if (row.From_name !== 'DAO Wallet') {
+                        const nextQuarter = getNextQuarter(row.Quarter);
+                        row.To_name = `Unspent_${row.From_name}_${nextQuarter}`;
+                        row.To_category = `Unspent_${row.From_name}_${nextQuarter}`;
+                        row['Transaction Hash'] = 'Unspent';
+                        return true;
+                    }
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        });
+
+        return createSankeyData(filteredDf, false, quarter, null, false);
+    });
 }
 
 export function getWalletData(quarter, walletFilter) {
-    const df = getData();
-    let filteredDf = df.filter(row => {
-        if (row.Quarter === quarter) {
-            if (row['Transaction Hash'] === 'Interquarter') {
-                if (row.From_name !== 'DAO Wallet') {
-                    const nextQuarter = getNextQuarter(row.Quarter);
-                    row.To_name = `Unspent_${row.From_name}_${nextQuarter}`;
-                    row.To_category = `Unspent_${row.From_name}_${nextQuarter}`;
-                    row['Transaction Hash'] = 'Unspent';
-                    return true;
+    const cacheKey = `quarter_wallet_${quarter}_${walletFilter}`;
+    return getCachedData(cacheKey, () => {
+        const df = getData();
+        let filteredDf = df.filter(row => {
+            if (row.Quarter === quarter) {
+                if (row['Transaction Hash'] === 'Interquarter') {
+                    if (row.From_name !== 'DAO Wallet') {
+                        const nextQuarter = getNextQuarter(row.Quarter);
+                        row.To_name = `Unspent_${row.From_name}_${nextQuarter}`;
+                        row.To_category = `Unspent_${row.From_name}_${nextQuarter}`;
+                        row['Transaction Hash'] = 'Unspent';
+                        return true;
+                    }
+                    return false;
                 }
-                return false;
+                return true;
             }
-            return true;
-        }
-        return false;
+            return false;
+        });
+
+        filteredDf = filteredDf.filter(row => 
+            row.From_category === walletFilter || 
+            row.To_category === walletFilter || 
+            row['Transaction Hash'] === walletFilter
+        );
+
+        return createSankeyData(filteredDf, false, quarter, walletFilter, false);
     });
-
-    filteredDf = filteredDf.filter(row => row.From_category === walletFilter || row.To_category === walletFilter || row['Transaction Hash'] === walletFilter);
-
-    return createSankeyData(filteredDf, false, quarter, walletFilter, false);
 }
 
 export function getYearData(year) {
-    const df = getData(true);
-    const yearInt = parseInt(year);
-    if (yearInt < 2022) {
-        throw new Error('Invalid year: data not available for years before 2022');
-    }
-
-    let filteredDf = df.filter(row => {
-        if (row['Transaction Hash'] === '0xdf821cb80860f015bff9ef1818cbb16e93682f071254f76a173db3db133dc534' 
-            || row['Transaction Hash'] === '0xdef61eb66b78c5b6acbe4c7eaa44438d1772e885a33588a5df0ca8bd63289a59') {
-            return
+    const cacheKey = `year_${year}`;
+    return getCachedData(cacheKey, () => {
+        const df = getData(true);
+        const yearInt = parseInt(year);
+        if (yearInt < 2022) {
+            throw new Error('Invalid year: data not available for years before 2022');
         }
-        if (row.Quarter === year.toString()) {
-            if (row['Transaction Hash'] === 'Interquarter' && row.From_name !== 'Community WG') {
-                if (row.From_name !== 'DAO Wallet') {
-                    const nextYear = (yearInt + 1).toString();
-                    row.To_name = `Unspent_${row.From_name}_${nextYear}`;
-                    row.To_category = `Unspent_${row.From_name}_${nextYear}`;
-                    row['Transaction Hash'] = 'Unspent';
-                    return true;
-                }
-                return false;
+
+        let filteredDf = df.filter(row => {
+            if (row['Transaction Hash'] === '0xdf821cb80860f015bff9ef1818cbb16e93682f071254f76a173db3db133dc534' 
+                || row['Transaction Hash'] === '0xdef61eb66b78c5b6acbe4c7eaa44438d1772e885a33588a5df0ca8bd63289a59') {
+                return;
             }
-            return true;
-        }
-        return false;
-    });
+            if (row.Quarter === year.toString()) {
+                if (row['Transaction Hash'] === 'Interquarter' && row.From_name !== 'Community WG') {
+                    if (row.From_name !== 'DAO Wallet') {
+                        const nextYear = (yearInt + 1).toString();
+                        row.To_name = `Unspent_${row.From_name}_${nextYear}`;
+                        row.To_category = `Unspent_${row.From_name}_${nextYear}`;
+                        row['Transaction Hash'] = 'Unspent';
+                        return true;
+                    }
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        });
 
-    return createSankeyData(filteredDf, false, year, null, true);
+        return createSankeyData(filteredDf, false, year, null, true);
+    });
 }
 
 export function getCategorySankeyData(category, quarter) {

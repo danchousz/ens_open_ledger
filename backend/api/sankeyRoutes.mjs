@@ -1,7 +1,23 @@
 import express from 'express';
-import { getBigPictureData, getQuarterData, getWalletData, getCategorySankeyData, getYearData, getYearWalletData, getYearCategoryData } from '../services/sankeyService.mjs';
+import { 
+    getBigPictureData, 
+    getQuarterData, 
+    getWalletData, 
+    getCategorySankeyData, 
+    getYearData, 
+    getYearWalletData, 
+    getYearCategoryData 
+} from '../services/sankeyService.mjs';
+import { cacheManager } from '../utils/cacheManager.mjs';
 
 const router = express.Router();
+
+router.use((req, res, next) => {
+    if (!cacheManager.isInitialized) {
+        console.log('Warning: Cache is not initialized yet, using direct computation');
+    }
+    next();
+});
 
 router.get('/data/big_picture', (req, res) => {
     try {
@@ -72,7 +88,6 @@ router.get('/category-sankey-data/year/:year/category/:category', (req, res) => 
     }
 });
 
-// New routes for yearly wallet and category views
 router.get('/data/year/:year/:wallet', (req, res) => {
     try {
         const year = req.params.year;
@@ -81,6 +96,16 @@ router.get('/data/year/:year/:wallet', (req, res) => {
         res.json(sankeyData);
     } catch (error) {
         console.error('Error creating yearly wallet Sankey data:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+router.get('/cache/stats', (req, res) => {
+    try {
+        const stats = cacheManager.getStats();
+        res.json(stats);
+    } catch (error) {
+        console.error('Error getting cache stats:', error);
         res.status(500).send('Internal Server Error');
     }
 });
