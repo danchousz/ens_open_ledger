@@ -5,6 +5,8 @@ import os
 from keys import api_key
 from datetime import datetime
 import pytz
+import time
+from typing import Dict, Any, Optional
 
 scan_url = 'https://api.etherscan.io/api'
 wallets = {
@@ -17,159 +19,249 @@ wallets = {
     'Hackathons SG': '0x9b9c249be04dd433c7e8fbbf5e61e6741b89966d',
     'Newsletter SG': '0x13aee52c1c688d3554a15556c5353cb0c3696ea2',
     'Large Grants Pod': '0xeba76c907f02ba13064edad7876fe51d9d856f62'
-
-    # Temp/const inactive
-    # 'Merch SG': '0x0d06a817584ac378849f03df6f11a9ad67dd786d',
-    # 'Builders SG': '0x6a016548310076285668e2378df70bd545396b5a',
-    # 'Translators SG': '0xe8929029ea54113da91cdb8c9c1ba297cf803838',
-    # 'Websites SG': '0x593a50cf05359bc88474d86b06ec6e1c1a2a899f',
-    # 'Docs SG': '0x5d609c79c7e19aa334d77517b3b17a3dac6f54bc',
-    # 'Gitcoin Grants SG': '0xba0c461b22d918fb1f52fef556310230d177d1f2',
-    # 'Support SG': '0x69a79128462853833e22bba1a43bcdac4725761b',
-    # 'Bug Bounty SG': '0xb3a37c813d3d365a03dd1dd3e68cc11af019cdd6',
-    # 'Governance Pod': '0x4f4cadb8af8f1d463240c2b93952d8a16688a818',
-     # 'DAO Tooling Pod': '0x8f730f4ac5fd234df9993e0e317f07e44fb869c1',
-    # 'Endowment Fees Pod': '0x83dd97a584c4ad50015f7aa6b48bf4970a056d8f',
 }
+
 contracts = {
     'ens': '0xc18360217d8f7ab5e7c516566761ea12ce7f9d72',
     'usdc': '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
     'weth': '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
 }
 
-def fetch_price(ticker):
-    binance_url = f'https://api.binance.com/api/v3/ticker/price?symbol={ticker}'
-    response = requests.get(binance_url)
-    price_data = response.json()
-    return float(price_data['price'])
+def safe_request(url: str, max_retries: int = 3, delay: float = 1.0) -> Optional[Dict[str, Any]]:
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            print(f"Request failed (attempt {attempt + 1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(delay)
+            continue
+        except json.JSONDecodeError as e:
+            print(f"JSON decode error: {e}")
+            print(f"Response text: {response.text}")
+            return None
+    return None
 
-ens_price = fetch_price('ENSUSDC')
-eth_price = fetch_price('ETHUSDC')
+def fetch_price(ticker: str) -> float:
+    try:
+        binance_url = f'https://api.binance.com/api/v3/ticker/price?symbol={ticker}'
+        data = safe_request(binance_url)
+        if data and 'price' in data:
+            return float(data['price'])
+        return 0.0
+    except Exception as e:
+        print(f"Error fetching price for {ticker}: {e}")
+        return 0.0
 
-def convert_timestamp(unix_timestamp):
-    utc_dt = datetime.fromtimestamp(int(unix_timestamp), pytz.UTC)
-    return utc_dt.strftime('%Y-%m-%d %H:%M:%S')
+def safe_float_conversion(value: str, decimals: int = 18) -> float:
+    try:
+        return int(value) / 10**decimals
+    except (ValueError, TypeError) as e:
+        print(f"Error converting value: {e}")
+        return 0.0
 
-def get_last_block():
-    request = f'{scan_url}?module=proxy&action=eth_blockNumber&apikey={api_key}'
-    response = requests.get(request)
-    last_block = int(json.loads(response.text)['result'], 16)
-    return last_block
+def convert_timestamp(unix_timestamp: str) -> str:
+    try:
+        utc_dt = datetime.fromtimestamp(int(unix_timestamp), pytz.UTC)
+        return utc_dt.strftime('%Y-%m-%d %H:%M:%S')
+    except (ValueError, TypeError) as e:
+        print(f"Error converting timestamp: {e}")
+        return datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S')
 
-def get_start_block():
+def get_last_block() -> int:
+    try:
+        request = f'{scan_url}?module=proxy&action=eth_blockNumber&apikey={api_key}'
+        data = safe_request(request)
+        if data and 'result' in data:
+            return int(data['result'], 16)
+        return 0
+    except Exception as e:
+        print(f"Error getting last block: {e}")
+        return 0
+
+def get_start_block() -> int:
     try:
         with open('../scripts/data_miner/last_processed_block.txt', 'r') as f:
             return int(f.read().strip())
-    except FileNotFoundError:
+    except (FileNotFoundError, ValueError) as e:
+        print(f"Error reading start block: {e}")
         return 0
 
-def save_last_block(block):
-    with open('../scripts/data_miner/last_processed_block.txt', 'w') as f:
-        f.write(str(block+1))
+def safe_save_to_csv(file_path: str, data: list, fields: list):
+    try:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        mode = 'a' if os.path.exists(file_path) else 'w'
+        with open(file_path, mode, newline='') as csvfile:
+            csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+            if mode == 'w':
+                csvwriter.writerow(fields)
+            csvwriter.writerows(data)
+        return True
+    except Exception as e:
+        print(f"Error saving to CSV {file_path}: {e}")
+        return False
 
-def get_erc20_txlist(contract_address, wallet_address, start_block, end_block):
-    request = f'{scan_url}?module=account&action=tokentx&contractaddress={contract_address}&address={wallet_address}&page=1&offset=10000&startblock={start_block}&endblock={end_block}&sort=asc&apikey={api_key}'
-    response = requests.get(request)
-    return response.json()
+def save_last_block(block: int):
+    try:
+        with open('../scripts/data_miner/last_processed_block.txt', 'w') as f:
+            f.write(str(block+1))
+    except Exception as e:
+        print(f"Error saving last block: {e}")
 
-def get_internal_txlist(wallet_address, start_block, end_block):
-    request = f'{scan_url}?module=account&action=txlistinternal&address={wallet_address}&startblock={start_block}&endblock={end_block}&page=1&offset=10000&sort=asc&apikey={api_key}'
-    response = requests.get(request)
-    return response.json()
+def get_erc20_txlist(contract_address: str, wallet_address: str, start_block: int, end_block: int) -> Dict[str, Any]:
+    try:
+        request = f'{scan_url}?module=account&action=tokentx&contractaddress={contract_address}&address={wallet_address}&page=1&offset=10000&startblock={start_block}&endblock={end_block}&sort=asc&apikey={api_key}'
+        data = safe_request(request)
+        if data is None:
+            return {"status": "0", "message": "Failed to fetch data", "result": []}
+        return data
+    except Exception as e:
+        print(f"Error getting ERC20 transactions: {e}")
+        return {"status": "0", "message": str(e), "result": []}
 
-def save_erc20_transactions(data, wallet_name):
-    fields = ["Transaction Hash", "Blockno", "UnixTimestamp", "DateTime (UTC)", "From", "To", "TokenValue", "USDValueDayOfTx", "ContractAddress", "TokenName", "TokenSymbol"]
+def get_internal_txlist(wallet_address: str, start_block: int, end_block: int) -> Dict[str, Any]:
+    try:
+        request = f'{scan_url}?module=account&action=txlistinternal&address={wallet_address}&startblock={start_block}&endblock={end_block}&page=1&offset=10000&sort=asc&apikey={api_key}'
+        data = safe_request(request)
+        if data is None:
+            return {"status": "0", "message": "Failed to fetch data", "result": []}
+        return data
+    except Exception as e:
+        print(f"Error getting internal transactions: {e}")
+        return {"status": "0", "message": str(e), "result": []}
+
+def process_erc20_transaction(tx: Dict[str, Any], wallet_name: str) -> list:
+    try:
+        value = safe_float_conversion(tx["value"], 6 if tx["tokenSymbol"] == 'USDC' else 18)
+        if tx["tokenSymbol"] == 'ENS':
+            usdprice = fetch_price('ENSUSDC')
+        elif tx["tokenSymbol"] == 'USDC':
+            usdprice = 1
+        else:
+            usdprice = fetch_price('ETHUSDC')
+        
+        return [
+            tx.get("hash", ""),
+            tx.get("blockNumber", ""),
+            tx.get("timeStamp", ""),
+            convert_timestamp(tx.get("timeStamp", "0")),
+            tx.get("from", ""),
+            tx.get("to", ""),
+            value,
+            value * usdprice,
+            tx.get("contractAddress", ""),
+            tx.get("tokenName", ""),
+            tx.get("tokenSymbol", "")
+        ]
+    except Exception as e:
+        print(f"Error processing ERC20 transaction: {e}")
+        return []
+
+def process_internal_transaction(tx: Dict[str, Any], wallet_name: str) -> list:
+    try:
+        value = safe_float_conversion(tx["value"])
+        usdprice = fetch_price('ETHUSDC')
+        
+        return [
+            tx.get("hash", ""),
+            tx.get("blockNumber", ""),
+            tx.get("timeStamp", ""),
+            convert_timestamp(tx.get("timeStamp", "0")),
+            "",
+            "",
+            "",
+            tx.get("from", ""),
+            tx.get("to", ""),
+            "",
+            value if tx["to"] == wallets[wallet_name] else 0,
+            0 if tx["to"] == wallets[wallet_name] else value,
+            "",
+            usdprice,
+            "0",
+            "",
+            ""
+        ]
+    except Exception as e:
+        print(f"Error processing internal transaction: {e}")
+        return []
+
+def save_erc20_transactions(data: Dict[str, Any], wallet_name: str):
+    fields = ["Transaction Hash", "Blockno", "UnixTimestamp", "DateTime (UTC)", 
+             "From", "To", "TokenValue", "USDValueDayOfTx", "ContractAddress", 
+             "TokenName", "TokenSymbol"]
+    
     file_path = os.path.join('..', 'scripts', 'data_miner', 'raw_txs', f'${wallet_name}', 'token.csv')
     
-    mode = 'a' if os.path.exists(file_path) else 'w'
-    with open(file_path, mode, newline='') as csvfile:
-        csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        if mode == 'w':
-            csvwriter.writerow(fields)
-        
-        for tx in data["result"]:
-            value = int(tx["value"])/10**6 if tx["tokenSymbol"] == 'USDC' else int(tx["value"])/10**18
-            if tx["tokenSymbol"] == 'ENS':
-                usdprice = ens_price
-            elif tx["tokenSymbol"] == 'USDC':
-                usdprice = 1
-            else:
-                usdprice = eth_price
-            csvwriter.writerow([
-                tx["hash"],
-                tx["blockNumber"],
-                tx["timeStamp"],
-                convert_timestamp(tx["timeStamp"]),
-                tx["from"],
-                tx["to"],
-                value,
-                value*usdprice,
-                tx["contractAddress"],
-                tx["tokenName"],
-                tx["tokenSymbol"]
-            ])
+    transactions = []
+    for tx in data.get("result", []):
+        processed_tx = process_erc20_transaction(tx, wallet_name)
+        if processed_tx:
+            transactions.append(processed_tx)
+    
+    safe_save_to_csv(file_path, transactions, fields)
 
-def save_internal_transactions(data, wallet_name):
-    fields = ["Transaction Hash","Blockno","UnixTimestamp","DateTime (UTC)","ParentTxFrom","ParentTxTo","ParentTxETH_Value","From","TxTo","ContractAddress","Value_IN(ETH)","Value_OUT(ETH)","CurrentValue @ $3414.36790970245/Eth","Historical $Price/Eth","Status","ErrCode","Type"]
+def save_internal_transactions(data: Dict[str, Any], wallet_name: str):
+    fields = ["Transaction Hash", "Blockno", "UnixTimestamp", "DateTime (UTC)", 
+             "ParentTxFrom", "ParentTxTo", "ParentTxETH_Value", "From", "TxTo", 
+             "ContractAddress", "Value_IN(ETH)", "Value_OUT(ETH)", 
+             "CurrentValue @ $3414.36790970245/Eth", "Historical $Price/Eth", 
+             "Status", "ErrCode", "Type"]
+    
     file_path = os.path.join('..', 'scripts', 'data_miner', 'raw_txs', f'${wallet_name}', 'internal.csv')
     
-    mode = 'a' if os.path.exists(file_path) else 'w'
-    with open(file_path, mode, newline='') as csvfile:
-        csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        if mode == 'w':
-            csvwriter.writerow(fields)
-        
-        for tx in data["result"]:
-            value = int(tx["value"])/10**18
-            usdprice = eth_price
-            csvwriter.writerow([
-                tx["hash"],
-                tx["blockNumber"],
-                tx["timeStamp"],
-                convert_timestamp(tx["timeStamp"]),
-                "",
-                "",
-                "",
-                tx["from"],
-                tx["to"],
-                "",
-                value if tx["to"] == wallets[wallet_name] else 0,
-                0 if tx["to"] == wallets[wallet_name] else value,
-                "",
-                usdprice,
-                "0",
-                "",
-                ""
-            ])
+    transactions = []
+    for tx in data.get("result", []):
+        processed_tx = process_internal_transaction(tx, wallet_name)
+        if processed_tx:
+            transactions.append(processed_tx)
+    
+    safe_save_to_csv(file_path, transactions, fields)
 
 def main():
-    start_block = get_start_block()
-    end_block = get_last_block()
+    try:
+        start_block = get_start_block()
+        end_block = get_last_block()
 
-    print(f"Processing blocks from {start_block} to {end_block}")
+        if end_block == 0:
+            print("Failed to get last block, exiting...")
+            return
 
-    for wallet_name, wallet_address in wallets.items():
-        print(f"Processing {wallet_name}...")
-        
-        for contract_name, contract_address in contracts.items():
-            data = get_erc20_txlist(contract_address, wallet_address, start_block, end_block)
-            if data['status'] == '1':
-                save_erc20_transactions(data, wallet_name)
-                print(f"ERC20 transactions for {contract_name} saved to ${wallet_name}/token.csv")
-            else:
-                print(f"Error fetching data for contract {contract_name}: {data['message']}")
-        
-        internal_data = get_internal_txlist(wallet_address, start_block, end_block)
-        if internal_data['status'] == '1':
-            save_internal_transactions(internal_data, wallet_name)
-            print(f"Internal transactions saved to ${wallet_name}/internal.csv")
-        else:
-            print(f"Error fetching internal transactions: {internal_data['message']}")
-        
-        print("---")
+        print(f"Processing blocks from {start_block} to {end_block}")
 
-    save_last_block(end_block)
-    print(f"Last processed block: {end_block}")
+        for wallet_name, wallet_address in wallets.items():
+            print(f"Processing {wallet_name}...")
+            
+            for contract_name, contract_address in contracts.items():
+                try:
+                    data = get_erc20_txlist(contract_address, wallet_address, start_block, end_block)
+                    if data['status'] == '1':
+                        save_erc20_transactions(data, wallet_name)
+                        print(f"ERC20 transactions for {contract_name} saved to ${wallet_name}/token.csv")
+                    else:
+                        print(f"Error fetching data for contract {contract_name}: {data['message']}")
+                except Exception as e:
+                    print(f"Error processing contract {contract_name}: {e}")
+            
+            try:
+                internal_data = get_internal_txlist(wallet_address, start_block, end_block)
+                if internal_data['status'] == '1':
+                    save_internal_transactions(internal_data, wallet_name)
+                    print(f"Internal transactions saved to ${wallet_name}/internal.csv")
+                else:
+                    print(f"Error fetching internal transactions: {internal_data['message']}")
+            except Exception as e:
+                print(f"Error processing internal transactions: {e}")
+            
+            print("---")
+            time.sleep(0.2)
+            
+        save_last_block(end_block)
+        print(f"Last processed block: {end_block}")
+
+    except Exception as e:
+        print(f"Critical error in main function: {e}")
 
 if __name__ == "__main__":
     main()

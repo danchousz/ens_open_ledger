@@ -97,7 +97,7 @@ various_txs = [
         # Prop House
         ("Prop House", "0xdf3e588d1b1b97ca42fd89825b36f7ea4dd0e32002ff935cb75e1d8a29b0dfb8"), #Nouns
         # ENS Distribution
-        ("$ENS Distibution", "0x2e21076adb62acead1a25436c1696347fc65fe0ead4985277c256af9a0b29cca"),
+        ("$ENS Distribution", "0x2e21076adb62acead1a25436c1696347fc65fe0ead4985277c256af9a0b29cca"),
         # SMM
         ("SMM", "0x1ffde69b813722b7e1faaad10395b76e0a08ae8b805b22bfd53f3c2d7ee2d851"),
         ("SMM", "0xa34c54ea54ae96dddfd2e9a79f6cdcf96b14eadda46a71da5f78565d9d8421c8"),
