@@ -115,7 +115,10 @@ export function drawCategorySankey(period, category, isYearly = false) {
     .then(response => response.json())
     .then(({ data, layout }) => {
         const config = createConfig(true);
-  
+        const nodesAmount = data[0].node.label.length;
+
+        const extraHeightRate = nodesAmount >= 50 ? 2 : 1;
+        
         Plotly.newPlot(sankeyDiv, data, {
           ...layout,
           width: isDesktop ? (isSideMenuExpanded ? (0.77*getWidth) : getWidth) : 1440,

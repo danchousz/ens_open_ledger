@@ -20,7 +20,7 @@ export function addAnnotationListener() {
 
             const clickedYear = eventData.fullAnnotation.text;
 
-            if (clickedOnQuarter.match(/^\d{4}Q\d$/) && clickedOnQuarter !== '2025Q1') {
+            if (clickedOnQuarter.match(/^\d{4}Q\d$/) && clickedOnQuarter !== '2025Q2') {
                 navigator.setQuarter(clickedOnQuarter);
             } else if ((clickedYear.match(/^\d{4}$/))) {
                 navigator.setYear(clickedYear);
@@ -31,11 +31,11 @@ export function addAnnotationListener() {
             const clickedPoint = eventData.points[0];
             const quarterLabel = clickedPoint.label;
             if (navigator.currentView === 'quarter') {
-                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q1')) {
+                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q2')) {
                     navigator.setQuarter(quarterLabel);
                 }
             } else if (navigator.currentView === 'wallet') {
-                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q1')) {
+                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q2')) {
                     navigator.currentQuarter = quarterLabel;
                     navigator.updateDiagram();
                 }
@@ -213,20 +213,19 @@ export function createUniversalListenerForNodesAndLinks(layout) {
                 const txDetails = clickedPoint.customdata;
                 const txHash = txDetails.receipt;
                 const address = txDetails.addr;
-    
-                if (!hasOpenBanner(txHash) && txHash !== 'Interquarter' && txHash !== 'Unspent') {
+                const uniqueID = `${txHash}-${txDetails.date}-${txDetails.to}-${txDetails.symbol}`;
+                if (!hasOpenBanner(uniqueID) && txHash !== 'Interquarter' && txHash !== 'Unspent') {
                     const flowInfo = `${txDetails.date}: <b>${txDetails.from}</b> sent ${txDetails.value} ${txDetails.symbol} (${txDetails.usd} USD) to <b>${txDetails.to}</b>`;
                     const etherscanUrl = `${getEtherscanLink(txHash)}`;
-                    createFlowBanner(flowInfo, etherscanUrl, txHash, address);
+                    createFlowBanner(flowInfo, etherscanUrl, uniqueID, address);
                 } else if (txHash === 'Interquarter' || txHash === 'Unspent') {
-                    const uniqueID = `${txHash}${txDetails.date}${txDetails.from}${txDetails.symbol}`;
                     if (hasOpenBanner(uniqueID)) {
                         return shakeBanner(uniqueID);
                     }
                     const flowInfo = `<b>${txDetails.from}</b> had ${txDetails.value} ${txDetails.symbol} unspent in <b>${txDetails.qtr}</b>`;
                     createFlowBanner(flowInfo, false, uniqueID);
                 } else {
-                    shakeBanner(txHash);
+                    shakeBanner(uniqueID);
                 }
             }
         }
@@ -255,12 +254,12 @@ export function createCategoryUniversalListener(category) {
             const txDetails = clickedPoint.customdata;
             if (txDetails) {
                 const bannerId = `${category}-${txDetails.to}-${quarter}`;
-                if (hasOpenBanner(txHash)) {
-                    shakeBanner(txHash);
+                if (hasOpenBanner(bannerId)) {
+                    shakeBanner(bannerId);
                 } else {
                     const flowInfo = `${txDetails.date}: <b>${txDetails.from}</b> sent ${txDetails.value} ${txDetails.symbol} (${txDetails.usd} USD) to <b>${txDetails.to}</b>`;
                     const etherscanUrl = txDetails.receipt ? getEtherscanLink(txDetails.receipt) : null;
-                    createFlowBanner(flowInfo, etherscanUrl, txHash, address);
+                    createFlowBanner(flowInfo, etherscanUrl, bannerId, address);
                 }
             }
         }

@@ -189,7 +189,7 @@ export function getCategorySankeyData(category, quarter) {
         orientation: "h",
         arrangement: "fixed",
         node: {
-            pad: 15,
+            pad: 30,
             thickness: 30,
             line: {
                 color: "grey",

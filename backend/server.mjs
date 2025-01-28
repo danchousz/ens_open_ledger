@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import cors from 'cors';
 
 import { avatarRoutes } from './api/avatarRoutes.mjs';
 import { sankeyRoutes } from './api/sankeyRoutes.mjs';
@@ -20,7 +21,13 @@ loadData();
 initializeCronJobs();
 
 const app = express();
-const port = 3000;
+const port = 3001;
+
+app.use(cors({
+    origin: ['http://localhost:3000', 'http://127.0.0.1:3000'], // разрешаем запросы с localhost:3000
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // разрешенные методы
+    allowedHeaders: ['Content-Type', 'Authorization'] // разрешенные заголовки
+  }));
 
 app.use(express.json());
 

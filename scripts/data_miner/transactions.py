@@ -7,8 +7,8 @@ various_txs = [
         ("Eco. Grants", "0x9fc2812533dcd1cbf81f3fdf00eb3ec5f391ad183823831b1cf25bd0566fb65a"), #Ethlimo
         ("Eco. Grants", "0x580f4a60dac647cd046a152045ab587aae9bcc205e0a1df89b3f57c814bcb135"), #Research
         ("Eco. Grants", "0xa9f0f7adbf97b0643026cd4723ea1115d8c43dba68ce2682816b2f2db5225966"), #10kclub
-        ("Website Competition", "0xe0081485f9ee1b75ea0c44279e1a63482a85ddfc8d26320f05ac3b31bbe518b2"), #Website Competition
-        ("Website Competition", "0x7021bcee453664bcae2a8a2d56c184674cd27d1c85da13a73d7012bb075b664d"), #Website Competition
+        ("Websites", "0xe0081485f9ee1b75ea0c44279e1a63482a85ddfc8d26320f05ac3b31bbe518b2"), #Website Competition
+        ("Websites", "0x7021bcee453664bcae2a8a2d56c184674cd27d1c85da13a73d7012bb075b664d"), #Website Competition
         ("Eco. Grants", "0x16d27d47d92011c88c61857a1d4c2806f9b05d034075e4ea2dd9466232262b9a"), #Greg
         # Translators – marked in funding request&reports as Integretions
         ("Translators", "0x335170d78dd22feb2ec78e9435b792d277fff6117d3c944d87a13baa00c1f7e2"), #Danch.eth
@@ -108,7 +108,7 @@ various_txs = [
     # Metagov
         # DAO Tooling
         ("DAO Tooling", "0xe3c9e56764fc1564c214e2ef6367eef38429e16a649404ef7cdf33cf332adc2f"), #ENSTooling
-        ("ENS Governance", "0x47d973727a5e8d9e7cacb2a11e26514d0ff74360618b3f40ed15b855a6b11e99"), #Marcus
+        ("Governance", "0x47d973727a5e8d9e7cacb2a11e26514d0ff74360618b3f40ed15b855a6b11e99"), #Marcus
     # Public Goods
         # Small Grants
         ("PG Small Grants", "0x4571c7d091b6f26285af737fb2eaa979bfe5a18c236266ef45c699e912f248a7"), #Round 2
@@ -267,7 +267,7 @@ various_txs = [
         ("PG Small Grants", "0xc0da04297a4216218a3f2f7aea3d7f73691151d7e48a9b24836dc9dcf16c7ec7"), #Round 10
         ("PG Small Grants", "0x198de4aef0bdb7f080932facf9a1f6f0ea2ddbe8a19b2a19f617fa4afc97d17f"), #Round 11
         # Giveth
-        ("Giveth", "0x3243fc29e6e31ec2782230318055e3f45b753846d9f53b81ba99887ffc2c705a"), #Giveth
+        ("Sponsorship", "0x3243fc29e6e31ec2782230318055e3f45b753846d9f53b81ba99887ffc2c705a"), #Giveth
         # Translators
         ("Translators", "0xd461abe7355a120e06332598e5bfa1a3ce5cc158c8c5fdc1cd74fb30e0ee2da7"),
         # Hackathons
@@ -407,4 +407,10 @@ various_txs = [
         ("Articles", "0x1375bed275b4bc51ab322e81817584a48bc1c58bfd234776ccdc674ce7d7bcab"),
         ("Builders", "0x440b28fe819bc74c27b542f5d08b9cac62666bd404fb0150b6d98a85145683b5"),
         ("Builders", "0x51482b22753f387a5032750e813707e3e20fa8a056c519f3cd5997bbf1a39732"),
+
+    #Public Goods
+        ("Large Grants", "0x9f9af4c2e9f5d9ee51a3e7a9b7a6d2b719f80b833cd2bc287024f29a0f8cdddb"),
+    #Metagov
+        ("$ENS Vesting", "0xa24f99865b86ece0a259457dd97141a2f3cd7c58765fd3a7a9c6bbb8de1f0c13"),
+        ("$ENS Vesting", "0x46aca713338937d99ec1ce522aeef79e95af864860b3d807b724b94e744dbfd6"),
 ]

@@ -226,8 +226,10 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
             model = (quarter === '2022Q3') ? 'dissolution' : 5;
         } else if (walletFilter) {
             model = 'detailed';
+        } else if (quarter === '2025Q1') {
+            model = 'temp'
         } else {
-            model = 'NaN'
+            model = 'NaN';
         }
     }
 
@@ -2624,87 +2626,74 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                     }
                 } else if (model === 'temp') {
-                    if (nodeName === 'DAO Wallet') {
+                    pad = 10;
+                    if (nodeName === 'Ecosystem') {
                         nodeX.push(daoWalletX);
-                        nodeY.push(daoWalletY += 0.1);
-                    } else if (sender === 'DAO Wallet' && !specialWallets.hasOwnProperty(nodeName)) {
-                        daoWalletRecipients.push(nodeName);
-                        nodeX.push(0.95);
-                        if (daoWalletRecipients.length != 1) {
-                            nodeY.push(lastDaoWalletY += (daoWalletRecipients.length * 0.1));
-                        } else {
-                            nodeY.push(lastDaoWalletY = daoWalletY - 0.25)
-                        }
-                    } else if (nodeName === 'Ecosystem') {
-                        nodeX.push(specialWalletsX);
-                        nodeY.push(lastEcosystemY = lastDaoWalletY + 0.15);
+                        nodeY.push(lastEcosystemY = lastDaoWalletY + 0.2);
                         interCatFlag = true;
                     } else if (sender === 'Ecosystem') {
                         if (interCatFlag) {
-                            lastX = 0.98;
-                            interCatFlag = false;
-                        }
-                        if (receiver.startsWith('Unspent')) {
                             lastX = 0.95;
-                            if (!unspentNodes.has(receiver)) {
-                                unspentNodes.add(receiver);
-                                nodeX.push(lastX);
-                                nodeY.push(lastEcosystemY);
-                            }
-                            lastEcosystemY += 0.04;
-                            return nodeIndices[receiver];
+                            nodeX.push(lastX);
+                            nodeY.push(lastEcosystemY);
+                            lastEcosystemY += 0.1
+                            interCatFlag = false;
                         } else {
-                            nodeX.push(lastX -= 0.03);
-                            nodeY.push(lastEcosystemY += 0.04);
+                            nodeX.push(lastX);
+                            nodeY.push(lastEcosystemY += 0.07);
                         }
                         ecosystemRecipients.push(nodeName);
                     } else if (nodeName === 'Public Goods') {
-                        nodeX.push(specialWalletsX);
+                        if (innerTransfers) {
+                            nodeX.push(specialWalletsX);
+                        } else {
+                            nodeX.push(daoWalletX);
+                        }
                         nodeY.push(lastPublicGoodsY = lastEcosystemY + 0.1);
                         interCatFlag = true;
                     } else if (sender === 'Public Goods') {
                         if (interCatFlag) {
-                            lastX = 0.98;
-                            interCatFlag = false;
-                        }
-                        if (receiver.startsWith('Unspent')) {
                             lastX = 0.95;
-                            if (!unspentNodes.has(receiver)) {
-                                unspentNodes.add(receiver);
-                                nodeX.push(lastX);
-                                nodeY.push(lastPublicGoodsY);
-                            }
-                            lastPublicGoodsY += 0.01;
-                            return nodeIndices[receiver];
+                            nodeX.push(lastX);
+                            nodeY.push(lastPublicGoodsY);
+                            interCatFlag = false;
                         } else {
-                            nodeX.push(lastX -= 0.03);
-                            nodeY.push(lastPublicGoodsY += 0.04);
+                            nodeX.push(lastX);
+                            nodeY.push(lastPublicGoodsY += 0.07);
                         }
                         publicGoodsRecipients.push(nodeName);
                     } else if (nodeName === 'Metagov') {
-                        nodeX.push(specialWalletsX);
-                        nodeY.push(lastMetagovY = lastPublicGoodsY + 0.3);
+                        nodeX.push(daoWalletX);
+                        nodeY.push(lastMetagovY = lastPublicGoodsY + 0.2);
                         interCatFlag = true;
                     } else if (sender === 'Metagov') {
-                        if (receiver.startsWith('Unspent')) {
+                        if (interCatFlag) {
                             lastX = 0.95;
-                            if (!unspentNodes.has(receiver)) {
-                                unspentNodes.add(receiver);
-                                nodeX.push(lastX);
-                                nodeY.push(lastMetagovY - 0.1);
-                            }
-                            lastMetagovY += 0.17;
-                            return nodeIndices[receiver];
+                            nodeX.push(lastX);
+                            nodeY.push(lastMetagovY);
+                            lastMetagovY += 0.075
+                            interCatFlag = false;
                         } else {
-                            nodeX.push(lastX -= 0.03);
-                            nodeY.push(lastMetagovY += 0.04);
+                            nodeX.push(lastX);
+                            nodeY.push(lastMetagovY += 0.15);
                         }
                         metagovRecipients.push(nodeName);
                     } else if (nodeName === 'Providers') {
-                        nodeX.push(specialWalletsX);
-                        nodeY.push(lastSpsY = lastMetagovY + 0.2);
+                        nodeX.push(daoWalletX);
+                        lastSpsY = lastMetagovY + 0.07;
                         interCatFlag = true;
-                    }
+                    } else if (sender == 'Providers') {
+                        if (interCatFlag) {
+                            lastX = 0.95;
+                            nodeX.push(lastX);
+                            nodeY.push(lastSpsY);
+                            interCatFlag = false;
+                        } else {
+                            nodeX.push(lastX);
+                            nodeY.push(lastSpsY += 0.07);
+                        }
+                        spsRecipients.push(nodeName);
+                    } 
                 } 
                 if (model === 'detailed') {
                     pad = 15;

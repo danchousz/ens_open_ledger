@@ -44,6 +44,12 @@ class CategoriesCache {
                 "Public Goods",
                 "Ref. Accidental Txs",
                 "Stream",
+                "Airdrop",
+                "Agora",
+                "ETHLimo",
+                "Endowment",
+                "Providers",
+                "$ENS Vesting"
             ];
 
             data.forEach(item => {
