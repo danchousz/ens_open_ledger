@@ -21,7 +21,7 @@ loadData();
 initializeCronJobs();
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(cors({
     origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
