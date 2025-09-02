@@ -54,3 +54,4 @@ varint==1.0.2
 web3==7.4.0
 websockets==14.1
 yarl==1.13.1
+dotenv==1.0.1

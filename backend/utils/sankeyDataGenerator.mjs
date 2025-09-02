@@ -264,13 +264,10 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     metagovZone = 0.84;
                     communityWGZone = 0.9;
                     spsZone = 0.435;
-                    if (nodeName.startsWith('Registrar')) {
-                        nodeX.push(registrarZone)
-                    }
                  }
                 if (nodeName.includes('2022Q2')) {
                     startPoint = quarterNumber*1 - quarterNumber + border
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -361,7 +358,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2022Q3')) {
                     startPoint = quarterNumber*2 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -462,7 +459,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2022Q4')) {
                 startPoint = quarterNumber*3 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -554,7 +551,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2023Q1')) {
                     startPoint = quarterNumber*4 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -662,7 +659,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     }                 
                 } else if (nodeName.includes('2023Q2')) {
                     startPoint = quarterNumber*5 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -773,7 +770,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2023Q3')) {
                     startPoint = quarterNumber*6 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -883,7 +880,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2023Q4')) {
                     startPoint = quarterNumber*7 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -993,7 +990,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2024Q1')) {
                     startPoint = quarterNumber*8 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1118,7 +1115,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                 
                 } else if (nodeName.includes('2024Q2')) {
                     startPoint = quarterNumber*9 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1247,7 +1244,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
 
                 } else if (nodeName.includes('2024Q3')) {
                     startPoint = quarterNumber*10 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1378,10 +1375,9 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         nodeX.push(startPoint);
                         nodeY.push(spsZoneSendersCat -= 0.0075)
                     }
-                    
                 } else if (nodeName.includes('2024Q4')) {
                     startPoint = quarterNumber*11 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1468,14 +1464,23 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         nodeY.push(metagovZone);
                         interCatFlag = true;
                     } else if (sender.startsWith('Metagov')) {
-                        if (interCatFlag) {
-                            metagovZoneRecipientCat += 0.02;
-                            interCatFlag = false;
-                        }
-                        nodeX.push(startPoint + quarterNumber -  2.5*border);
                         if (hideMode) {
-                            nodeY.push(metagovZoneRecipientCat += 0.0125);
+                            if (interCatFlag) {
+                                metagovZoneRecipientCat += 0.04;
+                                nodeX.push(startPoint + quarterNumber -  2.5*border);
+                                nodeY.push(metagovZoneRecipientCat += 0.01);
+                                metagovZoneRecipientCat += 0.03;
+                                interCatFlag = false;
+                            } else {
+                                nodeX.push(startPoint + quarterNumber -  2.5*border);
+                                nodeY.push(metagovZoneRecipientCat += 0.0125);
+                            }
                         } else {
+                            if (interCatFlag) {
+                                metagovZoneRecipientCat += 0.02;
+                                interCatFlag = false;
+                            }
+                            nodeX.push(startPoint + quarterNumber -  2.5*border);
                             nodeY.push(metagovZoneRecipientCat += 0.01);
                         }
                         spsZoneRecipientsCat = spsZone;
@@ -1487,7 +1492,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         nodeX.push(startPoint);
                         nodeY.push(metagovZoneSendersCat += 0.01)
-                        zoneSendersList.push(nodeName);   
+                        zoneSendersList.push(nodeName);
                     } else if (nodeName.startsWith('Providers')) {
                         nodeX.push(startPoint + (quarterNumber/2.5));;
                         nodeY.push(spsZone);
@@ -1499,14 +1504,13 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         nodeX.push(startPoint + quarterNumber -  2.5*border);
                         nodeY.push(spsZoneRecipientsCat += 0.01);
-                        ecosystemZoneRecipientsCat = ecosystemZone;
                     } else if (receiver.startsWith('Providers')) {
                         nodeX.push(startPoint);
                         nodeY.push(spsZoneSendersCat -= 0.0075)
                     }
                 } else if (nodeName.includes('2025Q1')) {
                     startPoint = quarterNumber*12 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1593,14 +1597,23 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         nodeY.push(metagovZone);
                         interCatFlag = true;
                     } else if (sender.startsWith('Metagov')) {
-                        if (interCatFlag) {
-                            metagovZoneRecipientCat += 0.02;
-                            interCatFlag = false;
-                        }
-                        nodeX.push(startPoint + quarterNumber -  2.5*border);
                         if (hideMode) {
-                            nodeY.push(metagovZoneRecipientCat += 0.0125);
+                            if (interCatFlag) {
+                                metagovZoneRecipientCat += 0.04;
+                                nodeX.push(startPoint + quarterNumber -  2.5*border);
+                                nodeY.push(metagovZoneRecipientCat += 0.01);
+                                metagovZoneRecipientCat += 0.03;
+                                interCatFlag = false;
+                            } else {
+                                nodeX.push(startPoint + quarterNumber -  2.5*border);
+                                nodeY.push(metagovZoneRecipientCat += 0.0125);
+                            }
                         } else {
+                            if (interCatFlag) {
+                                metagovZoneRecipientCat += 0.02;
+                                interCatFlag = false;
+                            }
+                            nodeX.push(startPoint + quarterNumber -  2.5*border);
                             nodeY.push(metagovZoneRecipientCat += 0.01);
                         }
                         spsZoneRecipientsCat = spsZone;
@@ -1612,7 +1625,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         nodeX.push(startPoint);
                         nodeY.push(metagovZoneSendersCat += 0.01)
-                        zoneSendersList.push(nodeName);   
+                        zoneSendersList.push(nodeName);
                     } else if (nodeName.startsWith('Providers')) {
                         nodeX.push(startPoint + (quarterNumber/2.5));;
                         nodeY.push(spsZone);
@@ -1630,7 +1643,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     }
                 } else if (nodeName.includes('2025Q2')) {
                     startPoint = quarterNumber*13 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1745,7 +1758,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         nodeX.push(startPoint);
                         nodeY.push(metagovZoneSendersCat += 0.01)
-                        zoneSendersList.push(nodeName);   
+                        zoneSendersList.push(nodeName);
                     } else if (nodeName.startsWith('Providers')) {
                         nodeX.push(startPoint + (quarterNumber/2.5));;
                         nodeY.push(spsZone);
@@ -1763,7 +1776,141 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                     }
                 } else if (nodeName.includes('2025Q3')) {
                     startPoint = quarterNumber*14 - quarterNumber + border;
-                    if (nodeName.includes('Registrar')) {
+                    if (nodeName.startsWith('Registrar')) {
+                        nodeX.push(startPoint - quarterNumber + 2.5*border)
+                        nodeY.push(registrarZone)
+                        ecosystemZoneRecipientsCat = ecosystemZone;
+                    }
+                    if (nodeName.startsWith('DAO Wallet')) {
+                        nodeX.push(startPoint);
+                        nodeY.push(daoWalletZone);
+                        interCatFlag = true;
+                        daoWalletZoneRecipientsCat = daoWalletZone;
+                    } else if (sender.startsWith('DAO Wallet')) {
+                        if (interCatFlag) {
+                            if (hideMode) {
+                                daoWalletZoneRecipientsCat += 0.025;
+                            } else {
+                                daoWalletZoneRecipientsCat += 0.17;
+                            }
+                            interCatFlag = false;
+                        }
+                        nodeX.push(startPoint + quarterNumber -  2.5*border);
+                        if (hideMode) {
+                            nodeY.push(daoWalletZoneRecipientsCat += 0.03);
+                        } else {
+                            nodeY.push(daoWalletZoneRecipientsCat += 0.01);
+                        }
+                        spsZoneRecipientsCat = spsZone;
+                    } else if (nodeName.startsWith('Ecosystem')) {
+                        nodeX.push(startPoint + (quarterNumber/2.5));
+                        nodeY.push(ecosystemZone);
+                        interCatFlag = true;
+                        ecosystemZoneSendersCat = ecosystemZone + 0.03;
+                    } else if (sender.startsWith('Ecosystem')) {
+                        if (interCatFlag) {
+                            ecosystemZoneRecipientsCat += 0.03;
+                            interCatFlag = false;
+                        }
+                        nodeX.push(startPoint + quarterNumber -  2.5*border);
+                        if (hideMode) {
+                            nodeY.push(ecosystemZoneRecipientsCat += 0.0125);
+                        } else {
+                            nodeY.push(ecosystemZoneRecipientsCat += 0.01);
+                        }
+                        publicGoodsZoneRecipientsCat = publicGoodsZone;
+                        interSenderEcoFlag = true;
+                    } else if (receiver.startsWith('Ecosystem')) {
+                        if (interSenderEcoFlag) {
+                            if (hideMode) {
+                                ecosystemZoneSendersCat -= 0.1
+                            } else {
+                                ecosystemZoneSendersCat -= 0.075
+                            }
+                            interSenderEcoFlag = false;
+                        }
+                        nodeX.push(startPoint);
+                        nodeY.push(ecosystemZoneSendersCat += 0.01)
+                        zoneSendersList.push(nodeName);
+                    } else if (nodeName.startsWith('Public Goods')) {
+                        nodeX.push(startPoint + (quarterNumber/2.5));;
+                        nodeY.push(publicGoodsZone);
+                        interCatFlag = true;
+                    } else if (sender.startsWith('Public Goods')) {
+                        if (interCatFlag) {
+                            publicGoodsZoneRecipientsCat += 0.02;
+                            interCatFlag = false;
+                        }
+                        nodeX.push(startPoint + quarterNumber -  2.5*border);
+                        if (hideMode) {
+                            nodeY.push(publicGoodsZoneRecipientsCat += 0.0125);
+                        } else {
+                            nodeY.push(publicGoodsZoneRecipientsCat += 0.01);
+                        }
+                        metagovZoneRecipientCat = metagovZone;
+                        metagovZoneSendersCat = metagovZone;
+                        interSenderFlag = true;
+                    } else if (receiver.startsWith('Public Goods')) {
+                        if (interSenderFlag) {
+                            publicGoodsZoneSendersCat -= 0.004
+                            interSenderFlag = false;
+                        }
+                        nodeX.push(startPoint);
+                        nodeY.push(publicGoodsZoneSendersCat += 0.005)
+                        zoneSendersList.push(nodeName);
+                    } else if (nodeName.startsWith('Metagov')) {
+                        nodeX.push(startPoint + (quarterNumber/2.5));;
+                        nodeY.push(metagovZone);
+                        interCatFlag = true;
+                    } else if (sender.startsWith('Metagov')) {
+                        if (hideMode) {
+                            if (interCatFlag) {
+                                metagovZoneRecipientCat += 0.04;
+                                nodeX.push(startPoint + quarterNumber -  2.5*border);
+                                nodeY.push(metagovZoneRecipientCat += 0.01);
+                                metagovZoneRecipientCat += 0.03;
+                                interCatFlag = false;
+                            } else {
+                                nodeX.push(startPoint + quarterNumber -  2.5*border);
+                                nodeY.push(metagovZoneRecipientCat += 0.0125);
+                            }
+                        } else {
+                            if (interCatFlag) {
+                                metagovZoneRecipientCat += 0.02;
+                                interCatFlag = false;
+                            }
+                            nodeX.push(startPoint + quarterNumber -  2.5*border);
+                            nodeY.push(metagovZoneRecipientCat += 0.01);
+                        }
+                        spsZoneRecipientsCat = spsZone;
+                        interSenderMGFlag = true;
+                    } else if (receiver.startsWith('Metagov')) {
+                        if (interSenderMGFlag) {
+                            metagovZoneSendersCat -= 0.06
+                            interSenderMGFlag = false;
+                        }
+                        nodeX.push(startPoint);
+                        nodeY.push(metagovZoneSendersCat += 0.01)
+                        zoneSendersList.push(nodeName);
+                    } else if (nodeName.startsWith('Providers')) {
+                        nodeX.push(startPoint + (quarterNumber/2.5));;
+                        nodeY.push(spsZone);
+                        interCatFlag = true;
+                    } else if (sender.startsWith('Providers')) {
+                        if (interCatFlag) {
+                            spsZoneRecipientsCat += 0.02;
+                            interCatFlag = false;
+                        }
+                        nodeX.push(startPoint + quarterNumber -  2.5*border);
+                        nodeY.push(spsZoneRecipientsCat += 0.01);
+                    } else if (receiver.startsWith('Providers')) {
+                        nodeX.push(startPoint);
+                        nodeY.push(spsZoneSendersCat -= 0.0075)
+                    }
+
+                } else if (nodeName.includes('2025Q4')) {
+                    startPoint = quarterNumber*15 - quarterNumber + border;
+                    if (nodeName.startsWith('Registrar')) {
                         nodeX.push(startPoint - quarterNumber + 2.5*border)
                         nodeY.push(registrarZone)
                     }
@@ -1878,7 +2025,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         nodeX.push(startPoint);
                         nodeY.push(metagovZoneSendersCat += 0.01)
-                        zoneSendersList.push(nodeName);   
+                        zoneSendersList.push(nodeName);
                     } else if (nodeName.startsWith('Providers')) {
                         nodeX.push(startPoint + (quarterNumber/2.5));;
                         nodeY.push(spsZone);
@@ -1894,6 +2041,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         nodeX.push(startPoint);
                         nodeY.push(spsZoneSendersCat -= 0.0075)
                     }
+
                 } else if (sender === 'Plchld') {
                     nodeX.push(dummyNodeXY);
                     nodeY.push(dummyNodeXY);
@@ -1904,7 +2052,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         };
         
         if (quarter && !isYear) {
-            if (nodeName.includes('Registrar') 
+            if (nodeName.startsWith('Registrar') 
                 || (receiver.startsWith('Dissolution') && sender === 'Community WG')
                 || (receiver.startsWith('Unspent') && sender === 'Community WG')
                 || (receiver.endsWith('Swap') || sender.endsWith('Swap'))
@@ -2713,7 +2861,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         }
 
         if (isYear) {
-            if (nodeName.includes('Registrar') 
+            if (nodeName.startsWith('Registrar') 
                 || (receiver.startsWith('Dissolution') && sender === 'Community WG' )
                 || (receiver.endsWith('Swap') || sender.endsWith('Swap'))
                 || (receiver === 'CoW' || sender === 'CoW')
@@ -3013,9 +3161,9 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         ? Math.log(dollarValue) 
                         : row['From_name'] == 'DAO Wallet' && (row['Transaction Hash'] == 'Interquarter' || isSpecialReceipt) 
                             ? Math.log(dollarValue) 
-                            : row['From_name'] == 'Old Registrar' 
+                            : row['From_name'] == 'Registrar' 
                                 ? Math.log(dollarValue) 
-                                : row['From_name'] == 'New Registrar' 
+                                : row['From_name'] == 'Registrar' 
                                     ? Math.log(dollarValue) 
                                     : row['To_name'] == 'Endowment' 
                                         ? Math.log(dollarValue) 
@@ -3088,9 +3236,9 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
             const senderIndex = getNodeIndex(sender, sender, receiver, model, qtr);
             const receiverIndex = getNodeIndex(receiver, sender, receiver, model, qtr);
             const value =                         
-            row['From_name'] == 'Old Registrar' 
+            row['From_name'] == 'Registrar' 
             ? dollarValue / 100 
-            : row['From_name'] == 'New Registrar' 
+            : row['From_name'] == 'Registrar' 
                 ? dollarValue / 100 
                 : row['To_name'] == 'Endowment' 
                     ? dollarValue / 25 

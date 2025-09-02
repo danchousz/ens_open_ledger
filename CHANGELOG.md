@@ -1,6 +1,18 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.2a] - 25.12.2024
+
+### Changed
+
+- The data collector now has an architecture with clear separation of concerns
+- The bot now has an admin panel that allows you to control the identification of recipients and categories
+- Identity keys are now stored in JSON instead of tuples
+
+### Fixed
+
+- Many bugs that prevented normal data collection and notification of bot subscribers
+
 ## [1.0.2] - 25.12.2024
 
 ### Added

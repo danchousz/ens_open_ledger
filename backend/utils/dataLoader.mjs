@@ -8,12 +8,23 @@ const __dirname = path.dirname(__filename);
 
 const ledgerCsvFilePath = path.join(__dirname, '../..', 'frontend', 'data', 'ledger.csv');
 const ledgerYearCsvFilePath = path.join(__dirname, '../..', 'frontend', 'data', 'ledger_year.csv');
+const unknownCsvFilePath = path.join(__dirname, '../..', 'frontend', 'data', 'unknown_contractors.csv');
 
 let df;
 let dfYear;
+let dfUnknown;
 
-export function loadData(isYear = false) {
-    const filePath = isYear ? ledgerYearCsvFilePath : ledgerCsvFilePath;
+export function loadData(isYear = false, isUnknown = false) {
+    let filePath;
+    
+    if (isUnknown) {
+        filePath = unknownCsvFilePath;
+    } else if (isYear) {
+        filePath = ledgerYearCsvFilePath;
+    } else {
+        filePath = ledgerCsvFilePath;
+    }
+    
     try {
         const csvData = fs.readFileSync(filePath, 'utf8');
         const parsedData = csvParse(csvData);
@@ -43,11 +54,20 @@ export function getData(isYear = false, forceReload = false) {
     }
 }
 
+export function getUnknown(forceReload = false) {
+    if (!dfUnknown || forceReload) {
+        dfUnknown = loadData(false, true);
+    }
+    return dfUnknown;
+}
+
 export function reloadData() {
     df = null;
     dfYear = null;
+    dfUnknown = null;
     return {
         quarterly: getData(),
-        yearly: getData(true)
+        yearly: getData(true),
+        unknown: getUnknown()
     };
 }

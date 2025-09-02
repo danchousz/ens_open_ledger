@@ -778,5 +778,97 @@
   "eth-mexico.eth": {
     "textRecord": "",
     "avatarUrl": null
+  },
+  "simple.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "esteroids.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "mmurthy.eth": {
+    "textRecord": "https://euc.li/mmurthy.eth",
+    "avatarUrl": "https://euc.li/mmurthy.eth"
+  },
+  "mihal.eth": {
+    "textRecord": "https://avatars.githubusercontent.com/u/1661138",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/1661138"
+  },
+  "lcfr.eth": {
+    "textRecord": "eip155:1/erc721:0x5af0d9827e0c53e4799bb226655a1de152a425a5/2939",
+    "avatarUrl": null
+  },
+  "albertocevallos.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "namesys.eth": {
+    "textRecord": "https://euc.li/namesys.eth",
+    "avatarUrl": "https://euc.li/namesys.eth"
+  },
+  "griff.eth": {
+    "textRecord": "eip155:1/erc721:0xc8db6048e47d23960edb52a623b0d02593276314/50710379709804769251162498933097602225622595869186631712702887749288116355073",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/QmQbDo8NynZ3kXQbbY1kRDf4czxr4CWGYmGz8XHR1GCKfX/image.png"
+  },
+  "blockful.eth": {
+    "textRecord": "https://euc.li/blockful.eth",
+    "avatarUrl": "https://euc.li/blockful.eth"
+  },
+  "brantly.eth": {
+    "textRecord": "https://euc.li/brantly.eth",
+    "avatarUrl": "https://euc.li/brantly.eth"
+  },
+  "fireeyesdao.eth": {
+    "textRecord": "https://i.imgur.com/KiXIB3E.png",
+    "avatarUrl": "https://i.imgur.com/KiXIB3E.png"
+  },
+  "lefteris.eth": {
+    "textRecord": "https://s.gravatar.com/avatar/9c124c1f38e3df30d0c582beec001257?s=420",
+    "avatarUrl": "https://s.gravatar.com/avatar/9c124c1f38e3df30d0c582beec001257?s=420"
+  },
+  "0xshazam.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "bifolco.eth": {
+    "textRecord": "eip155:1/erc721:0x66dab8a88b7ca020a89f45380cc61692fe62e7ed/1003",
+    "avatarUrl": null
+  },
+  "nevvdevv.eth": {
+    "textRecord": "https://pbs.twimg.com/profile_images/1720483481501720576/pU0jdSxN_bigger.jpg",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1720483481501720576/pU0jdSxN_bigger.jpg"
+  },
+  "caiomattos.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "dradaku.eth": {
+    "textRecord": "eip155:1/erc1155:0x495f947276749Ce646f68AC8c248420045cb7b5e/32350460808913527742537229803894544572041831720695459235186440090049564377089",
+    "avatarUrl": "https://i2.seadn.io/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/4add2019d55e2ce68a8a280de3c9b3/5f4add2019d55e2ce68a8a280de3c9b3.avif"
+  },
+  "rohitramesh.eth": {
+    "textRecord": "https://euc.li/rohitramesh.eth",
+    "avatarUrl": "https://euc.li/rohitramesh.eth"
+  },
+  "pacordero.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "kourin.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "vibern.eth": {
+    "textRecord": "",
+    "avatarUrl": null
+  },
+  "sovereignsignal.eth": {
+    "textRecord": "eip155:1/erc721:0xef1a89cbfabe59397ffda11fc5df293e9bc5db90/6489",
+    "avatarUrl": "https://gateway.ipfs.io/ipfs/bafybeihlond74ij2vbzyuagma2uxtv2b7e4nmty6ujxbapqopsarzy3yo4/2923.png"
+  },
+  "ipecity.eth": {
+    "textRecord": "https://cdn.justaname.id/avatar/ipecity.eth-20250418213121.png",
+    "avatarUrl": "https://cdn.justaname.id/avatar/ipecity.eth-20250418213121.png"
   }
 }

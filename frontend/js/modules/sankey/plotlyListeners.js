@@ -20,7 +20,7 @@ export function addAnnotationListener() {
 
             const clickedYear = eventData.fullAnnotation.text;
 
-            if (clickedOnQuarter.match(/^\d{4}Q\d$/) && clickedOnQuarter !== '2025Q2') {
+            if (clickedOnQuarter.match(/^\d{4}Q\d$/) && clickedOnQuarter !== '2025Q4') {
                 navigator.setQuarter(clickedOnQuarter);
             } else if ((clickedYear.match(/^\d{4}$/))) {
                 navigator.setYear(clickedYear);
@@ -31,15 +31,15 @@ export function addAnnotationListener() {
             const clickedPoint = eventData.points[0];
             const quarterLabel = clickedPoint.label;
             if (navigator.currentView === 'quarter') {
-                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q2')) {
+                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q4')) {
                     navigator.setQuarter(quarterLabel);
                 }
             } else if (navigator.currentView === 'wallet') {
-                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q2')) {
+                if (quarterLabel.match(/^\d{4}Q\d$/) && !quarterLabel.endsWith('2025Q4')) {
                     navigator.currentQuarter = quarterLabel;
                     navigator.updateDiagram();
                 }
-            } else if (navigator.currentView === 'year' && quarterLabel !== '2025') {
+            } else if (navigator.currentView === 'year' && quarterLabel !== '2026') {
                 if (quarterLabel.match(/^\d{4}$/)) {
                     navigator.currentYear = quarterLabel;
                     navigator.updateDiagram();

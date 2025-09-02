@@ -9,9 +9,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const pythonPath = path.join(__dirname, '../..', 'venv', 'bin', 'python3');
-const dataMergerPath = path.join(__dirname, '../..', 'scripts', 'data_miner', 'merger.py');
-const dataMinerPath = path.join(__dirname, '../..', 'scripts', 'data_miner', 'new_miner.py');
-const dailyStreamGrouperScriptPath = path.join(__dirname, '../..', 'scripts', 'data_miner', 'stream_grouper.py');
+const dataMergerPath = path.join(__dirname, '../..', 'scripts', 'data_miner', 'src', 'main.py');
+const dataMinerPath = path.join(__dirname, '../..', 'scripts', 'data_miner', 'src', 'services', 'miner.py');
+const dailyStreamGrouperScriptPath = path.join(__dirname, '../..', 'scripts', 'data_miner', 'src', 'contracts', 'spp.py');
 
 function runPythonScript(scriptPath) {
     return new Promise((resolve, reject) => {
@@ -46,7 +46,7 @@ async function handleMergerCompletion() {
 
 export function initializeCronJobs() {
     // Run data merger every 2 hours
-    cron.schedule('0 */2 * * *', async () => {
+    cron.schedule('10 */2 * * *', async () => {
         try {
             await runPythonScript(dataMergerPath);
             await handleMergerCompletion();
@@ -56,7 +56,7 @@ export function initializeCronJobs() {
     });
 
     // Run data miner every 2 hours, 10 minute after the merger
-    cron.schedule('10 */2 * * *', () => {
+    cron.schedule('0 */2 * * *', () => {
         runPythonScript(dataMinerPath);
     });
 

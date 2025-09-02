@@ -1,6 +1,6 @@
 {
   "name": "ENS_Open_Ledger",
-  "version": "1.0.2",
+  "version": "1.0.2a",
   "description": "",
   "main": "server.mjs",
   "scripts": {
@@ -19,6 +19,7 @@
     "cors": "^2.8.5",
     "d3-dsv": "^3.0.1",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.2.1",
     "ethers": "^6.13.2",
     "exceljs": "^4.4.0",
     "express": "^4.17.1",

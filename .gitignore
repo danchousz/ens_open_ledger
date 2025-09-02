@@ -3,7 +3,7 @@ venv/
 .env
 *.pyc
 __pycache__/
-obsolete/
+_obsolete/
 /scripts/data_miner/keys.py
 /scripts/data_miner/last_processed_block.txt
 /backend/config/gcs/gcs-key.json
@@ -12,3 +12,4 @@ obsolete/
 local_ledgers/
 quarterly_ledgers/
 /frontend/data/
+/scripts/data_miner/config/txs_def.json

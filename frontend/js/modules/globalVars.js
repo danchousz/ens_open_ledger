@@ -8,7 +8,7 @@ export const specialWallets = ['Ecosystem', 'Public Goods', 'Metagov', 'Communit
 
 export const daoWallet = ['DAO Wallet'];
 
-export const registrars = ['Old Registrar', 'New Registrar'];
+export const registrars = ['Old Registrar', 'New Registrar', 'Registrar'];
 
 export const getWidth = window.innerWidth;
 export const getHeight = window.innerHeight;

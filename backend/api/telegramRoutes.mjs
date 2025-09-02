@@ -2,10 +2,9 @@ import express from 'express';
 import { getData } from '../utils/dataLoader.mjs';
 import ExcelJS from 'exceljs';
 import { Parser } from 'json2csv';
-import { filterTransactions } from '../bot/telegram/commands.mjs'
+import { filterTransactions } from '../bot/telegram/commands/utils/helpers.mjs'
 
 const router = express.Router();
-
 
 router.get('/api/telegram/transactions', (req, res) => {
     try {

@@ -1,0 +1,5012 @@
+[
+  {
+    "date": "2025-08-21",
+    "ens_price": 24.44,
+    "eth_price": 1965
+  },
+  {
+    "date": "2025-08-06",
+    "ens_price": 26.23,
+    "eth_price": 1965
+  },
+  {
+    "date": "2025-07-15",
+    "ens_price": 24.32,
+    "eth_price": 1965
+  },
+  {
+    "date": "2025-05-29",
+    "ens_price": 17.73,
+    "eth_price": 1965
+  },
+  {
+    "date": "2024-12-31",
+    "ens_price": 33.00,
+    "eth_price": 3000
+  },
+  {
+    "date": "2025-03-21",
+    "ens_price": 16.45,
+    "eth_price": 1965
+  },
+  {
+    "date": "2025-01-07",
+    "ens_price": 33.33,
+    "eth_price": 3000
+  },
+  {
+    "date": "2025-01-25",
+    "ens_price": 34.01,
+    "eth_price": 3000
+  },
+  {
+    "date": "2025-04-04",
+    "ens_price": 15.15,
+    "eth_price": 3000
+  },
+  {
+    "date": "2025-05-31",
+    "ens_price": 20.78,
+    "eth_price": 3000
+  },
+  {
+    "date": "2025-05-04",
+    "ens_price": 20.78,
+    "eth_price": 1820
+  },
+  {
+    "date": "2024-12-20",
+    "ens_price": 36.02,
+    "eth_price": 3000
+  },
+  {
+    "date": "2024-11-10",
+    "ens_price": 17.67,
+    "eth_price": 3000
+  },
+  {
+    "date": "2024-11-29",
+    "ens_price": 34.96,
+    "eth_price": 3000
+  },
+  {
+    "date": "2024-11-28",
+    "ens_price": 34.59,
+    "eth_price": 3000
+  },
+  {
+    "date": "2024-10-01",
+    "ens_price": 13.46,
+    "eth_price": 2385.2
+  },
+  {
+    "date": "2024-09-12",
+    "ens_price": 13.46,
+    "eth_price": 2361.03
+  },
+  {
+    "date": "2024-09-17",
+    "ens_price": 16.72,
+    "eth_price": 3000
+  },
+  {
+    "date": "2024-09-07",
+    "ens_price": 16.86,
+    "eth_price": 3000
+  },
+  {
+    "date": "2024-07-19",
+    "ens_price": 25.8,
+    "eth_price": 3387.66
+  },
+  {
+    "date": "2024-07-18",
+    "ens_price": 13.46,
+    "eth_price": 3387.66
+  },
+  {
+    "date": "2024-07-17",
+    "ens_price": 13.46,
+    "eth_price": 3387.66
+  },
+  {
+    "date": "2024-07-16",
+    "ens_price": 13.46,
+    "eth_price": 3446.19
+  },
+  {
+    "date": "2024-07-15",
+    "ens_price": 13.46,
+    "eth_price": 3485.5
+  },
+  {
+    "date": "2024-07-14",
+    "ens_price": 13.46,
+    "eth_price": 3246.12
+  },
+  {
+    "date": "2024-07-13",
+    "ens_price": 13.46,
+    "eth_price": 3176.67
+  },
+  {
+    "date": "2024-07-12",
+    "ens_price": 13.46,
+    "eth_price": 3134.62
+  },
+  {
+    "date": "2024-07-11",
+    "ens_price": 25.9,
+    "eth_price": 3099.49
+  },
+  {
+    "date": "2024-07-10",
+    "ens_price": 13.46,
+    "eth_price": 3100.44
+  },
+  {
+    "date": "2024-07-09",
+    "ens_price": 13.46,
+    "eth_price": 3066.44
+  },
+  {
+    "date": "2024-07-08",
+    "ens_price": 13.46,
+    "eth_price": 3018.49
+  },
+  {
+    "date": "2024-07-07",
+    "ens_price": 13.46,
+    "eth_price": 2931.2
+  },
+  {
+    "date": "2024-07-06",
+    "ens_price": 13.46,
+    "eth_price": 3067.54
+  },
+  {
+    "date": "2024-07-05",
+    "ens_price": 13.46,
+    "eth_price": 2982.07
+  },
+  {
+    "date": "2024-07-04",
+    "ens_price": 13.46,
+    "eth_price": 3058.81
+  },
+  {
+    "date": "2024-07-03",
+    "ens_price": 13.46,
+    "eth_price": 3292.16
+  },
+  {
+    "date": "2024-07-02",
+    "ens_price": 13.46,
+    "eth_price": 3416.41
+  },
+  {
+    "date": "2024-07-01",
+    "ens_price": 13.46,
+    "eth_price": 3438.83
+  },
+  {
+    "date": "2024-06-30",
+    "ens_price": 28.05,
+    "eth_price": 3432.82
+  },
+  {
+    "date": "2024-06-29",
+    "ens_price": 13.46,
+    "eth_price": 3373.52
+  },
+  {
+    "date": "2024-06-28",
+    "ens_price": 13.46,
+    "eth_price": 3373.8
+  },
+  {
+    "date": "2024-06-27",
+    "ens_price": 13.46,
+    "eth_price": 3445.8
+  },
+  {
+    "date": "2024-06-26",
+    "ens_price": 13.46,
+    "eth_price": 3369.46
+  },
+  {
+    "date": "2024-06-25",
+    "ens_price": 13.46,
+    "eth_price": 3393.91
+  },
+  {
+    "date": "2024-06-24",
+    "ens_price": 13.46,
+    "eth_price": 3350.54
+  },
+  {
+    "date": "2024-06-23",
+    "ens_price": 13.46,
+    "eth_price": 3418.62
+  },
+  {
+    "date": "2024-06-22",
+    "ens_price": 13.46,
+    "eth_price": 3494.25
+  },
+  {
+    "date": "2024-06-21",
+    "ens_price": 13.46,
+    "eth_price": 3517.28
+  },
+  {
+    "date": "2024-06-20",
+    "ens_price": 13.46,
+    "eth_price": 3510.94
+  },
+  {
+    "date": "2024-06-19",
+    "ens_price": 26.19,
+    "eth_price": 3558.97
+  },
+  {
+    "date": "2024-06-18",
+    "ens_price": 13.46,
+    "eth_price": 3482.27
+  },
+  {
+    "date": "2024-06-17",
+    "ens_price": 13.46,
+    "eth_price": 3510.08
+  },
+  {
+    "date": "2024-06-16",
+    "ens_price": 13.46,
+    "eth_price": 3622.37
+  },
+  {
+    "date": "2024-06-15",
+    "ens_price": 13.46,
+    "eth_price": 3566.61
+  },
+  {
+    "date": "2024-06-14",
+    "ens_price": 13.46,
+    "eth_price": 3479.74
+  },
+  {
+    "date": "2024-06-13",
+    "ens_price": 13.46,
+    "eth_price": 3467.79
+  },
+  {
+    "date": "2024-06-12",
+    "ens_price": 13.46,
+    "eth_price": 3559.25
+  },
+  {
+    "date": "2024-06-11",
+    "ens_price": 13.46,
+    "eth_price": 3497.32
+  },
+  {
+    "date": "2024-06-10",
+    "ens_price": 13.46,
+    "eth_price": 3665.99
+  },
+  {
+    "date": "2024-06-09",
+    "ens_price": 13.46,
+    "eth_price": 3706
+  },
+  {
+    "date": "2024-06-08",
+    "ens_price": 13.46,
+    "eth_price": 3680.84
+  },
+  {
+    "date": "2024-06-07",
+    "ens_price": 13.46,
+    "eth_price": 3676.79
+  },
+  {
+    "date": "2024-06-06",
+    "ens_price": 13.46,
+    "eth_price": 3812.05
+  },
+  {
+    "date": "2024-06-05",
+    "ens_price": 13.46,
+    "eth_price": 3866.46
+  },
+  {
+    "date": "2024-06-04",
+    "ens_price": 13.46,
+    "eth_price": 3810.73
+  },
+  {
+    "date": "2024-06-03",
+    "ens_price": 13.46,
+    "eth_price": 3766.32
+  },
+  {
+    "date": "2024-06-02",
+    "ens_price": 13.46,
+    "eth_price": 3779.06
+  },
+  {
+    "date": "2024-06-01",
+    "ens_price": 13.46,
+    "eth_price": 3812.81
+  },
+  {
+    "date": "2024-05-31",
+    "ens_price": 13.46,
+    "eth_price": 3758.65
+  },
+  {
+    "date": "2024-05-30",
+    "ens_price": 13.46,
+    "eth_price": 3746.97
+  },
+  {
+    "date": "2024-05-29",
+    "ens_price": 13.46,
+    "eth_price": 3762.22
+  },
+  {
+    "date": "2024-05-28",
+    "ens_price": 13.46,
+    "eth_price": 3840.39
+  },
+  {
+    "date": "2024-05-27",
+    "ens_price": 13.46,
+    "eth_price": 3891.26
+  },
+  {
+    "date": "2024-05-26",
+    "ens_price": 13.46,
+    "eth_price": 3824.34
+  },
+  {
+    "date": "2024-05-25",
+    "ens_price": 13.46,
+    "eth_price": 3749.23
+  },
+  {
+    "date": "2024-05-24",
+    "ens_price": 13.46,
+    "eth_price": 3727.14
+  },
+  {
+    "date": "2024-05-23",
+    "ens_price": 13.46,
+    "eth_price": 3781.61
+  },
+  {
+    "date": "2024-05-22",
+    "ens_price": 13.46,
+    "eth_price": 3736.33
+  },
+  {
+    "date": "2024-05-21",
+    "ens_price": 13.46,
+    "eth_price": 3789.36
+  },
+  {
+    "date": "2024-05-20",
+    "ens_price": 13.46,
+    "eth_price": 3661.58
+  },
+  {
+    "date": "2024-05-19",
+    "ens_price": 13.46,
+    "eth_price": 3070.68
+  },
+  {
+    "date": "2024-05-18",
+    "ens_price": 13.46,
+    "eth_price": 3123.72
+  },
+  {
+    "date": "2024-05-17",
+    "ens_price": 13.46,
+    "eth_price": 3093.44
+  },
+  {
+    "date": "2024-05-16",
+    "ens_price": 13.46,
+    "eth_price": 2945.17
+  },
+  {
+    "date": "2024-05-15",
+    "ens_price": 13.46,
+    "eth_price": 3033.46
+  },
+  {
+    "date": "2024-05-14",
+    "ens_price": 13.46,
+    "eth_price": 2880.64
+  },
+  {
+    "date": "2024-05-13",
+    "ens_price": 13.46,
+    "eth_price": 2950.16
+  },
+  {
+    "date": "2024-05-12",
+    "ens_price": 13.46,
+    "eth_price": 2927.97
+  },
+  {
+    "date": "2024-05-11",
+    "ens_price": 13.46,
+    "eth_price": 2911.82
+  },
+  {
+    "date": "2024-05-10",
+    "ens_price": 13.46,
+    "eth_price": 2909.58
+  },
+  {
+    "date": "2024-05-09",
+    "ens_price": 13.46,
+    "eth_price": 3035.93
+  },
+  {
+    "date": "2024-05-08",
+    "ens_price": 13.46,
+    "eth_price": 2973.31
+  },
+  {
+    "date": "2024-05-07",
+    "ens_price": 13.46,
+    "eth_price": 3005.91
+  },
+  {
+    "date": "2024-05-06",
+    "ens_price": 13.46,
+    "eth_price": 3063.19
+  },
+  {
+    "date": "2024-05-05",
+    "ens_price": 13.46,
+    "eth_price": 3137.09
+  },
+  {
+    "date": "2024-05-04",
+    "ens_price": 13.46,
+    "eth_price": 3117.52
+  },
+  {
+    "date": "2024-05-03",
+    "ens_price": 13.46,
+    "eth_price": 3103.77
+  },
+  {
+    "date": "2024-05-02",
+    "ens_price": 13.46,
+    "eth_price": 2986.41
+  },
+  {
+    "date": "2024-05-01",
+    "ens_price": 13.46,
+    "eth_price": 2968.82
+  },
+  {
+    "date": "2024-04-30",
+    "ens_price": 13.46,
+    "eth_price": 3011.46
+  },
+  {
+    "date": "2024-04-29",
+    "ens_price": 13.46,
+    "eth_price": 3215.73
+  },
+  {
+    "date": "2024-04-28",
+    "ens_price": 13.46,
+    "eth_price": 3262.43
+  },
+  {
+    "date": "2024-04-27",
+    "ens_price": 13.46,
+    "eth_price": 3253.23
+  },
+  {
+    "date": "2024-04-26",
+    "ens_price": 13.46,
+    "eth_price": 3130.07
+  },
+  {
+    "date": "2024-04-25",
+    "ens_price": 13.46,
+    "eth_price": 3155.47
+  },
+  {
+    "date": "2024-04-24",
+    "ens_price": 13.46,
+    "eth_price": 3139.1
+  },
+  {
+    "date": "2024-04-23",
+    "ens_price": 13.46,
+    "eth_price": 3219.78
+  },
+  {
+    "date": "2024-04-22",
+    "ens_price": 13.46,
+    "eth_price": 3201.55
+  },
+  {
+    "date": "2024-04-21",
+    "ens_price": 13.46,
+    "eth_price": 3148.11
+  },
+  {
+    "date": "2024-04-20",
+    "ens_price": 13.46,
+    "eth_price": 3157.04
+  },
+  {
+    "date": "2024-04-19",
+    "ens_price": 13.46,
+    "eth_price": 3058.2
+  },
+  {
+    "date": "2024-04-18",
+    "ens_price": 13.28,
+    "eth_price": 2956.5
+  },
+  {
+    "date": "2024-04-17",
+    "ens_price": 13.45,
+    "eth_price": 3093.2
+  },
+  {
+    "date": "2024-04-16",
+    "ens_price": 13.53,
+    "eth_price": 3079.4
+  },
+  {
+    "date": "2024-04-15",
+    "ens_price": 14.01,
+    "eth_price": 3125.6
+  },
+  {
+    "date": "2024-04-14",
+    "ens_price": 12.47,
+    "eth_price": 3011.2
+  },
+  {
+    "date": "2024-04-13",
+    "ens_price": 15.2,
+    "eth_price": 3230.2
+  },
+  {
+    "date": "2024-04-12",
+    "ens_price": 19.77,
+    "eth_price": 3507.2
+  },
+  {
+    "date": "2024-04-11",
+    "ens_price": 20.4,
+    "eth_price": 3531.2
+  },
+  {
+    "date": "2024-04-10",
+    "ens_price": 20.29,
+    "eth_price": 3502.2
+  },
+  {
+    "date": "2024-04-09",
+    "ens_price": 22.35,
+    "eth_price": 3689.3
+  },
+  {
+    "date": "2024-04-08",
+    "ens_price": 20.22,
+    "eth_price": 3433.7
+  },
+  {
+    "date": "2024-04-07",
+    "ens_price": 19.66,
+    "eth_price": 3356.9
+  },
+  {
+    "date": "2024-04-06",
+    "ens_price": 19.33,
+    "eth_price": 3315.6
+  },
+  {
+    "date": "2024-04-05",
+    "ens_price": 19.8,
+    "eth_price": 3297.3
+  },
+  {
+    "date": "2024-04-04",
+    "ens_price": 19.44,
+    "eth_price": 3323.3
+  },
+  {
+    "date": "2024-04-03",
+    "ens_price": 19.1,
+    "eth_price": 3283.4
+  },
+  {
+    "date": "2024-04-02",
+    "ens_price": 20.78,
+    "eth_price": 3504.9
+  },
+  {
+    "date": "2024-04-01",
+    "ens_price": 22.4,
+    "eth_price": 3621.8
+  },
+  {
+    "date": "2024-03-31",
+    "ens_price": 21.69,
+    "eth_price": 3518.7
+  },
+  {
+    "date": "2024-03-30",
+    "ens_price": 22.17,
+    "eth_price": 3514.4
+  },
+  {
+    "date": "2024-03-29",
+    "ens_price": 22.35,
+    "eth_price": 3557.9
+  },
+  {
+    "date": "2024-03-28",
+    "ens_price": 21.87,
+    "eth_price": 3495.7
+  },
+  {
+    "date": "2024-03-27",
+    "ens_price": 22.67,
+    "eth_price": 3580.0
+  },
+  {
+    "date": "2024-03-26",
+    "ens_price": 22.74,
+    "eth_price": 3592.8
+  },
+  {
+    "date": "2024-03-25",
+    "ens_price": 22.15,
+    "eth_price": 3456.3
+  },
+  {
+    "date": "2024-03-24",
+    "ens_price": 21.27,
+    "eth_price": 3343.3
+  },
+  {
+    "date": "2024-03-23",
+    "ens_price": 20.88,
+    "eth_price": 3335.2
+  },
+  {
+    "date": "2024-03-22",
+    "ens_price": 21.04,
+    "eth_price": 3490.4
+  },
+  {
+    "date": "2024-03-21",
+    "ens_price": 21.06,
+    "eth_price": 3517.8
+  },
+  {
+    "date": "2024-03-20",
+    "ens_price": 19.24,
+    "eth_price": 3158.2
+  },
+  {
+    "date": "2024-03-19",
+    "ens_price": 21.26,
+    "eth_price": 3525.8
+  },
+  {
+    "date": "2024-03-18",
+    "ens_price": 22.48,
+    "eth_price": 3621.6
+  },
+  {
+    "date": "2024-03-17",
+    "ens_price": 21.68,
+    "eth_price": 3539.6
+  },
+  {
+    "date": "2024-03-16",
+    "ens_price": 22.99,
+    "eth_price": 3740.9
+  },
+  {
+    "date": "2024-03-15",
+    "ens_price": 24.74,
+    "eth_price": 3880.9
+  },
+  {
+    "date": "2024-03-14",
+    "ens_price": 25.88,
+    "eth_price": 4009.7
+  },
+  {
+    "date": "2024-03-13",
+    "ens_price": 25.59,
+    "eth_price": 3996.6
+  },
+  {
+    "date": "2024-03-12",
+    "ens_price": 26.07,
+    "eth_price": 4076.4
+  },
+  {
+    "date": "2024-03-11",
+    "ens_price": 26.06,
+    "eth_price": 3880.6
+  },
+  {
+    "date": "2024-03-10",
+    "ens_price": 25.17,
+    "eth_price": 3920.1
+  },
+  {
+    "date": "2024-03-09",
+    "ens_price": 24.95,
+    "eth_price": 3912.3
+  },
+  {
+    "date": "2024-03-08",
+    "ens_price": 25.36,
+    "eth_price": 3876.2
+  },
+  {
+    "date": "2024-03-07",
+    "ens_price": 25.87,
+    "eth_price": 3828.2
+  },
+  {
+    "date": "2024-03-06",
+    "ens_price": 25.24,
+    "eth_price": 3589.9
+  },
+  {
+    "date": "2024-03-05",
+    "ens_price": 21.68,
+    "eth_price": 3624.4
+  },
+  {
+    "date": "2024-03-04",
+    "ens_price": 22.27,
+    "eth_price": 3520.9
+  },
+  {
+    "date": "2024-03-03",
+    "ens_price": 22.7,
+    "eth_price": 3421.6
+  },
+  {
+    "date": "2024-03-02",
+    "ens_price": 21.52,
+    "eth_price": 3438.0
+  },
+  {
+    "date": "2024-03-01",
+    "ens_price": 20.94,
+    "eth_price": 3363.9
+  },
+  {
+    "date": "2024-02-29",
+    "ens_price": 21.16,
+    "eth_price": 3417.6
+  },
+  {
+    "date": "2024-02-28",
+    "ens_price": 22.17,
+    "eth_price": 3241.8
+  },
+  {
+    "date": "2024-02-27",
+    "ens_price": 22.15,
+    "eth_price": 3174.0
+  },
+  {
+    "date": "2024-02-26",
+    "ens_price": 22.71,
+    "eth_price": 3126.2
+  },
+  {
+    "date": "2024-02-25",
+    "ens_price": 21.49,
+    "eth_price": 2993.4
+  },
+  {
+    "date": "2024-02-24",
+    "ens_price": 20.97,
+    "eth_price": 2923.6
+  },
+  {
+    "date": "2024-02-23",
+    "ens_price": 21.4,
+    "eth_price": 2975.6
+  },
+  {
+    "date": "2024-02-22",
+    "ens_price": 22.38,
+    "eth_price": 2938.3
+  },
+  {
+    "date": "2024-02-21",
+    "ens_price": 22.97,
+    "eth_price": 3014.4
+  },
+  {
+    "date": "2024-02-20",
+    "ens_price": 23.76,
+    "eth_price": 2938.0
+  },
+  {
+    "date": "2024-02-19",
+    "ens_price": 22.48,
+    "eth_price": 2861.9
+  },
+  {
+    "date": "2024-02-18",
+    "ens_price": 22.1,
+    "eth_price": 2766.0
+  },
+  {
+    "date": "2024-02-17",
+    "ens_price": 22.28,
+    "eth_price": 2790.9
+  },
+  {
+    "date": "2024-02-16",
+    "ens_price": 23.79,
+    "eth_price": 2827.0
+  },
+  {
+    "date": "2024-02-15",
+    "ens_price": 23.44,
+    "eth_price": 2782.2
+  },
+  {
+    "date": "2024-02-14",
+    "ens_price": 22.26,
+    "eth_price": 2626.0
+  },
+  {
+    "date": "2024-02-13",
+    "ens_price": 22.58,
+    "eth_price": 2683.6
+  },
+  {
+    "date": "2024-02-12",
+    "ens_price": 21.42,
+    "eth_price": 2518.9
+  },
+  {
+    "date": "2024-02-11",
+    "ens_price": 22.22,
+    "eth_price": 2504.7
+  },
+  {
+    "date": "2024-02-10",
+    "ens_price": 21.1,
+    "eth_price": 2502.1
+  },
+  {
+    "date": "2024-02-09",
+    "ens_price": 20.43,
+    "eth_price": 2440.0
+  },
+  {
+    "date": "2024-02-08",
+    "ens_price": 21.41,
+    "eth_price": 2426.2
+  },
+  {
+    "date": "2024-02-07",
+    "ens_price": 22.3,
+    "eth_price": 2384.0
+  },
+  {
+    "date": "2024-02-06",
+    "ens_price": 20.2,
+    "eth_price": 2307.4
+  },
+  {
+    "date": "2024-02-05",
+    "ens_price": 17.96,
+    "eth_price": 2280.1
+  },
+  {
+    "date": "2024-02-04",
+    "ens_price": 17.43,
+    "eth_price": 2300.5
+  },
+  {
+    "date": "2024-02-03",
+    "ens_price": 17.8,
+    "eth_price": 2318.5
+  },
+  {
+    "date": "2024-02-02",
+    "ens_price": 17.52,
+    "eth_price": 2306.4
+  },
+  {
+    "date": "2024-02-01",
+    "ens_price": 17.82,
+    "eth_price": 2285.3
+  },
+  {
+    "date": "2024-01-31",
+    "ens_price": 19.18,
+    "eth_price": 2341.5
+  },
+  {
+    "date": "2024-01-30",
+    "ens_price": 19.94,
+    "eth_price": 2316.7
+  },
+  {
+    "date": "2024-01-29",
+    "ens_price": 18.49,
+    "eth_price": 2267.0
+  },
+  {
+    "date": "2024-01-28",
+    "ens_price": 19.64,
+    "eth_price": 2277.2
+  },
+  {
+    "date": "2024-01-27",
+    "ens_price": 19.59,
+    "eth_price": 2279.0
+  },
+  {
+    "date": "2024-01-26",
+    "ens_price": 17.88,
+    "eth_price": 2217.0
+  },
+  {
+    "date": "2024-01-25",
+    "ens_price": 18.32,
+    "eth_price": 2231.3
+  },
+  {
+    "date": "2024-01-24",
+    "ens_price": 16.62,
+    "eth_price": 2243.9
+  },
+  {
+    "date": "2024-01-23",
+    "ens_price": 17.42,
+    "eth_price": 2327.1
+  },
+  {
+    "date": "2024-01-22",
+    "ens_price": 18.44,
+    "eth_price": 2455.4
+  },
+  {
+    "date": "2024-01-21",
+    "ens_price": 18.97,
+    "eth_price": 2463.7
+  },
+  {
+    "date": "2024-01-20",
+    "ens_price": 20.02,
+    "eth_price": 2486.8
+  },
+  {
+    "date": "2024-01-19",
+    "ens_price": 21.12,
+    "eth_price": 2467.1
+  },
+  {
+    "date": "2024-01-18",
+    "ens_price": 21.99,
+    "eth_price": 2526.3
+  },
+  {
+    "date": "2024-01-17",
+    "ens_price": 23.29,
+    "eth_price": 2581.4
+  },
+  {
+    "date": "2024-01-16",
+    "ens_price": 23.46,
+    "eth_price": 2512.6
+  },
+  {
+    "date": "2024-01-15",
+    "ens_price": 23.7,
+    "eth_price": 2480.6
+  },
+  {
+    "date": "2024-01-14",
+    "ens_price": 23.23,
+    "eth_price": 2566.1
+  },
+  {
+    "date": "2024-01-13",
+    "ens_price": 23.65,
+    "eth_price": 2523.6
+  },
+  {
+    "date": "2024-01-12",
+    "ens_price": 24.34,
+    "eth_price": 2599.3
+  },
+  {
+    "date": "2024-01-11",
+    "ens_price": 17.71,
+    "eth_price": 2585.1
+  },
+  {
+    "date": "2024-01-10",
+    "ens_price": 13.08,
+    "eth_price": 2352.5
+  },
+  {
+    "date": "2024-01-09",
+    "ens_price": 13.51,
+    "eth_price": 2313.8
+  },
+  {
+    "date": "2024-01-08",
+    "ens_price": 11.79,
+    "eth_price": 2209.2
+  },
+  {
+    "date": "2024-01-07",
+    "ens_price": 13.0,
+    "eth_price": 2241.9
+  },
+  {
+    "date": "2024-01-06",
+    "ens_price": 14.32,
+    "eth_price": 2254.9
+  },
+  {
+    "date": "2024-01-05",
+    "ens_price": 15.06,
+    "eth_price": 2277.1
+  },
+  {
+    "date": "2024-01-04",
+    "ens_price": 12.74,
+    "eth_price": 2214.7
+  },
+  {
+    "date": "2024-01-03",
+    "ens_price": 10.26,
+    "eth_price": 2374.0
+  },
+  {
+    "date": "2024-01-02",
+    "ens_price": 10.19,
+    "eth_price": 2351.3
+  },
+  {
+    "date": "2024-01-01",
+    "ens_price": 9.68,
+    "eth_price": 2289.2
+  },
+  {
+    "date": "2023-12-31",
+    "ens_price": 9.84,
+    "eth_price": 2295.7
+  },
+  {
+    "date": "2023-12-30",
+    "ens_price": 9.88,
+    "eth_price": 2298.6
+  },
+  {
+    "date": "2023-12-29",
+    "ens_price": 10.16,
+    "eth_price": 2350.4
+  },
+  {
+    "date": "2023-12-28",
+    "ens_price": 10.34,
+    "eth_price": 2392.5
+  },
+  {
+    "date": "2023-12-27",
+    "ens_price": 10.32,
+    "eth_price": 2224.6
+  },
+  {
+    "date": "2023-12-26",
+    "ens_price": 9.8,
+    "eth_price": 2265.9
+  },
+  {
+    "date": "2023-12-25",
+    "ens_price": 9.36,
+    "eth_price": 2271.6
+  },
+  {
+    "date": "2023-12-24",
+    "ens_price": 9.12,
+    "eth_price": 2303.9
+  },
+  {
+    "date": "2023-12-23",
+    "ens_price": 8.95,
+    "eth_price": 2324.7
+  },
+  {
+    "date": "2023-12-22",
+    "ens_price": 8.56,
+    "eth_price": 2236.7
+  },
+  {
+    "date": "2023-12-21",
+    "ens_price": 8.51,
+    "eth_price": 2200.2
+  },
+  {
+    "date": "2023-12-20",
+    "ens_price": 8.14,
+    "eth_price": 2177.0
+  },
+  {
+    "date": "2023-12-19",
+    "ens_price": 8.34,
+    "eth_price": 2213.3
+  },
+  {
+    "date": "2023-12-18",
+    "ens_price": 8.59,
+    "eth_price": 2199.9
+  },
+  {
+    "date": "2023-12-17",
+    "ens_price": 8.8,
+    "eth_price": 2232.1
+  },
+  {
+    "date": "2023-12-16",
+    "ens_price": 8.5,
+    "eth_price": 2219.5
+  },
+  {
+    "date": "2023-12-15",
+    "ens_price": 9.05,
+    "eth_price": 2305.7
+  },
+  {
+    "date": "2023-12-14",
+    "ens_price": 8.87,
+    "eth_price": 2251.5
+  },
+  {
+    "date": "2023-12-13",
+    "ens_price": 8.85,
+    "eth_price": 2202.1
+  },
+  {
+    "date": "2023-12-12",
+    "ens_price": 8.8,
+    "eth_price": 2230.8
+  },
+  {
+    "date": "2023-12-11",
+    "ens_price": 9.69,
+    "eth_price": 2335.9
+  },
+  {
+    "date": "2023-12-10",
+    "ens_price": 9.62,
+    "eth_price": 2343.4
+  },
+  {
+    "date": "2023-12-09",
+    "ens_price": 9.54,
+    "eth_price": 2361.4
+  },
+  {
+    "date": "2023-12-08",
+    "ens_price": 9.38,
+    "eth_price": 2360.1
+  },
+  {
+    "date": "2023-12-07",
+    "ens_price": 8.99,
+    "eth_price": 2234.4
+  },
+  {
+    "date": "2023-12-06",
+    "ens_price": 9.06,
+    "eth_price": 2305.5
+  },
+  {
+    "date": "2023-12-05",
+    "ens_price": 9.22,
+    "eth_price": 2243.1
+  },
+  {
+    "date": "2023-12-04",
+    "ens_price": 8.8,
+    "eth_price": 2204.3
+  },
+  {
+    "date": "2023-12-03",
+    "ens_price": 8.98,
+    "eth_price": 2165.2
+  },
+  {
+    "date": "2023-12-02",
+    "ens_price": 8.58,
+    "eth_price": 2098.3
+  },
+  {
+    "date": "2023-12-01",
+    "ens_price": 8.42,
+    "eth_price": 2075.9
+  },
+  {
+    "date": "2023-11-30",
+    "ens_price": 8.49,
+    "eth_price": 2024.1
+  },
+  {
+    "date": "2023-11-29",
+    "ens_price": 8.6,
+    "eth_price": 2056.9
+  },
+  {
+    "date": "2023-11-28",
+    "ens_price": 8.41,
+    "eth_price": 2035.7
+  },
+  {
+    "date": "2023-11-27",
+    "ens_price": 8.65,
+    "eth_price": 2063.1
+  },
+  {
+    "date": "2023-11-26",
+    "ens_price": 8.73,
+    "eth_price": 2076.9
+  },
+  {
+    "date": "2023-11-25",
+    "ens_price": 8.52,
+    "eth_price": 2077.8
+  },
+  {
+    "date": "2023-11-24",
+    "ens_price": 8.39,
+    "eth_price": 2067.6
+  },
+  {
+    "date": "2023-11-23",
+    "ens_price": 8.42,
+    "eth_price": 2069.0
+  },
+  {
+    "date": "2023-11-22",
+    "ens_price": 7.77,
+    "eth_price": 1980.0
+  },
+  {
+    "date": "2023-11-21",
+    "ens_price": 8.7,
+    "eth_price": 2021.1
+  },
+  {
+    "date": "2023-11-20",
+    "ens_price": 9.09,
+    "eth_price": 2004.2
+  },
+  {
+    "date": "2023-11-19",
+    "ens_price": 8.68,
+    "eth_price": 1959.3
+  },
+  {
+    "date": "2023-11-18",
+    "ens_price": 8.87,
+    "eth_price": 1952.8
+  },
+  {
+    "date": "2023-11-17",
+    "ens_price": 9.32,
+    "eth_price": 1960.5
+  },
+  {
+    "date": "2023-11-16",
+    "ens_price": 9.4,
+    "eth_price": 2058.1
+  },
+  {
+    "date": "2023-11-15",
+    "ens_price": 8.43,
+    "eth_price": 1983.5
+  },
+  {
+    "date": "2023-11-14",
+    "ens_price": 8.75,
+    "eth_price": 2053.2
+  },
+  {
+    "date": "2023-11-13",
+    "ens_price": 9.19,
+    "eth_price": 2039.3
+  },
+  {
+    "date": "2023-11-12",
+    "ens_price": 9.12,
+    "eth_price": 2053.2
+  },
+  {
+    "date": "2023-11-11",
+    "ens_price": 9.19,
+    "eth_price": 2067.7
+  },
+  {
+    "date": "2023-11-10",
+    "ens_price": 8.69,
+    "eth_price": 2117.6
+  },
+  {
+    "date": "2023-11-09",
+    "ens_price": 8.51,
+    "eth_price": 1884.3
+  },
+  {
+    "date": "2023-11-08",
+    "ens_price": 8.49,
+    "eth_price": 1885.4
+  },
+  {
+    "date": "2023-11-07",
+    "ens_price": 8.79,
+    "eth_price": 1888.2
+  },
+  {
+    "date": "2023-11-06",
+    "ens_price": 8.49,
+    "eth_price": 1880.5
+  },
+  {
+    "date": "2023-11-05",
+    "ens_price": 8.28,
+    "eth_price": 1857.7
+  },
+  {
+    "date": "2023-11-04",
+    "ens_price": 8.06,
+    "eth_price": 1831.7
+  },
+  {
+    "date": "2023-11-03",
+    "ens_price": 7.88,
+    "eth_price": 1783.8
+  },
+  {
+    "date": "2023-11-02",
+    "ens_price": 8.02,
+    "eth_price": 1847.3
+  },
+  {
+    "date": "2023-11-01",
+    "ens_price": 7.75,
+    "eth_price": 1814.6
+  },
+  {
+    "date": "2023-10-31",
+    "ens_price": 8.01,
+    "eth_price": 1814.5
+  },
+  {
+    "date": "2023-10-30",
+    "ens_price": 7.78,
+    "eth_price": 1794.7
+  },
+  {
+    "date": "2023-10-29",
+    "ens_price": 7.7,
+    "eth_price": 1775.2
+  },
+  {
+    "date": "2023-10-28",
+    "ens_price": 7.48,
+    "eth_price": 1784.3
+  },
+  {
+    "date": "2023-10-27",
+    "ens_price": 7.71,
+    "eth_price": 1792.6
+  },
+  {
+    "date": "2023-10-26",
+    "ens_price": 7.73,
+    "eth_price": 1785.1
+  },
+  {
+    "date": "2023-10-25",
+    "ens_price": 7.76,
+    "eth_price": 1785.2
+  },
+  {
+    "date": "2023-10-24",
+    "ens_price": 7.66,
+    "eth_price": 1765.4
+  },
+  {
+    "date": "2023-10-23",
+    "ens_price": 7.25,
+    "eth_price": 1667.8
+  },
+  {
+    "date": "2023-10-22",
+    "ens_price": 7.09,
+    "eth_price": 1631.5
+  },
+  {
+    "date": "2023-10-21",
+    "ens_price": 6.78,
+    "eth_price": 1605.4
+  },
+  {
+    "date": "2023-10-20",
+    "ens_price": 6.74,
+    "eth_price": 1564.0
+  },
+  {
+    "date": "2023-10-19",
+    "ens_price": 6.76,
+    "eth_price": 1563.2
+  },
+  {
+    "date": "2023-10-18",
+    "ens_price": 6.94,
+    "eth_price": 1564.9
+  },
+  {
+    "date": "2023-10-17",
+    "ens_price": 7.14,
+    "eth_price": 1597.9
+  },
+  {
+    "date": "2023-10-16",
+    "ens_price": 7.04,
+    "eth_price": 1558.6
+  },
+  {
+    "date": "2023-10-15",
+    "ens_price": 7.02,
+    "eth_price": 1552.5
+  },
+  {
+    "date": "2023-10-14",
+    "ens_price": 7.03,
+    "eth_price": 1554.0
+  },
+  {
+    "date": "2023-10-13",
+    "ens_price": 6.84,
+    "eth_price": 1543.1
+  },
+  {
+    "date": "2023-10-12",
+    "ens_price": 7.14,
+    "eth_price": 1560.8
+  },
+  {
+    "date": "2023-10-11",
+    "ens_price": 7.19,
+    "eth_price": 1556.7
+  },
+  {
+    "date": "2023-10-10",
+    "ens_price": 7.15,
+    "eth_price": 1580.2
+  },
+  {
+    "date": "2023-10-09",
+    "ens_price": 7.61,
+    "eth_price": 1628.8
+  },
+  {
+    "date": "2023-10-08",
+    "ens_price": 7.5,
+    "eth_price": 1635.0
+  },
+  {
+    "date": "2023-10-07",
+    "ens_price": 7.69,
+    "eth_price": 1646.9
+  },
+  {
+    "date": "2023-10-06",
+    "ens_price": 7.58,
+    "eth_price": 1616.4
+  },
+  {
+    "date": "2023-10-05",
+    "ens_price": 7.78,
+    "eth_price": 1643.7
+  },
+  {
+    "date": "2023-10-04",
+    "ens_price": 7.73,
+    "eth_price": 1637.1
+  },
+  {
+    "date": "2023-10-03",
+    "ens_price": 7.83,
+    "eth_price": 1661.6
+  },
+  {
+    "date": "2023-10-02",
+    "ens_price": 8.34,
+    "eth_price": 1732.7
+  },
+  {
+    "date": "2023-10-01",
+    "ens_price": 8.0,
+    "eth_price": 1673.9
+  },
+  {
+    "date": "2023-09-30",
+    "ens_price": 7.58,
+    "eth_price": 1669.0
+  },
+  {
+    "date": "2023-09-29",
+    "ens_price": 7.6,
+    "eth_price": 1653.1
+  },
+  {
+    "date": "2023-09-28",
+    "ens_price": 7.4,
+    "eth_price": 1597.3
+  },
+  {
+    "date": "2023-09-27",
+    "ens_price": 7.37,
+    "eth_price": 1595.0
+  },
+  {
+    "date": "2023-09-26",
+    "ens_price": 7.39,
+    "eth_price": 1589.8
+  },
+  {
+    "date": "2023-09-25",
+    "ens_price": 7.31,
+    "eth_price": 1573.1
+  },
+  {
+    "date": "2023-09-24",
+    "ens_price": 7.39,
+    "eth_price": 1594.4
+  },
+  {
+    "date": "2023-09-23",
+    "ens_price": 7.47,
+    "eth_price": 1594.6
+  },
+  {
+    "date": "2023-09-22",
+    "ens_price": 7.49,
+    "eth_price": 1581.0
+  },
+  {
+    "date": "2023-09-21",
+    "ens_price": 7.58,
+    "eth_price": 1615.4
+  },
+  {
+    "date": "2023-09-20",
+    "ens_price": 7.68,
+    "eth_price": 1641.6
+  },
+  {
+    "date": "2023-09-19",
+    "ens_price": 7.55,
+    "eth_price": 1632.9
+  },
+  {
+    "date": "2023-09-18",
+    "ens_price": 7.39,
+    "eth_price": 1622.3
+  },
+  {
+    "date": "2023-09-17",
+    "ens_price": 7.73,
+    "eth_price": 1633.1
+  },
+  {
+    "date": "2023-09-16",
+    "ens_price": 7.69,
+    "eth_price": 1643.6
+  },
+  {
+    "date": "2023-09-15",
+    "ens_price": 7.54,
+    "eth_price": 1623.6
+  },
+  {
+    "date": "2023-09-14",
+    "ens_price": 7.22,
+    "eth_price": 1612.9
+  },
+  {
+    "date": "2023-09-13",
+    "ens_price": 7.11,
+    "eth_price": 1595.1
+  },
+  {
+    "date": "2023-09-12",
+    "ens_price": 7.16,
+    "eth_price": 1586.9
+  },
+  {
+    "date": "2023-09-11",
+    "ens_price": 7.46,
+    "eth_price": 1609.4
+  },
+  {
+    "date": "2023-09-10",
+    "ens_price": 7.72,
+    "eth_price": 1630.8
+  },
+  {
+    "date": "2023-09-09",
+    "ens_price": 7.64,
+    "eth_price": 1635.0
+  },
+  {
+    "date": "2023-09-08",
+    "ens_price": 7.77,
+    "eth_price": 1645.0
+  },
+  {
+    "date": "2023-09-07",
+    "ens_price": 7.53,
+    "eth_price": 1635.5
+  },
+  {
+    "date": "2023-09-06",
+    "ens_price": 7.74,
+    "eth_price": 1632.7
+  },
+  {
+    "date": "2023-09-05",
+    "ens_price": 7.59,
+    "eth_price": 1622.8
+  },
+  {
+    "date": "2023-09-04",
+    "ens_price": 7.33,
+    "eth_price": 1641.5
+  },
+  {
+    "date": "2023-09-03",
+    "ens_price": 7.36,
+    "eth_price": 1634.4
+  },
+  {
+    "date": "2023-09-02",
+    "ens_price": 7.43,
+    "eth_price": 1631.3
+  },
+  {
+    "date": "2023-09-01",
+    "ens_price": 7.83,
+    "eth_price": 1651.8
+  },
+  {
+    "date": "2023-08-31",
+    "ens_price": 8.05,
+    "eth_price": 1706.9
+  },
+  {
+    "date": "2023-08-30",
+    "ens_price": 8.27,
+    "eth_price": 1730.3
+  },
+  {
+    "date": "2023-08-29",
+    "ens_price": 8.07,
+    "eth_price": 1651.2
+  },
+  {
+    "date": "2023-08-28",
+    "ens_price": 8.03,
+    "eth_price": 1650.6
+  },
+  {
+    "date": "2023-08-27",
+    "ens_price": 7.91,
+    "eth_price": 1652.0
+  },
+  {
+    "date": "2023-08-26",
+    "ens_price": 7.77,
+    "eth_price": 1650.9
+  },
+  {
+    "date": "2023-08-25",
+    "ens_price": 8.09,
+    "eth_price": 1658.5
+  },
+  {
+    "date": "2023-08-24",
+    "ens_price": 8.13,
+    "eth_price": 1680.2
+  },
+  {
+    "date": "2023-08-23",
+    "ens_price": 8.03,
+    "eth_price": 1639.4
+  },
+  {
+    "date": "2023-08-22",
+    "ens_price": 8.0,
+    "eth_price": 1666.7
+  },
+  {
+    "date": "2023-08-21",
+    "ens_price": 8.14,
+    "eth_price": 1683.5
+  },
+  {
+    "date": "2023-08-20",
+    "ens_price": 8.11,
+    "eth_price": 1668.4
+  },
+  {
+    "date": "2023-08-19",
+    "ens_price": 8.02,
+    "eth_price": 1669.4
+  },
+  {
+    "date": "2023-08-18",
+    "ens_price": 7.93,
+    "eth_price": 1691.0
+  },
+  {
+    "date": "2023-08-17",
+    "ens_price": 8.26,
+    "eth_price": 1801.0
+  },
+  {
+    "date": "2023-08-16",
+    "ens_price": 8.57,
+    "eth_price": 1826.7
+  },
+  {
+    "date": "2023-08-15",
+    "ens_price": 9.02,
+    "eth_price": 1844.4
+  },
+  {
+    "date": "2023-08-14",
+    "ens_price": 8.99,
+    "eth_price": 1839.6
+  },
+  {
+    "date": "2023-08-13",
+    "ens_price": 9.02,
+    "eth_price": 1850.4
+  },
+  {
+    "date": "2023-08-12",
+    "ens_price": 8.95,
+    "eth_price": 1846.2
+  },
+  {
+    "date": "2023-08-11",
+    "ens_price": 9.2,
+    "eth_price": 1853.0
+  },
+  {
+    "date": "2023-08-10",
+    "ens_price": 9.17,
+    "eth_price": 1853.6
+  },
+  {
+    "date": "2023-08-09",
+    "ens_price": 9.3,
+    "eth_price": 1854.6
+  },
+  {
+    "date": "2023-08-08",
+    "ens_price": 9.15,
+    "eth_price": 1828.2
+  },
+  {
+    "date": "2023-08-07",
+    "ens_price": 9.0,
+    "eth_price": 1837.1
+  },
+  {
+    "date": "2023-08-06",
+    "ens_price": 8.92,
+    "eth_price": 1833.4
+  },
+  {
+    "date": "2023-08-05",
+    "ens_price": 8.76,
+    "eth_price": 1832.0
+  },
+  {
+    "date": "2023-08-04",
+    "ens_price": 9.0,
+    "eth_price": 1834.7
+  },
+  {
+    "date": "2023-08-03",
+    "ens_price": 9.45,
+    "eth_price": 1842.3
+  },
+  {
+    "date": "2023-08-02",
+    "ens_price": 9.89,
+    "eth_price": 1870.1
+  },
+  {
+    "date": "2023-08-01",
+    "ens_price": 9.55,
+    "eth_price": 1855.1
+  },
+  {
+    "date": "2023-07-31",
+    "ens_price": 9.5,
+    "eth_price": 1861.2
+  },
+  {
+    "date": "2023-07-30",
+    "ens_price": 9.52,
+    "eth_price": 1881.7
+  },
+  {
+    "date": "2023-07-29",
+    "ens_price": 9.41,
+    "eth_price": 1874.8
+  },
+  {
+    "date": "2023-07-28",
+    "ens_price": 9.32,
+    "eth_price": 1864.4
+  },
+  {
+    "date": "2023-07-27",
+    "ens_price": 9.17,
+    "eth_price": 1870.5
+  },
+  {
+    "date": "2023-07-26",
+    "ens_price": 9.21,
+    "eth_price": 1856.7
+  },
+  {
+    "date": "2023-07-25",
+    "ens_price": 9.14,
+    "eth_price": 1852.9
+  },
+  {
+    "date": "2023-07-24",
+    "ens_price": 9.58,
+    "eth_price": 1888.3
+  },
+  {
+    "date": "2023-07-23",
+    "ens_price": 9.62,
+    "eth_price": 1870.9
+  },
+  {
+    "date": "2023-07-22",
+    "ens_price": 9.79,
+    "eth_price": 1895.2
+  },
+  {
+    "date": "2023-07-21",
+    "ens_price": 10.0,
+    "eth_price": 1890.8
+  },
+  {
+    "date": "2023-07-20",
+    "ens_price": 9.74,
+    "eth_price": 1886.1
+  },
+  {
+    "date": "2023-07-19",
+    "ens_price": 9.81,
+    "eth_price": 1909.5
+  },
+  {
+    "date": "2023-07-18",
+    "ens_price": 9.96,
+    "eth_price": 1910.2
+  },
+  {
+    "date": "2023-07-17",
+    "ens_price": 9.69,
+    "eth_price": 1928.1
+  },
+  {
+    "date": "2023-07-16",
+    "ens_price": 9.85,
+    "eth_price": 1935.3
+  },
+  {
+    "date": "2023-07-15",
+    "ens_price": 9.82,
+    "eth_price": 1935.8
+  },
+  {
+    "date": "2023-07-14",
+    "ens_price": 10.04,
+    "eth_price": 1999.3
+  },
+  {
+    "date": "2023-07-13",
+    "ens_price": 9.74,
+    "eth_price": 1865.8
+  },
+  {
+    "date": "2023-07-12",
+    "ens_price": 9.35,
+    "eth_price": 1877.3
+  },
+  {
+    "date": "2023-07-11",
+    "ens_price": 9.26,
+    "eth_price": 1878.0
+  },
+  {
+    "date": "2023-07-10",
+    "ens_price": 9.11,
+    "eth_price": 1855.3
+  },
+  {
+    "date": "2023-07-09",
+    "ens_price": 9.21,
+    "eth_price": 1862.2
+  },
+  {
+    "date": "2023-07-08",
+    "ens_price": 9.26,
+    "eth_price": 1868.7
+  },
+  {
+    "date": "2023-07-07",
+    "ens_price": 8.99,
+    "eth_price": 1845.9
+  },
+  {
+    "date": "2023-07-06",
+    "ens_price": 8.81,
+    "eth_price": 1907.9
+  },
+  {
+    "date": "2023-07-05",
+    "ens_price": 9.2,
+    "eth_price": 1935.4
+  },
+  {
+    "date": "2023-07-04",
+    "ens_price": 9.37,
+    "eth_price": 1957.1
+  },
+  {
+    "date": "2023-07-03",
+    "ens_price": 9.34,
+    "eth_price": 1939.7
+  },
+  {
+    "date": "2023-07-02",
+    "ens_price": 9.46,
+    "eth_price": 1918.3
+  },
+  {
+    "date": "2023-07-01",
+    "ens_price": 9.26,
+    "eth_price": 1933.9
+  },
+  {
+    "date": "2023-06-30",
+    "ens_price": 8.61,
+    "eth_price": 1856.7
+  },
+  {
+    "date": "2023-06-29",
+    "ens_price": 8.4,
+    "eth_price": 1829.3
+  },
+  {
+    "date": "2023-06-28",
+    "ens_price": 9.0,
+    "eth_price": 1878.8
+  },
+  {
+    "date": "2023-06-27",
+    "ens_price": 8.71,
+    "eth_price": 1860.3
+  },
+  {
+    "date": "2023-06-26",
+    "ens_price": 9.01,
+    "eth_price": 1899.8
+  },
+  {
+    "date": "2023-06-25",
+    "ens_price": 8.66,
+    "eth_price": 1877.5
+  },
+  {
+    "date": "2023-06-24",
+    "ens_price": 8.53,
+    "eth_price": 1886.2
+  },
+  {
+    "date": "2023-06-23",
+    "ens_price": 8.03,
+    "eth_price": 1873.8
+  },
+  {
+    "date": "2023-06-22",
+    "ens_price": 8.29,
+    "eth_price": 1891.2
+  },
+  {
+    "date": "2023-06-21",
+    "ens_price": 8.07,
+    "eth_price": 1788.5
+  },
+  {
+    "date": "2023-06-20",
+    "ens_price": 7.91,
+    "eth_price": 1745.0
+  },
+  {
+    "date": "2023-06-19",
+    "ens_price": 7.69,
+    "eth_price": 1721.8
+  },
+  {
+    "date": "2023-06-18",
+    "ens_price": 7.84,
+    "eth_price": 1726.7
+  },
+  {
+    "date": "2023-06-17",
+    "ens_price": 7.69,
+    "eth_price": 1722.0
+  },
+  {
+    "date": "2023-06-16",
+    "ens_price": 7.33,
+    "eth_price": 1661.2
+  },
+  {
+    "date": "2023-06-15",
+    "ens_price": 7.29,
+    "eth_price": 1651.8
+  },
+  {
+    "date": "2023-06-14",
+    "ens_price": 7.58,
+    "eth_price": 1738.1
+  },
+  {
+    "date": "2023-06-13",
+    "ens_price": 7.64,
+    "eth_price": 1746.5
+  },
+  {
+    "date": "2023-06-12",
+    "ens_price": 7.41,
+    "eth_price": 1746.1
+  },
+  {
+    "date": "2023-06-11",
+    "ens_price": 7.68,
+    "eth_price": 1756.2
+  },
+  {
+    "date": "2023-06-10",
+    "ens_price": 9.02,
+    "eth_price": 1844.9
+  },
+  {
+    "date": "2023-06-09",
+    "ens_price": 8.99,
+    "eth_price": 1846.6
+  },
+  {
+    "date": "2023-06-08",
+    "ens_price": 9.05,
+    "eth_price": 1833.3
+  },
+  {
+    "date": "2023-06-07",
+    "ens_price": 9.48,
+    "eth_price": 1884.0
+  },
+  {
+    "date": "2023-06-06",
+    "ens_price": 9.32,
+    "eth_price": 1811.2
+  },
+  {
+    "date": "2023-06-05",
+    "ens_price": 10.12,
+    "eth_price": 1889.7
+  },
+  {
+    "date": "2023-06-04",
+    "ens_price": 10.08,
+    "eth_price": 1894.2
+  },
+  {
+    "date": "2023-06-03",
+    "ens_price": 10.19,
+    "eth_price": 1906.1
+  },
+  {
+    "date": "2023-06-02",
+    "ens_price": 10.0,
+    "eth_price": 1862.6
+  },
+  {
+    "date": "2023-06-01",
+    "ens_price": 9.98,
+    "eth_price": 1878.4
+  },
+  {
+    "date": "2023-05-31",
+    "ens_price": 10.42,
+    "eth_price": 1900.5
+  },
+  {
+    "date": "2023-05-30",
+    "ens_price": 10.58,
+    "eth_price": 1893.6
+  },
+  {
+    "date": "2023-05-29",
+    "ens_price": 10.71,
+    "eth_price": 1919.7
+  },
+  {
+    "date": "2023-05-28",
+    "ens_price": 10.47,
+    "eth_price": 1827.7
+  },
+  {
+    "date": "2023-05-27",
+    "ens_price": 10.37,
+    "eth_price": 1826.4
+  },
+  {
+    "date": "2023-05-26",
+    "ens_price": 9.93,
+    "eth_price": 1805.2
+  },
+  {
+    "date": "2023-05-25",
+    "ens_price": 9.88,
+    "eth_price": 1803.6
+  },
+  {
+    "date": "2023-05-24",
+    "ens_price": 10.37,
+    "eth_price": 1848.1
+  },
+  {
+    "date": "2023-05-23",
+    "ens_price": 10.13,
+    "eth_price": 1823.5
+  },
+  {
+    "date": "2023-05-22",
+    "ens_price": 10.02,
+    "eth_price": 1803.5
+  },
+  {
+    "date": "2023-05-21",
+    "ens_price": 10.49,
+    "eth_price": 1818.8
+  },
+  {
+    "date": "2023-05-20",
+    "ens_price": 10.43,
+    "eth_price": 1813.4
+  },
+  {
+    "date": "2023-05-19",
+    "ens_price": 10.31,
+    "eth_price": 1799.7
+  },
+  {
+    "date": "2023-05-18",
+    "ens_price": 10.68,
+    "eth_price": 1821.8
+  },
+  {
+    "date": "2023-05-17",
+    "ens_price": 10.62,
+    "eth_price": 1824.1
+  },
+  {
+    "date": "2023-05-16",
+    "ens_price": 10.49,
+    "eth_price": 1814.1
+  },
+  {
+    "date": "2023-05-15",
+    "ens_price": 10.45,
+    "eth_price": 1795.5
+  },
+  {
+    "date": "2023-05-14",
+    "ens_price": 10.27,
+    "eth_price": 1796.5
+  },
+  {
+    "date": "2023-05-13",
+    "ens_price": 10.45,
+    "eth_price": 1804.1
+  },
+  {
+    "date": "2023-05-12",
+    "ens_price": 10.2,
+    "eth_price": 1797.3
+  },
+  {
+    "date": "2023-05-11",
+    "ens_price": 10.63,
+    "eth_price": 1839.7
+  },
+  {
+    "date": "2023-05-10",
+    "ens_price": 10.35,
+    "eth_price": 1847.9
+  },
+  {
+    "date": "2023-05-09",
+    "ens_price": 10.39,
+    "eth_price": 1842.8
+  },
+  {
+    "date": "2023-05-08",
+    "ens_price": 11.0,
+    "eth_price": 1872.6
+  },
+  {
+    "date": "2023-05-07",
+    "ens_price": 11.19,
+    "eth_price": 1899.2
+  },
+  {
+    "date": "2023-05-06",
+    "ens_price": 12.03,
+    "eth_price": 1997.3
+  },
+  {
+    "date": "2023-05-05",
+    "ens_price": 11.92,
+    "eth_price": 1881.3
+  },
+  {
+    "date": "2023-05-04",
+    "ens_price": 12.0,
+    "eth_price": 1898.6
+  },
+  {
+    "date": "2023-05-03",
+    "ens_price": 11.8,
+    "eth_price": 1875.2
+  },
+  {
+    "date": "2023-05-02",
+    "ens_price": 11.63,
+    "eth_price": 1833.5
+  },
+  {
+    "date": "2023-05-01",
+    "ens_price": 11.99,
+    "eth_price": 1875.1
+  },
+  {
+    "date": "2023-04-30",
+    "ens_price": 12.33,
+    "eth_price": 1899.9
+  },
+  {
+    "date": "2023-04-29",
+    "ens_price": 12.26,
+    "eth_price": 1893.2
+  },
+  {
+    "date": "2023-04-28",
+    "ens_price": 12.18,
+    "eth_price": 1908.7
+  },
+  {
+    "date": "2023-04-27",
+    "ens_price": 11.89,
+    "eth_price": 1873.8
+  },
+  {
+    "date": "2023-04-26",
+    "ens_price": 12.15,
+    "eth_price": 1864.8
+  },
+  {
+    "date": "2023-04-25",
+    "ens_price": 12.09,
+    "eth_price": 1840.8
+  },
+  {
+    "date": "2023-04-24",
+    "ens_price": 12.03,
+    "eth_price": 1855.8
+  },
+  {
+    "date": "2023-04-23",
+    "ens_price": 12.27,
+    "eth_price": 1871.3
+  },
+  {
+    "date": "2023-04-22",
+    "ens_price": 11.97,
+    "eth_price": 1847.7
+  },
+  {
+    "date": "2023-04-21",
+    "ens_price": 12.93,
+    "eth_price": 1939.9
+  },
+  {
+    "date": "2023-04-20",
+    "ens_price": 13.22,
+    "eth_price": 1931.7
+  },
+  {
+    "date": "2023-04-19",
+    "ens_price": 14.48,
+    "eth_price": 2097.7
+  },
+  {
+    "date": "2023-04-18",
+    "ens_price": 14.15,
+    "eth_price": 2104.0
+  },
+  {
+    "date": "2023-04-17",
+    "ens_price": 14.65,
+    "eth_price": 2108.2
+  },
+  {
+    "date": "2023-04-16",
+    "ens_price": 13.93,
+    "eth_price": 2074.7
+  },
+  {
+    "date": "2023-04-15",
+    "ens_price": 14.01,
+    "eth_price": 2100.3
+  },
+  {
+    "date": "2023-04-14",
+    "ens_price": 13.72,
+    "eth_price": 2014.6
+  },
+  {
+    "date": "2023-04-13",
+    "ens_price": 13.47,
+    "eth_price": 1911.3
+  },
+  {
+    "date": "2023-04-12",
+    "ens_price": 13.21,
+    "eth_price": 1901.1
+  },
+  {
+    "date": "2023-04-11",
+    "ens_price": 13.26,
+    "eth_price": 1915.1
+  },
+  {
+    "date": "2023-04-10",
+    "ens_price": 12.88,
+    "eth_price": 1855.1
+  },
+  {
+    "date": "2023-04-09",
+    "ens_price": 12.88,
+    "eth_price": 1851.2
+  },
+  {
+    "date": "2023-04-08",
+    "ens_price": 13.02,
+    "eth_price": 1858.6
+  },
+  {
+    "date": "2023-04-07",
+    "ens_price": 13.2,
+    "eth_price": 1874.2
+  },
+  {
+    "date": "2023-04-06",
+    "ens_price": 13.4,
+    "eth_price": 1907.7
+  },
+  {
+    "date": "2023-04-05",
+    "ens_price": 13.48,
+    "eth_price": 1871.2
+  },
+  {
+    "date": "2023-04-04",
+    "ens_price": 13.09,
+    "eth_price": 1808.9
+  },
+  {
+    "date": "2023-04-03",
+    "ens_price": 13.24,
+    "eth_price": 1775.3
+  },
+  {
+    "date": "2023-04-02",
+    "ens_price": 13.56,
+    "eth_price": 1817.3
+  },
+  {
+    "date": "2023-04-01",
+    "ens_price": 13.48,
+    "eth_price": 1826.3
+  },
+  {
+    "date": "2023-03-31",
+    "ens_price": 13.31,
+    "eth_price": 1798.9
+  },
+  {
+    "date": "2023-03-30",
+    "ens_price": 13.61,
+    "eth_price": 1796.3
+  },
+  {
+    "date": "2023-03-29",
+    "ens_price": 13.07,
+    "eth_price": 1768.6
+  },
+  {
+    "date": "2023-03-28",
+    "ens_price": 12.67,
+    "eth_price": 1726.1
+  },
+  {
+    "date": "2023-03-27",
+    "ens_price": 13.26,
+    "eth_price": 1763.4
+  },
+  {
+    "date": "2023-03-26",
+    "ens_price": 13.13,
+    "eth_price": 1755.2
+  },
+  {
+    "date": "2023-03-25",
+    "ens_price": 13.4,
+    "eth_price": 1752.6
+  },
+  {
+    "date": "2023-03-24",
+    "ens_price": 13.94,
+    "eth_price": 1814.9
+  },
+  {
+    "date": "2023-03-23",
+    "ens_price": 13.55,
+    "eth_price": 1741.6
+  },
+  {
+    "date": "2023-03-22",
+    "ens_price": 14.19,
+    "eth_price": 1789.3
+  },
+  {
+    "date": "2023-03-21",
+    "ens_price": 13.63,
+    "eth_price": 1747.6
+  },
+  {
+    "date": "2023-03-20",
+    "ens_price": 14.41,
+    "eth_price": 1786.4
+  },
+  {
+    "date": "2023-03-19",
+    "ens_price": 14.2,
+    "eth_price": 1767.1
+  },
+  {
+    "date": "2023-03-18",
+    "ens_price": 14.71,
+    "eth_price": 1790.5
+  },
+  {
+    "date": "2023-03-17",
+    "ens_price": 13.59,
+    "eth_price": 1672.5
+  },
+  {
+    "date": "2023-03-16",
+    "ens_price": 12.59,
+    "eth_price": 1657.4
+  },
+  {
+    "date": "2023-03-15",
+    "ens_price": 13.88,
+    "eth_price": 1705.6
+  },
+  {
+    "date": "2023-03-14",
+    "ens_price": 13.18,
+    "eth_price": 1692.1
+  },
+  {
+    "date": "2023-03-13",
+    "ens_price": 13.03,
+    "eth_price": 1603.3
+  },
+  {
+    "date": "2023-03-12",
+    "ens_price": 12.16,
+    "eth_price": 1531.9
+  },
+  {
+    "date": "2023-03-11",
+    "ens_price": 12.4,
+    "eth_price": 1433.8
+  },
+  {
+    "date": "2023-03-10",
+    "ens_price": 12.14,
+    "eth_price": 1428.4
+  },
+  {
+    "date": "2023-03-09",
+    "ens_price": 12.83,
+    "eth_price": 1533.5
+  },
+  {
+    "date": "2023-03-08",
+    "ens_price": 13.9,
+    "eth_price": 1563.2
+  },
+  {
+    "date": "2023-03-07",
+    "ens_price": 13.85,
+    "eth_price": 1563.2
+  },
+  {
+    "date": "2023-03-06",
+    "ens_price": 13.81,
+    "eth_price": 1564.0
+  },
+  {
+    "date": "2023-03-05",
+    "ens_price": 14.04,
+    "eth_price": 1567.7
+  },
+  {
+    "date": "2023-03-04",
+    "ens_price": 14.23,
+    "eth_price": 1572.0
+  },
+  {
+    "date": "2023-03-03",
+    "ens_price": 15.63,
+    "eth_price": 1645.8
+  },
+  {
+    "date": "2023-03-02",
+    "ens_price": 16.1,
+    "eth_price": 1666.6
+  },
+  {
+    "date": "2023-03-01",
+    "ens_price": 15.24,
+    "eth_price": 1598.3
+  },
+  {
+    "date": "2023-02-28",
+    "ens_price": 16.33,
+    "eth_price": 1630.8
+  },
+  {
+    "date": "2023-02-27",
+    "ens_price": 16.38,
+    "eth_price": 1645.9
+  },
+  {
+    "date": "2023-02-26",
+    "ens_price": 15.06,
+    "eth_price": 1594.4
+  },
+  {
+    "date": "2023-02-25",
+    "ens_price": 15.69,
+    "eth_price": 1608.5
+  },
+  {
+    "date": "2023-02-24",
+    "ens_price": 16.37,
+    "eth_price": 1656.2
+  },
+  {
+    "date": "2023-02-23",
+    "ens_price": 16.29,
+    "eth_price": 1638.2
+  },
+  {
+    "date": "2023-02-22",
+    "ens_price": 16.46,
+    "eth_price": 1654.8
+  },
+  {
+    "date": "2023-02-21",
+    "ens_price": 17.68,
+    "eth_price": 1710.3
+  },
+  {
+    "date": "2023-02-20",
+    "ens_price": 16.43,
+    "eth_price": 1701.3
+  },
+  {
+    "date": "2023-02-19",
+    "ens_price": 16.07,
+    "eth_price": 1698.2
+  },
+  {
+    "date": "2023-02-18",
+    "ens_price": 15.37,
+    "eth_price": 1692.9
+  },
+  {
+    "date": "2023-02-17",
+    "ens_price": 14.5,
+    "eth_price": 1649.6
+  },
+  {
+    "date": "2023-02-16",
+    "ens_price": 15.46,
+    "eth_price": 1696.6
+  },
+  {
+    "date": "2023-02-15",
+    "ens_price": 14.48,
+    "eth_price": 1548.2
+  },
+  {
+    "date": "2023-02-14",
+    "ens_price": 13.88,
+    "eth_price": 1505.1
+  },
+  {
+    "date": "2023-02-13",
+    "ens_price": 14.14,
+    "eth_price": 1514.7
+  },
+  {
+    "date": "2023-02-12",
+    "ens_price": 14.44,
+    "eth_price": 1533.4
+  },
+  {
+    "date": "2023-02-11",
+    "ens_price": 13.97,
+    "eth_price": 1508.9
+  },
+  {
+    "date": "2023-02-10",
+    "ens_price": 14.03,
+    "eth_price": 1550.6
+  },
+  {
+    "date": "2023-02-09",
+    "ens_price": 15.39,
+    "eth_price": 1620.1
+  },
+  {
+    "date": "2023-02-08",
+    "ens_price": 16.07,
+    "eth_price": 1670.2
+  },
+  {
+    "date": "2023-02-07",
+    "ens_price": 14.85,
+    "eth_price": 1623.3
+  },
+  {
+    "date": "2023-02-06",
+    "ens_price": 15.24,
+    "eth_price": 1630.9
+  },
+  {
+    "date": "2023-02-05",
+    "ens_price": 16.0,
+    "eth_price": 1661.8
+  },
+  {
+    "date": "2023-02-04",
+    "ens_price": 16.56,
+    "eth_price": 1658.1
+  },
+  {
+    "date": "2023-02-03",
+    "ens_price": 16.27,
+    "eth_price": 1650.0
+  },
+  {
+    "date": "2023-02-02",
+    "ens_price": 16.33,
+    "eth_price": 1669.3
+  },
+  {
+    "date": "2023-02-01",
+    "ens_price": 15.9,
+    "eth_price": 1578.2
+  },
+  {
+    "date": "2023-01-31",
+    "ens_price": 16.2,
+    "eth_price": 1571.2
+  },
+  {
+    "date": "2023-01-30",
+    "ens_price": 16.1,
+    "eth_price": 1639.3
+  },
+  {
+    "date": "2023-01-29",
+    "ens_price": 15.94,
+    "eth_price": 1591.7
+  },
+  {
+    "date": "2023-01-28",
+    "ens_price": 16.77,
+    "eth_price": 1598.3
+  },
+  {
+    "date": "2023-01-27",
+    "ens_price": 15.29,
+    "eth_price": 1576.1
+  },
+  {
+    "date": "2023-01-26",
+    "ens_price": 14.93,
+    "eth_price": 1620.0
+  },
+  {
+    "date": "2023-01-25",
+    "ens_price": 13.87,
+    "eth_price": 1531.0
+  },
+  {
+    "date": "2023-01-24",
+    "ens_price": 14.86,
+    "eth_price": 1635.3
+  },
+  {
+    "date": "2023-01-23",
+    "ens_price": 14.53,
+    "eth_price": 1590.0
+  },
+  {
+    "date": "2023-01-22",
+    "ens_price": 14.62,
+    "eth_price": 1627.2
+  },
+  {
+    "date": "2023-01-21",
+    "ens_price": 15.19,
+    "eth_price": 1666.0
+  },
+  {
+    "date": "2023-01-20",
+    "ens_price": 14.05,
+    "eth_price": 1548.4
+  },
+  {
+    "date": "2023-01-19",
+    "ens_price": 13.52,
+    "eth_price": 1514.3
+  },
+  {
+    "date": "2023-01-18",
+    "ens_price": 14.16,
+    "eth_price": 1566.7
+  },
+  {
+    "date": "2023-01-17",
+    "ens_price": 14.86,
+    "eth_price": 1569.6
+  },
+  {
+    "date": "2023-01-16",
+    "ens_price": 14.03,
+    "eth_price": 1551.3
+  },
+  {
+    "date": "2023-01-15",
+    "ens_price": 13.94,
+    "eth_price": 1551.0
+  },
+  {
+    "date": "2023-01-14",
+    "ens_price": 13.37,
+    "eth_price": 1453.1
+  },
+  {
+    "date": "2023-01-13",
+    "ens_price": 12.69,
+    "eth_price": 1406.0
+  },
+  {
+    "date": "2023-01-12",
+    "ens_price": 12.54,
+    "eth_price": 1390.0
+  },
+  {
+    "date": "2023-01-11",
+    "ens_price": 12.33,
+    "eth_price": 1328.3
+  },
+  {
+    "date": "2023-01-10",
+    "ens_price": 12.16,
+    "eth_price": 1320.4
+  },
+  {
+    "date": "2023-01-09",
+    "ens_price": 12.08,
+    "eth_price": 1287.7
+  },
+  {
+    "date": "2023-01-08",
+    "ens_price": 11.61,
+    "eth_price": 1261.0
+  },
+  {
+    "date": "2023-01-07",
+    "ens_price": 11.55,
+    "eth_price": 1265.7
+  },
+  {
+    "date": "2023-01-06",
+    "ens_price": 11.28,
+    "eth_price": 1261.7
+  },
+  {
+    "date": "2023-01-05",
+    "ens_price": 11.74,
+    "eth_price": 1258.0
+  },
+  {
+    "date": "2023-01-04",
+    "ens_price": 11.23,
+    "eth_price": 1252.7
+  },
+  {
+    "date": "2023-01-03",
+    "ens_price": 11.28,
+    "eth_price": 1212.3
+  },
+  {
+    "date": "2023-01-02",
+    "ens_price": 10.91,
+    "eth_price": 1212.0
+  },
+  {
+    "date": "2023-01-01",
+    "ens_price": 10.76,
+    "eth_price": 1196.3
+  },
+  {
+    "date": "2022-12-31",
+    "ens_price": 10.68,
+    "eth_price": 1194.8
+  },
+  {
+    "date": "2022-12-30",
+    "ens_price": 10.82,
+    "eth_price": 1198.3
+  },
+  {
+    "date": "2022-12-29",
+    "ens_price": 11.01,
+    "eth_price": 1185.9
+  },
+  {
+    "date": "2022-12-28",
+    "ens_price": 11.22,
+    "eth_price": 1203.6
+  },
+  {
+    "date": "2022-12-27",
+    "ens_price": 11.33,
+    "eth_price": 1231.4
+  },
+  {
+    "date": "2022-12-26",
+    "ens_price": 11.08,
+    "eth_price": 1219.6
+  },
+  {
+    "date": "2022-12-25",
+    "ens_price": 10.92,
+    "eth_price": 1218.6
+  },
+  {
+    "date": "2022-12-24",
+    "ens_price": 10.93,
+    "eth_price": 1219.2
+  },
+  {
+    "date": "2022-12-23",
+    "ens_price": 11.16,
+    "eth_price": 1218.7
+  },
+  {
+    "date": "2022-12-22",
+    "ens_price": 11.27,
+    "eth_price": 1217.9
+  },
+  {
+    "date": "2022-12-21",
+    "ens_price": 11.4,
+    "eth_price": 1210.0
+  },
+  {
+    "date": "2022-12-20",
+    "ens_price": 10.84,
+    "eth_price": 1168.7
+  },
+  {
+    "date": "2022-12-19",
+    "ens_price": 11.58,
+    "eth_price": 1185.4
+  },
+  {
+    "date": "2022-12-18",
+    "ens_price": 11.67,
+    "eth_price": 1186.2
+  },
+  {
+    "date": "2022-12-17",
+    "ens_price": 11.51,
+    "eth_price": 1169.6
+  },
+  {
+    "date": "2022-12-16",
+    "ens_price": 12.89,
+    "eth_price": 1270.3
+  },
+  {
+    "date": "2022-12-15",
+    "ens_price": 13.31,
+    "eth_price": 1306.1
+  },
+  {
+    "date": "2022-12-14",
+    "ens_price": 13.4,
+    "eth_price": 1322.0
+  },
+  {
+    "date": "2022-12-13",
+    "ens_price": 13.32,
+    "eth_price": 1278.3
+  },
+  {
+    "date": "2022-12-12",
+    "ens_price": 13.37,
+    "eth_price": 1260.2
+  },
+  {
+    "date": "2022-12-11",
+    "ens_price": 13.76,
+    "eth_price": 1262.0
+  },
+  {
+    "date": "2022-12-10",
+    "ens_price": 13.55,
+    "eth_price": 1267.7
+  },
+  {
+    "date": "2022-12-09",
+    "ens_price": 13.68,
+    "eth_price": 1279.8
+  },
+  {
+    "date": "2022-12-08",
+    "ens_price": 13.31,
+    "eth_price": 1234.0
+  },
+  {
+    "date": "2022-12-07",
+    "ens_price": 13.7,
+    "eth_price": 1272.0
+  },
+  {
+    "date": "2022-12-06",
+    "ens_price": 13.96,
+    "eth_price": 1265.0
+  },
+  {
+    "date": "2022-12-05",
+    "ens_price": 14.07,
+    "eth_price": 1279.7
+  },
+  {
+    "date": "2022-12-04",
+    "ens_price": 13.92,
+    "eth_price": 1252.0
+  },
+  {
+    "date": "2022-12-03",
+    "ens_price": 14.14,
+    "eth_price": 1289.4
+  },
+  {
+    "date": "2022-12-02",
+    "ens_price": 14.1,
+    "eth_price": 1275.3
+  },
+  {
+    "date": "2022-12-01",
+    "ens_price": 14.15,
+    "eth_price": 1293.8
+  },
+  {
+    "date": "2022-11-30",
+    "ens_price": 13.48,
+    "eth_price": 1216.4
+  },
+  {
+    "date": "2022-11-29",
+    "ens_price": 12.93,
+    "eth_price": 1165.1
+  },
+  {
+    "date": "2022-11-28",
+    "ens_price": 13.3,
+    "eth_price": 1194.3
+  },
+  {
+    "date": "2022-11-27",
+    "ens_price": 13.04,
+    "eth_price": 1215.5
+  },
+  {
+    "date": "2022-11-26",
+    "ens_price": 13.05,
+    "eth_price": 1203.2
+  },
+  {
+    "date": "2022-11-25",
+    "ens_price": 13.25,
+    "eth_price": 1202.0
+  },
+  {
+    "date": "2022-11-24",
+    "ens_price": 13.38,
+    "eth_price": 1182.7
+  },
+  {
+    "date": "2022-11-23",
+    "ens_price": 12.31,
+    "eth_price": 1143.4
+  },
+  {
+    "date": "2022-11-22",
+    "ens_price": 12.02,
+    "eth_price": 1102.3
+  },
+  {
+    "date": "2022-11-21",
+    "ens_price": 12.14,
+    "eth_price": 1133.9
+  },
+  {
+    "date": "2022-11-20",
+    "ens_price": 13.44,
+    "eth_price": 1219.6
+  },
+  {
+    "date": "2022-11-19",
+    "ens_price": 13.05,
+    "eth_price": 1209.7
+  },
+  {
+    "date": "2022-11-18",
+    "ens_price": 12.75,
+    "eth_price": 1212.0
+  },
+  {
+    "date": "2022-11-17",
+    "ens_price": 12.68,
+    "eth_price": 1217.6
+  },
+  {
+    "date": "2022-11-16",
+    "ens_price": 13.17,
+    "eth_price": 1253.1
+  },
+  {
+    "date": "2022-11-15",
+    "ens_price": 12.94,
+    "eth_price": 1239.6
+  },
+  {
+    "date": "2022-11-14",
+    "ens_price": 12.23,
+    "eth_price": 1223.0
+  },
+  {
+    "date": "2022-11-13",
+    "ens_price": 12.22,
+    "eth_price": 1257.6
+  },
+  {
+    "date": "2022-11-12",
+    "ens_price": 12.55,
+    "eth_price": 1278.5
+  },
+  {
+    "date": "2022-11-11",
+    "ens_price": 13.06,
+    "eth_price": 1262.2
+  },
+  {
+    "date": "2022-11-10",
+    "ens_price": 10.5,
+    "eth_price": 1089.7
+  },
+  {
+    "date": "2022-11-09",
+    "ens_price": 13.46,
+    "eth_price": 1324.9
+  },
+  {
+    "date": "2022-11-08",
+    "ens_price": 16.24,
+    "eth_price": 1571.0
+  },
+  {
+    "date": "2022-11-07",
+    "ens_price": 16.39,
+    "eth_price": 1566.5
+  },
+  {
+    "date": "2022-11-06",
+    "ens_price": 18.02,
+    "eth_price": 1622.0
+  },
+  {
+    "date": "2022-11-05",
+    "ens_price": 17.89,
+    "eth_price": 1640.8
+  },
+  {
+    "date": "2022-11-04",
+    "ens_price": 16.62,
+    "eth_price": 1528.4
+  },
+  {
+    "date": "2022-11-03",
+    "ens_price": 16.12,
+    "eth_price": 1515.1
+  },
+  {
+    "date": "2022-11-02",
+    "ens_price": 16.23,
+    "eth_price": 1578.3
+  },
+  {
+    "date": "2022-11-01",
+    "ens_price": 16.98,
+    "eth_price": 1572.1
+  },
+  {
+    "date": "2022-10-31",
+    "ens_price": 17.29,
+    "eth_price": 1583.9
+  },
+  {
+    "date": "2022-10-30",
+    "ens_price": 17.72,
+    "eth_price": 1610.9
+  },
+  {
+    "date": "2022-10-29",
+    "ens_price": 17.13,
+    "eth_price": 1553.8
+  },
+  {
+    "date": "2022-10-28",
+    "ens_price": 17.24,
+    "eth_price": 1514.7
+  },
+  {
+    "date": "2022-10-27",
+    "ens_price": 18.05,
+    "eth_price": 1564.1
+  },
+  {
+    "date": "2022-10-26",
+    "ens_price": 17.51,
+    "eth_price": 1468.4
+  },
+  {
+    "date": "2022-10-25",
+    "ens_price": 16.97,
+    "eth_price": 1343.6
+  },
+  {
+    "date": "2022-10-24",
+    "ens_price": 17.14,
+    "eth_price": 1342.1
+  },
+  {
+    "date": "2022-10-23",
+    "ens_price": 16.74,
+    "eth_price": 1312.4
+  },
+  {
+    "date": "2022-10-22",
+    "ens_price": 16.98,
+    "eth_price": 1307.5
+  },
+  {
+    "date": "2022-10-21",
+    "ens_price": 17.32,
+    "eth_price": 1287.5
+  },
+  {
+    "date": "2022-10-20",
+    "ens_price": 18.62,
+    "eth_price": 1282.4
+  },
+  {
+    "date": "2022-10-19",
+    "ens_price": 19.1,
+    "eth_price": 1309.5
+  },
+  {
+    "date": "2022-10-18",
+    "ens_price": 19.35,
+    "eth_price": 1335.7
+  },
+  {
+    "date": "2022-10-17",
+    "ens_price": 19.8,
+    "eth_price": 1307.2
+  },
+  {
+    "date": "2022-10-16",
+    "ens_price": 19.54,
+    "eth_price": 1276.0
+  },
+  {
+    "date": "2022-10-15",
+    "ens_price": 19.69,
+    "eth_price": 1296.4
+  },
+  {
+    "date": "2022-10-14",
+    "ens_price": 19.42,
+    "eth_price": 1320.8
+  },
+  {
+    "date": "2022-10-13",
+    "ens_price": 17.14,
+    "eth_price": 1292.8
+  },
+  {
+    "date": "2022-10-12",
+    "ens_price": 16.64,
+    "eth_price": 1284.4
+  },
+  {
+    "date": "2022-10-11",
+    "ens_price": 16.13,
+    "eth_price": 1286.0
+  },
+  {
+    "date": "2022-10-10",
+    "ens_price": 18.05,
+    "eth_price": 1333.6
+  },
+  {
+    "date": "2022-10-09",
+    "ens_price": 17.72,
+    "eth_price": 1325.8
+  },
+  {
+    "date": "2022-10-08",
+    "ens_price": 17.3,
+    "eth_price": 1332.5
+  },
+  {
+    "date": "2022-10-07",
+    "ens_price": 17.17,
+    "eth_price": 1354.6
+  },
+  {
+    "date": "2022-10-06",
+    "ens_price": 17.52,
+    "eth_price": 1364.1
+  },
+  {
+    "date": "2022-10-05",
+    "ens_price": 16.13,
+    "eth_price": 1357.2
+  },
+  {
+    "date": "2022-10-04",
+    "ens_price": 15.63,
+    "eth_price": 1322.2
+  },
+  {
+    "date": "2022-10-03",
+    "ens_price": 14.22,
+    "eth_price": 1274.8
+  },
+  {
+    "date": "2022-10-02",
+    "ens_price": 14.95,
+    "eth_price": 1309.8
+  },
+  {
+    "date": "2022-10-01",
+    "ens_price": 16.06,
+    "eth_price": 1327.7
+  },
+  {
+    "date": "2022-09-30",
+    "ens_price": 15.72,
+    "eth_price": 1336.5
+  },
+  {
+    "date": "2022-09-29",
+    "ens_price": 15.87,
+    "eth_price": 1337.5
+  },
+  {
+    "date": "2022-09-28",
+    "ens_price": 15.34,
+    "eth_price": 1336.7
+  },
+  {
+    "date": "2022-09-27",
+    "ens_price": 14.85,
+    "eth_price": 1336.2
+  },
+  {
+    "date": "2022-09-26",
+    "ens_price": 13.8,
+    "eth_price": 1307.7
+  },
+  {
+    "date": "2022-09-25",
+    "ens_price": 13.61,
+    "eth_price": 1317.5
+  },
+  {
+    "date": "2022-09-24",
+    "ens_price": 14.0,
+    "eth_price": 1323.3
+  },
+  {
+    "date": "2022-09-23",
+    "ens_price": 13.92,
+    "eth_price": 1330.9
+  },
+  {
+    "date": "2022-09-22",
+    "ens_price": 13.44,
+    "eth_price": 1257.6
+  },
+  {
+    "date": "2022-09-21",
+    "ens_price": 13.42,
+    "eth_price": 1322.2
+  },
+  {
+    "date": "2022-09-20",
+    "ens_price": 13.67,
+    "eth_price": 1381.8
+  },
+  {
+    "date": "2022-09-19",
+    "ens_price": 12.82,
+    "eth_price": 1336.4
+  },
+  {
+    "date": "2022-09-18",
+    "ens_price": 14.55,
+    "eth_price": 1464.7
+  },
+  {
+    "date": "2022-09-17",
+    "ens_price": 14.52,
+    "eth_price": 1440.6
+  },
+  {
+    "date": "2022-09-16",
+    "ens_price": 14.19,
+    "eth_price": 1450.0
+  },
+  {
+    "date": "2022-09-15",
+    "ens_price": 14.66,
+    "eth_price": 1641.7
+  },
+  {
+    "date": "2022-09-14",
+    "ens_price": 14.51,
+    "eth_price": 1567.2
+  },
+  {
+    "date": "2022-09-13",
+    "ens_price": 15.09,
+    "eth_price": 1676.0
+  },
+  {
+    "date": "2022-09-12",
+    "ens_price": 15.71,
+    "eth_price": 1741.3
+  },
+  {
+    "date": "2022-09-11",
+    "ens_price": 15.56,
+    "eth_price": 1767.8
+  },
+  {
+    "date": "2022-09-10",
+    "ens_price": 15.48,
+    "eth_price": 1715.5
+  },
+  {
+    "date": "2022-09-09",
+    "ens_price": 15.71,
+    "eth_price": 1643.5
+  },
+  {
+    "date": "2022-09-08",
+    "ens_price": 14.81,
+    "eth_price": 1620.8
+  },
+  {
+    "date": "2022-09-07",
+    "ens_price": 14.21,
+    "eth_price": 1522.0
+  },
+  {
+    "date": "2022-09-06",
+    "ens_price": 14.53,
+    "eth_price": 1630.2
+  },
+  {
+    "date": "2022-09-05",
+    "ens_price": 13.72,
+    "eth_price": 1577.1
+  },
+  {
+    "date": "2022-09-04",
+    "ens_price": 14.03,
+    "eth_price": 1550.7
+  },
+  {
+    "date": "2022-09-03",
+    "ens_price": 13.75,
+    "eth_price": 1569.5
+  },
+  {
+    "date": "2022-09-02",
+    "ens_price": 13.44,
+    "eth_price": 1581.9
+  },
+  {
+    "date": "2022-09-01",
+    "ens_price": 12.48,
+    "eth_price": 1557.1
+  },
+  {
+    "date": "2022-08-31",
+    "ens_price": 12.19,
+    "eth_price": 1562.4
+  },
+  {
+    "date": "2022-08-30",
+    "ens_price": 12.57,
+    "eth_price": 1535.8
+  },
+  {
+    "date": "2022-08-29",
+    "ens_price": 11.32,
+    "eth_price": 1428.0
+  },
+  {
+    "date": "2022-08-28",
+    "ens_price": 11.92,
+    "eth_price": 1493.8
+  },
+  {
+    "date": "2022-08-27",
+    "ens_price": 12.24,
+    "eth_price": 1494.9
+  },
+  {
+    "date": "2022-08-26",
+    "ens_price": 13.58,
+    "eth_price": 1687.7
+  },
+  {
+    "date": "2022-08-25",
+    "ens_price": 13.83,
+    "eth_price": 1669.5
+  },
+  {
+    "date": "2022-08-24",
+    "ens_price": 13.59,
+    "eth_price": 1649.3
+  },
+  {
+    "date": "2022-08-23",
+    "ens_price": 13.68,
+    "eth_price": 1624.4
+  },
+  {
+    "date": "2022-08-22",
+    "ens_price": 13.18,
+    "eth_price": 1615.8
+  },
+  {
+    "date": "2022-08-21",
+    "ens_price": 12.67,
+    "eth_price": 1578.7
+  },
+  {
+    "date": "2022-08-20",
+    "ens_price": 12.8,
+    "eth_price": 1622.8
+  },
+  {
+    "date": "2022-08-19",
+    "ens_price": 14.12,
+    "eth_price": 1818.4
+  },
+  {
+    "date": "2022-08-18",
+    "ens_price": 15.75,
+    "eth_price": 1834.4
+  },
+  {
+    "date": "2022-08-17",
+    "ens_price": 14.98,
+    "eth_price": 1877.5
+  },
+  {
+    "date": "2022-08-16",
+    "ens_price": 15.1,
+    "eth_price": 1904.1
+  },
+  {
+    "date": "2022-08-15",
+    "ens_price": 14.52,
+    "eth_price": 1951.0
+  },
+  {
+    "date": "2022-08-14",
+    "ens_price": 15.38,
+    "eth_price": 1993.0
+  },
+  {
+    "date": "2022-08-13",
+    "ens_price": 16.02,
+    "eth_price": 1951.2
+  },
+  {
+    "date": "2022-08-12",
+    "ens_price": 15.59,
+    "eth_price": 1886.2
+  },
+  {
+    "date": "2022-08-11",
+    "ens_price": 16.14,
+    "eth_price": 1872.4
+  },
+  {
+    "date": "2022-08-10",
+    "ens_price": 15.56,
+    "eth_price": 1689.92
+  },
+  {
+    "date": "2022-08-09",
+    "ens_price": 16.7,
+    "eth_price": 1771.22
+  },
+  {
+    "date": "2022-08-08",
+    "ens_price": 16.88,
+    "eth_price": 1699.79
+  },
+  {
+    "date": "2022-08-07",
+    "ens_price": 16.91,
+    "eth_price": 1673.26
+  },
+  {
+    "date": "2022-08-06",
+    "ens_price": 17.23,
+    "eth_price": 1741.72
+  },
+  {
+    "date": "2022-08-05",
+    "ens_price": 15.89,
+    "eth_price": 1614.48
+  },
+  {
+    "date": "2022-08-04",
+    "ens_price": 16.44,
+    "eth_price": 1619.68
+  },
+  {
+    "date": "2022-08-03",
+    "ens_price": 14.94,
+    "eth_price": 1622.07
+  },
+  {
+    "date": "2022-08-02",
+    "ens_price": 14.15,
+    "eth_price": 1629.26
+  },
+  {
+    "date": "2022-08-01",
+    "ens_price": 14.31,
+    "eth_price": 1676.46
+  },
+  {
+    "date": "2022-07-31",
+    "ens_price": 14.75,
+    "eth_price": 1692.18
+  },
+  {
+    "date": "2022-07-30",
+    "ens_price": 14.64,
+    "eth_price": 1729.04
+  },
+  {
+    "date": "2022-07-29",
+    "ens_price": 15.13,
+    "eth_price": 1726.83
+  },
+  {
+    "date": "2022-07-28",
+    "ens_price": 15.47,
+    "eth_price": 1633.4
+  },
+  {
+    "date": "2022-07-27",
+    "ens_price": 12.77,
+    "eth_price": 1453.34
+  },
+  {
+    "date": "2022-07-26",
+    "ens_price": 12.51,
+    "eth_price": 1437.25
+  },
+  {
+    "date": "2022-07-25",
+    "ens_price": 13.15,
+    "eth_price": 1599.16
+  },
+  {
+    "date": "2022-07-24",
+    "ens_price": 12.69,
+    "eth_price": 1552.64
+  },
+  {
+    "date": "2022-07-23",
+    "ens_price": 12.19,
+    "eth_price": 1536.25
+  },
+  {
+    "date": "2022-07-22",
+    "ens_price": 13.0,
+    "eth_price": 1581.57
+  },
+  {
+    "date": "2022-07-21",
+    "ens_price": 11.3,
+    "eth_price": 1527.11
+  },
+  {
+    "date": "2022-07-20",
+    "ens_price": 10.96,
+    "eth_price": 1528.95
+  },
+  {
+    "date": "2022-07-19",
+    "ens_price": 11.39,
+    "eth_price": 1575.72
+  },
+  {
+    "date": "2022-07-18",
+    "ens_price": 9.35,
+    "eth_price": 1360.19
+  },
+  {
+    "date": "2022-07-17",
+    "ens_price": 9.7,
+    "eth_price": 1359.53
+  },
+  {
+    "date": "2022-07-16",
+    "ens_price": 9.21,
+    "eth_price": 1213.25
+  },
+  {
+    "date": "2022-07-15",
+    "ens_price": 9.18,
+    "eth_price": 1211.59
+  },
+  {
+    "date": "2022-07-14",
+    "ens_price": 8.87,
+    "eth_price": 1116.16
+  },
+  {
+    "date": "2022-07-13",
+    "ens_price": 8.31,
+    "eth_price": 1057.58
+  },
+  {
+    "date": "2022-07-12",
+    "ens_price": 8.54,
+    "eth_price": 1092.22
+  },
+  {
+    "date": "2022-07-11",
+    "ens_price": 9.39,
+    "eth_price": 1157.85
+  },
+  {
+    "date": "2022-07-10",
+    "ens_price": 10.1,
+    "eth_price": 1215.51
+  },
+  {
+    "date": "2022-07-09",
+    "ens_price": 10.09,
+    "eth_price": 1212.26
+  },
+  {
+    "date": "2022-07-08",
+    "ens_price": 10.44,
+    "eth_price": 1236.66
+  },
+  {
+    "date": "2022-07-07",
+    "ens_price": 10.26,
+    "eth_price": 1182.86
+  },
+  {
+    "date": "2022-07-06",
+    "ens_price": 9.31,
+    "eth_price": 1114.08
+  },
+  {
+    "date": "2022-07-05",
+    "ens_price": 9.79,
+    "eth_price": 1149.93
+  },
+  {
+    "date": "2022-07-04",
+    "ens_price": 9.04,
+    "eth_price": 1070.95
+  },
+  {
+    "date": "2022-07-03",
+    "ens_price": 8.51,
+    "eth_price": 1065.77
+  },
+  {
+    "date": "2022-07-02",
+    "ens_price": 8.42,
+    "eth_price": 1055.9
+  },
+  {
+    "date": "2022-07-01",
+    "ens_price": 8.61,
+    "eth_price": 1065.52
+  },
+  {
+    "date": "2022-06-30",
+    "ens_price": 8.84,
+    "eth_price": 1101.23
+  },
+  {
+    "date": "2022-06-29",
+    "ens_price": 8.81,
+    "eth_price": 1146.47
+  },
+  {
+    "date": "2022-06-28",
+    "ens_price": 9.31,
+    "eth_price": 1193.37
+  },
+  {
+    "date": "2022-06-27",
+    "ens_price": 9.3,
+    "eth_price": 1205.74
+  },
+  {
+    "date": "2022-06-26",
+    "ens_price": 9.87,
+    "eth_price": 1233.36
+  },
+  {
+    "date": "2022-06-25",
+    "ens_price": 9.92,
+    "eth_price": 1219.67
+  },
+  {
+    "date": "2022-06-24",
+    "ens_price": 9.21,
+    "eth_price": 1144.07
+  },
+  {
+    "date": "2022-06-23",
+    "ens_price": 8.51,
+    "eth_price": 1069.63
+  },
+  {
+    "date": "2022-06-22",
+    "ens_price": 9.07,
+    "eth_price": 1124.78
+  },
+  {
+    "date": "2022-06-21",
+    "ens_price": 8.99,
+    "eth_price": 1123.68
+  },
+  {
+    "date": "2022-06-20",
+    "ens_price": 8.92,
+    "eth_price": 1095.98
+  },
+  {
+    "date": "2022-06-19",
+    "ens_price": 8.88,
+    "eth_price": 997.81
+  },
+  {
+    "date": "2022-06-18",
+    "ens_price": 8.25,
+    "eth_price": 1089.19
+  },
+  {
+    "date": "2022-06-17",
+    "ens_price": 8.03,
+    "eth_price": 1070.29
+  },
+  {
+    "date": "2022-06-16",
+    "ens_price": 9.34,
+    "eth_price": 1244.08
+  },
+  {
+    "date": "2022-06-15",
+    "ens_price": 8.24,
+    "eth_price": 1196.0
+  },
+  {
+    "date": "2022-06-14",
+    "ens_price": 8.04,
+    "eth_price": 1201.3
+  },
+  {
+    "date": "2022-06-13",
+    "ens_price": 8.46,
+    "eth_price": 1431.92
+  },
+  {
+    "date": "2022-06-12",
+    "ens_price": 9.2,
+    "eth_price": 1535.88
+  },
+  {
+    "date": "2022-06-11",
+    "ens_price": 10.41,
+    "eth_price": 1660.34
+  },
+  {
+    "date": "2022-06-10",
+    "ens_price": 11.51,
+    "eth_price": 1777.64
+  },
+  {
+    "date": "2022-06-09",
+    "ens_price": 11.39,
+    "eth_price": 1782.35
+  },
+  {
+    "date": "2022-06-08",
+    "ens_price": 11.93,
+    "eth_price": 1821.18
+  },
+  {
+    "date": "2022-06-07",
+    "ens_price": 12.23,
+    "eth_price": 1836.71
+  },
+  {
+    "date": "2022-06-06",
+    "ens_price": 11.05,
+    "eth_price": 1820.23
+  },
+  {
+    "date": "2022-06-05",
+    "ens_price": 11.0,
+    "eth_price": 1796.26
+  },
+  {
+    "date": "2022-06-04",
+    "ens_price": 10.82,
+    "eth_price": 1753.23
+  },
+  {
+    "date": "2022-06-03",
+    "ens_price": 11.32,
+    "eth_price": 1805.17
+  },
+  {
+    "date": "2022-06-02",
+    "ens_price": 10.66,
+    "eth_price": 1830.73
+  },
+  {
+    "date": "2022-06-01",
+    "ens_price": 11.87,
+    "eth_price": 1922.28
+  },
+  {
+    "date": "2022-05-31",
+    "ens_price": 12.58,
+    "eth_price": 1974.58
+  },
+  {
+    "date": "2022-05-30",
+    "ens_price": 10.2,
+    "eth_price": 1812.1
+  },
+  {
+    "date": "2022-05-29",
+    "ens_price": 10.2,
+    "eth_price": 1770.0
+  },
+  {
+    "date": "2022-05-28",
+    "ens_price": 9.73,
+    "eth_price": 1749.45
+  },
+  {
+    "date": "2022-05-27",
+    "ens_price": 10.39,
+    "eth_price": 1750.0
+  },
+  {
+    "date": "2022-05-26",
+    "ens_price": 12.29,
+    "eth_price": 1920.68
+  },
+  {
+    "date": "2022-05-25",
+    "ens_price": 12.38,
+    "eth_price": 1981.84
+  },
+  {
+    "date": "2022-05-24",
+    "ens_price": 12.73,
+    "eth_price": 1966.74
+  },
+  {
+    "date": "2022-05-23",
+    "ens_price": 12.62,
+    "eth_price": 2075.42
+  },
+  {
+    "date": "2022-05-22",
+    "ens_price": 12.79,
+    "eth_price": 2032.42
+  },
+  {
+    "date": "2022-05-21",
+    "ens_price": 13.06,
+    "eth_price": 1967.36
+  },
+  {
+    "date": "2022-05-20",
+    "ens_price": 12.63,
+    "eth_price": 2023.22
+  },
+  {
+    "date": "2022-05-19",
+    "ens_price": 10.49,
+    "eth_price": 1912.15
+  },
+  {
+    "date": "2022-05-18",
+    "ens_price": 12.45,
+    "eth_price": 2066.55
+  },
+  {
+    "date": "2022-05-17",
+    "ens_price": 10.67,
+    "eth_price": 2026.28
+  },
+  {
+    "date": "2022-05-16",
+    "ens_price": 10.37,
+    "eth_price": 2084.89
+  },
+  {
+    "date": "2022-05-15",
+    "ens_price": 9.63,
+    "eth_price": 2021.19
+  },
+  {
+    "date": "2022-05-14",
+    "ens_price": 9.78,
+    "eth_price": 1999.04
+  },
+  {
+    "date": "2022-05-13",
+    "ens_price": 8.61,
+    "eth_price": 1997.69
+  },
+  {
+    "date": "2022-05-12",
+    "ens_price": 9.53,
+    "eth_price": 2134.86
+  },
+  {
+    "date": "2022-05-11",
+    "ens_price": 14.12,
+    "eth_price": 2344.6
+  },
+  {
+    "date": "2022-05-10",
+    "ens_price": 13.32,
+    "eth_price": 2227.89
+  },
+  {
+    "date": "2022-05-09",
+    "ens_price": 17.01,
+    "eth_price": 2519.95
+  },
+  {
+    "date": "2022-05-08",
+    "ens_price": 18.31,
+    "eth_price": 2596.66
+  },
+  {
+    "date": "2022-05-07",
+    "ens_price": 18.39,
+    "eth_price": 2674.26
+  },
+  {
+    "date": "2022-05-06",
+    "ens_price": 18.95,
+    "eth_price": 2725.15
+  },
+  {
+    "date": "2022-05-05",
+    "ens_price": 22.17,
+    "eth_price": 2946.95
+  },
+  {
+    "date": "2022-05-04",
+    "ens_price": 21.99,
+    "eth_price": 2795.01
+  },
+  {
+    "date": "2022-05-03",
+    "ens_price": 26.03,
+    "eth_price": 2844.7
+  },
+  {
+    "date": "2022-05-02",
+    "ens_price": 24.3,
+    "eth_price": 2841.15
+  },
+  {
+    "date": "2022-05-01",
+    "ens_price": 20.41,
+    "eth_price": 2732.14
+  },
+  {
+    "date": "2022-04-30",
+    "ens_price": 16.3,
+    "eth_price": 2829.15
+  },
+  {
+    "date": "2022-04-29",
+    "ens_price": 18.7,
+    "eth_price": 2942.0
+  },
+  {
+    "date": "2022-04-28",
+    "ens_price": 18.59,
+    "eth_price": 2896.6
+  },
+  {
+    "date": "2022-04-27",
+    "ens_price": 14.34,
+    "eth_price": 2820.14
+  },
+  {
+    "date": "2022-04-26",
+    "ens_price": 15.73,
+    "eth_price": 3027.7
+  },
+  {
+    "date": "2022-04-25",
+    "ens_price": 15.32,
+    "eth_price": 2908.68
+  },
+  {
+    "date": "2022-04-24",
+    "ens_price": 13.96,
+    "eth_price": 2945.22
+  },
+  {
+    "date": "2022-04-23",
+    "ens_price": 14.2,
+    "eth_price": 2958.58
+  },
+  {
+    "date": "2022-04-22",
+    "ens_price": 14.52,
+    "eth_price": 3011.92
+  },
+  {
+    "date": "2022-04-21",
+    "ens_price": 14.61,
+    "eth_price": 3086.8
+  },
+  {
+    "date": "2022-04-20",
+    "ens_price": 14.91,
+    "eth_price": 3079.26
+  },
+  {
+    "date": "2022-04-19",
+    "ens_price": 14.29,
+    "eth_price": 3063.23
+  },
+  {
+    "date": "2022-04-18",
+    "ens_price": 13.7,
+    "eth_price": 2984.85
+  },
+  {
+    "date": "2022-04-17",
+    "ens_price": 14.3,
+    "eth_price": 3061.4
+  },
+  {
+    "date": "2022-04-16",
+    "ens_price": 14.26,
+    "eth_price": 3042.65
+  },
+  {
+    "date": "2022-04-15",
+    "ens_price": 13.99,
+    "eth_price": 3035.37
+  },
+  {
+    "date": "2022-04-14",
+    "ens_price": 14.59,
+    "eth_price": 3118.66
+  },
+  {
+    "date": "2022-04-13",
+    "ens_price": 14.29,
+    "eth_price": 3030.07
+  },
+  {
+    "date": "2022-04-12",
+    "ens_price": 13.78,
+    "eth_price": 2981.82
+  },
+  {
+    "date": "2022-04-11",
+    "ens_price": 15.15,
+    "eth_price": 3194.64
+  },
+  {
+    "date": "2022-04-10",
+    "ens_price": 15.63,
+    "eth_price": 3259.07
+  },
+  {
+    "date": "2022-04-09",
+    "ens_price": 15.14,
+    "eth_price": 3196.26
+  },
+  {
+    "date": "2022-04-08",
+    "ens_price": 16.58,
+    "eth_price": 3224.4
+  },
+  {
+    "date": "2022-04-07",
+    "ens_price": 16.18,
+    "eth_price": 3203.2
+  },
+  {
+    "date": "2022-04-06",
+    "ens_price": 18.84,
+    "eth_price": 3282.0
+  },
+  {
+    "date": "2022-04-05",
+    "ens_price": 19.83,
+    "eth_price": 3531.36
+  },
+  {
+    "date": "2022-04-04",
+    "ens_price": 20.92,
+    "eth_price": 3498.08
+  },
+  {
+    "date": "2022-04-03",
+    "ens_price": 18.56,
+    "eth_price": 3445.46
+  },
+  {
+    "date": "2022-04-02",
+    "ens_price": 18.42,
+    "eth_price": 3477.94
+  },
+  {
+    "date": "2022-04-01",
+    "ens_price": 18.06,
+    "eth_price": 3285.39
+  },
+  {
+    "date": "2022-03-31",
+    "ens_price": 19.28,
+    "eth_price": 3403.88
+  },
+  {
+    "date": "2022-03-30",
+    "ens_price": 19.2,
+    "eth_price": 3391.19
+  },
+  {
+    "date": "2022-03-29",
+    "ens_price": 18.66,
+    "eth_price": 3358.04
+  },
+  {
+    "date": "2022-03-28",
+    "ens_price": 18.44,
+    "eth_price": 3285.28
+  },
+  {
+    "date": "2022-03-27",
+    "ens_price": 17.36,
+    "eth_price": 3154.26
+  },
+  {
+    "date": "2022-03-26",
+    "ens_price": 17.56,
+    "eth_price": 3099.7
+  },
+  {
+    "date": "2022-03-25",
+    "ens_price": 18.15,
+    "eth_price": 3142.08
+  },
+  {
+    "date": "2022-03-24",
+    "ens_price": 18.16,
+    "eth_price": 3060.25
+  },
+  {
+    "date": "2022-03-23",
+    "ens_price": 17.56,
+    "eth_price": 2968.72
+  },
+  {
+    "date": "2022-03-22",
+    "ens_price": 15.79,
+    "eth_price": 2901.36
+  },
+  {
+    "date": "2022-03-21",
+    "ens_price": 15.88,
+    "eth_price": 2858.93
+  },
+  {
+    "date": "2022-03-20",
+    "ens_price": 16.44,
+    "eth_price": 2932.22
+  },
+  {
+    "date": "2022-03-19",
+    "ens_price": 15.02,
+    "eth_price": 2962.68
+  },
+  {
+    "date": "2022-03-18",
+    "ens_price": 15.06,
+    "eth_price": 2789.3
+  },
+  {
+    "date": "2022-03-17",
+    "ens_price": 14.44,
+    "eth_price": 2759.88
+  },
+  {
+    "date": "2022-03-16",
+    "ens_price": 13.36,
+    "eth_price": 2613.43
+  },
+  {
+    "date": "2022-03-15",
+    "ens_price": 13.52,
+    "eth_price": 2591.99
+  },
+  {
+    "date": "2022-03-14",
+    "ens_price": 12.72,
+    "eth_price": 2509.83
+  },
+  {
+    "date": "2022-03-13",
+    "ens_price": 13.57,
+    "eth_price": 2560.0
+  },
+  {
+    "date": "2022-03-12",
+    "ens_price": 13.72,
+    "eth_price": 2582.94
+  },
+  {
+    "date": "2022-03-11",
+    "ens_price": 14.0,
+    "eth_price": 2573.27
+  },
+  {
+    "date": "2022-03-10",
+    "ens_price": 14.72,
+    "eth_price": 2659.32
+  },
+  {
+    "date": "2022-03-09",
+    "ens_price": 13.84,
+    "eth_price": 2580.52
+  },
+  {
+    "date": "2022-03-08",
+    "ens_price": 13.68,
+    "eth_price": 2525.94
+  },
+  {
+    "date": "2022-03-07",
+    "ens_price": 14.01,
+    "eth_price": 2531.0
+  },
+  {
+    "date": "2022-03-06",
+    "ens_price": 14.83,
+    "eth_price": 2649.46
+  },
+  {
+    "date": "2022-03-05",
+    "ens_price": 15.26,
+    "eth_price": 2610.29
+  },
+  {
+    "date": "2022-03-04",
+    "ens_price": 14.31,
+    "eth_price": 2750.0
+  },
+  {
+    "date": "2022-03-03",
+    "ens_price": 15.14,
+    "eth_price": 2969.76
+  },
+  {
+    "date": "2022-03-02",
+    "ens_price": 15.25,
+    "eth_price": 2999.39
+  },
+  {
+    "date": "2022-03-01",
+    "ens_price": 15.37,
+    "eth_price": 2957.15
+  },
+  {
+    "date": "2022-02-28",
+    "ens_price": 13.2,
+    "eth_price": 2672.5
+  },
+  {
+    "date": "2022-02-27",
+    "ens_price": 14.09,
+    "eth_price": 2745.29
+  },
+  {
+    "date": "2022-02-26",
+    "ens_price": 14.88,
+    "eth_price": 2850.0
+  },
+  {
+    "date": "2022-02-25",
+    "ens_price": 13.74,
+    "eth_price": 2610.21
+  },
+  {
+    "date": "2022-02-24",
+    "ens_price": 14.25,
+    "eth_price": 2577.65
+  },
+  {
+    "date": "2022-02-23",
+    "ens_price": 14.82,
+    "eth_price": 2631.09
+  },
+  {
+    "date": "2022-02-22",
+    "ens_price": 13.9,
+    "eth_price": 2555.0
+  },
+  {
+    "date": "2022-02-21",
+    "ens_price": 15.21,
+    "eth_price": 2610.54
+  },
+  {
+    "date": "2022-02-20",
+    "ens_price": 16.06,
+    "eth_price": 2726.38
+  },
+  {
+    "date": "2022-02-19",
+    "ens_price": 15.74,
+    "eth_price": 2783.53
+  },
+  {
+    "date": "2022-02-18",
+    "ens_price": 15.76,
+    "eth_price": 2920.37
+  },
+  {
+    "date": "2022-02-17",
+    "ens_price": 17.65,
+    "eth_price": 3128.12
+  },
+  {
+    "date": "2022-02-16",
+    "ens_price": 18.43,
+    "eth_price": 3189.07
+  },
+  {
+    "date": "2022-02-15",
+    "ens_price": 17.04,
+    "eth_price": 2934.8
+  },
+  {
+    "date": "2022-02-14",
+    "ens_price": 16.8,
+    "eth_price": 2875.04
+  },
+  {
+    "date": "2022-02-13",
+    "ens_price": 17.03,
+    "eth_price": 2916.59
+  },
+  {
+    "date": "2022-02-12",
+    "ens_price": 17.21,
+    "eth_price": 2917.99
+  },
+  {
+    "date": "2022-02-11",
+    "ens_price": 18.96,
+    "eth_price": 3060.87
+  },
+  {
+    "date": "2022-02-10",
+    "ens_price": 21.28,
+    "eth_price": 3246.4
+  },
+  {
+    "date": "2022-02-09",
+    "ens_price": 20.13,
+    "eth_price": 3109.99
+  },
+  {
+    "date": "2022-02-08",
+    "ens_price": 21.81,
+    "eth_price": 3134.68
+  },
+  {
+    "date": "2022-02-07",
+    "ens_price": 20.85,
+    "eth_price": 3037.36
+  },
+  {
+    "date": "2022-02-06",
+    "ens_price": 20.04,
+    "eth_price": 3027.38
+  },
+  {
+    "date": "2022-02-05",
+    "ens_price": 20.6,
+    "eth_price": 2980.78
+  },
+  {
+    "date": "2022-02-04",
+    "ens_price": 18.41,
+    "eth_price": 2692.67
+  },
+  {
+    "date": "2022-02-03",
+    "ens_price": 17.98,
+    "eth_price": 2678.25
+  },
+  {
+    "date": "2022-02-02",
+    "ens_price": 19.4,
+    "eth_price": 2772.55
+  },
+  {
+    "date": "2022-02-01",
+    "ens_price": 20.17,
+    "eth_price": 2692.5
+  },
+  {
+    "date": "2022-01-31",
+    "ens_price": 19.03,
+    "eth_price": 2584.62
+  },
+  {
+    "date": "2022-01-30",
+    "ens_price": 20.07,
+    "eth_price": 2589.26
+  },
+  {
+    "date": "2022-01-29",
+    "ens_price": 17.85,
+    "eth_price": 2547.08
+  },
+  {
+    "date": "2022-01-28",
+    "ens_price": 16.81,
+    "eth_price": 2433.02
+  },
+  {
+    "date": "2022-01-27",
+    "ens_price": 17.01,
+    "eth_price": 2450.84
+  },
+  {
+    "date": "2022-01-26",
+    "ens_price": 16.56,
+    "eth_price": 2442.57
+  },
+  {
+    "date": "2022-01-25",
+    "ens_price": 16.46,
+    "eth_price": 2438.94
+  },
+  {
+    "date": "2022-01-24",
+    "ens_price": 17.14,
+    "eth_price": 2522.69
+  },
+  {
+    "date": "2022-01-23",
+    "ens_price": 16.06,
+    "eth_price": 2423.36
+  },
+  {
+    "date": "2022-01-22",
+    "ens_price": 17.87,
+    "eth_price": 2565.34
+  },
+  {
+    "date": "2022-01-21",
+    "ens_price": 21.1,
+    "eth_price": 2979.96
+  },
+  {
+    "date": "2022-01-20",
+    "ens_price": 22.15,
+    "eth_price": 3188.99
+  },
+  {
+    "date": "2022-01-19",
+    "ens_price": 23.43,
+    "eth_price": 3142.46
+  },
+  {
+    "date": "2022-01-18",
+    "ens_price": 24.31,
+    "eth_price": 3221.82
+  },
+  {
+    "date": "2022-01-17",
+    "ens_price": 27.69,
+    "eth_price": 3330.96
+  },
+  {
+    "date": "2022-01-16",
+    "ens_price": 26.66,
+    "eth_price": 3324.13
+  },
+  {
+    "date": "2022-01-15",
+    "ens_price": 26.28,
+    "eth_price": 3330.61
+  },
+  {
+    "date": "2022-01-14",
+    "ens_price": 25.68,
+    "eth_price": 3231.55
+  },
+  {
+    "date": "2022-01-13",
+    "ens_price": 27.97,
+    "eth_price": 3358.59
+  },
+  {
+    "date": "2022-01-12",
+    "ens_price": 26.76,
+    "eth_price": 3241.86
+  },
+  {
+    "date": "2022-01-11",
+    "ens_price": 25.39,
+    "eth_price": 3100.0
+  },
+  {
+    "date": "2022-01-10",
+    "ens_price": 28.01,
+    "eth_price": 3144.32
+  },
+  {
+    "date": "2022-01-09",
+    "ens_price": 27.73,
+    "eth_price": 3081.02
+  },
+  {
+    "date": "2022-01-08",
+    "ens_price": 30.05,
+    "eth_price": 3211.37
+  },
+  {
+    "date": "2022-01-07",
+    "ens_price": 33.14,
+    "eth_price": 3369.33
+  },
+  {
+    "date": "2022-01-06",
+    "ens_price": 33.8,
+    "eth_price": 3528.96
+  },
+  {
+    "date": "2022-01-05",
+    "ens_price": 38.7,
+    "eth_price": 3802.03
+  },
+  {
+    "date": "2022-01-04",
+    "ens_price": 39.27,
+    "eth_price": 3729.95
+  },
+  {
+    "date": "2022-01-03",
+    "ens_price": 41.06,
+    "eth_price": 3814.79
+  },
+  {
+    "date": "2022-01-02",
+    "ens_price": 40.19,
+    "eth_price": 3763.62
+  },
+  {
+    "date": "2022-01-01",
+    "ens_price": 38.96,
+    "eth_price": 3698.02
+  },
+  {
+    "date": "2021-12-31",
+    "ens_price": 39.08,
+    "eth_price": 3712.62
+  },
+  {
+    "date": "2021-12-30",
+    "ens_price": 38.6,
+    "eth_price": 3631.93
+  },
+  {
+    "date": "2021-12-29",
+    "ens_price": 39.7,
+    "eth_price": 3825.81
+  },
+  {
+    "date": "2021-12-28",
+    "ens_price": 44.42,
+    "eth_price": 4025.0
+  },
+  {
+    "date": "2021-12-27",
+    "ens_price": 45.67,
+    "eth_price": 4042.89
+  },
+  {
+    "date": "2021-12-26",
+    "ens_price": 46.41,
+    "eth_price": 4089.54
+  },
+  {
+    "date": "2021-12-25",
+    "ens_price": 45.7,
+    "eth_price": 4075.53
+  },
+  {
+    "date": "2021-12-24",
+    "ens_price": 49.52,
+    "eth_price": 4102.13
+  },
+  {
+    "date": "2021-12-23",
+    "ens_price": 45.09,
+    "eth_price": 3979.06
+  },
+  {
+    "date": "2021-12-22",
+    "ens_price": 40.94,
+    "eth_price": 4000.22
+  },
+  {
+    "date": "2021-12-21",
+    "ens_price": 40.43,
+    "eth_price": 3973.38
+  },
+  {
+    "date": "2021-12-20",
+    "ens_price": 40.82,
+    "eth_price": 3934.39
+  },
+  {
+    "date": "2021-12-19",
+    "ens_price": 42.64,
+    "eth_price": 3926.74
+  },
+  {
+    "date": "2021-12-18",
+    "ens_price": 42.15,
+    "eth_price": 3876.71
+  },
+  {
+    "date": "2021-12-17",
+    "ens_price": 44.34,
+    "eth_price": 3938.38
+  },
+  {
+    "date": "2021-12-16",
+    "ens_price": 42.43,
+    "eth_price": 4048.3
+  },
+  {
+    "date": "2021-12-15",
+    "ens_price": 39.87,
+    "eth_price": 3867.86
+  },
+  {
+    "date": "2021-12-14",
+    "ens_price": 39.99,
+    "eth_price": 3767.58
+  },
+  {
+    "date": "2021-12-13",
+    "ens_price": 47.07,
+    "eth_price": 4113.79
+  },
+  {
+    "date": "2021-12-12",
+    "ens_price": 47.46,
+    "eth_price": 4089.19
+  },
+  {
+    "date": "2021-12-11",
+    "ens_price": 42.6,
+    "eth_price": 3910.0
+  },
+  {
+    "date": "2021-12-10",
+    "ens_price": 44.97,
+    "eth_price": 4126.95
+  },
+  {
+    "date": "2021-12-09",
+    "ens_price": 49.37,
+    "eth_price": 4460.0
+  },
+  {
+    "date": "2021-12-08",
+    "ens_price": 50.72,
+    "eth_price": 4306.92
+  },
+  {
+    "date": "2021-12-07",
+    "ens_price": 51.46,
+    "eth_price": 4370.0
+  },
+  {
+    "date": "2021-12-06",
+    "ens_price": 49.34,
+    "eth_price": 4128.69
+  },
+  {
+    "date": "2021-12-05",
+    "ens_price": 50.79,
+    "eth_price": 4135.88
+  },
+  {
+    "date": "2021-12-04",
+    "ens_price": 54.29,
+    "eth_price": 4185.2
+  },
+  {
+    "date": "2021-12-03",
+    "ens_price": 61.68,
+    "eth_price": 4526.48
+  },
+  {
+    "date": "2021-12-02",
+    "ens_price": 64.81,
+    "eth_price": 4586.72
+  },
+  {
+    "date": "2021-12-01",
+    "ens_price": 69.98,
+    "eth_price": 4691.79
+  },
+  {
+    "date": "2021-11-30",
+    "ens_price": 70.21,
+    "eth_price": 4477.0
+  },
+  {
+    "date": "2021-11-29",
+    "ens_price": 76.14,
+    "eth_price": 4306.1
+  },
+  {
+    "date": "2021-11-28",
+    "ens_price": 73.45,
+    "eth_price": 4050.9
+  },
+  {
+    "date": "2021-11-27",
+    "ens_price": 59.52,
+    "eth_price": 4041.42
+  },
+  {
+    "date": "2021-11-26",
+    "ens_price": 68.24,
+    "eth_price": 4503.72
+  },
+  {
+    "date": "2021-11-25",
+    "ens_price": 49.22,
+    "eth_price": 4276.84
+  },
+  {
+    "date": "2021-11-24",
+    "ens_price": 50.8,
+    "eth_price": 4355.86
+  },
+  {
+    "date": "2021-11-23",
+    "ens_price": 40.92,
+    "eth_price": 4068.6
+  },
+  {
+    "date": "2021-11-22",
+    "ens_price": 42.06,
+    "eth_price": 4256.49
+  },
+  {
+    "date": "2021-11-21",
+    "ens_price": 46.78,
+    "eth_price": 4418.07
+  },
+  {
+    "date": "2021-11-20",
+    "ens_price": 47.8,
+    "eth_price": 4322.0
+  },
+  {
+    "date": "2021-11-19",
+    "ens_price": 41.33,
+    "eth_price": 3997.82
+  },
+  {
+    "date": "2021-11-18",
+    "ens_price": 48.14,
+    "eth_price": 4311.97
+  },
+  {
+    "date": "2021-11-17",
+    "ens_price": 48.21,
+    "eth_price": 4200.0
+  },
+  {
+    "date": "2021-11-16",
+    "ens_price": 55.75,
+    "eth_price": 4537.2
+  },
+  {
+    "date": "2021-11-15",
+    "ens_price": 56.22,
+    "eth_price": 4648.2
+  },
+  {
+    "date": "2021-11-14",
+    "ens_price": 55.58,
+    "eth_price": 4662.81
+  },
+  {
+    "date": "2021-11-13",
+    "ens_price": 54.6,
+    "eth_price": 4702.75
+  },
+  {
+    "date": "2021-11-12",
+    "ens_price": 55.38,
+    "eth_price": 4730.67
+  },
+  {
+    "date": "2021-11-11",
+    "ens_price": 73.87,
+    "eth_price": 4613.88
+  },
+  {
+    "date": "2021-11-10",
+    "ens_price": 43.66,
+    "eth_price": 4750.55
+  }
+]

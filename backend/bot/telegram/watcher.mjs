@@ -1,5 +1,5 @@
 import { getData } from "../../utils/dataLoader.mjs";
-import { notifySubscribers } from "./commands.mjs"
+import { notifySubscribers } from "./commands/handlers/subscription.mjs"
 
 let lastKnownTransactions = new Set();
 
