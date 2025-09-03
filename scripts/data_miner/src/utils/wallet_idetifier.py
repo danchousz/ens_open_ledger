@@ -198,7 +198,10 @@ def apply_specific_fixes(df):
         (df['To'] == '0xa19a7ae868ede64c6c5256a64bcd3bf3a9f2d615'), 'To_name'] = 'cryptowork.eth'
 
     df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
-        (df['To'] == '0x7f7720bdb2cb5c13dd30a0c8ab8d0dd553b31caa'), 'To_category'] = 'Open Ledger'
+        (df['To'] == '0x7f7720bdb2cb5c13dd30a0c8ab8d0dd553b31caa'), 'To_category'] = 'DAO Tooling'
+    
+    df.loc[(df['Transaction Hash'] == '0x5286750eec05cdbc885a64ff62deb0fe7a6f0206f8cd1800c9a97825ac629d63') & 
+        (df['To'] == '0x7f7720bdb2cb5c13dd30a0c8ab8d0dd553b31caa'), 'To_category'] = 'Research'
     
     df.loc[(df['Transaction Hash'] == '0x8ba0d6e261677400f68261543a8b10ea0fe20ad797e31f0ff17b2d8a1cf2a19e') & 
         ((df['To'] == '0xe52c39327ff7576baec3dbfef0787bd62db6d726') | (df['To'] == '0x60dbf50076206f60bcc2edf9295f5734561b8d77')), 'To_category'] = 'IRL'

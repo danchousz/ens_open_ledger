@@ -13,3 +13,4 @@ local_ledgers/
 quarterly_ledgers/
 /frontend/data/
 /scripts/data_miner/config/txs_def.json
+b.json

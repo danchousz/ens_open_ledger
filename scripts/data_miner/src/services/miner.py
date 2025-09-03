@@ -36,6 +36,7 @@ def safe_request(url: str, max_retries: int = 3, delay: float = 1.0) -> Optional
         try:
             response = requests.get(url, timeout=10)
             response.raise_for_status()
+            time.sleep(0.21)
             return response.json()
         except requests.exceptions.RequestException as e:
             print(f"Request failed (attempt {attempt + 1}/{max_retries}): {e}")

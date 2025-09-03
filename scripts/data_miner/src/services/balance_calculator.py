@@ -10,6 +10,28 @@ def calculate_interperiod_balances(df, wallet, data, is_year=False):
     df = df.copy()
     df['Date'] = pd.to_datetime(df['Date'])
     
+    if wallet == 'Ecosystem':
+        internal_mask = (
+            ((df['From_category'] == 'Ecosystem') & (df['To_name'].str.endswith(' SG'))) |
+            ((df['To_category'] == 'Ecosystem') & (df['From_name'].str.endswith(' SG')))
+        )
+        df = df[~internal_mask]
+    elif wallet == 'Metagov':
+        internal_mask = (
+            ((df['From_category'] == 'Metagov') & (df['To_name'].str.endswith(' Pod'))) |
+            ((df['To_category'] == 'Metagov') & (df['From_name'].str.endswith(' Pod')))
+        )
+        df = df[~internal_mask]
+    elif wallet == 'Public Goods':
+        internal_mask = (
+            ((df['From_category'] == 'Public Goods') & (df['To_name'] == 'Large Grants Pod')) |
+            ((df['To_category'] == 'Public Goods') & (df['From_name'] == 'Large Grants Pod'))
+        )
+        df = df[~internal_mask]
+    
+    df = df.copy()
+    df['Date'] = pd.to_datetime(df['Date'])
+    
     if is_year:
         df['Period'] = df['Date'].dt.year
         period_end_func = lambda year: pd.Timestamp(f"{year}-12-31").date()

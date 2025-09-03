@@ -20,7 +20,7 @@ def process_hedgey_transactions(df, data):
                 os.path.dirname(__file__), '..', 'contracts', 'hedgey.py'))
 
             result = subprocess.run(
-                f"python3 '{script_path}' '{tx['Transaction Hash']}'",
+                f"../venv/bin/python3 '{script_path}' '{tx['Transaction Hash']}'",
                 shell=True,
                 capture_output=True,
                 text=True,
