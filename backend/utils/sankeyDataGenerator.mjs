@@ -229,7 +229,7 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
         } else if (quarter === '2025Q1') {
             model = 'temp'
         } else {
-            model = 'NaN';
+            model = 'dist';
         }
     }
 
@@ -2842,7 +2842,115 @@ export function createSankeyData(df, bigPicture = false, quarter = null, walletF
                         }
                         spsRecipients.push(nodeName);
                     } 
-                } 
+                } else if (model === 'dist') {
+                    pad = 10;
+                    if (nodeName === 'DAO Wallet') {
+                        nodeX.push(daoWalletX)
+                        nodeY.push(daoWalletY += 0.1);
+                        interCatFlag = true;
+                    } else if (nodeName === 'Community WG') {
+                        nodeX.push(specialWalletsX);
+                        nodeY.push(lastCommunityWGY = 1.3);
+                    } else if (sender === 'DAO Wallet' && !specialWallets.hasOwnProperty(nodeName)) {
+                        daoWalletRecipients.push(nodeName);
+                        nodeX.push(0.95);
+                        if (quarter === '2022Q2') {
+                            if (daoWalletRecipients.length != 1) {
+                                nodeY.push(lastDaoWalletY += (daoWalletRecipients.length * 0.1));
+                            } else {
+                                nodeY.push(lastDaoWalletY = daoWalletY - 0.1)
+                            }
+                        } else {
+                            if (interCatFlag) {
+                                lastDaoWalletY -= 0.035;
+                                interCatFlag = false;
+                            }
+                            nodeY.push(lastDaoWalletY += 0.1)
+                        }
+                    } else if (nodeName === 'Ecosystem') {
+                        nodeX.push(specialWalletsX);
+                        nodeY.push(lastEcosystemY = lastDaoWalletY + 0.25);
+                        interCatFlag = true;
+                    } else if (sender === 'Ecosystem') {
+                        if (interCatFlag) {
+                            lastX = 0.95;
+                            nodeX.push(lastX);
+                            nodeY.push(lastEcosystemY);
+                            if (quarter !== '2022Q2') {
+                                lastEcosystemY += 0.03;
+                            }
+                            interCatFlag = false;
+                        } else {
+                            nodeX.push(lastX);
+                            nodeY.push(lastEcosystemY += 0.05);
+                        }
+                        ecosystemRecipients.push(nodeName);
+                    } else if (nodeName === 'Public Goods') {
+                        nodeX.push(specialWalletsX);
+                        nodeY.push(lastPublicGoodsY = lastEcosystemY + 0.1);
+                        interCatFlag = true;
+                    } else if (sender === 'Public Goods') {
+                        if (interCatFlag) {
+                            lastX = 0.95;
+                            nodeX.push(lastX);
+                            nodeY.push(lastPublicGoodsY);
+                            interCatFlag = false;
+                        } else {
+                            nodeX.push(lastX);
+                            nodeY.push(lastPublicGoodsY += 0.05);
+                        }
+                        publicGoodsRecipients.push(nodeName);
+                    } else if (nodeName === 'Metagov') {
+                        nodeX.push(specialWalletsX);
+                        nodeY.push(lastMetagovY = lastPublicGoodsY + 0.125);
+                        interCatFlag = true;
+                    } else if (sender === 'Metagov') {
+                        if (interCatFlag) {
+                            lastX = 0.95;
+                            nodeX.push(lastX);
+                            nodeY.push(lastMetagovY);
+                            lastMetagovY += 0.06
+                            interCatFlag = false;
+                        } else {
+                            nodeX.push(lastX);
+                            if (quarter !== '2022Q2') {
+                                nodeY.push(lastMetagovY += 0.06);
+                            } else {
+                                nodeY.push(lastMetagovY += 0.05);
+                            }
+                        }
+                        metagovRecipients.push(nodeName);
+                    } else if (nodeName === 'Community WG') {
+                        interCatFlag = true;
+                    } else if (sender === 'Community WG') {
+                        if (interCatFlag) {
+                            lastX = 0.95;
+                            nodeX.push(lastX);
+                            nodeY.push(lastCommunityWGY);
+                            interCatFlag = false;
+                        } else {
+                            nodeX.push(lastX);
+                            nodeY.push(lastCommunityWGY += 0.05);
+                        }
+                        communityWGRecipients.push(nodeName);
+                    } else if (nodeName === 'Providers') {
+                        nodeX.push(specialWalletsX);
+                        nodeY.push(lastSpsY = lastMetagovY + 0.1);
+                        interCatFlag = true;
+                    } else if (sender == 'Providers') {
+                        if (interCatFlag) {
+                            lastX = 0.95;
+                            nodeX.push(lastX);
+                            nodeY.push(lastSpsY);
+                            interCatFlag = false;
+                        } else {
+                            nodeX.push(lastX);
+                            nodeY.push(lastSpsY += 0.08);
+                        }
+                        spsRecipients.push(nodeName);
+                    }
+
+                }
                 if (model === 'detailed') {
                     pad = 15;
                 } else {

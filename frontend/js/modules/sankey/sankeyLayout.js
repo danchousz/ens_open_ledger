@@ -183,22 +183,22 @@ export function createLayout(data) {
             plot_bgcolor: '#fafafa',
         };
     } else {
-        const currentModel = data.model;
-        annotations.push({
-            x: 0.9,
-            y: 0.9,
-            xref: 'paper',
-            yref: 'paper',
-            font: {
-                size: 18,
-                color: 'black'
-            },
-            showarrow: false,
-            text: `model: ${currentModel}`,
-            xanchor: 'center',
-            yanchor: 'middle',
-            dragmode: 'none',
-        });
+        // const currentModel = data.model;
+        // annotations.push({
+        //     x: 0.9,
+        //     y: 0.9,
+        //     xref: 'paper',
+        //     yref: 'paper',
+        //     font: {
+        //         size: 18,
+        //         color: 'black'
+        //     },
+        //     showarrow: false,
+        //     text: `model: ${currentModel}`,
+        //     xanchor: 'center',
+        //     yanchor: 'middle',
+        //     dragmode: 'none',
+        // });
 
         annotations.push({
             x: isDesktop 
