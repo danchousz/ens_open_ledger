@@ -1,4 +1,6 @@
 node_modules/
+/scripts/data_miner/data/
+/scripts/data_miner/config/last_processed_block.txt
 venv/
 .env
 *.pyc
@@ -12,5 +14,3 @@ quarterly_ledgers/
 /frontend/data/
 /scripts/data_miner/config/txs_def.json
 b.json
-/scripts/data_miner/data/
-/scripts/data_miner/config/last_processed_block.txt
