@@ -1,6 +1,4 @@
 node_modules/
-/scripts/data_miner/data/
-/scripts/data_miner/config/last_processed_block.txt
 venv/
 .env
 *.pyc
