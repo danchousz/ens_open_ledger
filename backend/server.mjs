@@ -5,7 +5,7 @@ import { avatarRoutes } from './api/avatarRoutes.mjs';
 import { sankeyRoutes } from './api/sankeyRoutes.mjs';
 import { loadData } from './utils/dataLoader.mjs';
 import { recipientRoutes } from './api/recipientDetailsRoutes.mjs';
-import { exportRoutes } from './api/exportRoutes.mjs'; // ← убрать лишний ;
+import { exportRoutes } from './api/exportRoutes.mjs';
 import { dropdownRoutes } from './api/dropdownRoutes.mjs';
 import { pageRoutes } from './api/pageRoutes.mjs';
 import { initializeCronJobs } from './utils/cronJobs.mjs';
@@ -22,15 +22,12 @@ let bot;
 
 async function startServer() {
     try {
-        // 1. Сначала загружаем данные
         console.log('Loading data...');
         await loadData();
         
-        // 2. Инициализируем cron jobs
         console.log('Initializing cron jobs...');
         initializeCronJobs();
         
-        // 3. Настраиваем Express
         app.use(cors({
             origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
             methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -41,7 +38,6 @@ async function startServer() {
         app.use(pageRoutes);
         app.use(express.static(path.join('..', 'frontend')));
         
-        // API routes
         app.use(sankeyRoutes);
         app.use(avatarRoutes);
         app.use(recipientRoutes);
@@ -52,12 +48,10 @@ async function startServer() {
         app.use(telegramRoutes);
         app.use(safeRoutes);
         
-        // 4. Стартуем сервер
         server = app.listen(port, '0.0.0.0', () => {
             console.log(`✅ Server running at port ${port}`);
         });
         
-        // 5. Стартуем бота ПОСЛЕ сервера
         console.log('Starting Telegram bot...');
         bot = await startBot();
         console.log('✅ Telegram bot started successfully');
@@ -68,7 +62,6 @@ async function startServer() {
     }
 }
 
-// Graceful shutdown
 process.on('SIGINT', async () => {
     console.log('\n🛑 Received SIGINT, shutting down gracefully...');
     
@@ -90,8 +83,6 @@ process.on('SIGINT', async () => {
 
 process.on('SIGTERM', async () => {
     console.log('🛑 Received SIGTERM, shutting down gracefully...');
-    // Same logic as SIGINT
 });
 
-// Start the application
 startServer();

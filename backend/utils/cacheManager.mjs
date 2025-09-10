@@ -44,72 +44,76 @@ class CacheManager {
     }
 
     async updateAllCacheData() {
-        const startTime = process.hrtime();
-        this.logWithTimestamp('Starting cache update...');
+    const startTime = process.hrtime();
+    this.logWithTimestamp('Starting cache update...');
 
-        try {
-            const df = getData();
-            
-            const quarters = new Set();
-            const years = new Set();
-            const categories = new Set();
-            const wallets = new Set();
-            
-            df.forEach(row => {
-                if (row.Quarter) {
-                    quarters.add(row.Quarter);
-                    const year = row.Quarter.split('Q')[0];
-                    years.add(year);
-                }
-                if (row.To_category) categories.add(row.To_category);
-                if (row.From_category) categories.add(row.From_category);
-            });
-
-            this.cache.set('big_picture_false', getBigPictureData(false));
-            this.cache.set('big_picture_true', getBigPictureData(true));
-
-            for (const quarter of quarters) {
-                this.cache.set(`quarter_${quarter}`, getQuarterData(quarter));
-                
-                for (const wallet of wallets) {
-                    this.cache.set(`quarter_wallet_${quarter}_${wallet}`, 
-                        getWalletData(quarter, wallet));
-                }
-                
-                for (const category of categories) {
-                    this.cache.set(`quarter_category_${quarter}_${category}`, 
-                        getCategorySankeyData(category, quarter));
-                }
+    try {
+        this.clearCache();
+        
+        const df = getData(false, true);
+        
+        const quarters = new Set();
+        const years = new Set();
+        const categories = new Set();
+        const wallets = new Set();
+        
+        df.forEach(row => {
+            if (row.Quarter) {
+                quarters.add(row.Quarter);
+                const year = row.Quarter.split('Q')[0];
+                years.add(year);
             }
+            if (row.To_category) categories.add(row.To_category);
+            if (row.From_category) categories.add(row.From_category);
+            if (row.From_wallet) wallets.add(row.From_wallet);
+            if (row.To_wallet) wallets.add(row.To_wallet);
+        });
 
-            for (const year of years) {
-                this.cache.set(`year_${year}`, getYearData(year));
-                
-                for (const wallet of wallets) {
-                    this.cache.set(`year_wallet_${year}_${wallet}`, 
-                        getYearWalletData(year, wallet));
-                }
-                
-                for (const category of categories) {
-                    this.cache.set(`year_category_${year}_${category}`, 
-                        getYearCategoryData(category, year));
-                }
+        this.cache.set('big_picture_false', await getBigPictureData(false));
+        this.cache.set('big_picture_true', await getBigPictureData(true));
+
+        for (const quarter of quarters) {
+            this.cache.set(`quarter_${quarter}`, await getQuarterData(quarter));
+            
+            for (const wallet of wallets) {
+                this.cache.set(`quarter_wallet_${quarter}_${wallet}`, 
+                    await getWalletData(quarter, wallet));
             }
-
-            const endTime = process.hrtime(startTime);
-            const updateTime = (endTime[0] * 1000 + endTime[1] / 1000000).toFixed(2);
             
-            this.lastUpdateTime = new Date();
-            
-            this.logWithTimestamp(`Cache update completed in ${updateTime}ms`);
-            this.logWithTimestamp(`Total cached entries: ${this.cache.keys().length}`);
-            
-            return true;
-        } catch (error) {
-            this.logWithTimestamp(`Cache update failed: ${error.message}`);
-            throw error;
+            for (const category of categories) {
+                this.cache.set(`quarter_category_${quarter}_${category}`, 
+                    await getCategorySankeyData(category, quarter));
+            }
         }
+
+        for (const year of years) {
+            this.cache.set(`year_${year}`, await getYearData(year));
+            
+            for (const wallet of wallets) {
+                this.cache.set(`year_wallet_${year}_${wallet}`, 
+                    await getYearWalletData(year, wallet));
+            }
+            
+            for (const category of categories) {
+                this.cache.set(`year_category_${year}_${category}`, 
+                    await getYearCategoryData(category, year));
+            }
+        }
+
+        const endTime = process.hrtime(startTime);
+        const updateTime = (endTime[0] * 1000 + endTime[1] / 1000000).toFixed(2);
+        
+        this.lastUpdateTime = new Date();
+        
+        this.logWithTimestamp(`Cache update completed in ${updateTime}ms`);
+        this.logWithTimestamp(`Total cached entries: ${this.cache.keys().length}`);
+        
+        return true;
+    } catch (error) {
+        this.logWithTimestamp(`Cache update failed: ${error.message}`);
+        throw error;
     }
+}
 
     get(key) {
         const data = this.cache.get(key);
